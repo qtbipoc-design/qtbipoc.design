@@ -1,0 +1,1 @@
+:root{--BrightTurquoise:#00cef8;--Ghost:#c0c4cf;--LavenderRose:#f89ce4;--Cerise:#e52a98;--PurpleHeart:#751ed9;--Meteorite:#46267f;--Christalle:#35006a;--MineShaft:#3b3b3b}body{background:var(--MineShaft);color:var(--Cerise)}h1{color:var(--LavenderRose)}@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');body{font-family:'Quicksand',sans-serif}

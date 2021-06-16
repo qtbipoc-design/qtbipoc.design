@@ -1,0 +1,26 @@
+{
+  "name": "qtbipoc.design",
+  "version": "1.0.0",
+  "description": "qtbipoc.design stylesheets and js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "css": "uglifycss styles/* > style.css",
+    "js": "uglifyjs scripts/* -o script.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/graydori/qtbipoc.design.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/graydori/qtbipoc.design/issues"
+  },
+  "homepage": "https://github.com/graydori/qtbipoc.design#readme",
+  "devDependencies": {
+    "uglify-js": "^3.13.9",
+    "uglifycss": "^0.0.29"
+  }
+}
