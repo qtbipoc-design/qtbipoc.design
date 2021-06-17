@@ -1,4 +1,4 @@
-    :root {
+:root {
     --BrightTurquoise: #00CEF8;
     --Ghost: #C0C4CF;
     --LavenderRose: #F89CE4;
@@ -8,6 +8,7 @@
     --Christalle: #35006A;
     --MineShaft: #3B3B3B;
 }
+
 body {
     background: var(--MineShaft);
     color: var(--Cerise);
