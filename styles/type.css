@@ -186,6 +186,12 @@ body h6.as-paragraph, body .as-paragraph h6 {line-height: var(--line-height-h6-a
     line-height: var(--line-height-super-heading);
 }
 
+.super-paragraph,
+.super-paragraph *{
+    font-size: var(--font-size-super-paragraph);
+    line-height: var(--line-height-super-paragraph);
+}
+
 .sub-paragraph,
 .sub-paragraph *{
     font-size: var(--font-size-sub-paragraph);
