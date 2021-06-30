@@ -1,0 +1,42 @@
+/* ----- Nectar Button ----- */
+
+.nectar-button, 
+.nectar-button[data-color-override="false"].regular-button, /* for override */
+body[data-button-style*="slightly_rounded"] .nectar-button /* for override */,
+form .gform_button 
+body.material .nectar-button.large /* override */,
+body[data-form-submit="regular"] .container-wrap input[type=submit] /* override */, 
+body[data-form-submit="regular"] .container-wrap button[type=submit] /* override */, 
+body[data-form-submit="see-through"] .container-wrap input[type=submit] /* override */, 
+body[data-form-submit="see-through"] .container-wrap button[type=submit]:not(.search-widget-btn) /* override */{
+
+    background-color: transparent !important; /* override */
+    text-transform: uppercase;
+    border: 2px solid #CCCCCC; /* TODO: Use color variable */
+    box-shadow: 0px 8px 0px #CCCCCC; /* TODO: Use color variable */
+    margin-bottom: 1rem;
+    padding: 1rem 4rem !important; /* override */
+}
+
+.before-footer .gform_button,
+.before-footer .gform_legacy_markup_wrapper .gform_footer input.button, /* for override */
+.before-footer .gform_legacy_markup_wrapper .gform_footer input[type=submit],  /* for override */
+.before-footer .gform_legacy_markup_wrapper .gform_page_footer input.button,  /* for override */
+.before-footer .gform_legacy_markup_wrapper .gform_page_footer input[type=submit] /* for override */ {
+    box-shadow: 0px 4px 0px #CCCCCC; /* TODO: Use color variable */
+    font-size: 14px; /* override */
+}
+
+
+
+body[data-form-submit="regular"] .container-wrap .before-footer input[type=submit], /* for override */
+body[data-form-submit="regular"] .container-wrap .before-footer button[type=submit],  /* for override */
+body[data-form-submit="see-through"] .container-wrap .before-footer input[type=submit],  /* for override */
+body[data-form-submit="see-through"] .container-wrap .before-footer button[type=submit]:not(.search-widget-btn)  /* for override */{
+    padding: 0.5rem 1rem !important; /* override */
+}
+
+
+.nectar-button.large {
+    font-size: 18px; /* override */ /* TODO: Use variable for default text */
+}

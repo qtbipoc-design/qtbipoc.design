@@ -1,0 +1,13 @@
+/* Default frosted card background */
+
+.card-default-style>.vc_column-inner,
+.card-default-style.wpb_row.vc_row-fluid.vc_row.inner_row,
+.row.blog-recent>.post,
+.column-bg-overlay-wrap .column-bg-overlay /* For override */ {
+    background-color: hsla(268 100% 90% / 10%);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-radius: 1rem;
+    border: 1px solid hsla(0 100% 100% / 20%);
+    padding: 2rem;
+}

@@ -1,0 +1,20 @@
+form .gform_body .gfield input,
+form .gform_body .gfield select,
+form .gform_body .gfield textarea {
+    background-color: hsla(0 0% 0% / 20%); /* TEMP: Use color variable */
+    border: 2px solid hsla(0 100% 100% / 20%); /* TEMP: Use color variable */
+    border-radius: 0.5rem;
+    color: hsla(0 100% 100% / 75%); /* TEMP: Use color variable for default font color */
+}
+
+form .gform_body .gfield input::placeholder {
+    color: transparent;
+}
+
+.gform_legacy_markup_wrapper input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]) {
+    padding: 1rem; /* override */
+}
+
+.before-footer .gform_legacy_markup_wrapper input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]) {
+    padding: 0.5rem; /* override */
+}

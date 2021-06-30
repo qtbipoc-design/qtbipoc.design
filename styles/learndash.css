@@ -1,0 +1,8 @@
+.ld-account-links { 
+    display: none;
+    }
+
+    
+.logged-in .ld-account-links { 
+    display: block;
+    }
