@@ -1,45 +1,4 @@
-/* ----- Nectar Button ----- */
-
-.nectar-button, 
-.nectar-button[data-color-override="false"].regular-button, /* for override */
-body[data-button-style*="slightly_rounded"] .nectar-button /* for override */,
-form .gform_button 
-body.material .nectar-button.large /* override */,
-body[data-form-submit="regular"] .container-wrap input[type=submit] /* override */, 
-body[data-form-submit="regular"] .container-wrap button[type=submit] /* override */, 
-body[data-form-submit="see-through"] .container-wrap input[type=submit] /* override */, 
-body[data-form-submit="see-through"] .container-wrap button[type=submit]:not(.search-widget-btn) /* override */{
-
-    background-color: transparent !important; /* override */
-    text-transform: uppercase;
-    border: 2px solid #CCCCCC; /* TODO: Use color variable */
-    box-shadow: 0px 8px 0px #CCCCCC; /* TODO: Use color variable */
-    margin-bottom: 1rem;
-    padding: 1rem 4rem !important; /* override */
-}
-
-/* TODO: Refactor when working on Gravity Forms elements */
-.before-footer .gform_button,
-.before-footer .gform_legacy_markup_wrapper .gform_footer input.button, /* for override */
-.before-footer .gform_legacy_markup_wrapper .gform_footer input[type=submit],  /* for override */
-.before-footer .gform_legacy_markup_wrapper .gform_page_footer input.button,  /* for override */
-.before-footer .gform_legacy_markup_wrapper .gform_page_footer input[type=submit] /* for override */ {
-    box-shadow: 0px 4px 0px #CCCCCC; /* TODO: Use color variable */
-    font-size: 14px; /* override */
-}
-
-
-
-body[data-form-submit="regular"] .container-wrap .before-footer input[type=submit], /* for override */
-body[data-form-submit="regular"] .container-wrap .before-footer button[type=submit],  /* for override */
-body[data-form-submit="see-through"] .container-wrap .before-footer input[type=submit],  /* for override */
-body[data-form-submit="see-through"] .container-wrap .before-footer button[type=submit]:not(.search-widget-btn)  /* for override */{
-    padding: 0.5rem 1rem !important; /* override */
-}
-
-
-
-
+/* Set up Variable */
 
 :root {
     --color-accent: var(--BrightTurquoise); /* TEMP */
@@ -47,9 +6,6 @@ body[data-form-submit="see-through"] .container-wrap .before-footer button[type=
     --color-extra-2: var(--PurpleHeart); /* TEMP */
     --color-extra-3: var(--LavenderRose); /* TEMP */
     
-    /* incomplete support */
-    --color-extra-color-gradient-1: linear-gradient(125deg, var(--Cerise), var(--PurpleHeart)); /* incomplete support */
-    --color-extra-color-gradient-2: linear-gradient(125deg, var(--BrightTurquoise), var(--Cerise));/* incomplete support */
 }
 
 body.material .nectar-button.accent-color {
@@ -74,31 +30,39 @@ body.material .nectar-button.extra-color-2,
 body.material .nectar-button.extra-color-3 {
     --color-button-assigned-border: var(--color-button-assigned);
     --color-button-assigned-shadow: var(--color-button-assigned);
-    border-color: var(--color-button-assigned-border);
 }
 
 
 
-body.material .nectar-button.m-extra-color-gradient-1 {
-    /* incomplete support */
-    --color-button-assigned: var(--color-extra-color-gradient-1);
-    --color-button-assigned-border: var(--color-button-assigned);
-    --color-button-assigned-shadow: var(--color-accent);
-    border-image: var(--color-button-assigned-border);
-}
+/* Override Nectar Buttons */
 
-body.material .nectar-button.m-extra-color-gradient-2 {
-    /* incomplete support */
-    --color-button-assigned: var(--color-extra-color-gradient-2);
-    --color-button-assigned-border: var(--color-button-assigned);
-    --color-button-assigned-shadow: var(--color-accent);
-    border-image: var(--color-button-assigned-border);
+
+.nectar-button, 
+.nectar-button[data-color-override="false"].regular-button, /* for override */
+body[data-button-style*="slightly_rounded"] .nectar-button /* for override */,
+form .gform_button 
+body.material .nectar-button.large /* override */,
+body[data-form-submit="regular"] .container-wrap input[type=submit] /* override */, 
+body[data-form-submit="regular"] .container-wrap button[type=submit] /* override */ {
+    background-color: transparent !important; /* override */
+    text-transform: uppercase;
+    border: 2px solid #CCCCCC; /* TODO: Use color variable */
+    margin-bottom: 1rem;
+     
 }
 
 body[data-button-style*="slightly_rounded"] .nectar-button {
     -webkit-transition-duration: 0.45s, 0.2s, 0.45s, 0.45s, 0.45s, 0.2s; /* override */
     transition-duration: 0.45s, 0.2s, 0.45s, 0.45s, 0.45s, 0.2s; /* override */
 }
+
+body.material .nectar-button.accent-color,
+body.material .nectar-button.extra-color-1,
+body.material .nectar-button.extra-color-2,
+body.material .nectar-button.extra-color-3 {
+    border-color: var(--color-button-assigned-border);
+}
+
 
 .nectar-button::before {
     position: absolute;
@@ -228,4 +192,27 @@ body.material .nectar-button.extra_jumbo:active,
 .nectar-button[data-color-override="false"].regular-button.extra_jumbo:active /* override */{
     box-shadow: 0 10px 0 var(--color-button-assigned-shadow);
     transform: translateY(2px);
+}
+
+
+
+/* TODO: Refactor when working on Gravity Forms elements */
+.before-footer .gform_button,
+.before-footer .gform_legacy_markup_wrapper .gform_footer input.button, /* for override */
+.before-footer .gform_legacy_markup_wrapper .gform_footer input[type=submit],  /* for override */
+.before-footer .gform_legacy_markup_wrapper .gform_page_footer input.button,  /* for override */
+.before-footer .gform_legacy_markup_wrapper .gform_page_footer input[type=submit] /* for override */ {
+    box-shadow: 0px 4px 0px #CCCCCC; /* TODO: Use color variable */
+    font-size: 14px; /* override */
+}
+
+
+
+/* Footer-specific buttons */
+
+body[data-form-submit="regular"] .container-wrap .before-footer input[type=submit], /* for override */
+body[data-form-submit="regular"] .container-wrap .before-footer button[type=submit],  /* for override */
+body[data-form-submit="see-through"] .container-wrap .before-footer input[type=submit],  /* for override */
+body[data-form-submit="see-through"] .container-wrap .before-footer button[type=submit]:not(.search-widget-btn)  /* for override */{
+    padding: 0.5rem 1rem !important; /* override */
 }
