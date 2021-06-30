@@ -179,3 +179,15 @@ body h5.as-paragraph, body .as-paragraph h5 {line-height: var(--line-height-h5-a
 body h6.as-paragraph, body .as-paragraph h6 {line-height: var(--line-height-h6-as-paragraph);}
 
 /* End Salient overrides for font-size and line-height */
+
+.super-heading,
+.super-heading *{
+    font-size: var(--font-size-super-heading);
+    line-height: var(--line-height-super-heading);
+}
+
+.sub-paragraph,
+.sub-paragraph *{
+    font-size: var(--font-size-sub-paragraph);
+    line-height: var(--line-height-sub-paragraph);
+}
