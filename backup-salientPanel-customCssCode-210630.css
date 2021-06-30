@@ -1,0 +1,358 @@
+/* ----- Header Styling ----- */
+#logo img { margin-left: -24px!important;}
+
+.nav-button a:before {
+    border-color: rgba(255,255,255,.75)!important;
+}
+
+/* ----- Footer Styling ----- */
+.footer-styling h2 {
+    font-weight: 600;
+    font-size: 1em;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-styling ul {
+    margin-left: 0;
+    margin-bottom: 0;
+}
+
+.footer-styling ul li {
+    list-style-type: none;
+}
+
+.footer-inline ul {
+    margin-left: 0;
+}
+.footer-inline ul li {
+    display: inline;
+    padding-right: 20px;
+}
+
+
+/* Footer Decorative */
+
+.footer-horizon-container {
+    background-image: linear-gradient(to bottom, hsla(228 85% 17% / 0%) 0%, hsla(248 60% 22% / 100%) 100%);
+    width: 100vw;
+    height: 450px;
+    position: absolute;
+    top:0;
+    left: 0;
+    overflow: hidden;
+}
+
+.footer-horizon-object {
+    width: 250vw;
+    height: 60vw;
+    border-radius: 100%;
+    transform: translate(-75vw, 250px);
+    background-image: linear-gradient(to bottom, hsla(51 100% 90% / 10%) 0%, hsla(51 100% 90% / 0%) 175px), linear-gradient(to bottom, #0D0021, #0D0021);
+    box-shadow: 0px 0px 250px hsla(263 100% 69% / 100), 0px 0px 50px hsla(0 100% 100% / 50%);
+}
+
+
+/* ----- Nectar Button ----- */
+
+.nectar-button, 
+.nectar-button[data-color-override="false"].regular-button, /* for override */
+body[data-button-style*="slightly_rounded"] .nectar-button /* for override */,
+form .gform_button 
+body.material .nectar-button.large /* override */,
+body[data-form-submit="regular"] .container-wrap input[type=submit] /* override */, 
+body[data-form-submit="regular"] .container-wrap button[type=submit] /* override */, 
+body[data-form-submit="see-through"] .container-wrap input[type=submit] /* override */, 
+body[data-form-submit="see-through"] .container-wrap button[type=submit]:not(.search-widget-btn) /* override */{
+
+    background-color: transparent !important; /* override */
+    text-transform: uppercase;
+    border: 2px solid #CCCCCC; /* TODO: Use color variable */
+    box-shadow: 0px 8px 0px #CCCCCC; /* TODO: Use color variable */
+    margin-bottom: 1rem;
+    padding: 1rem 4rem !important; /* override */
+}
+
+.before-footer .gform_button,
+.before-footer .gform_legacy_markup_wrapper .gform_footer input.button, /* for override */
+.before-footer .gform_legacy_markup_wrapper .gform_footer input[type=submit],  /* for override */
+.before-footer .gform_legacy_markup_wrapper .gform_page_footer input.button,  /* for override */
+.before-footer .gform_legacy_markup_wrapper .gform_page_footer input[type=submit] /* for override */ {
+    box-shadow: 0px 4px 0px #CCCCCC; /* TODO: Use color variable */
+    font-size: 14px; /* override */
+}
+
+
+
+body[data-form-submit="regular"] .container-wrap .before-footer input[type=submit], /* for override */
+body[data-form-submit="regular"] .container-wrap .before-footer button[type=submit],  /* for override */
+body[data-form-submit="see-through"] .container-wrap .before-footer input[type=submit],  /* for override */
+body[data-form-submit="see-through"] .container-wrap .before-footer button[type=submit]:not(.search-widget-btn)  /* for override */{
+    padding: 0.5rem 1rem !important; /* override */
+}
+
+
+.nectar-button.large {
+    font-size: 18px; /* override */ /* TODO: Use variable for default text */
+}
+
+
+/* ----- Default frosted card background ----- */
+
+/* Default frosted card background */
+
+.card-default-style>.vc_column-inner,
+.card-default-style.wpb_row.vc_row-fluid.vc_row.inner_row,
+.row.blog-recent>.post,
+.column-bg-overlay-wrap .column-bg-overlay /* For override */ {
+    background-color: hsla(268 100% 90% / 10%);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-radius: 1rem;
+    border: 1px solid hsla(0 100% 100% / 20%);
+    padding: 2rem;
+}
+
+
+/* ----- Gravity Forms Styling ----- */
+
+form .gform_body .gfield input,
+form .gform_body .gfield select,
+form .gform_body .gfield textarea {
+    background-color: hsla(0 0% 0% / 20%); /* TEMP: Use color variable */
+    border: 2px solid hsla(0 100% 100% / 20%); /* TEMP: Use color variable */
+    border-radius: 0.5rem;
+    color: hsla(0 100% 100% / 75%); /* TEMP: Use color variable for default font color */
+}
+
+form .gform_body .gfield input::placeholder {
+    color: transparent;
+}
+
+.gform_legacy_markup_wrapper input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]) {
+    padding: 1rem; /* override */
+}
+
+.before-footer .gform_legacy_markup_wrapper input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]) {
+    padding: 0.5rem; /* override */
+}
+
+
+
+/* ----- LearnDash Styling ----- */
+.ld-account-links { display: none;}
+.logged-in .ld-account-links { display: block;}
+
+/* ----- Background Styling ----- */
+
+
+/* ----- Background Styling: Stars ----- */
+
+.qdb-stars {
+    height: 0;
+}
+
+.qdb-stars .nectar_cascading_images>div {
+    position: absolute;
+}
+
+.qdb-stars .nectar_cascading_images .cascading-image, .nectar_cascading_images .cascading-image .inner-wrap {
+    text-align: left; /* override */
+}
+
+.qdb-stars .nectar_cascading_images .cascading-image:not(:first-child) {
+    webkit-transform: none; /* override */
+    transform: none; /* override */
+}
+
+.qdb-stars .nectar_cascading_images>div:nth-of-type(1) {
+    left: 5vw; /* TODO: Update positioning to scale with active RWD margin rules */
+    top: 5vh;
+    opacity: 0.5;
+}
+
+.qdb-stars .nectar_cascading_images>div:nth-of-type(2) {
+    left: 90vw; /* TODO: Update positioning to scale with active RWD margin rules */
+    top: 35vh;
+    opacity: 0.5;
+}
+
+.qdb-stars .nectar_cascading_images>div:nth-of-type(3) {
+    left: 10vw; /* TODO: Update positioning to scale with active RWD margin rules */
+    top: 65vh;
+    opacity: 0.5;
+}
+
+.qdb-stars .nectar_cascading_images>div:nth-of-type(4) {
+    left: 95vw; /* TODO: Update positioning to scale with active RWD margin rules */
+    top: 95vh;
+    opacity: 0.5;
+}
+
+.qdb-stars-opt2 .nectar_cascading_images>div:nth-of-type(1) {
+    left: 95vw; /* TODO: Update positioning to scale with active RWD margin rules */
+    opacity: 0.5;
+}
+
+.qdb-stars-opt2 .nectar_cascading_images>div:nth-of-type(2) {
+    left: 10vw; /* TODO: Update positioning to scale with active RWD margin rules */
+    opacity: 0.5;
+}
+
+.qdb-stars-opt2 .nectar_cascading_images>div:nth-of-type(3) {
+    left: 90vw; /* TODO: Update positioning to scale with active RWD margin rules */
+    opacity: 0.5;
+}
+
+.qdb-stars-opt2 .nectar_cascading_images>div:nth-of-type(4) {
+    left: 5vw; /* TODO: Update positioning to scale with active RWD margin rules */
+    opacity: 0.5;
+}
+
+.qdb-stars-opt3 .nectar_cascading_images>div:nth-of-type(1) {
+    left: 75vw; /* TODO: Update positioning to scale with active RWD margin rules */
+    opacity: 0.5;
+}
+
+.qdb-stars-opt3 .nectar_cascading_images>div:nth-of-type(2) {
+    left: 20vw; /* TODO: Update positioning to scale with active RWD margin rules */
+    opacity: 0.5;
+}
+
+.qdb-stars-opt3 .nectar_cascading_images>div:nth-of-type(3) {
+    left: 60vw; /* TODO: Update positioning to scale with active RWD margin rules */
+    opacity: 0.5;
+}
+
+.qdb-stars-opt3 .nectar_cascading_images>div:nth-of-type(4) {
+    left: 35vw; /* TODO: Update positioning to scale with active RWD margin rules */
+    opacity: 0.5;
+}
+
+
+
+/* ----- Background Styling: Planets ----- */
+
+
+.qdb-container-planet {
+    position: relative;
+}
+
+.qdb-planet {
+    border-radius: 100rem;
+    position: absolute;
+    z-index: 50;
+    width: 100%;
+    transform: translateX(-50%);
+}
+
+.qdb-planet>div,
+.qdb-planet>.wpb-wrapper {
+    width: 100%;
+    height: 100%;
+}
+
+
+.qdb-planet .cascading-image .img-wrap {
+    width: 150px;
+    height: 150px;
+     width: 100%; /* v2 override */
+    height: 100%; /* v2 override */
+    border-radius: 100rem;
+    
+    /* override-able */
+    background-color: #D5AAFF;
+    transform: rotate(-45deg);
+}
+
+
+
+.qdb-planet .cascading-image .img-wrap::after{
+    width: 100%;
+    height: calc(100% + 1px);
+    content: "";
+    position: absolute;
+    border-radius: 100rem;
+    top: 0;
+    left: 0;
+    
+    background: radial-gradient(65% 65% at 50% 15%, hsl(0 0% 100% / 50%) 0%, hsla(0 0% 0% / 95%) 100%); /* highlight/shadow */
+    mix-blend-mode: multiply;
+}
+
+.qdb-container-planet .cascading-image .img-wrap img {
+    width:100%;
+    height:100%;
+}
+
+
+.qdb-planet-color-cyan .cascading-image .img-wrap {
+    background-color: #00CEF8;
+}
+
+.qdb-planet-color-pink .cascading-image .img-wrap{
+    background-color: #FF4FF7;
+}
+
+.qdb-planet-color-gray .cascading-image .img-wrap {
+    background-color: #C0C4CF;
+}
+
+.qdb-planet-color-hero .cascading-image .img-wrap {
+    background: linear-gradient(-90deg, #FF80F9 0%, #AE66FF 100%);
+}
+
+.qdb-planet-color-hero.qdb-planet-rotate-top-right .cascading-image .img-wrap,
+.qdb-planet-color-hero.qdb-planet-rotate-top .cascading-image .img-wrap,
+.qdb-planet-color-hero.qdb-planet-rotate-bottom-right .cascading-image .img-wrap{
+    background: linear-gradient(90deg, #FF80F9 0%, #AE66FF 100%);
+}
+
+.qdb-planet-color-trans .cascading-image .img-wrap{
+    background: linear-gradient(-90deg, white 17%, pink 35%, pink 65%, cyan 83%);
+}
+
+.qdb-planet-color-trans.qdb-planet-rotate-top-right .cascading-image .img-wrap,
+.qdb-planet-color-trans.qdb-planet-rotate-top .cascading-image .img-wrap,
+.qdb-planet-color-trans.qdb-planet-rotate-bottom-right .cascading-image .img-wrap{
+    background: linear-gradient(90deg, white 17%, pink 35%, pink 65%, cyan 83%);
+}
+
+.qdb-planet-color-bi .cascading-image .img-wrap {
+    background: linear-gradient(-90deg, #D70270 25%, #734F96 42%, #734F96 58%, #0038A8 75%);
+}
+
+.qdb-planet-color-bi.qdb-planet-rotate-top-right .cascading-image .img-wrap,
+.qdb-planet-color-bi.qdb-planet-rotate-top .cascading-image .img-wrap,
+.qdb-planet-color-bi.qdb-planet-rotate-bottom-right .cascading-image .img-wrap{
+    background: linear-gradient(90deg, #D70270 25%, #734F96 42%, #734F96 58%, #0038A8 75%);
+}
+
+.qdb-planet-color-pan .cascading-image .img-wrap{
+    background: linear-gradient(-90deg, #FF218C 17%, #FFD800 35%, #FFD800 65%, #21B1FF 83%);
+}
+
+.qdb-planet-color-pan.qdb-planet-rotate-top-right .cascading-image .img-wrap,
+.qdb-planet-color-pan.qdb-planet-rotate-top .cascading-image .img-wrap,
+.qdb-planet-color-pan.qdb-planet-rotate-bottom-right .cascading-image .img-wrap{
+    background: linear-gradient(90deg, #FF218C 17%, #FFD800 35%, #FFD800 65%, #21B1FF 83%);
+}
+
+.qdb-planet-color-asexual .cascading-image .img-wrap {
+    background: linear-gradient(-90deg, #333333 15%, #A4A4A4 40%, #DDDDDD 60%, #DDDDDD 70%, #810086 95%);
+}
+
+.qdb-planet-color-asexual.qdb-planet-rotate-top-right .cascading-image .img-wrap,
+.qdb-planet-color-asexual.qdb-planet-rotate-top .cascading-image .img-wrap,
+.qdb-planet-color-asexual.qdb-planet-rotate-bottom-right .cascading-image .img-wrap{
+    background: linear-gradient(90deg, #333333 15%, #A4A4A4 40%, #DDDDDD 60%, #DDDDDD 70%, #810086 95%);
+}
+
+.qdb-planet-color-intersex .cascading-image .img-wrap {
+    background: linear-gradient(-90deg, #FFDA00 50%, #7A00AC 90%);
+}
+
+.qdb-planet-color-intersex.qdb-planet-rotate-top-right .cascading-image .img-wrap,
+.qdb-planet-color-intersex.qdb-planet-rotate-top .cascading-image .img-wrap,
+.qdb-planet-color-intersex.qdb-planet-rotate-bottom-right .cascading-image .img-wrap{
+    background: linear-gradient(90deg, #FFDA00 50%, #7A00AC 90%);
+}

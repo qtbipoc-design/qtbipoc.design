@@ -1,0 +1,425 @@
+<script src="https://qtbipoc-design.github.io/qtbipoc.design/script.js"></script>
+<script>
+
+let docRoot = document.documentElement; // For RWD Type Scaling
+
+
+/**
+ * Gravity Wiz // Gravity Forms // Preview Image of File Upload
+ *
+ * Outputs an image preview for File Upload fields.
+ * 
+ * Based on: https://stackoverflow.com/questions/37880725/gravity-form-preview-of-image-upload
+ */
+
+( function( $ ) {  // Start jQuery
+    
+    // Update "123" to Form ID and "1" to File Upload Field ID in "#input_123_1".
+    $( document ).on( "change","#input_3_57", function() {
+	readURL( this );
+    } );
+
+$( "#input_3_57" ).ready( function() {
+	readURL( this );
+    } );
+    
+    function readURL( input ) {
+    
+	if ( input.files && input.files[0] ) {
+
+	    var reader = new FileReader();
+	   // $( '.member-photo' ).show();
+    
+	    reader.onload = function ( e ) {
+		$( '.member-photo>img' ).attr( 'src', e.target.result );
+	    }
+    
+	    reader.readAsDataURL( input.files[0] );
+
+	}    
+    
+    }
+
+
+
+
+// Preview color change
+$( document ).on( "change","#input_3_24", function() { // 3_24 is highlight color select version 1
+	updateDirectoryFormPreviewFrameColor( this );
+    } );
+
+$( document ).on( "change","#input_3_68 input", function() { // 3_68 is highlight color selector version 2
+	updateDirectoryFormPreviewFrameColor( this );
+    } );
+
+
+$( "#input_3_24" ).ready(function() { // 3_24 is highlight color select version 1
+	updateDirectoryFormPreviewFrameColor( document.querySelector("#input_3_24") );
+    } );
+
+
+$( "#input_3_68" ).ready(function() { // 3_68 is highlight color selector version 2
+	updateDirectoryFormPreviewFrameColor( document.querySelector("#input_3_68 input[checked]") ); // 3_68 is highlight color selector
+    } );
+
+
+///// Directory Filter FAB /////
+
+$("#directoryFilterFab").ready(function () {
+directoryFilterFab_addEventListener();
+$("#directoryFilterFab a").removeAttr("href");
+});
+
+
+
+///// Page Submenu ////
+
+$(".wpb_row").ready(function() {
+changeSubmenuLabel();
+});
+
+
+
+} )( jQuery ) // End jQuery
+
+
+
+function updateDirectoryFormPreviewFrameColor( input ) {
+
+let highlightInput = input;
+
+let highlightColorStr = highlightInput.value.toLowerCase().replace(" ", "");
+let highlightColorVarStr = "var(--color-directory-highlight-" + highlightColorStr + ")";
+
+document.querySelector(".member-photo img").style.borderColor = highlightColorVarStr;
+document.querySelector(".member-photo img").style.boxShadow = "16px 16px 0px 0px " + highlightColorVarStr;
+
+
+}
+
+
+
+
+function directoryFilterFab_addEventListener() {
+document.querySelector("#directoryFilterFab a").addEventListener("click", function() {
+
+// Get directory filter panel state and use that as the definitive state in case the states get mixed up.
+var directoryFilterIsDisplayed = true;
+
+if (document.querySelector("#directoryFilterModuleRow").classList.contains("panel-closed")) {
+directoryFilterIsDisplayed = false;
+}
+
+// Change panel state
+toggleDirectoryFilterDisplay(directoryFilterIsDisplayed);
+
+// Update Fab styling
+toggleDirectoryFilterFabDisplay(directoryFilterIsDisplayed);
+
+}); // end addEventListener
+} // end function
+
+
+
+
+function toggleDirectoryFilterDisplay(directoryFilterIsDisplayed){
+// If panel has "panel-closed" class, remove it. If it doesn't have it, add it.
+
+if (directoryFilterIsDisplayed) {
+document.querySelector("#directoryFilterModuleRow").classList.add("panel-closed");
+} else {
+document.querySelector("#directoryFilterModuleRow").classList.remove("panel-closed");
+} // end if
+
+} // end function
+
+
+
+function toggleDirectoryFilterFabDisplay(directoryFilterIsDisplayed){
+// If panel has "panel-closed" class, remove it. If it doesn't have it, add it.
+if (directoryFilterIsDisplayed) {
+document.querySelector("#directoryFilterFab").classList.add("panel-closed");
+document.querySelector("#directoryFilterFab a.nectar-button span").textContent = "Filters";
+document.querySelector("#directoryFilterFab a.nectar-button i").classList.add("fa-filter"); /* filter icon */
+document.querySelector("#directoryFilterFab a.nectar-button i").classList.remove("fa-times"); /* x icon */
+} else {
+document.querySelector("#directoryFilterFab").classList.remove("panel-closed");
+document.querySelector("#directoryFilterFab a.nectar-button span").textContent = "Close";
+document.querySelector("#directoryFilterFab a.nectar-button i").classList.add("fa-times"); /* x icon */
+document.querySelector("#directoryFilterFab a.nectar-button i").classList.remove("fa-filter"); /* filter icon */
+} // end if
+} // end function
+
+
+
+
+///////////// DIRECTORY AJAX DETECTION /////////
+
+
+
+function sfAjaxStarted () {
+	// Actions for when S&F search has started
+	// ex. When the results content opacity is reduced
+	//console.log("ajax start");
+}
+
+function sfAjaxFinished () {
+	// Actions for when S&F search has ended
+	// ex. When the results content opacity returns to 100%
+	//console.log("ajax complete");
+}
+
+
+jQuery(document).ready(function($){
+// From https://searchandfilter.com/documentation/faq/
+
+//detects the start of an ajax request being made
+$(document).on("sf:ajaxstart", ".searchandfilter", function(){
+	sfAjaxStarted();
+});
+
+//detects when the ajax request has finished and the content has been updated
+// - add scripts that apply to your results here
+$(document).on("sf:ajaxfinish", ".searchandfilter", function(){
+	sfAjaxFinished();
+});
+
+//an event fired when S&F is initialised and S&F scripts have been loaded
+$(document).on("sf:init", ".searchandfilter", function(){
+	console.log("S&F JS initialised");
+});
+
+//depending on where you add your JS, sometimes its necessary to wrap the above events in a function (as is standard practice):
+(function ( $ ) {
+	"use strict";
+	
+	$(document).on("sf:init", ".searchandfilter", function(){
+		console.log("S&F JS initialised");
+	});
+}(jQuery));
+
+});
+
+
+///////////// END DIRECTORY AJAX DETECTION ////////////////
+
+
+
+
+
+
+
+
+
+
+
+
+
+function changeSubmenuLabel(label) {
+// Change the default submenu label "Menu" to something else
+
+var newLabel;
+if (label) {newLabel = label} else {newLabel = "Sections";}
+
+var menuLinkEl = document.querySelector(".submenu-organized-by-sections .page-submenu a.mobile-menu-link");
+if (!menuLinkEl) {return;}
+
+menuLinkEl.innerHTML = menuLinkEl.innerHTML.replace("Menu",newLabel);
+
+}
+
+
+
+
+//////////  RWD Type Scaling //////////
+
+
+
+function getNewMediaMatches() {
+	// Get data to determine whether window current fits each media class
+	return {
+		mobile: window.matchMedia("(max-width: 689px)").matches,
+		tablet: window.matchMedia("(min-width: 690px) and (max-width:999px)").matches,
+		desktop: window.matchMedia("(min-width: 1000px) and (max-width:1299px)")
+			.matches,
+		desktop_wide: window.matchMedia("(min-width: 1300px)").matches
+	};
+}
+
+function isMediaClassChanged() {
+	// Collect a new set of data to compare with
+	let latestMediaMatches = getNewMediaMatches();
+
+	// Compare with existing data
+	// // If it's different, then the class is changed
+	if (
+		currentMediaMatches["mobile"] != latestMediaMatches["mobile"] ||
+		currentMediaMatches["tablet"] != latestMediaMatches["tablet"] ||
+		currentMediaMatches["desktop"] != latestMediaMatches["desktop"] ||
+		currentMediaMatches["desktop_wide"] != latestMediaMatches["desktop_wide"]
+	) {
+		// console.log(currentMediaMatches["mobile"], currentMediaMatches["tablet"], currentMediaMatches["desktop"], currentMediaMatches["desktop_wide"]); // debug
+
+		// Keep the current set updated
+		currentMediaMatches = getNewMediaMatches();
+		return true;
+	}
+
+	return false;
+}
+
+function setRootCssByMedia(elementsArray, mediaClass) {
+	// RWD Type Scaling
+	// Set the :root CSS properties based on the media class and the elements given. The properties should already be pre-written in actual style sheet.
+
+	if (elementsArray.length == 0 || !mediaClass) {
+		return;
+	} // Stop function is there aren't any elements to update or if a mediaClass is not given
+
+	for (element of elementsArray) {
+		if (
+			element == "super-heading" ||
+			element == "h1" ||
+			element == "h2" ||
+			element == "h3" ||
+			element == "h4" ||
+			element == "h5" ||
+			element == "h6" ||
+			element == "paragraph"
+		) {
+			docRoot.style.setProperty(
+				"--multiplier-font-size-" + element + "-current",
+				"var(--multiplier-font-size-" + element + "-" + mediaClass + ")"
+			);
+		}
+		// No other element types are written yet, if ever.
+	}
+}
+
+function updateTypeScaling() {
+	// RWD Type Scaling
+	// Get the current media class, set the correct multiplier in CSS
+	
+	let elementsArray = ["super-heading","h1", "h2", "h3", "h4", "h5", "h6", "paragraph"];
+	
+	if (currentMediaMatches["mobile"]) {
+		// console.log("mobile");
+		setRootCssByMedia(elementsArray, "mobile");
+	} else if (currentMediaMatches["tablet"]) {
+		// console.log("tablet");
+		setRootCssByMedia(elementsArray, "tablet");
+	} else if (currentMediaMatches["desktop"]) {
+		// console.log("desktop");
+		setRootCssByMedia(elementsArray, "desktop");
+	} else {
+		// console.log("desktop_wide");
+		setRootCssByMedia(elementsArray, "desktop-wide");
+	}
+}
+
+
+function checkAndUpdateTypeScaling(){
+	// RWD Type Scaling
+	
+	// console.log("Current width: " + window.innerWidth); // debug
+
+	let mediaClassIsChanged = isMediaClassChanged();
+	// console.log(mediaClassIsChanged + " " + window.innerWidth); // debug
+	if (mediaClassIsChanged == false) {
+		return;
+	} // Only proceed if the mediaClass is changed.
+	
+	updateTypeScaling();
+
+}
+
+function turnOnRwdTypography(bool) {
+	// RWD Type Scaling
+	// One-change function to easily toggle the entire operation if necessary.
+
+	if (bool == false) {
+		return;
+	}
+
+	updateTypeScaling();
+	window.addEventListener("resize", checkAndUpdateTypeScaling);
+}
+
+// Get an initial set of media data when the page loads.
+let currentMediaMatches = getNewMediaMatches();
+
+turnOnRwdTypography(true); // Setting this to true activates augmented responsive type scaling
+
+
+// Login Modal
+// Part of a fix to prevent scrolling and keep the login model
+// fixed positioning in the center of the page
+//
+// https://www.notion.so/qtbipocdesign/Learndash-Login-Modal-93e71dfba7cc4a78873318f2b58c0916
+
+jQuery(function($) {
+  $('a[href="#login"]').click(function(e) {
+        e.preventDefault();
+        $(".learndash-wrapper-login-modal")
+.addClass("ld-modal-open")
+.removeClass("ld-modal-closed");
+        return false;
+    });
+})
+
+
+
+
+
+// Background Planet Styling
+
+jQuery(function($) {
+
+
+	var transformRotateDegrees = -45;
+	var planetsInner = $(".qdb-planet .cascading-image .img-wrap");
+
+	$(".qdb-planet .cascading-image .img-wrap").each(function() {
+		var individualElementStyles;
+
+		getRotateValue(this);
+
+		copyTransformStyle(this);
+		modifyTransformStyle(transformRotateDegrees);
+		replaceTransformStyle(this);
+
+	});
+
+	function getRotateValue(element) {
+		if (element.closest(".qdb-planet-rotate-top-left")) transformRotateDegrees = -45;
+		if (element.closest(".qdb-planet-rotate-top")) transformRotateDegrees = 0;
+		if (element.closest(".qdb-planet-rotate-top-right")) transformRotateDegrees = 45;
+		if (element.closest(".qdb-planet-rotate-bottom-left")) transformRotateDegrees = -135;
+		if (element.closest(".qdb-planet-rotate-bottom")) transformRotateDegrees = 180;
+		if (element.closest(".qdb-planet-rotate-bottom-right")) transformRotateDegrees = 135;
+
+		// TODO V2: Parse values from custom rotate classes (ex. ".qdb-planet-rotate-23deg");
+	}
+
+
+	function copyTransformStyle(element) {
+		individualElementStyles = {
+			element: element,
+			originalTransform: window.getComputedStyle(element, null).transform
+		};
+	}
+
+	function modifyTransformStyle(transformRotateDegrees) {
+		individualElementStyles.modifiedTransform = individualElementStyles.originalTransform;
+		individualElementStyles.modifiedTransform += " rotate(" + transformRotateDegrees + "deg)";
+	}
+
+	function replaceTransformStyle(element) {
+		element.style.transform = individualElementStyles.modifiedTransform;
+	}
+
+}); // end jQuery
+
+
+
+</script>
