@@ -1,3 +1,181 @@
+:root {
+
+    --font-family-default: "Quicksand";
+
+    /* 
+    
+    Just use these following variables to override default styling, 
+    and they will automatically calculate the correct responsive values based on screen widths
+
+
+    --font-size-super-heading
+    --font-size-h1
+    --font-size-h2
+    --font-size-h3
+    --font-size-h4
+    --font-size-h5
+    --font-size-h6
+    --font-size-super-paragraph
+    --font-size-paragraph
+    --font-size-sub-paragraph
+
+
+    --line-height-super-heading
+    --line-height-h1
+    --line-height-h2
+    --line-height-h3
+    --line-height-h4
+    --line-height-h5
+    --line-height-h6
+    --line-height-super-paragraph
+    --line-height-paragraph
+    --line-height-sub-paragraph
+
+    */
+
+
+    /* Font size multiplier values are based on WordPress/Salient's own responsive scaling, with some adjustments */
+    --multiplier-font-size-super-heading-desktop-wide: 1;
+	--multiplier-font-size-super-heading-desktop: 0.75;
+	--multiplier-font-size-super-heading-tablet: 0.7;
+	--multiplier-font-size-super-heading-mobile: 0.65;
+	--multiplier-font-size-super-heading-current: var(--multiplier-font-size-super-heading-desktop-wide);
+
+	--multiplier-font-size-h1-desktop-wide: 1;
+	--multiplier-font-size-h1-desktop: 0.75;
+	--multiplier-font-size-h1-tablet: 0.7;
+	--multiplier-font-size-h1-mobile: 0.65;
+	--multiplier-font-size-h1-current: var(--multiplier-font-size-h1-desktop-wide);
+
+	--multiplier-font-size-h2-desktop-wide: 1;
+	--multiplier-font-size-h2-desktop: 0.826;
+	--multiplier-font-size-h2-tablet: 0.789;
+	--multiplier-font-size-h2-mobile: 0.751;
+	--multiplier-font-size-h2-current: var(--multiplier-font-size-h2-desktop-wide);
+
+	--multiplier-font-size-h3-desktop-wide: 1;
+	--multiplier-font-size-h3-desktop: 0.909;
+	--multiplier-font-size-h3-tablet: 0.888;
+	--multiplier-font-size-h3-mobile: 0.866;
+	--multiplier-font-size-h3-current: var(--multiplier-font-size-h3-desktop-wide);
+	
+	--multiplier-font-size-h4-desktop-wide: 1;
+	--multiplier-font-size-h4-desktop: 1;
+	--multiplier-font-size-h4-tablet: 1;
+	--multiplier-font-size-h4-mobile: 1;
+	--multiplier-font-size-h4-current: var(--multiplier-font-size-h4-desktop-wide);
+	
+	--multiplier-font-size-h5-desktop-wide: 1;
+	--multiplier-font-size-h5-desktop: 1;
+	--multiplier-font-size-h5-tablet: 1;
+	--multiplier-font-size-h5-mobile: 1;
+	--multiplier-font-size-h5-current: var(--multiplier-font-size-h5-desktop-wide);
+	
+	--multiplier-font-size-h6-desktop-wide: 1;
+	--multiplier-font-size-h6-desktop: 1;
+	--multiplier-font-size-h6-tablet: 1;
+	--multiplier-font-size-h6-mobile: 1;
+	--multiplier-font-size-h6-current: var(--multiplier-font-size-h6-desktop-wide);
+	
+	--multiplier-font-size-paragraph-desktop-wide: 1;
+	--multiplier-font-size-paragraph-desktop: 1;
+	--multiplier-font-size-paragraph-tablet: 1;
+	--multiplier-font-size-paragraph-mobile: 1;
+	--multiplier-font-size-paragraph-current: var(--multiplier-font-size-paragraph-desktop-wide);
+
+
+    /* Font size values based on typographic scale of 1.26, with base size of 18 (https://type-scale.com/?size=18&scale=1.26)*/
+	--font-size-super-heading-default:  90.75px;
+	--font-size-super-heading:              calc(var(--font-size-super-heading-default) * var(--multiplier-font-size-super-heading-current));
+	--font-size-h1-default:             72.03px;
+	--font-size-h1:                         calc(var(--font-size-h1-default) * var(--multiplier-font-size-h1-current));
+	--font-size-h2-default:             57.16px;
+	--font-size-h2:                         calc(var(--font-size-h2-default) * var(--multiplier-font-size-h2-current));
+	--font-size-h3-default:             45.37px;
+	--font-size-h3:                         calc(var(--font-size-h3-default) * var(--multiplier-font-size-h3-current));
+	--font-size-h4-default:             36.01px;
+	--font-size-h4:                         calc(var(--font-size-h4-default) * var(--multiplier-font-size-h4-current));
+	--font-size-h5-default:             28.58px;
+	--font-size-h5:                         calc(var(--font-size-h5-default) * var(--multiplier-font-size-h5-current));
+	--font-size-h6-default:             22.68px;
+	--font-size-h6:                         calc(var(--font-size-h6-default) * var(--multiplier-font-size-h6-current));
+	--font-size-super-paragraph:        var(--font-size-h6);
+    --font-size-paragraph-default:      18px;
+	--font-size-paragraph:                  calc(var(--font-size-paragraph-default) * var(--multiplier-font-size-paragraph-current));
+    --font-size-sub-paragraph:          14.29px;
+	
+    /* Line height values are based on manual optical review of ideal line-height of paragraphs and headings */
+    --line-height-super-heading:        1.5;
+    --line-height-h1:                   1.5;
+    --line-height-h1-as-paragraph:          1.5;
+    --line-height-h2:                   1.5;
+    --line-height-h2-as-paragraph:          1.5;
+    --line-height-h3:                   1.5;
+    --line-height-h3-as-paragraph:          1.7;
+    --line-height-h4:                   1.5;
+    --line-height-h4-as-paragraph:          1.7;
+    --line-height-h5:                   1.5;
+    --line-height-h5-as-paragraph:          1.75;
+    --line-height-h6:                   1.5;
+    --line-height-h6-as-paragraph:          1.75;
+    --line-height-super-paragraph:          1.75;
+    --line-height-paragraph:                1.75;
+    --line-height-sub-paragraph:            1.75;
+
+}
+
 body {
     font-family: 'Quicksand', sans-serif;
+    font-family: var(--font-family-default), sans-serif;
 }
+
+
+
+/* Font-size and line-height Salient overrides */
+
+#page-header-bg h1, .full-width-content .nectar-recent-posts-slider .recent-post-container .inner-wrap h2, body #error-404 h1, body .row .col.section-title h1, body h1 {font-size: var(--font-size-h1);line-height: var(--line-height-h1);}
+#call-to-action span, #page-header-bg h2, .nectar_single_testimonial[data-style=bold] p, .row .col.section-title h2, .woocommerce .full-width-tabs #reviews h3, .woocommerce-account .woocommerce>#customer_login .nectar-form-controls .control, .woocommerce-page .woocommerce p.cart-empty, article.post .post-header h2, article.post.link .post-content h2, article.post.quote .post-content h2, body #error-404 h2, body h2 {font-size: var(--font-size-h2);line-height: var(--line-height-h2);}
+.ascend #respond h3, .ascend h3#comments, .masonry.classic_enhanced .masonry-blog-item h3.title, .nectar-hor-list-item[data-font-family=h3], .nectar-quick-view-box h1, .portfolio-items[data-ps="8"] .col h3, .row .col h3, .toggle h3 a, .woocommerce ul.products li.product h2, .woocommerce ul.products li.product.material h3, .woocommerce ul.products li.product.text_on_hover h3, .woocommerce-page ul.products li.product.material h3, body h3 {font-size: var(--font-size-h3);line-height: var(--line-height-h3);}
+#header-outer .total, #header-outer .total strong, #respond h3, .blog-recent.related-posts h3.title, .list-icon-holder[data-icon_type=numerical] span, .nectar-hor-list-item[data-font-family=h4], .portfolio-items .col.span_3 .work-meta h4, .portfolio-items .work-meta h4, .portfolio-items[data-ps="6"] .work-meta h4, .row .col h4, .toggles[data-style=minimal_small] .toggle>h3 a, .woocommerce #reviews #reply-title, body h4, h3#comments, p.woocommerce.add_to_cart_inline ins>span.woocommerce-Price-amount, p.woocommerce.add_to_cart_inline>span.woocommerce-Price-amount {font-size: var(--font-size-h4);line-height: var(--line-height-h4);}
+.nectar-hor-list-item[data-font-family=h5], .portfolio-items .work-item.style-3-alt p, .row .col h5, body h5 {font-size: var(--font-size-h5);line-height: var(--line-height-h5);}
+.nectar-hor-list-item[data-font-family=h6], .row .col h6, body h6 {font-size: var(--font-size-h6);line-height: var(--line-height-h6);}
+
+@media only screen and (min-width:1000px) and (max-width:1300px) {
+    .full-width-content .recent-post-container .inner-wrap h2, body .row .col.section-title h1, body h1 {font-size: var(--font-size-h1);line-height: var(--line-height-h1);}
+    .single-product div.product h1.product_title, body h2 {font-size: var(--font-size-h2);line-height: var(--line-height-h2);}
+    .row .col h3, .row .span_2 h3, .row .span_3 h3, .row .span_4 h3, .row .vc_col-sm-2 h3, .row .vc_col-sm-3 h3, .row .vc_col-sm-4 h3, body h3 {font-size: var(--font-size-h3);line-height: var(--line-height-h3);}
+    .row .col h4, body h4 {font-size: var(--font-size-h4);line-height: var(--line-height-h4);}
+    .row .col h5, body h5 {font-size: var(--font-size-h5);line-height: var(--line-height-h5);}
+    .row .col h6, body h6 {font-size: var(--font-size-h6);line-height: var(--line-height-h6);}
+}
+
+@media only screen and (min-width:690px) and (max-width:1000px) {
+    #page-header-bg .span_6 h1, #page-header-bg.fullscreen-header .span_6 h1, .full-width-content .nectar-recent-posts-slider .recent-post-container .inner-wrap h2, .full-width-content .recent-post-container .inner-wrap h2, body .row .col.section-title h1, body h1, html body .row .col.section-title.span_12 h1 {font-size: var(--font-size-h1);line-height: var(--line-height-h1);}
+    .col h2, .nectar_single_testimonial[data-style=bold] p, .single-product div.product h1.product_title, .woocommerce-account .woocommerce>#customer_login .nectar-form-controls .control, h2 {font-size: var(--font-size-h2);line-height: var(--line-height-h2);}
+    .row .col h3, .row .span_2 h3, .row .span_3 h3, .row .span_4 h3, .row .vc_col-sm-2 h3, .row .vc_col-sm-3 h3, .row .vc_col-sm-4 h3, body h3 {font-size: var(--font-size-h3);line-height: var(--line-height-h3);}
+    .row .col h4, body h4 {font-size: var(--font-size-h4);line-height: var(--line-height-h4);}
+    .row .col h5, body h5 {font-size: var(--font-size-h5);line-height: var(--line-height-h5);}
+    .row .col h6, body h6 {font-size: var(--font-size-h6);line-height: var(--line-height-h6);}
+}
+
+@media only screen and (max-width:690px) {
+    #page-header-bg .span_6 h1, #page-header-bg.fullscreen-header .span_6 h1, .full-width-content .nectar-recent-posts-slider .recent-post-container .inner-wrap h2, body .row .col.section-title h1, body h1, body.single.single-post .row .col.section-title.span_12 h1, html body .row .col.section-title.span_12 h1 {font-size: var(--font-size-h1);line-height: var(--line-height-h1);}
+    .col h2, .nectar_single_testimonial[data-style=bold] p, .single-product div.product h1.product_title, .woocommerce-account .woocommerce>#customer_login .nectar-form-controls .control, h2 {font-size: var(--font-size-h2);line-height: var(--line-height-h2);}
+    .row .col h3, .row .span_2 h3, .row .span_3 h3, .row .span_4 h3, .row .vc_col-sm-2 h3, .row .vc_col-sm-3 h3, .row .vc_col-sm-4 h3, body h3 {font-size: var(--font-size-h3);line-height: var(--line-height-h3);}
+    .row .col h4, body h4 {font-size: var(--font-size-h4);line-height: var(--line-height-h4);}
+    .row .col h5, body h5 {font-size: var(--font-size-h5);line-height: var(--line-height-h5);}
+    .row .col h6, body h6 {font-size: var(--font-size-h6);line-height: var(--line-height-h6);}
+}
+
+p {font-size: var(--font-size-paragraph);line-height: var(--line-height-paragraph);}
+
+
+/* Heading-as-paragraph line-height  */
+body h1.as-paragraph, body .as-paragraph h1 {line-height: var(--line-height-h1-as-paragraph);}
+body h2.as-paragraph, body .as-paragraph h2 {line-height: var(--line-height-h2-as-paragraph);}
+body h3.as-paragraph, body .as-paragraph h3 {line-height: var(--line-height-h3-as-paragraph);}
+body h4.as-paragraph, body .as-paragraph h4 {line-height: var(--line-height-h4-as-paragraph);}
+body h5.as-paragraph, body .as-paragraph h5 {line-height: var(--line-height-h5-as-paragraph);}
+body h6.as-paragraph, body .as-paragraph h6 {line-height: var(--line-height-h6-as-paragraph);}
+
+/* End Salient overrides for font-size and line-height */
