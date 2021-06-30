@@ -18,6 +18,7 @@ body[data-form-submit="see-through"] .container-wrap button[type=submit]:not(.se
     padding: 1rem 4rem !important; /* override */
 }
 
+/* TODO: Refactor when working on Gravity Forms elements */
 .before-footer .gform_button,
 .before-footer .gform_legacy_markup_wrapper .gform_footer input.button, /* for override */
 .before-footer .gform_legacy_markup_wrapper .gform_footer input[type=submit],  /* for override */
@@ -37,6 +38,194 @@ body[data-form-submit="see-through"] .container-wrap .before-footer button[type=
 }
 
 
-.nectar-button.large {
-    font-size: 18px; /* override */ /* TODO: Use variable for default text */
+
+
+
+:root {
+    --color-accent: var(--BrightTurquoise); /* TEMP */
+    --color-extra-1: var(--Cerise); /* TEMP */
+    --color-extra-2: var(--PurpleHeart); /* TEMP */
+    --color-extra-3: var(--LavenderRose); /* TEMP */
+    
+    /* incomplete support */
+    --color-extra-color-gradient-1: linear-gradient(125deg, var(--Cerise), var(--PurpleHeart)); /* incomplete support */
+    --color-extra-color-gradient-2: linear-gradient(125deg, var(--BrightTurquoise), var(--Cerise));/* incomplete support */
+}
+
+body.material .nectar-button.accent-color {
+    --color-button-assigned: var(--color-accent);
+}
+
+body.material .nectar-button.extra-color-1 {
+    --color-button-assigned: var(--color-extra-1);
+}
+
+body.material .nectar-button.extra-color-2 {
+    --color-button-assigned: var(--color-extra-2);
+}
+
+body.material .nectar-button.extra-color-3 {
+    --color-button-assigned: var(--color-extra-3);
+}
+
+body.material .nectar-button.accent-color,
+body.material .nectar-button.extra-color-1,
+body.material .nectar-button.extra-color-2,
+body.material .nectar-button.extra-color-3 {
+    --color-button-assigned-border: var(--color-button-assigned);
+    --color-button-assigned-shadow: var(--color-button-assigned);
+    border-color: var(--color-button-assigned-border);
+}
+
+
+
+body.material .nectar-button.m-extra-color-gradient-1 {
+    /* incomplete support */
+    --color-button-assigned: var(--color-extra-color-gradient-1);
+    --color-button-assigned-border: var(--color-button-assigned);
+    --color-button-assigned-shadow: var(--color-accent);
+    border-image: var(--color-button-assigned-border);
+}
+
+body.material .nectar-button.m-extra-color-gradient-2 {
+    /* incomplete support */
+    --color-button-assigned: var(--color-extra-color-gradient-2);
+    --color-button-assigned-border: var(--color-button-assigned);
+    --color-button-assigned-shadow: var(--color-accent);
+    border-image: var(--color-button-assigned-border);
+}
+
+body[data-button-style*="slightly_rounded"] .nectar-button {
+    -webkit-transition-duration: 0.45s, 0.2s, 0.45s, 0.45s, 0.45s, 0.2s; /* override */
+    transition-duration: 0.45s, 0.2s, 0.45s, 0.45s, 0.45s, 0.2s; /* override */
+}
+
+.nectar-button::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    left:0;
+    height: 8px; /* make height dynamic to button size */ 
+    bottom:-8px; /* make height dynamic to button size */
+    background-color:transparent;
+}
+
+.nectar-button:hover::before {
+    /*display: block;*/
+    height: 10px; /* make height dynamic to button size */ 
+    bottom:-10px; /* make height dynamic to button size */
+    
+}
+
+.nectar-button span {
+    white-space: nowrap;
+}
+
+.nectar-button.small,
+.nectar-button[data-color-override="false"].regular-button.small /* override */{
+    padding: 0.5rem 1rem !important; /* override */
+    box-shadow: 0 4px 0 var(--color-button-assigned-shadow); /* TEMP: Color */
+    font-size: var(--font-size-sub-paragraph);
+    font-size: 14px; /* TEMP */
+}
+
+.nectar-button.medium,
+.nectar-button[data-color-override="false"].regular-button.medium /* override */{
+    padding: 0.75rem 2rem !important; /* override */
+    box-shadow: 0 6px 0 var(--color-button-assigned-shadow); /* TEMP: Color */
+    font-size: var(--font-size-sub-paragraph);
+    font-size: 14px; /* TEMP */
+}
+
+
+body.material .nectar-button.large /* override */ {
+    padding: 1rem 3rem !important; /* override */
+    box-shadow: 0 8px 0 #CCCCCC; /* TEMP: Color */
+    box-shadow: 0 8px 0 var(--color-button-assigned-shadow); /* TEMP: Color */
+    font-size: var(--font-size-paragraph);
+    /* font-size: 18px; /* TEMP */
+    
+}
+
+body.material .nectar-button.jumbo,
+.nectar-button[data-color-override="false"].regular-button.jumbo /* override */{
+    padding: 1.5rem 4rem !important; /* override */
+    box-shadow: 0 10px 0 var(--color-button-assigned-shadow); /* TEMP: Color */
+    font-size: var(--font-size-super-paragraph);
+    font-size: 23px; /* TEMP */
+    border-radius: 10px !important; /* override */
+}
+
+body.material .nectar-button.extra_jumbo,
+.nectar-button[data-color-override="false"].regular-button.extra_jumbo /* override */{
+    padding: 1.25rem 5rem !important; /* override */
+    box-shadow: 0 14px 0 var(--color-button-assigned-shadow); /* TEMP: Color */
+    font-size: var(--font-size-h5);
+    font-size: 29px; /* TEMP */
+    border-radius: 12px !important; /* override */
+    line-height: 1.5; /* TEMP */
+}
+
+
+
+/* Hover */
+
+.nectar-button.small:hover,
+.nectar-button[data-color-override="false"].regular-button.small:hover /* override */{
+    box-shadow: 0 8px 0 var(--color-button-assigned-shadow);
+    transform: translateY(-4px);
+}
+
+.nectar-button.medium:hover,
+.nectar-button[data-color-override="false"].regular-button.medium:hover /* override */{
+    box-shadow: 0 10px 0 var(--color-button-assigned-shadow);
+    transform: translateY(-4px);
+}
+
+body.material .nectar-button.large:hover /* override */ {
+    box-shadow: 0 14px 0 var(--color-button-assigned-shadow);
+    transform: translateY(-6px);
+}
+
+body.material .nectar-button.jumbo:hover,
+.nectar-button[data-color-override="false"].regular-button.extra_jumbo:hover /* override */{
+    box-shadow: 0 16px 0 var(--color-button-assigned-shadow);
+    transform: translateY(-6px);
+}
+
+body.material .nectar-button.extra_jumbo:hover,
+.nectar-button[data-color-override="false"].regular-button.extra_jumbo:hover /* override */{
+    box-shadow: 0 20px 0 var(--color-button-assigned-shadow);
+    transform: translateY(-8px);
+}
+
+/* Active */
+
+.nectar-button.small:active,
+.nectar-button[data-color-override="false"].regular-button.small:active /* override */{
+    box-shadow: 0 2px 0 var(--color-button-assigned-shadow);
+    transform: translateY(2px);
+}
+
+.nectar-button.medium:active,
+.nectar-button[data-color-override="false"].regular-button.medium:active /* override */{
+    box-shadow: 0 4px 0 var(--color-button-assigned-shadow);
+    transform: translateY(2px);
+}
+
+body.material .nectar-button.large:active /* override */ {
+    box-shadow: 0 6px 0 var(--color-button-assigned-shadow);
+    transform: translateY(2px);
+}
+
+body.material .nectar-button.jumbo:active,
+.nectar-button[data-color-override="false"].regular-button.extra_jumbo:active /* override */{
+    box-shadow: 0 8px 0 var(--color-button-assigned-shadow);
+    transform: translateY(2px);
+}
+
+body.material .nectar-button.extra_jumbo:active,
+.nectar-button[data-color-override="false"].regular-button.extra_jumbo:active /* override */{
+    box-shadow: 0 10px 0 var(--color-button-assigned-shadow);
+    transform: translateY(2px);
 }
