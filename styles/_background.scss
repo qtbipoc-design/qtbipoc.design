@@ -126,7 +126,7 @@
     top: 0;
     left: 0;
     
-    background: radial-gradient(65% 65% at 50% 15%, hsl(0 0% 100% / 50%) 0%, hsla(0 0% 0% / 95%) 100%); /* highlight/shadow */
+    background: radial-gradient(65% 65% at 50% 15%, hsl(0 0.01% 100% / 50%) 0%, hsla(0 0.01% 0.01% / 95%) 100%); /* highlight/shadow */
     mix-blend-mode: multiply;
 }
 
