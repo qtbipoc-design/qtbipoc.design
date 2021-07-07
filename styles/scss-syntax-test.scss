@@ -1,0 +1,14 @@
+/*
+.syntax-test {
+    color: red;
+
+    $var: yellow;
+
+    &:hover {
+        color: blue;
+        background-color: $var;
+    }
+
+
+} 
+*/
