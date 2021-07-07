@@ -1,3 +1,9 @@
+body #header-outer, body[data-header-color="dark"] #header-outer { /* overrides Salient/Header Navigation/Header Background */
+    background-color: hsla(0 0% 9% / 90%);
+    backdrop-filter: blur(var(--radius-background-blur));
+    -webkit-backdrop-filter: blur(var(--radius-background-blur));
+}
+
 #logo img { margin-left: -24px!important;}
 
 .nav-button a:before {
