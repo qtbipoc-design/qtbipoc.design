@@ -87,10 +87,10 @@ body.material .nectar-button.extra-color-3 {
 
 .nectar-button.small,
 .nectar-button[data-color-override="false"].regular-button.small /* override */{
-    padding: 0.5rem 1rem !important; /* override */
-    box-shadow: 0 4px 0 var(--color-button-assigned-shadow); /* TEMP: Color */
+    padding: 0.25em 0.75em !important; /* override */
+    box-shadow: 0 3px 0 var(--color-button-assigned-shadow); /* TEMP: Color */
     font-size: var(--font-size-sub-paragraph);
-    font-size: 14px; /* TEMP */
+    font-size: 11.34px; /* TEMP */
 }
 
 .nectar-button.medium,
@@ -136,8 +136,8 @@ body.material .nectar-button.extra_jumbo,
 
 .nectar-button.small:hover,
 .nectar-button[data-color-override="false"].regular-button.small:hover /* override */{
-    box-shadow: 0 8px 0 var(--color-button-assigned-shadow);
-    transform: translateY(-4px);
+    box-shadow: 0 5px 0 var(--color-button-assigned-shadow);
+    transform: translateY(-3px);
 }
 
 .nectar-button.medium:hover,
@@ -168,7 +168,7 @@ body.material .nectar-button.extra_jumbo:hover,
 .nectar-button.small:active,
 .nectar-button[data-color-override="false"].regular-button.small:active /* override */{
     box-shadow: 0 2px 0 var(--color-button-assigned-shadow);
-    transform: translateY(2px);
+    transform: translateY(0px);
 }
 
 .nectar-button.medium:active,

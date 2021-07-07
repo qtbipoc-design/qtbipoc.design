@@ -4,9 +4,10 @@
 
     /* 
     
+    USE THESE VARIABLE NAMES:
+
     Just use these following variables to override default styling, 
     and they will automatically calculate the correct responsive values based on screen widths
-
 
     --font-size-super-heading
     --font-size-h1
@@ -103,6 +104,7 @@
     --font-size-paragraph-default:      18px;
 	--font-size-paragraph:                  calc(var(--font-size-paragraph-default) * var(--multiplier-font-size-paragraph-current));
     --font-size-sub-paragraph:          14.29px;
+	--font-size-sub-sub-paragraph:          14.34px;
 	
     /* Line height values are based on manual optical review of ideal line-height of paragraphs and headings */
     --line-height-super-heading:        1.5;
@@ -121,6 +123,7 @@
     --line-height-super-paragraph:          1.75;
     --line-height-paragraph:                1.75;
     --line-height-sub-paragraph:            1.75;
+    --line-height-sub-sub-paragraph:        1.75;
 
 }
 
