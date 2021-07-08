@@ -3,9 +3,9 @@
     --radius-background-blur-medium: 16px;
     --radius-background-blur-light: 8px;
 
-    --radius-background-blur: var(--radius-background-blur-light);
+    --radius-background-blur: var(--radius-background-blur-light); /* Defaulting to light for Chrome, which renders blur imperfectly */
 }
-@supports (-webkit-backdrop-filter: blur(1px)) { 
+@supports (-webkit-backdrop-filter: blur(1px)) { /* Safari */
     :root {
         --radius-background-blur: var(--radius-background-blur-heavy);
     }
