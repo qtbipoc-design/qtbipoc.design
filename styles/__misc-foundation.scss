@@ -4,5 +4,9 @@
     --radius-background-blur-light: 8px;
 
     --radius-background-blur: var(--radius-background-blur-light);
-    @supports (-webkit-backdrop-filter:blur(1px)) { --radius-background-blur: var(--radius-background-blur-heavy);}
+}
+@supports (-webkit-backdrop-filter: blur(1px)) { 
+    :root {
+        --radius-background-blur: var(--radius-background-blur-heavy);
+    }
 }
