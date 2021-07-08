@@ -1,7 +1,13 @@
 body #header-outer, body[data-header-color="dark"] #header-outer { /* overrides Salient Panel/Header Navigation/Header Background */
     background-color: hsla(267 100% 5% / 90%);
-    backdrop-filter: blur(var(--radius-background-blur));
-    -webkit-backdrop-filter: blur(var(--radius-background-blur));
+}
+
+@supports (backdrop-filter: blur(1px)) {
+    body #header-outer, body[data-header-color="dark"] #header-outer { /* overrides Salient Panel/Header Navigation/Header Background */
+        background-color: hsla(267 100% 5% / 70%);
+        backdrop-filter: blur(var(--radius-background-blur));
+        -webkit-backdrop-filter: blur(var(--radius-background-blur));
+    }    
 }
 
 #header-outer .sf-menu a .menu-title-text {
