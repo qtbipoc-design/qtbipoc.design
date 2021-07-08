@@ -58,7 +58,7 @@ form .gform_body .gfield input::placeholder {
 .gform_wrapper.gravity-theme textarea,
 .gform_wrapper.gravity-theme .chosen-container-single .chosen-single,
 body .gform_wrapper.gravity-theme .chosen-container a.chosen-single {
-    background: hsla(0 0% 100% / 10%); /* temporary, needs variable */
+    background: hsla(0 0.01% 100% / 10%); /* temporary, needs variable */
     backdrop-filter: blur(var(--radius-background-blur));
     -webkit-backdrop-filter: blur(var(--radius-background-blur));
     
@@ -66,7 +66,7 @@ body .gform_wrapper.gravity-theme .chosen-container a.chosen-single {
     line-height: var(--line-height-paragraph);
     
     color: hsla(0 100% 100% / 75%); /* TEMP: Use color variable for default font color */
-    border: 2px solid hsla(0 0% 100% / 20%); /* temporary, needs variable */
+    border: 2px solid hsla(0 0.01% 100% / 20%); /* temporary, needs variable */
     box-shadow: none;
     -webkit-box-shadow: none;
     border-radius: 0.5rem;
