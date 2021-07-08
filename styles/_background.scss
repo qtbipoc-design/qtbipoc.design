@@ -11,7 +11,7 @@
 }
 
 .qdb-stars .nectar_cascading_images .cascading-image:not(:first-child) {
-    webkit-transform: none; /* override */
+    -webkit-transform: none; /* override */
     transform: none; /* override */
 }
 
