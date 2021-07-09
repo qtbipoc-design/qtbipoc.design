@@ -1,30 +1,14 @@
-// form .gform_body .gfield input,
-// form .gform_body .gfield select,
-// form .gform_body .gfield textarea {
-//     background-color: hsla(0 0% 0% / 20%); /* TEMP: Use color variable */
-//     border: 2px solid hsla(0 100% 100% / 20%); /* TEMP: Use color variable */
-//     border-radius: 0.5rem;
-// }
 
-form .gform_body .gfield input::placeholder {
-    color: transparent;
-}
-
-.gform_legacy_markup_wrapper input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]) {
-    padding: 1rem; /* override */
-}
-
-.before-footer .gform_legacy_markup_wrapper input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]) {
-    padding: 0.5rem; /* override */
-}
-
-
-/* From Bulk Styling */
+/* LABELS */
 
 .gform_wrapper .gfield_label {
     font-size: var(--font-size-paragraph);
     line-height: var(--line-height-paragraph);
 }
+
+
+
+/* DESCRIPTIONS, INSTRUCTIONS */
 
 .gform_wrapper .description, 
 .gform_wrapper .gfield_description, 
@@ -34,11 +18,16 @@ form .gform_body .gfield input::placeholder {
     line-height: var(--line-height-sub-paragraph);
 }
 
+
+/* "REQUIRED" LABEL */
+
 .gform_wrapper .gfield_required {
     font-size: var(--font-size-sub-paragraph);
     line-height: var(--line-height-sub-paragraph);
 }
 
+
+/* TEXT-RELATED INPUTS */
 
 .gform_wrapper input[type=color], 
 .gform_wrapper input[type=date], 
@@ -81,6 +70,51 @@ body .gform_wrapper .chosen-container a.chosen-single {
     line-height: var(--line-height-paragraph);
 }
 
-.gform_wrapper .chosen-container-single .chosen-single div b { /* dropdown arrow icon */
+.tabbed > ul li .active-tab,
+body.material input[type=text]:focus,
+body.material textarea:focus,
+body.material input[type=email]:focus,
+body.material input[type=search]:focus,
+body.material input[type=password]:focus,
+body.material input[type=tel]:focus,
+body.material input[type=url]:focus,
+body.material input[type=date]:focus,
+body.material select:focus,
+.row .col .wp-caption .wp-caption-text,
+.material.woocommerce-page input#coupon_code:focus,
+.material #search-outer #search input[type="text"],
+#header-outer[data-lhe="animated_underline"] #top nav > ul > li > a .menu-title-text:after,
+div[data-style="minimal"] .toggle.default.open i,
+div[data-style="minimal"] .toggle.default:hover i,
+div[data-style="minimal"] .toggle.accent-color.open i,
+div[data-style="minimal"] .toggle.accent-color:hover i,
+.single #single-meta div a:hover,
+.single #single-meta div a:focus,
+.single .fullscreen-blog-header #single-below-header > span a:hover,
+.blog-title #single-meta .nectar-social.hover > div a:hover,
+.nectar-hor-list-item[data-hover-effect="full_border"][data-color="accent-color"]:hover,
+.material.woocommerce-page[data-form-style="default"] div input#coupon_code:focus,
+.gform_wrapper input[type=number]:focus,
+.gform_wrapper .ginput_complex .ginput_container_date input:focus, 
+.gform_wrapper .ginput_complex .ginput_container_date select:focus,
+.gform_wrapper .chosen-container:focus {
+    border-color: var(--Cerise);
+}
+
+
+/* MISCELLANEOUS */
+
+/* Dropdown arrow icon */
+.gform_wrapper .chosen-container-single .chosen-single div b {
     margin-top: 4px;
+}
+
+/* Soft hide placeholder text */
+form .gform_body .gfield input::placeholder {
+    color: transparent;
+}
+
+/* Footer */
+.before-footer .gform_legacy_markup_wrapper input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]) {
+    padding: 0.5rem; /* override */
 }
