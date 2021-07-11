@@ -208,3 +208,20 @@ body h6.as-paragraph, body .as-paragraph h6 {line-height: var(--line-height-h6-a
     font-size: var(--font-size-sub-sub-paragraph);
     line-height: var(--line-height-sub-sub-paragraph);
 }
+
+
+/* Spacing */
+h1, h2, h3, h4, h5, h6,
+.super-heading {
+    margin-top: 1.5em; /* 1.5em by eye */
+}
+
+
+/* Misc. Element Types */
+
+pre {
+    background-color: hsla(0 0.01% 0% / 20%); /* temporary color */
+    border: 1px solid hsla(0 0.01% 100% / 20%); /* temporary color */
+    border-radius: 0.5rem; /* temporary: use variable */
+    padding: 1rem;
+}
