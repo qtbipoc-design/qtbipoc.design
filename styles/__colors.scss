@@ -8,11 +8,17 @@
     --Christalle: #35006A;
     --NeutralDark: #3B3B3B;
     --NeutralLight: #FAFAFA;
-    --Ghost: #C0C4CF;
     */
+
+    /* Note: These should match in WordPress > Salient > Accent Colors definitions */ 
+    --color-accent: var(--PurpleHeart); /* TEMP */
+    --color-extra-1: var(--BrightTurquoise); /* TEMP */
+    --color-extra-2: var(--Cerise); /* TEMP */
+    --color-extra-3: var(--LavenderRose); /* TEMP */
+
 }
 
 body {
     background: var(--NeutralDark);
-    color: white; /* temporary */
+    color: var(--NeutralLight); /* temporary */
 }
