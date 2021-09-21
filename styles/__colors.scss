@@ -1,15 +1,16 @@
 :root {
     --BrightTurquoise: #00CEF8;
-    --Ghost: #C0C4CF;
     --LavenderRose: #F89CE4;
     --Cerise: #E52A98;
     --PurpleHeart: #751ED9;
     --Meteorite: #46267F;
     --Christalle: #35006A;
-    --MineShaft: #3B3B3B;
+    --NeutralDark: #3B3B3B;
+    --NeutralLight: #FAFAFA;
+    --Ghost: #C0C4CF;
 }
 
 body {
-    background: var(--MineShaft);
+    background: var(--NeutralDark);
     color: white; /* temporary */
 }
