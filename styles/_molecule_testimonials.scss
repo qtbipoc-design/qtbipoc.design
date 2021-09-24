@@ -1,0 +1,32 @@
+/* 3-Column Testimonials */
+
+@media only screen and (min-width: 1000px) {
+    #ajax-content-wrap .molecule-testimonial-3column .col[data-padding-pos=top-bottom]>.vc_column-inner {
+        padding: 2rem 2rem;
+    }
+}
+
+
+.molecule-testimonial-3column .nectar_single_testimonial .inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.molecule-testimonial-3column .nectar_single_testimonial .inner .image-icon {
+    order: -1;
+}
+
+.molecule-testimonial-3column .nectar_single_testimonial .image-icon {
+    width: 12.5rem; /* override */
+    height: 12.5rem; /* override */
+    margin-right:0; /* override */
+    border: 3px solid hsla(0 100% 100% / 75%); /* TODO: Use color variable */
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+}
+
+.molecule-testimonial-3column .nectar_single_testimonial .inner .wrap {
+    font-weight: bold;
+    margin-bottom: 1rem;
+}

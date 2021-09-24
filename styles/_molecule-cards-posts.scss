@@ -1,0 +1,85 @@
+/* 2x2 Posts */
+
+.molecule-cards-posts-2x2 .post > .post {
+    background-color: transparent;
+    padding-bottom: 0;
+}
+
+.molecule-cards-posts-2x2 .post > .post a.img-link{
+    order: 2;
+}
+
+.molecule-cards-posts-2x2 .post > .post .meta-category {
+    display: none;
+}
+
+.molecule-cards-posts-2x2 .post > .post .article-content-wrap {
+    order: 1;
+}
+
+.molecule-cards-posts-2x2 .post > .post .article-content-wrap .excerpt {
+    display: none;
+}
+
+
+
+
+/* 3-column posts */
+
+.molecule-cards-posts-3column .blog-recent>.post>.post {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 4rem;
+}
+
+.molecule-cards-posts-3column .blog-recent[data-style="classic_enhanced"][data-color-scheme="dark"] .inner-wrap {
+    background-color: transparent; /* override */
+}
+
+.molecule-cards-posts-3column .blog-recent[data-style*="classic_enhanced"] .article-content-wrap {
+    padding: 0;
+}
+
+
+.molecule-cards-posts-3column .blog-recent[data-style*="classic_enhanced"][data-remove-post-nectar-love="1"][data-remove-post-comment-number="1"][data-remove-post-author="1"] .inner-wrap {
+    padding-bottom: 4rem; /* override */
+    
+}
+
+.molecule-cards-posts-3column .blog-recent .post .post-featured-img {
+    margin-bottom: 1rem;
+    border-radius: 0.5rem;
+}
+
+
+.molecule-cards-posts-3column .blog-recent .post .article-content-wrap .post-header .meta {
+    font-size: 17px; /* TEMP: Use variable */    
+}
+
+.molecule-cards-posts-3column .blog-recent .post .article-content-wrap .post-header h3.title {
+    font-size: 23px; /* TEMP: Use variable */
+    line-height: 1.5; /* TEMP: Use variable */
+}
+
+.molecule-cards-posts-3column .blog-recent>.post>.post .meta-category {
+    order: 2;
+    position: absolute;
+    bottom: 2rem;
+}
+
+.molecule-cards-posts-3column .blog-recent[data-style*="classic_enhanced"] .meta-category a {
+    border: 0; /* override */
+    padding: 0; /* override */
+    text-transform: none; /* override */
+    font-size: 14px; /* override */
+    font-weight: normal; /* override */
+    margin-top: 2rem;
+}
+
+.molecule-cards-posts-3column .masonry.classic_enhanced .posts-container .has-post-thumbnail .meta-category a, .blog-recent[data-style*="classic_enhanced"] .has-post-thumbnail .meta-category a, .blog-recent[data-style*="classic_enhanced"] .meta-category a {
+    position: static; /* override */
+    top: auto;  /* override */
+    left: auto;  /* override */
+    z-index: auto;  /* override */
+}
+

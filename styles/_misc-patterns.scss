@@ -11,3 +11,13 @@
     border: 1px solid hsla(0 100% 100% / 20%);
     padding: 2rem;
 }
+
+
+/* Google Calendar */
+
+.calendar-google iframe {
+    padding: 3%; /* TODO: Use rems to make responsive */
+    background-color: white;
+    border-radius: 1rem;
+    opacity: 0.9;
+}

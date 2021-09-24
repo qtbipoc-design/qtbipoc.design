@@ -1,0 +1,128 @@
+.home-graphic-spaceship {
+    transform: translateX(-50%);
+    height: 0;
+}
+
+
+/* How Identify Section */
+
+
+.home-how-identify-cards .nectar-fancy-box .image-wrap {
+    padding: 1rem 0;
+}
+
+.home-how-identify-cards .nectar-fancy-box .image-wrap .box-bg {
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    padding-bottom: 250px;
+    
+    
+}
+
+
+/* Google Calendar */
+
+.calendar-google iframe {
+    padding: 3%; /* TODO: Use rems to make responsive */
+    background-color: white;
+    border-radius: 1rem;
+    opacity: 0.9;
+}
+
+/* Blog/News */
+
+.blog-recent[data-style="classic_enhanced"][data-color-scheme="dark"] .inner-wrap {
+    background-color: transparent; /* override */
+}
+
+.masonry.classic_enhanced .masonry-blog-item .article-content-wrap, .blog-recent[data-style*="classic_enhanced"] .article-content-wrap {
+    padding: 0;
+}
+
+.blog-recent>.post>.post {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 4rem;
+}
+
+.blog-recent[data-style*="classic_enhanced"][data-remove-post-nectar-love="1"][data-remove-post-comment-number="1"][data-remove-post-author="1"] .inner-wrap {
+    padding-bottom: 4rem; /* override */
+    
+}
+
+.blog-recent .post .post-featured-img {
+    margin-bottom: 1rem;
+    border-radius: 0.5rem;
+}
+
+
+.blog-recent .post .article-content-wrap .post-header .meta {
+    font-size: 17px; /* TEMP: Use variable */    
+}
+
+.blog-recent .post .article-content-wrap .post-header h3.title {
+    font-size: 23px; /* TEMP: Use variable */
+    line-height: 1.5; /* TEMP: Use variable */
+}
+
+.home .blog-recent .col .post-header h3 {
+    margin-bottom: 2em;
+}
+
+.blog-recent>.post>.post .meta-category {
+    order: 2;
+    position: absolute;
+    bottom: 2rem;
+}
+
+.blog-recent[data-style*="classic_enhanced"] .meta-category a {
+    border: 0; /* override */
+    padding: 0; /* override */
+    text-transform: none; /* override */
+    font-size: 14px; /* override */
+    font-weight: normal; /* override */
+    margin-top: 2rem;
+}
+
+.masonry.classic_enhanced .posts-container .has-post-thumbnail .meta-category a, .blog-recent[data-style*="classic_enhanced"] .has-post-thumbnail .meta-category a, .blog-recent[data-style*="classic_enhanced"] .meta-category a {
+    position: static; /* override */
+    top: auto;  /* override */
+    left: auto;  /* override */
+    z-index: auto;  /* override */
+}
+
+
+
+/* Testimonial */
+
+@media only screen and (min-width: 1000px) {
+    #ajax-content-wrap .col[data-padding-pos=top-bottom]>.vc_column-inner {
+        padding: 2rem 2rem;
+    }
+}
+
+
+.nectar_single_testimonial .inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nectar_single_testimonial .inner .image-icon {
+    order: -1;
+}
+
+.testimonial_slider[data-style="multiple_visible_minimal"] .image-icon, .nectar_single_testimonial .image-icon {
+    width: 12.5rem; /* override */
+    height: 12.5rem; /* override */
+    margin-right:0; /* override */
+    border: 3px solid hsla(0 100% 100% / 75%); /* TODO: Use color variable */
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+}
+
+.nectar_single_testimonial .inner .wrap {
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
