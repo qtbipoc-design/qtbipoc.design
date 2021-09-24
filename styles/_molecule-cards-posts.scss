@@ -1,8 +1,16 @@
 /* 2x2 Posts */
 
 .molecule-cards-posts-2x2 .post > .post {
-    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+
     padding-bottom: 0;
+}
+
+.molecule-cards-posts-2x2 .blog-recent[data-style=classic_enhanced][data-color-scheme=dark] .inner-wrap {
+     /* override */
+     
+    background-color: transparent;
 }
 
 .molecule-cards-posts-2x2 .post > .post a.img-link{
@@ -15,6 +23,35 @@
 
 .molecule-cards-posts-2x2 .post > .post .article-content-wrap {
     order: 1;
+}
+
+.molecule-cards-posts-2x2 .blog-recent[data-style*="classic_enhanced"] .article-content-wrap {
+     /* override */
+     
+    background-color: transparent;
+    padding: 0;
+}
+
+.molecule-cards-posts-2x2 .post-header .meta {
+    /* Post Date */
+    font-size: var(--font-size-paragraph);
+    border-bottom: 1px solid rgba(255 255 255 / 50%); /* color temporary. Use deemphasis border on dark */
+    padding-bottom: 0.5rem;
+    display: inline-block;
+}
+
+.molecule-cards-posts-2x2 .blog-recent[data-style*=classic_enhanced][data-color-scheme=dark] .post-header {
+    color: rgba(255 255 255 / 80%); /* temporary. make it de-emphasis text on dark */ /* override */
+}
+
+body .molecule-cards-posts-2x2 .post-header h3.title {
+    font-size: var(--font-size-super-paragraph); /* override */
+    margin-top: 0.5rem;
+}
+
+.molecule-cards-posts-2x2 .blog-recent[data-style=classic_enhanced][data-color-scheme=dark] h3.title {
+    color: white; /* temporary. make it default text on dark */ /* override */
+        
 }
 
 .molecule-cards-posts-2x2 .post > .post .article-content-wrap .excerpt {
