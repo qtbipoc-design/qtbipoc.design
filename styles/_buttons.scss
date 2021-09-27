@@ -139,36 +139,36 @@ body .nectar-button[data-color-override="false"].see-through.extra_jumbo /* over
 
 .nectar-button.small:hover,
 .nectar-button[data-color-override="false"].regular-button.small:hover /* override */,
-.nectar-button[data-color-override="false"].see-through.small:hover /* override */{
-    box-shadow: 0 5px 0 var(--color-button-assigned-shadow);
+body .nectar-button[data-color-override="false"].see-through.small:hover /* override */{
+    box-shadow: 0 5px 0 var(--color-button-assigned-shadow) !important;
     transform: translateY(-3px);
 }
 
 .nectar-button.medium:hover,
 .nectar-button[data-color-override="false"].regular-button.medium:hover /* override */,
-.nectar-button[data-color-override="false"].see-through.medium:hover /* override */{
-    box-shadow: 0 10px 0 var(--color-button-assigned-shadow);
+body .nectar-button[data-color-override="false"].see-through.medium:hover /* override */{
+    box-shadow: 0 10px 0 var(--color-button-assigned-shadow) !important;
     transform: translateY(-4px);
 }
 
 body.material .nectar-button.large:hover /* override */,
 .nectar-button[data-color-override="false"].regular-button.large:hover /* override */,
-.nectar-button[data-color-override="false"].see-through.large:hover /* override */ {
-    box-shadow: 0 14px 0 var(--color-button-assigned-shadow);
+body .nectar-button[data-color-override="false"].see-through.large:hover /* override */ {
+    box-shadow: 0 14px 0 var(--color-button-assigned-shadow) !important;
     transform: translateY(-6px);
 }
 
 body.material .nectar-button.jumbo:hover,
 .nectar-button[data-color-override="false"].regular-button.extra_jumbo:hover /* override */,
-.nectar-button[data-color-override="false"].see-through.extra_jumbo:hover /* override */{
-    box-shadow: 0 16px 0 var(--color-button-assigned-shadow);
+body .nectar-button[data-color-override="false"].see-through.extra_jumbo:hover /* override */{
+    box-shadow: 0 16px 0 var(--color-button-assigned-shadow) !important;
     transform: translateY(-6px);
 }
 
 body.material .nectar-button.extra_jumbo:hover,
 .nectar-button[data-color-override="false"].regular-button.extra_jumbo:hover /* override */,
-.nectar-button[data-color-override="false"].see-through.extra_jumbo:hover /* override */{
-    box-shadow: 0 20px 0 var(--color-button-assigned-shadow);
+body .nectar-button[data-color-override="false"].see-through.extra_jumbo:hover /* override */{
+    box-shadow: 0 20px 0 var(--color-button-assigned-shadow) !important;
     transform: translateY(-8px);
 }
 
@@ -176,36 +176,36 @@ body.material .nectar-button.extra_jumbo:hover,
 
 .nectar-button.small:active,
 .nectar-button[data-color-override="false"].regular-button.small:active /* override */,
-.nectar-button[data-color-override="false"].see-through.small:active /* override */{
-    box-shadow: 0 2px 0 var(--color-button-assigned-shadow);
+body .nectar-button[data-color-override="false"].see-through.small:active /* override */{
+    box-shadow: 0 2px 0 var(--color-button-assigned-shadow) !important;
     transform: translateY(0px);
 }
 
 .nectar-button.medium:active,
 .nectar-button[data-color-override="false"].regular-button.medium:active /* override */,
-.nectar-button[data-color-override="false"].see-through.medium:active /* override */{
-    box-shadow: 0 4px 0 var(--color-button-assigned-shadow);
+body .nectar-button[data-color-override="false"].see-through.medium:active /* override */{
+    box-shadow: 0 4px 0 var(--color-button-assigned-shadow) !important;
     transform: translateY(2px);
 }
 
 body.material .nectar-button.large:active /* override */,
 .nectar-button[data-color-override="false"].regular-button.large:active /* override */,
-.nectar-button[data-color-override="false"].see-through.large:active /* override */ {
-    box-shadow: 0 6px 0 var(--color-button-assigned-shadow);
+body.nectar-button[data-color-override="false"].see-through.large:active /* override */ {
+    box-shadow: 0 6px 0 var(--color-button-assigned-shadow) !important;
     transform: translateY(2px);
 }
 
 body.material .nectar-button.jumbo:active,
 .nectar-button[data-color-override="false"].regular-button.extra_jumbo:active /* override */,
-.nectar-button[data-color-override="false"].see-through.large:active /* override */{
-    box-shadow: 0 8px 0 var(--color-button-assigned-shadow);
+body.nectar-button[data-color-override="false"].see-through.large:active /* override */{
+    box-shadow: 0 8px 0 var(--color-button-assigned-shadow) !important;
     transform: translateY(2px);
 }
 
 body.material .nectar-button.extra_jumbo:active,
 .nectar-button[data-color-override="false"].regular-button.extra_jumbo:active /* override */,
-.nectar-button[data-color-override="false"].see-through.large:active /* override */{
-    box-shadow: 0 10px 0 var(--color-button-assigned-shadow);
+body.nectar-button[data-color-override="false"].see-through.large:active /* override */{
+    box-shadow: 0 10px 0 var(--color-button-assigned-shadow) !important;
     transform: translateY(2px);
 }
 
