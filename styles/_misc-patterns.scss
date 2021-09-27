@@ -2,14 +2,15 @@
 
 .card-default-style>.vc_column-inner,
 .card-default-style.wpb_row.vc_row-fluid.vc_row.inner_row,
+.molecule-general-largeMediaText>.col>.vc_column_container>.vc_column-inner,
 .row.blog-recent>.post,
 .column-bg-overlay-wrap .column-bg-overlay /* For override */ {
-    background-color: hsla(268 100% 90% / 10%);
+    background-color: hsla(268 100% 90% / 10%); /* TODO: use variable */
     backdrop-filter: blur(var(--radius-background-blur));
     -webkit-backdrop-filter: blur(var(--radius-background-blur));
-    border-radius: 1rem;
-    border: 1px solid hsla(0 100% 100% / 20%);
-    padding: 2rem;
+    border-radius: 1rem; /* TODO: use variable */
+    border: 1px solid hsla(0 100% 100% / 20%); /* TODO: use variable */
+    padding: 2rem; /* TODO: use variable */
 }
 
 
