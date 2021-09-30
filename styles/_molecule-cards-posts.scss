@@ -120,3 +120,56 @@ body .molecule-cards-posts-2x2 .post-header h3.title {
     z-index: auto;  /* override */
 }
 
+
+
+
+/* 4-Column Image Title Date Posts */
+
+.molecule-cards-posts-imageTitleDate-4column .post > .post {
+    display: flex;
+    flex-direction: column;
+
+    padding-bottom: 0;
+}
+
+.molecule-cards-posts-imageTitleDate-4column .blog-recent[data-style=classic_enhanced][data-color-scheme=dark] .inner-wrap {
+     /* override */
+     
+    background-color: transparent;
+}
+
+body .row .molecule-cards-posts-imageTitleDate-4column .col .post-featured-img img {
+    height: 20rem; /* TODO: Made tall specifically for bookclub images. Extract to separate rule. */
+    object-fit: cover;
+}
+
+.molecule-cards-posts-imageTitleDate-4column .post > .post .meta-category {
+    display: none;
+}
+
+.molecule-cards-posts-imageTitleDate-4column .post-header .meta {
+    /* Post Date */
+    font-size: var(--font-size-paragraph);
+    border-bottom: 1px solid rgba(255 255 255 / 50%); /* color temporary. Use deemphasis border on dark */
+    padding-bottom: 0.5rem;
+    
+}
+
+.molecule-cards-posts-imageTitleDate-4column .blog-recent[data-style*="classic_enhanced"] .article-content-wrap {
+     /* override */
+     
+    /*background-color: transparent;*/
+    padding: 0;
+}
+
+.molecule-cards-posts-imageTitleDate-4column .blog-recent[data-style*=classic_enhanced][data-color-scheme=dark] .post-header {
+    color: rgba(255 255 255 / 80%); /* temporary. make it de-emphasis text on dark */ /* override */
+}
+
+body .row .molecule-cards-posts-imageTitleDate-4column .col h3 {
+    font-size: var(--font-size-h6);
+}
+
+.molecule-cards-posts-imageTitleDate-4column .post > .post .article-content-wrap .excerpt {
+    display: none;
+}
