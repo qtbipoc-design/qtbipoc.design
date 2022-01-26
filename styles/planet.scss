@@ -1,0 +1,317 @@
+.planet {
+
+	/* Defaults */
+	--planet-diameter: 150px;
+	--sprite_x: 50%;
+	--sprite_y: 50%;
+	--offset_x: 0px;
+	--offset_y: 0px;
+	--color-base: #9700FF;
+	
+	background-color: red;
+	background-color: var(--color-base);
+	width: var(--planet-diameter);
+	height: var(--planet-diameter);
+
+	clip-path: circle(50% at 50% 50%);
+	position: absolute;
+	left: var(--offset_x);
+	top: var(--offset_y);
+	transform: translate(-50%, -50%);
+}
+
+.planet::after{
+	display: block;
+	width: 100%;
+	height: 100%;
+	content: "";
+	background-image: radial-gradient(circle at 25% 25%, hsla(0 0% 100% / 0.35) 0%, hsla(0 0% 100% / 0) 50%, hsla(0 0% 0% / .5) 100%);position: absolute;
+	left:0;
+	top:0;
+}
+
+
+.planet .svgTexture {
+
+	--ratio-planet-diameter-to-sprite: 0.2;
+	--translate-offset: calc(var(--ratio-planet-diameter-to-sprite) / 2 * 100%); /* Half of planet diameter as percentage of sprite */
+	--translate-sprite-x: calc(-1 * (var(--sprite_x) - var(--translate-offset)));
+	--translate-sprite-y: calc(-1 * (var(--sprite_y) - var(--translate-offset)));
+	--translate: translate(var(--translate-sprite-x), var(--translate-sprite-y));
+	
+	width: calc(100% / var(--ratio-planet-diameter-to-sprite));
+	transform: var(--translate);
+ 	-webkit-transform: var(--translate);
+	
+	background-color: var(--color-base);
+}
+
+
+.planet.scheme-monochromatic .svgTexture {
+    --color-fill-1: hsla(var(--color-base-hue) var(--color-sla-tint));
+    --color-fill-2: hsla(var(--color-base-hue) var(--color-sla-shade));
+    
+    
+	--fill-svg-1: var(--color-fill-1);
+	--fill-svg-2: var(--color-fill-2);
+	--fill-svg-3: var(--color-fill-1);
+	--fill-svg-4: var(--color-fill-2);
+	--fill-svg-5: var(--color-fill-1);
+	--fill-svg-6: var(--color-fill-2);
+	--fill-svg-7: var(--color-fill-1);
+}
+
+
+.planet.scheme-analogous .svgTexture {
+    --color-lower-hue:  calc(var(--color-base-hue) + var(--color-analogous-degree-shift-lower));
+    --color-higher-hue: calc(var(--color-base-hue) + var(--color-analogous-degree-shift-higher));
+	--color-saturation-child: calc(var(--color-base-saturation) * 0.8);
+    --color-lightness-child: calc(var(--color-base-lightness) * 0.8);
+    /* --color-fill-1: hsl(var(--color-lower-hue) var(--color-base-saturation) var(--color-base-lightness)); */
+    /* --color-fill-2: hsl(var(--color-higher-hue) var(--color-base-saturation) var(--color-base-lightness)); */
+    --color-fill-1: hsl(var(--color-lower-hue) var(--color-saturation-child) var(--color-lightness-child)); /* experiment */
+    --color-fill-2: hsl(var(--color-higher-hue) var(--color-saturation-child) var(--color-lightness-child)); /* experiment */
+
+	--fill-svg-1: var(--color-fill-1);
+	--fill-svg-2: var(--color-fill-2);
+	--fill-svg-3: var(--color-fill-1);
+	--fill-svg-4: var(--color-fill-2);
+	--fill-svg-5: var(--color-fill-1);
+	--fill-svg-6: var(--color-fill-2);
+	--fill-svg-7: var(--color-fill-1);
+	
+}
+
+.planet.scheme-lesbian {
+	--color-fill-1: hsla(var(--color-hue-brand-pink) var(--color-sla-shade)); /* dark pink */
+	--color-fill-2: hsla(var(--color-hue-brand-pink) var(--color-sla-default)); /* pink */
+	--color-fill-3: hsla(var(--color-hue-brand-pink) var(--color-sla-tint)); /* light pink */
+	--color-fill-4: var(--color-brand-white); /* white */
+	--color-fill-5: hsla(var(--color-hue-brand-orange) var(--color-sla-tint)); /* light orange */
+	--color-fill-6: hsla(var(--color-hue-brand-orange) var(--color-sla-default)); /* orange */
+	--color-fill-7: hsla(var(--color-hue-brand-orange) var(--color-sla-shade)); /* dark orange */
+	
+	
+	--fill-svg-1: var(--color-fill-1);
+	--fill-svg-2: var(--color-fill-2);
+	--fill-svg-3: var(--color-fill-3);
+	--fill-svg-4: var(--color-fill-2);
+	--fill-svg-5: var(--color-fill-5);
+	--fill-svg-6: var(--color-fill-6);
+	--fill-svg-7: var(--color-fill-7);
+}
+
+.planet.scheme-lesbian,
+.planet.scheme-lesbian * {
+    /* applies to the areas both outside and inside of SVG bounds */
+	--color-base: var(--color-fill-4);
+}
+
+
+
+.planet.scheme-pansexual {
+
+	--color-fill-1: var(--color-brand-pink); /* pink */
+	--color-fill-2: var(--color-brand-yellow); /* yellow */
+	--color-fill-3: var(--color-brand-lightblue); /* light blue */	
+
+	--fill-svg-1: var(--color-fill-1);
+	--fill-svg-2: var(--color-fill-3);
+	--fill-svg-3: var(--color-fill-1);
+	--fill-svg-4: var(--color-fill-3);
+	--fill-svg-5: var(--color-fill-1);
+	--fill-svg-6: var(--color-fill-3);
+	--fill-svg-7: var(--color-fill-1);
+}
+
+
+
+.planet.scheme-pansexual,
+.planet.scheme-pansexual * {
+    /* applies to the areas both outside and inside of SVG bounds */
+	--color-base: var(--color-fill-2);
+}
+
+
+.planet.scheme-bisexual {
+
+	--color-fill-1: var(--color-brand-pink);
+	--color-fill-2: var(--color-brand-purple);
+	--color-fill-3: var(--color-brand-blue);
+
+	--fill-svg-1: var(--color-fill-1);
+	--fill-svg-2: var(--color-fill-3);
+	--fill-svg-3: var(--color-fill-1);
+	--fill-svg-4: var(--color-fill-3);
+	--fill-svg-5: var(--color-fill-1);
+	--fill-svg-6: var(--color-fill-3);
+	--fill-svg-7: var(--color-fill-1);
+}
+
+.planet.scheme-bisexual,
+.planet.scheme-bisexual * {
+    /* applies to the areas both outside and inside of SVG bounds */
+	--color-base: var(--color-fill-2);
+}
+
+
+.planet.scheme-trans {
+
+	--color-fill-1: var(--color-brand-lightblue);
+	--color-fill-2: var(--color-brand-white);
+	--color-fill-3: var(--color-brand-pink-tint);
+
+	--fill-svg-1: var(--color-fill-1);
+	--fill-svg-2: var(--color-fill-3);
+	--fill-svg-3: var(--color-fill-1);
+	--fill-svg-4: var(--color-fill-3);
+	--fill-svg-5: var(--color-fill-1);
+	--fill-svg-6: var(--color-fill-2);
+	--fill-svg-7: var(--color-fill-3);
+}
+
+.planet.scheme-trans,
+.planet.scheme-trans * {
+    /* applies to the areas both outside and inside of SVG bounds */
+	--color-base: var(--color-fill-2);
+}
+
+
+.planet.scheme-asexual {
+
+	--color-fill-1: var(--color-brand-black);
+	--color-fill-2: hsl(0 0% var(--color-lightness-tint));
+	--color-fill-3: var(--color-brand-white);
+	--color-fill-4: var(--color-brand-purple);
+
+	--fill-svg-1: var(--color-fill-1);
+	--fill-svg-2: var(--color-fill-2);
+	--fill-svg-3: var(--color-fill-3);
+	--fill-svg-4: var(--color-fill-1);
+	--fill-svg-5: var(--color-fill-2);
+	--fill-svg-6: var(--color-fill-3);
+	--fill-svg-7: var(--color-fill-1);
+}
+
+.planet.scheme-asexual,
+.planet.scheme-asexual * {
+    /* applies to the areas both outside and inside of SVG bounds */
+	--color-base: var(--color-fill-4);
+}
+
+
+
+.planet.scheme-intersex {
+
+	--color-fill-1: var(--color-brand-yellow);
+	--color-fill-2: var(--color-brand-purple);
+
+	--fill-svg-1: var(--color-fill-2);
+	--fill-svg-2: var(--color-fill-2);
+	--fill-svg-3: var(--color-fill-2);
+	--fill-svg-4: var(--color-fill-2);
+	--fill-svg-5: var(--color-fill-2);
+	--fill-svg-6: var(--color-fill-2);
+	--fill-svg-7: var(--color-fill-2);
+}
+
+.planet.scheme-intersex,
+.planet.scheme-intersex * {
+    /* applies to the areas both outside and inside of SVG bounds */
+	--color-base: var(--color-fill-1);
+}
+
+
+.planet.scheme-nonbinary {
+
+	--color-fill-1: var(--color-brand-yellow);
+	--color-fill-2: var(--color-brand-white);
+	--color-fill-3: var(--color-brand-purple);
+	--color-fill-3: var(--color-brand-black);
+
+	--fill-svg-1: var(--color-fill-2);
+	--fill-svg-2: var(--color-fill-3);
+	--fill-svg-3: var(--color-fill-4);
+	--fill-svg-4: var(--color-fill-2);
+	--fill-svg-5: var(--color-fill-3);
+	--fill-svg-6: var(--color-fill-4);
+	--fill-svg-7: var(--color-fill-3);
+}
+
+.planet.scheme-nonbinary,
+.planet.scheme-nonbinary * {
+    /* applies to the areas both outside and inside of SVG bounds */
+	--color-base: var(--color-fill-1);
+}
+
+
+.planet.scheme-genderqueer {
+
+	--color-fill-1: var(--color-brand-purple-tint);
+	--color-fill-2: var(--color-brand-white);
+	--color-fill-3: var(--color-brand-green-shade);
+	
+	--fill-svg-1: var(--color-fill-1);
+	--fill-svg-2: var(--color-fill-3);
+	--fill-svg-3: var(--color-fill-1);
+	--fill-svg-4: var(--color-fill-3);
+	--fill-svg-5: var(--color-fill-1);
+	--fill-svg-6: var(--color-fill-3);
+	--fill-svg-7: var(--color-fill-1);
+}
+
+.planet.scheme-genderqueer,
+.planet.scheme-genderqueer * {
+    /* applies to the areas both outside and inside of SVG bounds */
+	--color-base: var(--color-fill-2);
+}
+
+
+.planet.scheme-blackidentify {
+
+	--color-fill-1: var(--color-brand-red);
+	--color-fill-2: var(--color-brand-black);
+	--color-fill-3: var(--color-brand-green-shade);
+
+	--fill-svg-1: var(--color-fill-2);
+	--fill-svg-2: var(--color-fill-3);
+	--fill-svg-3: var(--color-fill-2);
+	--fill-svg-4: var(--color-fill-3);
+	--fill-svg-5: var(--color-fill-2);
+	--fill-svg-6: var(--color-fill-3);
+	--fill-svg-7: var(--color-fill-2);
+}
+
+.planet.scheme-blackidentify,
+.planet.scheme-blackidentify * {
+    /* applies to the areas both outside and inside of SVG bounds */
+	--color-base: var(--color-fill-1);
+}
+
+
+/* Planet Color Scheme Template */
+/*
+
+.planet.scheme- {
+
+	--color-fill-1: var(--color-);
+	--color-fill-2: var(--color-);
+	--color-fill-3: var(--color-);
+	
+	--color-base: var(--color-fill-);
+
+	--fill-svg-1: var(--color-fill-1);
+	--fill-svg-2: var(--color-fill-);
+	--fill-svg-3: var(--color-fill-);
+	--fill-svg-4: var(--color-fill-);
+	--fill-svg-5: var(--color-fill-);
+	--fill-svg-6: var(--color-fill-);
+	--fill-svg-7: var(--color-fill-);
+}
+
+.planet.scheme- .svgTexture {
+	--color-base: var(--color-fill-);
+}
+
+
+*/
