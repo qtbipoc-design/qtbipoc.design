@@ -31,8 +31,8 @@
 
     
     /* Color Definitions */
-	--color-brand-white: hsla(0 0% 100% / var(--color-alpha-default));
-	--color-brand-black: hsla(0 0% 20% / var(--color-alpha-default));
+	--color-brand-white: hsla(0 0.01% 100% / var(--color-alpha-default)); /* Bug: Need to set 0% to 0.01%, else the 0% becomes 0 when compiling and become invalid */
+	--color-brand-black: hsla(0 0.01% 20% / var(--color-alpha-default)); /* Bug: Need to set 0% to 0.01%, else the 0% becomes 0 when compiling and become invalid */
 
 	--color-brand-red: hsla(var(--color-hue-brand-red) var(--color-sla-default));
 	--color-brand-red-tint: hsla(var(--color-hue-brand-red) var(--color-sla-tint));
