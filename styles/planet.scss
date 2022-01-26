@@ -47,6 +47,8 @@
 }
 
 
+/* Planet Color Schemes */
+
 .planet.scheme-monochromatic .svgTexture {
     --color-fill-1: hsla(var(--color-base-hue) var(--color-sla-tint));
     --color-fill-2: hsla(var(--color-base-hue) var(--color-sla-shade));
