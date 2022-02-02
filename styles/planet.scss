@@ -2,7 +2,7 @@
 
 	/* Defaults */
 	--planet-diameter: 150px;
-	--sprite_x: 50%;
+	--planet-sprite_x: 50%;
 	--sprite_y: 50%;
 	--offset_x: 0px;
 	--offset_y: 0px;
@@ -35,7 +35,7 @@
 
 	--ratio-planet-diameter-to-sprite: 0.2;
 	--translate-offset: calc(var(--ratio-planet-diameter-to-sprite) / 2 * 100%); /* Half of planet diameter as percentage of sprite */
-	--translate-sprite-x: calc(-1 * (var(--sprite_x) - var(--translate-offset)));
+	--translate-sprite-x: calc(-1 * (var(--planet-sprite_x) - var(--translate-offset)));
 	--translate-sprite-y: calc(-1 * (var(--sprite_y) - var(--translate-offset)));
 	--translate: translate(var(--translate-sprite-x), var(--translate-sprite-y));
 	
