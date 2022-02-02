@@ -3,9 +3,9 @@
 	/* Defaults */
 	--planet-diameter: 150px;
 	--planet-sprite_x: 50%;
-	--sprite_y: 50%;
-	--offset_x: 0px;
-	--offset_y: 0px;
+	--planet-sprite_y: 50%;
+	--planet-offset_x: 0px;
+	--planet-offset_y: 0px;
 	--color-base: #9700FF;
 	
 	background-color: red;
@@ -15,8 +15,8 @@
 
 	clip-path: circle(50% at 50% 50%);
 	position: absolute;
-	left: var(--offset_x);
-	top: var(--offset_y);
+	left: var(--planet-offset_x);
+	top: var(--planet-offset_y);
 	transform: translate(-50%, -50%);
 }
 
@@ -36,7 +36,7 @@
 	--ratio-planet-diameter-to-sprite: 0.2;
 	--translate-offset: calc(var(--ratio-planet-diameter-to-sprite) / 2 * 100%); /* Half of planet diameter as percentage of sprite */
 	--translate-sprite-x: calc(-1 * (var(--planet-sprite_x) - var(--translate-offset)));
-	--translate-sprite-y: calc(-1 * (var(--sprite_y) - var(--translate-offset)));
+	--translate-sprite-y: calc(-1 * (var(--planet-sprite_y) - var(--translate-offset)));
 	--translate: translate(var(--translate-sprite-x), var(--translate-sprite-y));
 	
 	width: calc(100% / var(--ratio-planet-diameter-to-sprite));
