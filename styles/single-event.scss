@@ -1,0 +1,22 @@
+
+
+/* Transcript */
+.row_inner_transcript .vc_acf {
+    height: 25rem;
+    overflow-y: scroll;
+    background-color: hsla(0 0.01% 100% / 5%);
+    padding: 1rem;
+    border-radius: 1rem;
+    border: 1px solid hsla(0 0.01% 100% / 15%);
+}
+
+.row_inner_transcript .vc_acf *:first-child {
+    margin-top: 1rem;
+    padding-top: 2rem;
+    border-top: 0.25rem solid var(--color-brand-white);
+}
+
+.row_inner_transcript .vc_acf *:last-child {
+    margin-bottom: 3rem;
+    border-bottom: 0.25rem solid var(--color-brand-white);
+}
