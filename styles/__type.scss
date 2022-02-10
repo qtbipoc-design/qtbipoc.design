@@ -127,6 +127,8 @@
     --line-height-sub-paragraph:            1.75;
     --line-height-sub-sub-paragraph:        1.75;
 
+
+    --width-text-default: 65ch;
 }
 
 body {
@@ -212,7 +214,7 @@ body h6.as-paragraph, body .as-paragraph h6 {line-height: var(--line-height-h6-a
 
 /* Text Container Sizing */
 p {
-    max-width: 65ch;
+    max-width: var(--width-text-default);
 }
 
 
