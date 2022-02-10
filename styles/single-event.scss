@@ -13,8 +13,7 @@
 
 @media only screen and (min-width:1000px) {
     .row_inner_transcript .vc_acf {
-        padding: 1rem 5rem 1rem 1rem;
-        max-width: calc(var(--width-text-default) + 5rem + 1rem);
+        max-width: calc(var(--width-text-default) + 15rem + 1rem);
     }
 }
 
