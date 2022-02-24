@@ -87,6 +87,7 @@ body .container-wrap .vc_row-fluid[data-column-margin="40px"] .wpb_column:not(.c
 /* Widget: Post Summary */
 .event-widget-column-summary {
     margin-bottom: 4rem;
+    text-align: left; /* force assign to offset center alignment in some parent containers */
 }
 
 .row .col.event-widget-column-summary img {

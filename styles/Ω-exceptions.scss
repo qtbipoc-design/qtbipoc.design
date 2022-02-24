@@ -1,0 +1,6 @@
+/* Simple overrides of existing styles.
+    Use only for one-off exceptions. If patterns of use emerge, create more permanent rules. */
+
+.exception-max-width-none, .exception-max-width-none * {
+    max-width: none;
+}
