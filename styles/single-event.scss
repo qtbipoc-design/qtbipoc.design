@@ -36,8 +36,16 @@
     line-height: var(--line-height-h6);
 }
 
+/* Video */
+.event_video {
+    margin-bottom: 0;
+}
 
 /* Transcript */
+.row_inner_transcript h3 {
+    margin-top: 0;
+}
+
 .row_inner_transcript .vc_acf {
     height: 25rem;
     overflow-y: scroll;
