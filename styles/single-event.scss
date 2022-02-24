@@ -1,4 +1,35 @@
+/* Post Header area */
+
+.row-event-meta {
+    font-family: new-spirit;
+    font-size: var(--font-size-h6);
+}
+
+.event-meta-eventType+.event-meta-eventDate::before {
+    content: "•";
+    margin: 0 0.5em;
+}
+
+/* Post hedaer element spacing */
+
+.material .wpb_row.row-event-meta { 
+    margin-top: 4rem;
+    margin-bottom: 0; /* override */
+}
+
+.material .wpb_content_element.wpb_raw_code { /* override */ /* Applies site-wide */
+    margin-bottom:0;
+}
+
+.row-event-title h1 {
+    margin-top: 0;
+}
+
+/* Content */
+
 .row_featured_image {display: none;}
+
+
 
 
 /* Transcript */
@@ -28,3 +59,5 @@
     margin-bottom: 3rem;
     border-bottom: 0.25rem solid var(--color-brand-white);
 }
+
+

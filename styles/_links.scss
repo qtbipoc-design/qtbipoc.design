@@ -10,3 +10,7 @@ a {
 a.nectar-button+a {
     margin-left: 1rem;
 }
+
+a.link-back::before {
+    content: '\276E  '; /* \276E is left chevron */
+}
