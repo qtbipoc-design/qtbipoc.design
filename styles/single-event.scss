@@ -1,8 +1,10 @@
 /* Post Header area */
 
-.row-event-meta {
+.row-event-meta,
+.row-event-meta * {
     font-family: new-spirit;
     font-size: var(--font-size-h6);
+    line-height: var(--line-height-h6);
 }
 
 .event-meta-eventType+.event-meta-eventDate::before {
@@ -29,7 +31,10 @@
 
 .row_featured_image {display: none;}
 
-
+.event-post-type .event-description, .event-post-type .event-description * {
+    font-size: var(--font-size-h6);
+    line-height: var(--line-height-h6);
+}
 
 
 /* Transcript */
