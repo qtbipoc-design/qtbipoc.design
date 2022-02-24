@@ -1,0 +1,86 @@
+
+
+/* All events widgets */
+
+
+
+
+/* Summary widgets */
+.event-widget-column-summary {
+    margin-bottom: 4rem;
+}
+
+.event-widget-column-summary,
+.event-widget-future-book-club-column-info,
+.event-widget-future-ux-nights-column-info {
+    font-family: proxima-soft;
+}
+
+.event-widget-element-event-date,
+.event-widget-element-event-date span{
+    font-family: new-spirit;
+}
+
+.row .col.event-widget-column-summary img,
+.event-widget-future-ux-nights-column-info .event-widget-element-event-date,
+.event-widget-future-book-club-column-info .event-widget-element-event-date {
+    margin-bottom: 0;
+}
+
+
+.row .col.event-widget-column-summary .event-widget-element-featured-image {
+    margin-bottom: 0.5rem;
+}
+
+.event-widget-column-summary .event-widget-element-event-date{
+    padding-bottom: 0;
+}
+
+.event-widget-column-summary .event-widget-element-post-heading,
+.event-widget-future-ux-nights-column-info .event-widget-element-post-heading,
+.event-widget-future-ux-nights-column-info .event-widget-element-event-name,
+.event-widget-future-book-club-column-info .event-widget-element-post-heading{
+    margin-top: 0;
+}
+
+/* Crop featured image by aspect ratio - Post summary */
+.event-widget-column-summary .event-widget-element-featured-image {
+    overflow: hidden;
+}
+
+.event-widget-column-summary-book-club .event-widget-element-featured-image {
+    aspect-ratio: 6/9;
+}
+
+.event-widget-column-summary-ux-nights .event-widget-element-featured-image {
+    aspect-ratio: 16/9;
+}
+
+.event-widget-column-summary .event-widget-element-featured-image .wpb_wrapper {
+    transform: translate(0, -50%);
+    position: relative;
+    top: 50%;
+    height: 100%;
+}
+
+.event-widget-column-summary .event-widget-element-featured-image .wpb_wrapper p {
+    /* height: 100%; */
+    transform: translate(0, -50%);
+    position: relative;
+    top: 50%;
+    /* height: 100%; */
+}
+
+/* Vertically center info container for future UX Nights */
+.event-widget-future-ux-nights-column-info .vc_column-inner {
+    transform: translate(0, -50%);
+    position: relative;
+    top: 50%;
+}
+
+/* override because widget is contained within Global Section */
+body .container-wrap .vc_row-fluid[data-column-margin="40px"] .wpb_column:not(.child_column), body .container-wrap .inner_row[data-column-margin="40px"] .child_column {
+    padding-left: 20px;
+    padding-right: 20px;
+    
+}
