@@ -1,46 +1,29 @@
+/* STYLES FOR EVENT POST TYPE RELATED PAGES AND COMPONENTS */
 
-
-/* All events widgets */
-
-
-
-
-/* Summary widgets */
-.event-widget-column-summary {
-    margin-bottom: 4rem;
-}
+/* ALL EVENTS WIDGETS */
 
 .event-widget-column-summary,
 .event-widget-future-book-club-column-info,
 .event-widget-future-ux-nights-column-info {
-    font-family: proxima-soft;
+    font-family: proxima-soft; /* TODO: Use css variable */
 }
 
-.event-widget-element-event-date,
-.event-widget-element-event-date span{
-    font-family: new-spirit;
+/* Columns */
+/* Override/Force spacing because widget is contained within Global Section 
+    - If the Search & Filter shortcode was inserted at the top/main level row, the column margin setting would render correctly. But since the shortcode is wrapped in a Global Section, that for some reason ignores the column margin setting
+*/
+
+body .container-wrap .vc_row-fluid[data-column-margin="40px"] .wpb_column:not(.child_column), body .container-wrap .inner_row[data-column-margin="40px"] .child_column {
+    padding-left: 20px;
+    padding-right: 20px;
+    
 }
 
-.row .col.event-widget-column-summary img,
-.event-widget-future-ux-nights-column-info .event-widget-element-event-date,
-.event-widget-future-book-club-column-info .event-widget-element-event-date {
-    margin-bottom: 0;
-}
 
+/* Featured Image */
 
 .row .col.event-widget-column-summary .event-widget-element-featured-image {
-    margin-bottom: 0.5rem;
-}
-
-.event-widget-column-summary .event-widget-element-event-date{
-    padding-bottom: 0;
-}
-
-.event-widget-column-summary .event-widget-element-post-heading,
-.event-widget-future-ux-nights-column-info .event-widget-element-post-heading,
-.event-widget-future-ux-nights-column-info .event-widget-element-event-name,
-.event-widget-future-book-club-column-info .event-widget-element-post-heading{
-    margin-top: 0;
+    margin-bottom: 1rem;
 }
 
 /* Crop featured image by aspect ratio - Post summary */
@@ -71,6 +54,48 @@
     /* height: 100%; */
 }
 
+
+
+
+
+/* Dates */
+.event-widget-element-event-date,
+.event-widget-element-event-date span{
+    font-family: new-spirit; /* TODO: Use CSS Variable */
+}
+
+.event-widget-column-summary .event-widget-element-event-date{
+    padding-bottom: 0;
+}
+
+.event-widget-future-ux-nights-column-info .event-widget-element-event-date,
+.event-widget-future-book-club-column-info .event-widget-element-event-date {
+    margin-bottom: 0;
+}
+
+
+/* Headings */
+.event-widget-column-summary .event-widget-element-post-heading,
+.event-widget-future-ux-nights-column-info .event-widget-element-post-heading,
+.event-widget-future-ux-nights-column-info .event-widget-element-event-name,
+.event-widget-future-book-club-column-info .event-widget-element-post-heading{
+    margin-top: 0;
+}
+
+/* SPECIFIC WIDGETS */
+
+/* Widget: Post Summary */
+.event-widget-column-summary {
+    margin-bottom: 4rem;
+}
+
+.row .col.event-widget-column-summary img {
+    margin-bottom: 0;
+}
+
+
+/* Widget: Future UX Nights */
+
 /* Vertically center info container for future UX Nights */
 .event-widget-future-ux-nights-column-info .vc_column-inner {
     transform: translate(0, -50%);
@@ -78,9 +103,3 @@
     top: 50%;
 }
 
-/* override because widget is contained within Global Section */
-body .container-wrap .vc_row-fluid[data-column-margin="40px"] .wpb_column:not(.child_column), body .container-wrap .inner_row[data-column-margin="40px"] .child_column {
-    padding-left: 20px;
-    padding-right: 20px;
-    
-}
