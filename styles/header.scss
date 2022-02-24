@@ -20,6 +20,9 @@ body #header-outer, body[data-header-color="dark"] #header-outer { /* overrides 
     font-weight: 500;
 }
 
+#logo {
+    text-decoration: none;
+}
 #logo img { margin-left: -24px!important;}
 
 .nav-button a:before {
