@@ -1,5 +1,5 @@
 body #header-outer, body[data-header-color="dark"] #header-outer { /* overrides Salient Panel/Header Navigation/Header Background */
-    background-color: hsla(267 100% 5% / 90%);
+    // background-color: hsla(267 100% 5% / 90%);
 }
 
 @supports (backdrop-filter: blur(1px)) {
@@ -10,7 +10,7 @@ body #header-outer, body[data-header-color="dark"] #header-outer { /* overrides 
 
 @supports (-webkit-backdrop-filter: blur(1px)) {
     body #header-outer, body[data-header-color="dark"] #header-outer { /* overrides Salient Panel/Header Navigation/Header Background */
-        background-color: hsla(267 100% 5% / 70%);
+        // background-color: hsla(267 100% 5% / 70%);
         backdrop-filter: blur(var(--radius-background-blur));
         -webkit-backdrop-filter: blur(var(--radius-background-blur));
     }    
