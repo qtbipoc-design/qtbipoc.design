@@ -2,3 +2,11 @@ body a, label span, body [class^="icon-"].icon-default-style, .blog-recent[data-
     /* override */
     color: var(--color-accent-text-ondark);
 }
+
+a {
+    text-decoration: underline;
+}
+
+a.nectar-button+a {
+    margin-left: 1rem;
+}
