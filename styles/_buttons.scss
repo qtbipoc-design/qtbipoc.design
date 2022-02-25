@@ -91,7 +91,8 @@ body.material .nectar-button.has-icon span /* override */ {
 }
 
 /* Override spacing when button has icon */
-body.material .nectar-button.has-icon i {
+body.material .nectar-button.has-icon i,
+body.material .nectar-button.has-icon.large:not([class*=see-through]) i /* override */ {
     position: relative;
     right: -0.5em;
     transform: translate(0, 0);
@@ -106,7 +107,7 @@ body.material .nectar-button.see-through.accent-color[data-color-override="false
 .nectar-button[data-color-override="false"].regular-button.small /* override */,
 body .nectar-button[data-color-override="false"].see-through.small /* override */{
     padding: 0.25rem 0.75rem !important; /* override */
-    padding: 0.25em 0.75em !important; /* override */
+    padding: 0.25em 1em !important; /* override */
     box-shadow: 0 0px 0 var(--color-button-assigned-shadow) !important; /* override */
     font-size: var(--font-size-sub-sub-paragraph);
     border-radius: 4px !important; /* override */
