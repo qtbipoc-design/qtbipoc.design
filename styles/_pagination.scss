@@ -65,7 +65,8 @@
     display: none;
 }
 
-.wp-pagenavi .previouspostslink, .wp-pagenavi .nextpostslink {
+.wp-pagenavi .previouspostslink,
+.wp-pagenavi .nextpostslink {
     padding-left: 1em;
     padding-right: 1em;
     background-color: transparent;
@@ -102,6 +103,6 @@
 
 .wp-pagenavi .previouspostslink:hover,
 .wp-pagenavi .nextpostslink:hover {
-    background-color: hsla(0 0% 100% / 10%); /* TODO: use variable */
+    background-color: hsla(0 0.01% 100% / 10%); /* TODO: use variable */
     color: white; /* TODO: use variable for hover text */
 }
