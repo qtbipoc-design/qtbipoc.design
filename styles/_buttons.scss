@@ -37,9 +37,9 @@ form .gform_button
 body.material .nectar-button.large /* override */,
 body[data-form-submit="regular"] .container-wrap input[type=submit] /* override */, 
 body[data-form-submit="regular"] .container-wrap button[type=submit] /* override */ {
-    background-color: transparent !important; /* override */
+    // background-color: transparent !important; /* override */
     text-transform: uppercase;
-    border: 2px solid #CCCCCC; /* TODO: Use color variable */
+    // border: 2px solid #CCCCCC; /* TODO: Use color variable */
     margin-bottom: 1rem;
      
 }
@@ -88,6 +88,7 @@ body.material .nectar-button.see-through.accent-color[data-color-override="false
 body .nectar-button[data-color-override="false"].see-through.small /* override */{
     padding: 0.25rem 0.75rem !important; /* override */
     box-shadow: 0 3px 0 var(--color-button-assigned-shadow) !important; /* override */
+    box-shadow: 0 0px 0 var(--color-button-assigned-shadow) !important; /* override */
     font-size: var(--font-size-sub-sub-paragraph);
 }
 
@@ -96,6 +97,7 @@ body .nectar-button[data-color-override="false"].see-through.small /* override *
 body .nectar-button[data-color-override="false"].see-through.medium /* override */{
     padding: 0.75rem 2rem !important; /* override */
     box-shadow: 0 6px 0 var(--color-button-assigned-shadow) !important; /* override */
+    box-shadow: 0 0px 0 var(--color-button-assigned-shadow) !important; /* override */
     font-size: var(--font-size-sub-paragraph);
 }
 
@@ -104,8 +106,8 @@ body.material .nectar-button.large,
 .nectar-button[data-color-override="false"].regular-button.large /* override */,
 body .nectar-button[data-color-override="false"].see-through.large /* override */{
     padding: 1rem 3rem !important; /* override */
-    box-shadow: 0 8px 0 #CCCCCC; /* TEMP: Color */
     box-shadow: 0 8px 0 var(--color-button-assigned-shadow) !important; /* override */
+    box-shadow: 0 0px 0 var(--color-button-assigned-shadow) !important; /* override */
     font-size: var(--font-size-paragraph);
     
 }
@@ -137,21 +139,24 @@ body .nectar-button[data-color-override="false"].see-through.extra_jumbo /* over
 .nectar-button[data-color-override="false"].regular-button.small:hover /* override */,
 body .nectar-button[data-color-override="false"].see-through.small:hover /* override */{
     box-shadow: 0 5px 0 var(--color-button-assigned-shadow) !important;
-    transform: translateY(-3px);
+    box-shadow: 0 2px 0 var(--color-button-assigned-shadow) !important;
+    // transform: translateY(-3px);
 }
 
 .nectar-button.medium:hover,
 .nectar-button[data-color-override="false"].regular-button.medium:hover /* override */,
 body .nectar-button[data-color-override="false"].see-through.medium:hover /* override */{
     box-shadow: 0 10px 0 var(--color-button-assigned-shadow) !important;
-    transform: translateY(-4px);
+    box-shadow: 0 4px 0 var(--color-button-assigned-shadow) !important;
+    // transform: translateY(-4px);
 }
 
 body.material .nectar-button.large:hover /* override */,
 .nectar-button[data-color-override="false"].regular-button.large:hover /* override */,
 body .nectar-button[data-color-override="false"].see-through.large:hover /* override */ {
     box-shadow: 0 14px 0 var(--color-button-assigned-shadow) !important;
-    transform: translateY(-6px);
+    box-shadow: 0 6px 0 var(--color-button-assigned-shadow) !important;
+    // transform: translateY(-6px);
 }
 
 body.material .nectar-button.jumbo:hover,
