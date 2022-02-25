@@ -88,7 +88,7 @@
     /* alternative styling */
     background-color: transparent;
     border: 2px solid white;
-    border-color: white; /* TODO: use variable */
+    border-color: hsl(0 0.01% 75%); /* TODO: use variable */
     box-sizing: border-box;
     line-height: calc(2.5rem - 4px); /* offset border */
 }
