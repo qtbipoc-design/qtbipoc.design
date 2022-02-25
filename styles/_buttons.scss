@@ -3,22 +3,22 @@
 
 body.material .nectar-button.accent-color {
     --color-button-assigned: var(--color-accent);
-    --color-button-shadow: hsl(var(--color-hue-brand-purple) var(--color-saturation-default) 25%);
+    --color-button-shadow: hsl(var(--color-hue-brand-purple) 67% 33%);
 }
 
 body.material .nectar-button.extra-color-1 {
     --color-button-assigned: var(--color-extra-1);
-    --color-button-shadow: hsl(var(--color-hue-brand-purple) var(--color-saturation-default) 25%);
+    --color-button-shadow: hsl(var(--color-hue-brand-purple) 67% 33%);
 }
 
 body.material .nectar-button.extra-color-2 {
     --color-button-assigned: var(--color-extra-2);
-    --color-button-shadow: hsl(var(--color-hue-brand-purple) var(--color-saturation-default) 25%);
+    --color-button-shadow: hsl(var(--color-hue-brand-purple) 67% 33%);
 }
 
 body.material .nectar-button.extra-color-3 {
     --color-button-assigned: var(--color-extra-3);
-    --color-button-shadow: hsl(var(--color-hue-brand-purple) var(--color-saturation-default) 25%);
+    --color-button-shadow: hsl(var(--color-hue-brand-purple) 67% 33%);
 }
 
 body.material .nectar-button.accent-color,
