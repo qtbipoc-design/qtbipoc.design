@@ -123,7 +123,7 @@ body .nectar-button[data-color-override="false"].see-through.jumbo /* override *
     box-shadow: 0 10px 0 var(--color-button-assigned-shadow) !important; /* override */
     box-shadow: 0 0px 0 var(--color-button-assigned-shadow) !important; /* override */
     font-size: var(--font-size-super-paragraph);
-    border-radius: 10px !important; /* override */
+    border-radius: 6px !important; /* override */
 }
 
 body.material .nectar-button.extra_jumbo,
@@ -133,7 +133,7 @@ body .nectar-button[data-color-override="false"].see-through.extra_jumbo /* over
     box-shadow: 0 14px 0 var(--color-button-assigned-shadow) !important; /* override */
     box-shadow: 0 0px 0 var(--color-button-assigned-shadow) !important; /* override */
     font-size: var(--font-size-h5);
-    border-radius: 12px !important; /* override */
+    border-radius: 8px !important; /* override */
     border-width: 2px;
     line-height: var(--line-height-h5);
 }
@@ -145,8 +145,8 @@ body .nectar-button[data-color-override="false"].see-through.extra_jumbo /* over
 .nectar-button[data-color-override="false"].regular-button.small:hover /* override */,
 body .nectar-button[data-color-override="false"].see-through.small:hover /* override */{
     box-shadow: 0 5px 0 var(--color-button-assigned-shadow) !important;
-    box-shadow: 0 2px 0 var(--color-button-assigned-shadow) !important;
-    transform: translateY(-2px);
+    box-shadow: 0 3px 0 var(--color-button-assigned-shadow) !important;
+    transform: translateY(-3px);
 }
 
 .nectar-button.medium:hover,
