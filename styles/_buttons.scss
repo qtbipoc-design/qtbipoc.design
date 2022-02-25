@@ -3,18 +3,22 @@
 
 body.material .nectar-button.accent-color {
     --color-button-assigned: var(--color-accent);
+    --color-button-shadow: hsl(var(--color-hue-brand-purple) var(--color-saturation-default) 25%);
 }
 
 body.material .nectar-button.extra-color-1 {
     --color-button-assigned: var(--color-extra-1);
+    --color-button-shadow: hsl(var(--color-hue-brand-purple) var(--color-saturation-default) 25%);
 }
 
 body.material .nectar-button.extra-color-2 {
     --color-button-assigned: var(--color-extra-2);
+    --color-button-shadow: hsl(var(--color-hue-brand-purple) var(--color-saturation-default) 25%);
 }
 
 body.material .nectar-button.extra-color-3 {
     --color-button-assigned: var(--color-extra-3);
+    --color-button-shadow: hsl(var(--color-hue-brand-purple) var(--color-saturation-default) 25%);
 }
 
 body.material .nectar-button.accent-color,
@@ -22,7 +26,7 @@ body.material .nectar-button.extra-color-1,
 body.material .nectar-button.extra-color-2,
 body.material .nectar-button.extra-color-3 {
     --color-button-assigned-border: var(--color-button-assigned);
-    --color-button-assigned-shadow: var(--color-button-assigned);
+    --color-button-assigned-shadow: var(--color-button-shadow);
 }
 
 
@@ -127,7 +131,7 @@ body.material .nectar-button.extra_jumbo,
 body .nectar-button[data-color-override="false"].see-through.extra_jumbo /* override */{
     padding: 1.25rem 5rem !important; /* override */
     box-shadow: 0 14px 0 var(--color-button-assigned-shadow) !important; /* override */
-    box-shadow: 0 04px 0 var(--color-button-assigned-shadow) !important; /* override */
+    box-shadow: 0 0px 0 var(--color-button-assigned-shadow) !important; /* override */
     font-size: var(--font-size-h5);
     border-radius: 12px !important; /* override */
     border-width: 2px;
