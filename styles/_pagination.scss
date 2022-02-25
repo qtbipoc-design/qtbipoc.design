@@ -1,0 +1,107 @@
+.wp-pagenavi {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    
+}
+
+/* Ordering */
+.wp-pagenavi .previouspostslink {
+    order: 10;
+}
+
+.wp-pagenavi .first {
+    order: 20;
+}
+
+.wp-pagenavi .previouspostslink+.extend {
+    order: 30;
+}
+
+.wp-pagenavi .page.smaller {
+    order: 40;
+}
+
+.wp-pagenavi .current {
+    order: 50;
+}
+
+.wp-pagenavi .page.larger {
+    order: 60;
+}
+
+.wp-pagenavi .page.larger+.extend {
+    order: 70;
+}
+
+.wp-pagenavi .last {
+    order: 80;
+}
+
+.wp-pagenavi .nextpostslink {
+    order: 90;
+}
+
+
+/* General */
+.wp-pagenavi a,
+.wp-pagenavi span {
+    min-width: 2.5rem;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    text-align: center;
+    border-radius: 0.25rem; 
+    background-color: white; /* TODO: use variable */
+    color: black; /* TODO user variable */
+    transition: none;
+    padding: 0; /* override */
+    margin: 0; /* override */
+    border: 0px; /* override */
+}
+
+
+/* Specific */
+.wp-pagenavi .pages /* Page detail (ex. 1 of 10) */{
+    display: none;
+}
+
+.wp-pagenavi .previouspostslink, .wp-pagenavi .nextpostslink {
+    padding-left: 1em;
+    padding-right: 1em;
+    background-color: transparent;
+    color: white; /* TODO: use variable */
+}
+
+.wp-pagenavi .extend {
+    background-color: transparent;
+    color: white; /* TODO use variable */
+    margin-left: -0.5em;
+    margin-right: -0.5em;
+}
+
+.wp-pagenavi span.current {
+    background-color: var(--color-brand-purple);
+    color: white; /* TODO: use variable */
+    font-weight: normal;
+    
+    /* alternative styling */
+    background-color: transparent;
+    border: 2px solid white;
+    border-color: white; /* TODO: use variable */
+    box-sizing: border-box;
+    line-height: calc(2.5rem - 4px); /* offset border */
+}
+
+/* Hover */
+.wp-pagenavi .first:hover,
+.wp-pagenavi .page:hover,
+.wp-pagenavi .last:hover {
+    background-color: var(--color-brand-purple);
+    color: white; /* TODO: use variable */
+}
+
+.wp-pagenavi .previouspostslink:hover,
+.wp-pagenavi .nextpostslink:hover {
+    background-color: hsla(0 0% 100% / 10%); /* TODO: use variable */
+    color: white; /* TODO: use variable for hover text */
+}
