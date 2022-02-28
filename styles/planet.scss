@@ -49,7 +49,8 @@
 
 /* Planet Color Schemes */
 
-.planet.scheme-monochromatic .svgTexture {
+.planet.scheme-monochromatic .svgTexture,
+.planetContainer.scheme-monochromatic .svgTexture {
     --color-fill-1: hsla(var(--color-base-hue) var(--color-sla-tint));
     --color-fill-2: hsla(var(--color-base-hue) var(--color-sla-shade));
     
@@ -64,7 +65,8 @@
 }
 
 
-.planet.scheme-analogous .svgTexture {
+.planet.scheme-analogous .svgTexture,
+.planetContainer.scheme-analogous .svgTexture {
     --color-lower-hue:  calc(var(--color-base-hue) + var(--color-analogous-degree-shift-lower));
     --color-higher-hue: calc(var(--color-base-hue) + var(--color-analogous-degree-shift-higher));
 	--color-saturation-child: calc(var(--color-base-saturation) * 0.8);
@@ -84,7 +86,8 @@
 	
 }
 
-.planet.scheme-lesbian {
+.planet.scheme-lesbian,
+.planetContainer.scheme-lesbian {
 	--color-fill-1: hsla(var(--color-hue-brand-pink) var(--color-sla-shade)); /* dark pink */
 	--color-fill-2: hsla(var(--color-hue-brand-pink) var(--color-sla-default)); /* pink */
 	--color-fill-3: hsla(var(--color-hue-brand-pink) var(--color-sla-tint)); /* light pink */
@@ -104,14 +107,17 @@
 }
 
 .planet.scheme-lesbian,
-.planet.scheme-lesbian * {
+.planet.scheme-lesbian *,
+.planetConainer.scheme-lesbian,
+.planetConainer.scheme-lesbian * {
     /* applies to the areas both outside and inside of SVG bounds */
 	--color-base: var(--color-fill-4);
 }
 
 
 
-.planet.scheme-pansexual {
+.planet.scheme-pansexual,
+.planetContainer.scheme-pansexual {
 
 	--color-fill-1: var(--color-brand-pink); /* pink */
 	--color-fill-2: var(--color-brand-yellow); /* yellow */
@@ -129,13 +135,16 @@
 
 
 .planet.scheme-pansexual,
-.planet.scheme-pansexual * {
+.planet.scheme-pansexual *,
+.planetContainer.scheme-pansexual,
+.planetContainer.scheme-pansexual * {
     /* applies to the areas both outside and inside of SVG bounds */
 	--color-base: var(--color-fill-2);
 }
 
 
-.planet.scheme-bisexual {
+.planet.scheme-bisexual,
+.planetContainer.scheme-bisexual {
 
 	--color-fill-1: var(--color-brand-pink);
 	--color-fill-2: var(--color-brand-purple);
@@ -151,13 +160,16 @@
 }
 
 .planet.scheme-bisexual,
-.planet.scheme-bisexual * {
+.planet.scheme-bisexual *,
+.planetContainer.scheme-bisexual,
+.planetContainer.scheme-bisexual * {
     /* applies to the areas both outside and inside of SVG bounds */
 	--color-base: var(--color-fill-2);
 }
 
 
-.planet.scheme-trans {
+.planet.scheme-trans,
+.planeplanetContainert.scheme-trans {
 
 	--color-fill-1: var(--color-brand-lightblue);
 	--color-fill-2: var(--color-brand-white);
@@ -173,13 +185,16 @@
 }
 
 .planet.scheme-trans,
-.planet.scheme-trans * {
+.planet.scheme-trans *,
+.planetContainer.scheme-trans,
+.planetContainer.scheme-trans * {
     /* applies to the areas both outside and inside of SVG bounds */
 	--color-base: var(--color-fill-2);
 }
 
 
-.planet.scheme-asexual {
+.planet.scheme-asexual,
+.planetContainer.scheme-asexual {
 
 	--color-fill-1: var(--color-brand-black);
 	--color-fill-2: hsl(0 0% var(--color-lightness-tint));
@@ -196,14 +211,17 @@
 }
 
 .planet.scheme-asexual,
-.planet.scheme-asexual * {
+.planet.scheme-asexual *,
+.planetContainer.scheme-asexual,
+.planetContainer.scheme-asexual * {
     /* applies to the areas both outside and inside of SVG bounds */
 	--color-base: var(--color-fill-4);
 }
 
 
 
-.planet.scheme-intersex {
+.planet.scheme-intersex,
+.planetContainer.scheme-intersex {
 
 	--color-fill-1: var(--color-brand-yellow);
 	--color-fill-2: var(--color-brand-purple);
@@ -218,13 +236,16 @@
 }
 
 .planet.scheme-intersex,
-.planet.scheme-intersex * {
+.planet.scheme-intersex *,
+.planetContainer.scheme-intersex,
+.planetContainer.scheme-intersex * {
     /* applies to the areas both outside and inside of SVG bounds */
 	--color-base: var(--color-fill-1);
 }
 
 
-.planet.scheme-nonbinary {
+.planet.scheme-nonbinary,
+.planetContainer.scheme-nonbinary {
 
 	--color-fill-1: var(--color-brand-yellow);
 	--color-fill-2: var(--color-brand-white);
@@ -241,13 +262,16 @@
 }
 
 .planet.scheme-nonbinary,
-.planet.scheme-nonbinary * {
+.planet.scheme-nonbinary *,
+.planetContainer.scheme-nonbinary,
+.planetContainer.scheme-nonbinary * {
     /* applies to the areas both outside and inside of SVG bounds */
 	--color-base: var(--color-fill-1);
 }
 
 
-.planet.scheme-genderqueer {
+.planet.scheme-genderqueer,
+.planetContainer.scheme-genderqueer {
 
 	--color-fill-1: var(--color-brand-purple-tint);
 	--color-fill-2: var(--color-brand-white);
@@ -263,13 +287,16 @@
 }
 
 .planet.scheme-genderqueer,
-.planet.scheme-genderqueer * {
+.planet.scheme-genderqueer *,
+.planetContainer.scheme-genderqueer,
+.planetContainer.scheme-genderqueer * {
     /* applies to the areas both outside and inside of SVG bounds */
 	--color-base: var(--color-fill-2);
 }
 
 
-.planet.scheme-blackidentify {
+.planet.scheme-blackidentify,
+.planetContainer.scheme-blackidentify {
 
 	--color-fill-1: var(--color-brand-red);
 	--color-fill-2: var(--color-brand-black);
@@ -285,7 +312,9 @@
 }
 
 .planet.scheme-blackidentify,
-.planet.scheme-blackidentify * {
+.planet.scheme-blackidentify *,
+.planetContainer.scheme-blackidentify,
+.planetContainer.scheme-blackidentify * {
     /* applies to the areas both outside and inside of SVG bounds */
 	--color-base: var(--color-fill-1);
 }
