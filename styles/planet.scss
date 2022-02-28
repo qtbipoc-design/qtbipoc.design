@@ -1,4 +1,4 @@
-.planet {
+.planetContainer {
 
 	/* Defaults */
 	--planet-diameter: 150px;
@@ -7,6 +7,17 @@
 	--planet-offset_x: 0px;
 	--planet-offset_y: 0px;
 	--color-base: #9700FF;
+}
+
+.planet {
+
+	/* Defaults */
+	// --planet-diameter: 150px;
+	// --planet-sprite_x: 50%;
+	// --planet-sprite_y: 50%;
+	// --planet-offset_x: 0px;
+	// --planet-offset_y: 0px;
+	// --color-base: #9700FF;
 	
 	background-color: red;
 	background-color: var(--color-base);
