@@ -4,3 +4,10 @@
 .exception-max-width-none, .exception-max-width-none * {
     max-width: none;
 }
+
+
+/* before footer */
+/* Remove spacing so planets don't end all of a sudden */
+.woocommerce-checkout .nectar-global-section.before-footer, .woocommerce-account .nectar-global-section.before-footer, .woocommerce-cart .nectar-global-section.before-footer, body:not(.page):not(.single-post):not(.single-portfolio) .nectar-global-section.before-footer, .single-portfolio #regular_portfolio [data-nav-pos="in_header"] .nectar-global-section.before-footer {
+    padding-top: 0px; /* override */
+}
