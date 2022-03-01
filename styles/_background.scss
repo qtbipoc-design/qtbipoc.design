@@ -11,7 +11,9 @@
     --planet_offset_y_initial: 100vh;
     --planet-offset_y_spacer: 80vh;
     top: calc(var(--planet_offset_y_initial) + (var(--planet-offset_y_spacer) * var(--planet-index)) + var(--planet-offset_y));
+    content:"";
 }
+
 
 .qdb-stars {
     height: 0;
