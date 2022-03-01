@@ -371,15 +371,17 @@
 .planet-ring {
 	display: block;
 	position: absolute;
-	width: var(--planet-ring-diameter);
-	height: calc( var(--planet-ring-diameter) / 2);
+	width: var(--planet-ring_diameter);
+	height: calc( var(--planet-ring_diameter) / 2);
 	
-	left: calc( ((var(--planet-ring-diameter) - var(--planet-diameter)) / -2) - (var(--planet-diameter) / 2)); /* includes moving planet center to origin */
+	left: calc( ((var(--planet-ring_diameter) - var(--planet-diameter)) / -2) - (var(--planet-diameter) / 2)); /* includes moving planet center to origin */
 	
-	transform: perspective(0) rotateX(var(--planet-ring-rotation-x)) rotateY(var(--planet-ring-rotation-y)) rotateZ(0); /* BUG: 1/24/22: rotateZ not working
+	transform: perspective(0) rotateX(var(--planet-ring_rotation_x)) rotateY(var(--planet-ring_rotation_y)) rotateZ(0);
+
+	--planet-ring-color: white; /* temporary */
 
 	/* for border-based rings */
-	border: var(--planet-ring-width) solid var(--planet-ring-color);
+	border: var(--planet-ring_width) solid var(--planet-ring_color);
 	box-sizing: border-box;	
 	background-image: none !important;
 }
