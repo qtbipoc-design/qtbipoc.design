@@ -125,8 +125,8 @@
 
 .planet.scheme-lesbian,
 .planet.scheme-lesbian *,
-.planetConainer.scheme-lesbian,
-.planetConainer.scheme-lesbian * {
+.planetContainer.scheme-lesbian,
+.planetContainer.scheme-lesbian * {
     /* applies to the areas both outside and inside of SVG bounds */
 	--color-base: var(--color-fill-4);
 }
@@ -186,7 +186,7 @@
 
 
 .planet.scheme-trans,
-.planeplanetContainert.scheme-trans {
+.planetContainer.scheme-trans {
 
 	--color-fill-1: var(--color-brand-lightblue);
 	--color-fill-2: var(--color-brand-white);
