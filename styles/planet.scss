@@ -400,9 +400,7 @@
 .planet-ring-front {
 	border-radius: 0 0 100000px 100000px;
 	border-top-width: 0;
-	// top: 0;
 	top: calc((var(--planet-diameter) / 2));
 	transform-origin: top center;
-	content: "";
 }
 
