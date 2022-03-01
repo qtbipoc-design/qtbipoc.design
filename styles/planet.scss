@@ -363,3 +363,42 @@
 
 
 */
+
+
+/* PLANET RINGS */
+
+
+.planet-ring {
+	display: block;
+	position: absolute;
+	width: var(--planet-ring-diameter);
+	height: calc( var(--planet-ring-diameter) / 2);
+	
+	left: calc( ((var(--planet-ring-diameter) - var(--planet-diameter)) / -2) - (var(--planet-diameter) / 2)); /* includes moving planet center to origin */
+	
+	transform: perspective(0) rotateX(var(--planet-ring-rotation-x)) rotateY(var(--planet-ring-rotation-y)) rotateZ(0); /* BUG: 1/24/22: rotateZ not working
+
+	/* for border-based rings */
+	border: var(--planet-ring-width) solid var(--planet-ring-color);
+	box-sizing: border-box;	
+	background-image: none !important;
+}
+
+
+.planet-ring-behind {
+	top: calc(((var(--planet-ring-diameter) - var(--planet-diameter)) / -2) - (var(--planet-diameter) / 2));  /* includes moving planet center to origin */
+	z-index: -1;
+	transform-origin: bottom center;
+	border-radius: 100000px 100000px 0 0;
+
+	/* For border-based rings */
+	border-bottom-width: 0;
+}
+
+.planet-ring-front {
+	border-radius: 0 0 100000px 100000px;
+	border-top-width: 0;
+	top: 0;
+	transform-origin: top center;
+}
+
