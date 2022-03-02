@@ -406,6 +406,9 @@
 
 
 .planet-ring {
+	--color-lightness-ring: 90%;
+	/*--planet-ring_color_alpha: 50%; /* temporary until variable defined in render code */
+
 	display: block;
 	position: absolute;
 	width: var(--planet-ring_diameter);
@@ -416,7 +419,7 @@
 	transform: rotate(var(--planet-ring_rotation)) scaleY(var(--planet-ring_flatness));
 
 	/* --planet-ring_color: white; /* temporary */
-	--planet-ring_color: hsla(var(--color-base-hue) var(--color-base-saturation) 90% / 50%);
+	--planet-ring_color: hsla(var(--color-base-hue) var(--color-base-saturation) var(--color-lightness-ring) / var(--planet-ring_color_alpha));
 
 	/* for border-based rings */
 	border: var(--planet-ring_width) solid var(--planet-ring_color);
