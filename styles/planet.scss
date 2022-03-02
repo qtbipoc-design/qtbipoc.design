@@ -436,6 +436,9 @@
 
 	/* For border-based rings */
 	border-bottom-width: 0;
+
+	/* Gradient-based rings */
+	background-image: radial-gradient(circle at 50% bottom, transparent 0%, transparent 55%, lime 55%, lime 57%, transparent 57%, transparent 67%, orange 67%); /* TODO: Replace with variables */
 }
 
 .planet-ring-front {
@@ -443,5 +446,8 @@
 	border-top-width: 0;
 	top: calc((var(--planet-diameter) / 2));
 	transform-origin: top center;
+
+	/* Gradient-based rings */
+	background-image: radial-gradient(circle at 50% top, transparent 0%, transparent 55%, lime 55%, lime 57%, transparent 57%, transparent 67%, orange 67%); /* TODO: Replace with variables */
 }
 
