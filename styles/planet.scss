@@ -424,7 +424,8 @@
 	/* for border-based rings */
 	border: var(--planet-ring_width) solid var(--planet-ring_color);
 	box-sizing: border-box;	
-	background-image: none !important;
+	// background-image: none !important;
+	
 }
 
 
@@ -438,7 +439,9 @@
 	border-bottom-width: 0;
 
 	/* Gradient-based rings */
-	background-image: radial-gradient(circle at 50% bottom, transparent 0%, transparent 55%, lime 55%, lime 57%, transparent 57%, transparent 67%, orange 67%); /* TODO: Replace with variables */
+	// background-image: radial-gradient(circle at 50% bottom, transparent 0%, transparent 55%, lime 55%, lime 57%, transparent 57%, transparent 67%, orange 67%); /* TODO: Replace with variables */
+
+	background-image: radial-gradient(circle at 50% bottom, var(--planet-ring_color_gradient));
 }
 
 .planet-ring-front {
@@ -448,6 +451,7 @@
 	transform-origin: top center;
 
 	/* Gradient-based rings */
-	background-image: radial-gradient(circle at 50% top, transparent 0%, transparent 55%, lime 55%, lime 57%, transparent 57%, transparent 67%, orange 67%); /* TODO: Replace with variables */
+	// background-image: radial-gradient(circle at 50% top, transparent 0%, transparent 55%, lime 55%, lime 57%, transparent 57%, transparent 67%, orange 67%); /* TODO: Replace with variables */
+	background-image: radial-gradient(circle at 50% top, var(--planet-ring_color_gradient));
 }
 
