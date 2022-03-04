@@ -1,7 +1,8 @@
 :root {
 
-    --font-family-default: "Quicksand";
+    // --font-family-default: "Quicksand";
     --font-family-default: proxima-soft;
+    --font-family-display: new-spirit;
 
     /* 
     
@@ -109,18 +110,20 @@
     --font-size-sub-paragraph:          14.29px;
 	--font-size-sub-sub-paragraph:      11.34px;
 
-     /* Font sizes based on Steven's definitions in Figma as of 2/2022 */
-	--font-size-h1-default:             68px;
+    /* Font sizes based on Steven's definitions in Figma as of 2/2022 */
+    --font-size-super-h1-default:       68px;
+    --font-size-super-h1:                   calc(var(--font-size-super-h1-default) * var(--multiplier-font-size-h1-current));
+    --font-size-h1-default:             53px;
 	--font-size-h1:                         calc(var(--font-size-h1-default) * var(--multiplier-font-size-h1-current));
-	--font-size-h2-default:             53px;
+	--font-size-h2-default:             42px;
 	--font-size-h2:                         calc(var(--font-size-h2-default) * var(--multiplier-font-size-h2-current));
-	--font-size-h3-default:             42px;
+	--font-size-h3-default:             33px;
 	--font-size-h3:                         calc(var(--font-size-h3-default) * var(--multiplier-font-size-h3-current));
-	--font-size-h4-default:             33px;
+	--font-size-h4-default:             26px;
 	--font-size-h4:                         calc(var(--font-size-h4-default) * var(--multiplier-font-size-h4-current));
-	--font-size-h5-default:             26px;
+	--font-size-h5-default:             20px;
 	--font-size-h5:                         calc(var(--font-size-h5-default) * var(--multiplier-font-size-h5-current));
-	--font-size-h6-default:             20px;
+	--font-size-h6-default:             16px;
 	--font-size-h6:                         calc(var(--font-size-h6-default) * var(--multiplier-font-size-h6-current));
 	--font-size-super-paragraph:        var(--font-size-h6);
     --font-size-paragraph-default:      16px;
