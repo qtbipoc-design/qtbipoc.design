@@ -13,7 +13,8 @@
     - If the Search & Filter shortcode was inserted at the top/main level row, the column margin setting would render correctly. But since the shortcode is wrapped in a Global Section, that for some reason ignores the column margin setting
 */
 
-body .container-wrap .vc_row-fluid[data-column-margin="40px"] .wpb_column:not(.child_column), body .container-wrap .inner_row[data-column-margin="40px"] .child_column {
+body .container-wrap .search-filter-results .vc_row-fluid[data-column-margin="40px"] .wpb_column:not(.child_column), 
+body .container-wrap .search-filter-results .inner_row[data-column-margin="40px"] .child_column {
     padding-left: 20px;
     padding-right: 20px;
     
