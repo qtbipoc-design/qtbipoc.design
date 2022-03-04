@@ -79,8 +79,20 @@ body .container-wrap .vc_row-fluid[data-column-margin="40px"] .wpb_column:not(.c
 .event-widget-column-summary .event-widget-element-post-heading,
 .event-widget-future-ux-nights-column-info .event-widget-element-post-heading,
 .event-widget-future-ux-nights-column-info .event-widget-element-event-name,
-.event-widget-future-book-club-column-info .event-widget-element-post-heading{
+.event-widget-future-book-club-column-info .event-widget-element-post-heading,
+.vc_custom_heading.book-subtitle{
     margin-top: 0;
+}
+
+.row_inner_book_subtitle {
+    margin-top: -1.5rem;
+}
+
+.vc_custom_heading.book-subtitle {
+    margin-top: 0;
+    font-family: var(--font-family-default);
+    font-size: var(--font-size-h4);
+    line-height: var(--line-height-h4);
 }
 
 /* SPECIFIC WIDGETS */
