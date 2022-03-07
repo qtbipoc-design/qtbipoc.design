@@ -126,7 +126,8 @@
 	--font-size-h5:                         calc(var(--font-size-h5-default) * var(--multiplier-font-size-h5-current));
 	--font-size-h6-default:             16px;
 	--font-size-h6:                         calc(var(--font-size-h6-default) * var(--multiplier-font-size-h6-current));
-	--font-size-super-paragraph:        var(--font-size-h6);
+	--font-size-super-paragraph-default:var(--font-size-h5);
+    --font-size-super-paragraph:            calc(var(--font-size-super-paragraph-default) * var(--multiplier-font-size-paragraph-current));
     --font-size-paragraph-default:      16px;
 	--font-size-paragraph:                  calc(var(--font-size-paragraph-default) * var(--multiplier-font-size-paragraph-current));
     --font-size-sub-paragraph:          13px;
