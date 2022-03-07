@@ -1,0 +1,626 @@
+/* 
+*************************************************************************************
+
+__misc-foundation.scss 
+
+*************************************************************************************
+*/
+
+:root {
+    --radius-background-blur-heavy: 32px;
+    --radius-background-blur-medium: 16px;
+    --radius-background-blur-light: 8px;
+
+    --radius-background-blur: var(--radius-background-blur-light); /* Defaulting to light for Chrome, which renders blur imperfectly */
+}
+@supports (-webkit-backdrop-filter: blur(1px)) { /* Safari */
+    :root {
+        --radius-background-blur: var(--radius-background-blur-heavy);
+    }
+}
+
+/* 
+*************************************************************************************
+
+_molecule-cards-images.scss 
+
+*************************************************************************************
+*/
+
+:root {
+    --length-molecule-cards-images: 24rem; /* 20rem arbitrary */
+}
+
+.molecule-cards-images .img-loaded {
+    height: var(--length-molecule-cards-images);
+    display: block;
+}
+
+.row .molecule-cards-images .col img {
+    max-width: unset;
+    max-height: unset;
+    
+    object-fit: cover;
+    object-position: 50% 50%;
+    height: var(--length-molecule-cards-images);
+    width: 100%;
+}
+
+
+/* 
+*************************************************************************************
+
+_molecule-cards-posts.scss
+
+*************************************************************************************
+*/
+
+/* 2x2 Posts */
+
+.molecule-cards-posts-2x2 .post > .post {
+    display: flex;
+    flex-direction: column;
+
+    padding-bottom: 0;
+}
+
+.molecule-cards-posts-2x2 .blog-recent[data-style=classic_enhanced][data-color-scheme=dark] .inner-wrap {
+     /* override */
+     
+    background-color: transparent;
+}
+
+.molecule-cards-posts-2x2 .post > .post a.img-link{
+    order: 2;
+}
+
+.molecule-cards-posts-2x2 .post > .post .meta-category {
+    display: none;
+}
+
+.molecule-cards-posts-2x2 .post > .post .article-content-wrap {
+    order: 1;
+}
+
+.molecule-cards-posts-2x2 .blog-recent[data-style*="classic_enhanced"] .article-content-wrap {
+     /* override */
+     
+    background-color: transparent;
+    padding: 0;
+}
+
+.molecule-cards-posts-2x2 .post-header .meta {
+    /* Post Date */
+    font-size: var(--font-size-paragraph);
+    border-bottom: 1px solid rgba(255 255 255 / 50%); /* color temporary. Use deemphasis border on dark */
+    padding-bottom: 0.5rem;
+    display: inline-block;
+}
+
+.molecule-cards-posts-2x2 .blog-recent[data-style*=classic_enhanced][data-color-scheme=dark] .post-header {
+    color: rgba(255 255 255 / 80%); /* temporary. make it de-emphasis text on dark */ /* override */
+}
+
+body .molecule-cards-posts-2x2 .post-header h3.title {
+    font-size: var(--font-size-super-paragraph); /* override */
+    margin-top: 0.5rem;
+}
+
+.molecule-cards-posts-2x2 .blog-recent[data-style=classic_enhanced][data-color-scheme=dark] h3.title {
+    color: white; /* temporary. make it default text on dark */ /* override */
+        
+}
+
+.molecule-cards-posts-2x2 .post > .post .article-content-wrap .excerpt {
+    display: none;
+}
+
+
+
+
+/* 3-column posts */
+
+.molecule-cards-posts-3column .blog-recent>.post>.post {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 4rem;
+}
+
+.molecule-cards-posts-3column .blog-recent[data-style="classic_enhanced"][data-color-scheme="dark"] .inner-wrap {
+    background-color: transparent; /* override */
+}
+
+.molecule-cards-posts-3column .blog-recent[data-style*="classic_enhanced"] .article-content-wrap {
+    padding: 0;
+}
+
+
+.molecule-cards-posts-3column .blog-recent[data-style*="classic_enhanced"][data-remove-post-nectar-love="1"][data-remove-post-comment-number="1"][data-remove-post-author="1"] .inner-wrap {
+    padding-bottom: 4rem; /* override */
+    
+}
+
+.molecule-cards-posts-3column .blog-recent .post .post-featured-img {
+    margin-bottom: 1rem;
+    border-radius: 0.5rem;
+}
+
+
+.molecule-cards-posts-3column .blog-recent .post .article-content-wrap .post-header .meta {
+    font-size: 17px; /* TEMP: Use variable */    
+}
+
+.molecule-cards-posts-3column .blog-recent .post .article-content-wrap .post-header h3.title {
+    font-size: 23px; /* TEMP: Use variable */
+    line-height: 1.5; /* TEMP: Use variable */
+}
+
+.molecule-cards-posts-3column .blog-recent>.post>.post .meta-category {
+    order: 2;
+    position: absolute;
+    bottom: 2rem;
+}
+
+.molecule-cards-posts-3column .blog-recent[data-style*="classic_enhanced"] .meta-category a {
+    border: 0; /* override */
+    padding: 0; /* override */
+    text-transform: none; /* override */
+    font-size: 14px; /* override */
+    font-weight: normal; /* override */
+    margin-top: 2rem;
+}
+
+.molecule-cards-posts-3column .masonry.classic_enhanced .posts-container .has-post-thumbnail .meta-category a, .blog-recent[data-style*="classic_enhanced"] .has-post-thumbnail .meta-category a, .blog-recent[data-style*="classic_enhanced"] .meta-category a {
+    position: static; /* override */
+    top: auto;  /* override */
+    left: auto;  /* override */
+    z-index: auto;  /* override */
+}
+
+
+
+
+/* 4-Column Image Title Date Posts */
+
+.molecule-cards-posts-imageTitleDate-4column .post > .post {
+    display: flex;
+    flex-direction: column;
+
+    padding-bottom: 0;
+}
+
+.molecule-cards-posts-imageTitleDate-4column .blog-recent[data-style=classic_enhanced][data-color-scheme=dark] .inner-wrap {
+     /* override */
+     
+    background-color: transparent;
+}
+
+body .row .molecule-cards-posts-imageTitleDate-4column .col .post-featured-img img {
+    height: 20rem; /* TODO: Made tall specifically for bookclub images. Extract to separate rule. */
+    object-fit: cover;
+}
+
+.molecule-cards-posts-imageTitleDate-4column .post > .post .meta-category {
+    display: none;
+}
+
+.molecule-cards-posts-imageTitleDate-4column .post-header .meta {
+    /* Post Date */
+    font-size: var(--font-size-paragraph);
+    border-bottom: 1px solid rgba(255 255 255 / 50%); /* color temporary. Use deemphasis border on dark */
+    padding-bottom: 0.5rem;
+    
+}
+
+.molecule-cards-posts-imageTitleDate-4column .blog-recent[data-style*="classic_enhanced"] .article-content-wrap {
+     /* override */
+     
+    /*background-color: transparent;*/
+    padding: 0;
+}
+
+.molecule-cards-posts-imageTitleDate-4column .blog-recent[data-style*=classic_enhanced][data-color-scheme=dark] .post-header {
+    color: rgba(255 255 255 / 80%); /* temporary. make it de-emphasis text on dark */ /* override */
+}
+
+body .row .molecule-cards-posts-imageTitleDate-4column .col h3 {
+    font-size: var(--font-size-h6);
+}
+
+.molecule-cards-posts-imageTitleDate-4column .post > .post .article-content-wrap .excerpt {
+    display: none;
+}
+
+/* 
+*************************************************************************************
+
+_molecule-general.scss
+
+*************************************************************************************
+*/
+
+
+/* Large Media + Text */
+
+/* For .molecule-general-largeMediaText container, see _misc-patterns.scss */
+
+.molecule-general-largeMediaText img {
+    border-radius: 1rem; /* temp: use variable */
+}
+
+.molecule-general-largeMediaText h3 {
+    margin-top: 0;
+}
+
+
+/* 
+*************************************************************************************
+
+_molecule-table.scss
+
+*************************************************************************************
+*/
+
+
+.molecule-table .wpb_text_column + .nectar-hor-list-item {
+    font-weight: 600;
+}
+
+.molecule-table .nectar-hor-list-item[data-hover-effect=none] {
+    padding: 0.5rem 0;
+}
+
+.molecule-table .wpb_wrapper .nectar-hor-list-item:nth-child(even) {
+    background-color: rgba(255 255 255 / 5%); /* temporary. use light, differentiating bg color */
+}
+
+.molecule-table .wpb_wrapper .nectar-hor-list-item .nectar-list-item:nth-child(1) {
+    padding-left: 1rem;
+}
+
+.molecule-table .wpb_wrapper .nectar-hor-list-item .nectar-list-item:last-child {
+    padding-right: 1rem;
+    
+}
+
+/* Mobile + Tablet */
+@media only screen and (max-width: 999px) {
+    
+    /* Hide column headings */
+    .molecule-table .wpb_wrapper .wpb_text_column + .nectar-hor-list-item{
+        display:none;
+    }
+    
+    .molecule-table .wpb_wrapper .wpb_text_column + .nectar-hor-list-item + .nectar-hor-list-item {
+        /* Hack to get to the first next event entry */
+        /* border-top: 1px solid rgba(255 255 255 / 50%); /* color temporary. use deemphasis border on dark */
+    }
+    
+    
+    .molecule-table .nectar-hor-list-item >.nectar-list-item {
+        display: block;
+    }
+    
+    .molecule-table .nectar-hor-list-item .nectar-list-item[data-text-align="left"] {
+        padding-right: 0;
+    }
+    
+    .molecule-table .nectar-hor-list-item .nectar-list-item, 
+    .molecule-table .nectar-hor-list-item[data-columns="2"][data-column-layout="xsmall_first"] >div:nth-child(1),
+    .molecule-table .nectar-hor-list-item[data-columns="2"][data-column-layout="xsmall_first"] >div:nth-child(2) {
+        width: 100%;
+    }
+    
+    .molecule-table .wpb_wrapper .nectar-hor-list-item {
+        padding: 2.5rem 1rem;
+        margin-left: -1rem;
+        margin-right: -1rem;
+    }
+    
+    .molecule-table .wpb_wrapper .nectar-hor-list-item .nectar-list-item:nth-child(1) {
+        padding-left: 0;
+    }
+
+    .molecule-table .wpb_wrapper .nectar-hor-list-item .nectar-list-item:last-child {
+        padding-right: 0;
+        
+    }
+    
+    .molecule-table .wpb_wrapper .nectar-hor-list-item .nectar-list-item:nth-child(1) {
+        font-size: var(--font-size-sub-paragraph);
+        line-height: var(--line-height-sub-paragraph);
+        font-weight: 600;
+
+    }
+}
+
+
+/* 
+*************************************************************************************
+
+_molecule-testimonials.scss
+
+*************************************************************************************
+*/
+
+
+/* 3-Column Testimonials */
+
+@media only screen and (min-width: 1000px) {
+    #ajax-content-wrap .molecule-testimonial-3column .col[data-padding-pos=top-bottom]>.vc_column-inner {
+        padding: 2rem 2rem;
+    }
+}
+
+
+.molecule-testimonial-3column .nectar_single_testimonial .inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.molecule-testimonial-3column .nectar_single_testimonial .inner .image-icon {
+    order: -1;
+}
+
+.molecule-testimonial-3column .nectar_single_testimonial .image-icon {
+    width: 12.5rem; /* override */
+    height: 12.5rem; /* override */
+    margin-right:0; /* override */
+    border: 3px solid hsla(0 100% 100% / 75%); /* TODO: Use color variable */
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+}
+
+.molecule-testimonial-3column .nectar_single_testimonial .inner .wrap {
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+
+/* 
+*************************************************************************************
+
+_misc-patterns.scss
+
+*************************************************************************************
+*/
+
+
+/* Default frosted card background */
+
+.card-default-style>.vc_column-inner,
+.card-default-style.wpb_row.vc_row-fluid.vc_row.inner_row,
+.molecule-general-largeMediaText>.col>.vc_column_container>.vc_column-inner,
+.row.blog-recent>.post,
+.column-bg-overlay-wrap .column-bg-overlay /* For override */ {
+    background-color: hsla(268 100% 90% / 10%); /* TODO: use variable */
+    backdrop-filter: blur(var(--radius-background-blur));
+    -webkit-backdrop-filter: blur(var(--radius-background-blur));
+    border-radius: 1rem; /* TODO: use variable */
+    border: 1px solid hsla(0 100% 100% / 20%); /* TODO: use variable */
+    padding: 2rem; /* TODO: use variable */
+}
+
+
+/* 
+*************************************************************************************
+
+_background.scss
+
+*************************************************************************************
+*/
+
+
+
+
+.qdb-stars {
+    height: 0;
+}
+
+.qdb-stars .nectar_cascading_images>div {
+    position: absolute;
+}
+
+.qdb-stars .nectar_cascading_images .cascading-image, .nectar_cascading_images .cascading-image .inner-wrap {
+    text-align: left; /* override */
+}
+
+.qdb-stars .nectar_cascading_images .cascading-image:not(:first-child) {
+    -webkit-transform: none; /* override */
+    transform: none; /* override */
+}
+
+.qdb-stars .nectar_cascading_images>div:nth-of-type(1) {
+    left: 5vw; /* TODO: Update positioning to scale with active RWD margin rules */
+    top: 5vh;
+    opacity: 0.5;
+}
+
+.qdb-stars .nectar_cascading_images>div:nth-of-type(2) {
+    left: 90vw; /* TODO: Update positioning to scale with active RWD margin rules */
+    top: 35vh;
+    opacity: 0.5;
+}
+
+.qdb-stars .nectar_cascading_images>div:nth-of-type(3) {
+    left: 10vw; /* TODO: Update positioning to scale with active RWD margin rules */
+    top: 65vh;
+    opacity: 0.5;
+}
+
+.qdb-stars .nectar_cascading_images>div:nth-of-type(4) {
+    left: 95vw; /* TODO: Update positioning to scale with active RWD margin rules */
+    top: 95vh;
+    opacity: 0.5;
+}
+
+.qdb-stars-opt2 .nectar_cascading_images>div:nth-of-type(1) {
+    left: 95vw; /* TODO: Update positioning to scale with active RWD margin rules */
+    opacity: 0.5;
+}
+
+.qdb-stars-opt2 .nectar_cascading_images>div:nth-of-type(2) {
+    left: 10vw; /* TODO: Update positioning to scale with active RWD margin rules */
+    opacity: 0.5;
+}
+
+.qdb-stars-opt2 .nectar_cascading_images>div:nth-of-type(3) {
+    left: 90vw; /* TODO: Update positioning to scale with active RWD margin rules */
+    opacity: 0.5;
+}
+
+.qdb-stars-opt2 .nectar_cascading_images>div:nth-of-type(4) {
+    left: 5vw; /* TODO: Update positioning to scale with active RWD margin rules */
+    opacity: 0.5;
+}
+
+.qdb-stars-opt3 .nectar_cascading_images>div:nth-of-type(1) {
+    left: 75vw; /* TODO: Update positioning to scale with active RWD margin rules */
+    opacity: 0.5;
+}
+
+.qdb-stars-opt3 .nectar_cascading_images>div:nth-of-type(2) {
+    left: 20vw; /* TODO: Update positioning to scale with active RWD margin rules */
+    opacity: 0.5;
+}
+
+.qdb-stars-opt3 .nectar_cascading_images>div:nth-of-type(3) {
+    left: 60vw; /* TODO: Update positioning to scale with active RWD margin rules */
+    opacity: 0.5;
+}
+
+.qdb-stars-opt3 .nectar_cascading_images>div:nth-of-type(4) {
+    left: 35vw; /* TODO: Update positioning to scale with active RWD margin rules */
+    opacity: 0.5;
+}
+
+
+
+/* ----- Background Styling: Planets ----- */
+
+
+.qdb-container-planet {
+    position: relative;
+}
+
+.qdb-planet {
+    border-radius: 100rem;
+    position: absolute;
+    z-index: 50;
+    width: 100%;
+    transform: translateX(-50%);
+}
+
+.qdb-planet>div,
+.qdb-planet>.wpb-wrapper {
+    width: 100%;
+    height: 100%;
+}
+
+
+.qdb-planet .cascading-image .img-wrap {
+    width: 150px;
+    height: 150px;
+     width: 100%; /* v2 override */
+    height: 100%; /* v2 override */
+    border-radius: 100rem;
+    
+    /* override-able */
+    background-color: #D5AAFF;
+    transform: rotate(-45deg);
+    transition: transform 5s;
+}
+
+
+
+.qdb-planet .cascading-image .img-wrap::after{
+    width: 100%;
+    height: calc(100% + 1px);
+    content: "";
+    position: absolute;
+    border-radius: 100rem;
+    top: 0;
+    left: 0;
+    
+    background: radial-gradient(65% 65% at 50% 15%, hsl(0 0.01% 100% / 50%) 0%, hsla(0 0.01% 0.01% / 95%) 100%); /* highlight/shadow */
+    mix-blend-mode: multiply;
+}
+
+.qdb-container-planet .cascading-image .img-wrap img {
+    width:100%;
+    height:100%;
+}
+
+
+.qdb-planet-color-cyan .cascading-image .img-wrap {
+    background-color: #00CEF8;
+}
+
+.qdb-planet-color-pink .cascading-image .img-wrap{
+    background-color: #FF4FF7;
+}
+
+.qdb-planet-color-gray .cascading-image .img-wrap {
+    background-color: #C0C4CF;
+}
+
+.qdb-planet-color-hero .cascading-image .img-wrap {
+    background: linear-gradient(-90deg, #FF80F9 0%, #AE66FF 100%);
+}
+
+.qdb-planet-color-hero.qdb-planet-rotate-top-right .cascading-image .img-wrap,
+.qdb-planet-color-hero.qdb-planet-rotate-top .cascading-image .img-wrap,
+.qdb-planet-color-hero.qdb-planet-rotate-bottom-right .cascading-image .img-wrap{
+    background: linear-gradient(90deg, #FF80F9 0%, #AE66FF 100%);
+}
+
+.qdb-planet-color-trans .cascading-image .img-wrap{
+    background: linear-gradient(-90deg, white 17%, pink 35%, pink 65%, cyan 83%);
+}
+
+.qdb-planet-color-trans.qdb-planet-rotate-top-right .cascading-image .img-wrap,
+.qdb-planet-color-trans.qdb-planet-rotate-top .cascading-image .img-wrap,
+.qdb-planet-color-trans.qdb-planet-rotate-bottom-right .cascading-image .img-wrap{
+    background: linear-gradient(90deg, white 17%, pink 35%, pink 65%, cyan 83%);
+}
+
+.qdb-planet-color-bi .cascading-image .img-wrap {
+    background: linear-gradient(-90deg, #D70270 25%, #734F96 42%, #734F96 58%, #0038A8 75%);
+}
+
+.qdb-planet-color-bi.qdb-planet-rotate-top-right .cascading-image .img-wrap,
+.qdb-planet-color-bi.qdb-planet-rotate-top .cascading-image .img-wrap,
+.qdb-planet-color-bi.qdb-planet-rotate-bottom-right .cascading-image .img-wrap{
+    background: linear-gradient(90deg, #D70270 25%, #734F96 42%, #734F96 58%, #0038A8 75%);
+}
+
+.qdb-planet-color-pan .cascading-image .img-wrap{
+    background: linear-gradient(-90deg, #FF218C 17%, #FFD800 35%, #FFD800 65%, #21B1FF 83%);
+}
+
+.qdb-planet-color-pan.qdb-planet-rotate-top-right .cascading-image .img-wrap,
+.qdb-planet-color-pan.qdb-planet-rotate-top .cascading-image .img-wrap,
+.qdb-planet-color-pan.qdb-planet-rotate-bottom-right .cascading-image .img-wrap{
+    background: linear-gradient(90deg, #FF218C 17%, #FFD800 35%, #FFD800 65%, #21B1FF 83%);
+}
+
+.qdb-planet-color-asexual .cascading-image .img-wrap {
+    background: linear-gradient(-90deg, #333333 15%, #A4A4A4 40%, #DDDDDD 60%, #DDDDDD 70%, #810086 95%);
+}
+
+.qdb-planet-color-asexual.qdb-planet-rotate-top-right .cascading-image .img-wrap,
+.qdb-planet-color-asexual.qdb-planet-rotate-top .cascading-image .img-wrap,
+.qdb-planet-color-asexual.qdb-planet-rotate-bottom-right .cascading-image .img-wrap{
+    background: linear-gradient(90deg, #333333 15%, #A4A4A4 40%, #DDDDDD 60%, #DDDDDD 70%, #810086 95%);
+}
+
+.qdb-planet-color-intersex .cascading-image .img-wrap {
+    background: linear-gradient(-90deg, #FFDA00 50%, #7A00AC 90%);
+}
+
+.qdb-planet-color-intersex.qdb-planet-rotate-top-right .cascading-image .img-wrap,
+.qdb-planet-color-intersex.qdb-planet-rotate-top .cascading-image .img-wrap,
+.qdb-planet-color-intersex.qdb-planet-rotate-bottom-right .cascading-image .img-wrap{
+    background: linear-gradient(90deg, #FFDA00 50%, #7A00AC 90%);
+}
