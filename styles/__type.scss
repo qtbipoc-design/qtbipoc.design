@@ -113,6 +113,7 @@
     /* Font sizes based on Steven's definitions in Figma as of 2/2022 */
     --font-size-super-h1-default:       68px;
     --font-size-super-h1:                   calc(var(--font-size-super-h1-default) * var(--multiplier-font-size-h1-current));
+    --font-size-super-heading:          var(--font-size-super-h1);
     --font-size-h1-default:             53px;
 	--font-size-h1:                         calc(var(--font-size-h1-default) * var(--multiplier-font-size-h1-current));
 	--font-size-h2-default:             42px;
@@ -134,6 +135,7 @@
 
     /* Line height values are based on manual optical review of ideal line-height of paragraphs and headings */
     --line-height-super-heading:        1.5;
+    --line-height-super-h1:             1.5;
     --line-height-h1:                   1.5;
     --line-height-h1-as-paragraph:          1.5;
     --line-height-h2:                   1.5;

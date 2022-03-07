@@ -6,6 +6,15 @@
 }
 
 
+
+/* Home Page Hero Org Name  Heading */
+.heading-home-hero-org-name {
+    font-size: var(--font-size-super-h1);
+    line-height: var(--line-height-super-heading);
+    font-weight: 900 !important;
+}
+
+
 /* before footer */
 /* Remove spacing so planets don't end all of a sudden */
 .woocommerce-checkout .nectar-global-section.before-footer, .woocommerce-account .nectar-global-section.before-footer, .woocommerce-cart .nectar-global-section.before-footer, body:not(.page):not(.single-post):not(.single-portfolio) .nectar-global-section.before-footer, .single-portfolio #regular_portfolio [data-nav-pos="in_header"] .nectar-global-section.before-footer {
