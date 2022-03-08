@@ -447,7 +447,8 @@
 
 .planet-ring-front {
 	border-radius: 0 0 100000px 100000px;
-	top: calc((var(--planet-diameter) / 2));
+	--hack-seam-offset: 0.1px;
+	top: calc((var(--planet-diameter) / 2) - var(--hack-seam-offset));
 	transform-origin: top center;
 
 	/* For border-based rings */
