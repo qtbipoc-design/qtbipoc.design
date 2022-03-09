@@ -94,7 +94,7 @@
 	/* should be same stops as planet shadow gradient */
 	--gradient-radial-planet-shading: radial-gradient(circle at 25% 25%,
 		hsla(0 .01% 100% / 1) 0,
-		hsla(0 .01% 100% / 0) 50%, 
+		hsla(0 .01% 100% / .2) 50%, 
 		hsla(0 .01% 0.01% / 0) 100%);
 
 	mask-image: var(--gradient-radial-planet-shading);
