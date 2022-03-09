@@ -61,10 +61,13 @@
 	transform: var(--translate);
  	-webkit-transform: var(--translate);
 	
-	background-color: var(--color-base); // change for microtexture
+	// change for microtexture
+	background-color: var(--color-base);
 
-	background-image: var(--base64-texture-grain); // remove for microtexture 
-	background-blend-mode: overlay; // remove for microtexture 
+	// remove for microtexture 
+	background-image: var(--base64-texture-grain);
+	// remove for microtexture 
+	background-blend-mode: overlay;
 
 	/* microtexture changes */
 	background-color: transparent;
