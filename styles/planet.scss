@@ -61,11 +61,42 @@
 	transform: var(--translate);
  	-webkit-transform: var(--translate);
 	
-	background-color: var(--color-base);
+	background-color: var(--color-base); // change for microtexture
+
+	background-image: var(--base64-texture-grain); // remove for microtexture 
+	background-blend-mode: overlay; // remove for microtexture 
+
+	/* microtexture changes */
+	background-color: transparent;
+	background-image: none;
+	background-blend-mode: normal;
+
+}
+
+
+.planetContainer .planetMicroTexture {
+	/* Same as .planet */
+	width: var(--planet-diameter);
+	height: var(--planet-diameter);
+	clip-path: circle(50% at 50% 50%);
+
+	/* specific properties */
+	position: absolute;
+	top: 0;
+	left: 0;
 
 	background-image: var(--base64-texture-grain);
-	background-blend-mode: overlay;
+	mix-blend-mode: overlay;
 
+	/* should be same stops as planet shadow gradient */
+	--gradient-radial-planet-shading: radial-gradient(circle at 25% 25%,
+		hsla(0 .01% 100% / 1) 0,
+		hsla(0 .01% 100% / 0) 50%, 
+		hsla(0 .01% 0.01% / 0) 100%);
+
+	mask-image: var(--gradient-radial-planet-shading);
+	-webkit-mask-image: var(--gradient-radial-planet-shading);
+	
 }
 
 
