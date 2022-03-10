@@ -471,8 +471,8 @@
 	top: calc((var(--planet-diameter) / 2));
 	transform-origin: top center;
 	
-	--hack-seam-offset: 0.3px;
-	--translate-y: calc(1 * (var(--planet-diameter) / -200));
+	// --hack-seam-offset: 0.3px;
+	--translate-y: calc(-4px / 10);
 	transform:  rotate(var(--planet-ring_rotation)) translateY(var(--translate-y)) scaleY(var(--planet-ring_flatness))  ;
 
 	/* For border-based rings */
