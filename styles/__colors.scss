@@ -34,6 +34,11 @@
 	--color-brand-white: hsla(0 0.01% 100% / var(--color-alpha-default)); /* Bug: Need to set 0% to 0.01%, else the 0% becomes 0 when compiling and become invalid */
 	--color-brand-black: hsla(0 0.01% 20% / var(--color-alpha-default)); /* Bug: Need to set 0% to 0.01%, else the 0% becomes 0 when compiling and become invalid */
 
+    --color-brand-gray-darkest: hsla(0 0.01% 14% / var(--color-alpha-default));
+
+
+
+
 	--color-brand-red: hsla(var(--color-hue-brand-red) var(--color-sla-default));
 	--color-brand-red-tint: hsla(var(--color-hue-brand-red) var(--color-sla-tint));
 	--color-brand-red-shade: hsla(var(--color-hue-brand-red) var(--color-sla-shade));
@@ -82,6 +87,18 @@
     --color-analogous-degree-shift-lower: calc(360 - var(--color-analogous-degree-shift));
     --color-analogous-degree-shift-higher: var(--color-analogous-degree-shift);
 
+
+    /* Text and Background */
+    
+    /* Dark on light */
+
+    --color-bg-light-default: var(--color-brand-white);
+    --color-text-dark-on-light-default: var(--color-brand-gray-darkest);
+
+    /* Light on Dark */
+    --color-bg-dark-default: var(--color-brand-gray-darkest);
+    --color-text-light-on-dark-default: var(--color-brand-white);
+    
         
     /*
     --BrightTurquoise: #00CEF8;
