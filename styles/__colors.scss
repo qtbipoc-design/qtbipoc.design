@@ -1,4 +1,5 @@
 :root {
+    --trigger-change: "can delete";
 
     /* Hue, Saturation, Lightness values */
     
@@ -53,7 +54,6 @@
 	--color-brand-black: hsla(var(--color-hue-neutral) var(--color-saturation-neutral) var(--color-lightness-neutral-black) / var(--color-alpha-default));
     --color-brand-gray-darkest: hsla(var(--color-hue-neutral) var(--color-saturation-neutral) var(--color-lightness-neutral-gray-darkest) / var(--color-alpha-default));
     --color-brand-gray-darkest-shade: hsla(var(--color-hue-neutral) var(--color-saturation-neutral) var(--color-lightness-shade-neutral-gray-darkest) / var(--color-alpha-default));
-
 
 
 
