@@ -2,6 +2,7 @@
 
     /* Hue, Saturation, Lightness values */
     
+    // Hue
     --color-hue-brand-red:          347;
     --color-hue-brand-orange:       29;
     --color-hue-brand-yellow:       45;
@@ -13,13 +14,30 @@
     --color-hue-brand-pink:         302;
     --color-hue-brand-rose:         324.5;
     --color-hue-brand-brown:        29;
+    --color-hue-neutral:            0;
     
+
+    // Saturation
     --color-saturation-default:     100%;
-    
+    --color-saturation-neutral:     0.01%; /* Bug: Need to set 0% to 0.01%, else the 0% becomes 0 when compiling and become invalid */
+    --color-saturation-brand-brown: 54%;
+
+
+    // Lightness
+    --pct-color-lightness-shade:    0.85;
+    --pct-color-lightness-tint:     1.5;
     --color-lightness-default:      50%;
-    --color-lightness-shade:        calc(var(--color-lightness-default) * 0.85);
-    --color-lightness-tint:         calc(var(--color-lightness-default) * 1.5);
+    --color-lightness-shade:        calc(var(--color-lightness-default) * var(--pct-color-lightness-shade));
+    --color-lightness-tint:         calc(var(--color-lightness-default) * var(--pct-color-lightness-tint));
     
+    --color-lightness-brand-brown:  45%;
+    --color-lightness-shade-brand-brown:  calc(var(--color-lightness-brand-brown) * var(--pct-color-lightness-shade));
+
+    --color-lightness-neutral-gray-darkest: 14%;
+    --color-lightness-shade-neutral-gray-darkest: calc(var(--color-lightness-neutral-gray-darkest) * var(--pct-color-lightness-shade));
+    --color-lightness-neutral-black: 20%;
+    
+    // Alpha
     --color-alpha-default:          1;
 
 
@@ -31,10 +49,9 @@
 
     
     /* Color Definitions */
-	--color-brand-white: hsla(0 0.01% 100% / var(--color-alpha-default)); /* Bug: Need to set 0% to 0.01%, else the 0% becomes 0 when compiling and become invalid */
-	--color-brand-black: hsla(0 0.01% 20% / var(--color-alpha-default)); /* Bug: Need to set 0% to 0.01%, else the 0% becomes 0 when compiling and become invalid */
-
-    --color-brand-gray-darkest: hsla(0 0.01% 14% / var(--color-alpha-default));
+	--color-brand-white: hsla(var(--color-hue-neutral) var(--color-saturation-neutral) 100% / var(--color-alpha-default));
+	--color-brand-black: hsla(var(--color-hue-neutral) var(--color-saturation-neutral) var(--color-lightness-neutral-black) / var(--color-alpha-default));
+    --color-brand-gray-darkest: hsla(var(--color-hue-neutral) var(--color-saturation-neutral) var(--color-lightness-neutral-gray-darkest) / var(--color-alpha-default));
 
 
 
@@ -79,7 +96,7 @@
 	--color-brand-rose-tint: hsla(var(--color-hue-brand-rose) var(--color-sla-tint));
 	--color-brand-rose-shade: hsla(var(--color-hue-brand-rose) var(--color-sla-shade));
 
-    --color-brand-brown: hsla(var(--color-hue-brand-rose) 54% 45% / 1);
+    --color-brand-brown: hsla(var(--color-hue-brand-rose) var(--color-saturation-brand-brown) var(--color-lightness-brand-brown) / var(--color-alpha-default));
 
     
     /* Color Scheme Properties */
