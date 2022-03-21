@@ -1,0 +1,108 @@
+/* DIRECTORY RESULTS */
+
+/* Flex grid item */
+.member-listing>.vc_row>.col {
+    row-gap: 2rem;
+}
+
+.member-card>.vc_column-inner,
+.member-card>.vc_column-inner>.wpb_wrapper {
+    height: 100%; /* Make cards same height */
+}
+
+.member-card>.vc_column-inner>.wpb_wrapper {
+    background-color: var(--color-bg-light-default);
+    color: var(--color-text-dark-on-light-default);
+    border-radius: 1rem;
+    overflow: hidden;
+    
+    /* Make cards same height */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Featured Image */
+
+.member-card .directory-result-element-featured-image a {
+    line-height: 0; /* To miminize bottom spacing */
+    display: block; /* To make image fill height */
+    aspect-ratio: 1;  /* To make image fill height */
+}
+
+.member-card .directory-result-element-featured-image img {
+    margin-bottom: 0;
+    height: 100%;  /* To make image fill height */
+    object-fit: cover; /* To make image fill height */
+    min-width: 100%; /* To make image fill width */
+}
+
+/* Content */
+:root {
+    --padding-horizontal-member-card-content: 2rem;
+}
+.member-card .directory-result-element-member-name, 
+.member-card .wpb_content_element:not(.directory-result-element-featured-image), 
+.member-card .inner-row-directory-result-member-socials {
+    padding: 0 var(--padding-horizontal-member-card-content);
+}
+
+body .member-card h4,  /* Salient override */
+.member-card .directory-result-element-member-name {
+    color: var(--color-text-dark-on-light-default);
+    margin-top 2rem;
+}
+
+.member-card .wpb_text_column.wpb_content_element:not(.directory-result-member-bio) {
+    margin-bottom: 0;
+}
+
+body .member-card .wpb_text_column.wpb_content_element:not(.directory-result-member-bio) p { /* Override */
+    font-family: var(--font-family-display);
+}
+
+body .member-card .directory-result-member-bio {
+    margin-top: 1em;
+    flex-grow: 100; /* Expand to make content below it align to bottom */
+}
+
+/* Button */
+.member-card .nectar-button{
+    margin: 0 var(--padding-horizontal-member-card-content);
+    display: block;
+    text-align: center;
+}
+
+body.material .member-card .nectar-button.accent-color { /* override */
+    --color-button-assigned: var(--color-member-highlight);
+}
+
+.member-card .nectar-button[data-color-override="false"].regular-button { /* Salient override */
+    background-color: var(--color-button-assigned) !important;
+}
+
+body.material .member-card .nectar-button.large:hover,  /* override github css */
+.member-card .nectar-button[data-color-override="false"].regular-button.large:hover,  /* override github css */
+body .member-card .nectar-button[data-color-override="false"].see-through.large:hover { /* override github css */
+    --color-button-assigned-shadow: var(--color-member-highlight-shade);
+}
+
+/* Socials */
+@media (min-width: 690px) {
+    .inner-row-directory-result-member-socials .vc_col-sm-4 { /* Salient override */
+        width: 100%;
+    }
+}
+
+.inner-row-directory-result-member-socials .nectar_icon i {
+    width: 0px !important; /* make no-link icons have no width */
+    overflow: hidden; /* Hide no-link icons */
+}
+
+.inner-row-directory-result-member-socials .nectar_icon a+i {
+    margin-right: 1rem;
+    width: auto !important; /* offset 0px for no-link icons */
+}
+
+.inner-row-directory-result-member-socials a:hover+i {
+    color: var(--color-member-highlight) !important;
+}
