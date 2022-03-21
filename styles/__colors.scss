@@ -3,7 +3,6 @@
     /* Hue, Saturation, Lightness values */
     
     /* Hue */
-
     --color-hue-brand-red:          347;
     --color-hue-brand-orange:       29;
     --color-hue-brand-yellow:       45;
@@ -36,6 +35,7 @@
 
     --color-lightness-neutral-gray-darkest: 14%;
     --color-lightness-shade-neutral-gray-darkest: calc(var(--color-lightness-neutral-gray-darkest) * var(--pct-color-lightness-shade));
+
     --color-lightness-neutral-black: 20%;
     
     /* Alpha */
@@ -97,8 +97,8 @@
 	--color-brand-rose-tint: hsla(var(--color-hue-brand-rose) var(--color-sla-tint));
 	--color-brand-rose-shade: hsla(var(--color-hue-brand-rose) var(--color-sla-shade));
 
-    --color-brand-brown: hsla(var(--color-hue-brand-rose) var(--color-saturation-brand-brown) var(--color-lightness-brand-brown) / var(--color-alpha-default));
-    --color-brand-brown-shade: hsla(var(--color-hue-brand-rose) var(--color-saturation-brand-brown) var(--color-lightness-shade-brand-brown) / var(--color-alpha-default));
+    --color-brand-brown:        hsla(var(--color-hue-brand-rose) var(--color-saturation-brand-brown) var(--color-lightness-brand-brown) / var(--color-alpha-default));
+    --color-brand-brown-shade:  hsla(var(--color-hue-brand-rose) var(--color-saturation-brand-brown) var(--color-lightness-shade-brand-brown) / var(--color-alpha-default));
 
     
     /* Color Scheme Properties */
@@ -111,12 +111,12 @@
     
     /* Dark on light */
 
-    --color-bg-light-default: var(--color-brand-white);
-    --color-text-dark-on-light-default: var(--color-brand-gray-darkest);
+    --color-bg-light-default:               var(--color-brand-white);
+    --color-text-dark-on-light-default:     var(--color-brand-gray-darkest);
 
     /* Light on Dark */
-    --color-bg-dark-default: var(--color-brand-gray-darkest);
-    --color-text-light-on-dark-default: var(--color-brand-white);
+    --color-bg-dark-default:                var(--color-brand-gray-darkest);
+    --color-text-light-on-dark-default:     var(--color-brand-white);
     
         
     /*

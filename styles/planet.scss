@@ -473,6 +473,7 @@
 	
 	// --hack-seam-offset: 0.3px;
 	--translate-y: calc(-4px / 10);
+	--translate-y: 0; /* Ivan 3/21/22: reset until better solution */
 	transform:  rotate(var(--planet-ring_rotation)) translateY(var(--translate-y)) scaleY(var(--planet-ring_flatness))  ;
 
 	/* For border-based rings */
