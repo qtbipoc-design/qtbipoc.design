@@ -46,7 +46,7 @@ $( document ).on( "change","#input_3_68 input", function() { // 3_68 is highligh
 	updateDirectoryFormPreviewFrameColor( this );
     } );
 
-
+/*
 $( "#input_3_24" ).ready(function() { // 3_24 is highlight color select version 1
 	updateDirectoryFormPreviewFrameColor( document.querySelector("#input_3_24") );
     } );
@@ -55,15 +55,16 @@ $( "#input_3_24" ).ready(function() { // 3_24 is highlight color select version 
 $( "#input_3_68" ).ready(function() { // 3_68 is highlight color selector version 2
 	updateDirectoryFormPreviewFrameColor( document.querySelector("#input_3_68 input[checked]") ); // 3_68 is highlight color selector
     } );
-
+*/
 
 ///// Directory Filter FAB /////
 
+/*
 $("#directoryFilterFab").ready(function () {
-directoryFilterFab_addEventListener();
-$("#directoryFilterFab a").removeAttr("href");
+	directoryFilterFab_addEventListener();
+	$("#directoryFilterFab a").removeAttr("href");
 });
-
+*/
 
 
 ///// Page Submenu ////
@@ -80,13 +81,13 @@ changeSubmenuLabel();
 
 function updateDirectoryFormPreviewFrameColor( input ) {
 
-let highlightInput = input;
+	let highlightInput = input;
 
-let highlightColorStr = highlightInput.value.toLowerCase().replace(" ", "");
-let highlightColorVarStr = "var(--color-directory-highlight-" + highlightColorStr + ")";
+	let highlightColorStr = highlightInput.value.toLowerCase().replace(" ", "");
+	let highlightColorVarStr = "var(--color-directory-highlight-" + highlightColorStr + ")";
 
-document.querySelector(".member-photo img").style.borderColor = highlightColorVarStr;
-document.querySelector(".member-photo img").style.boxShadow = "16px 16px 0px 0px " + highlightColorVarStr;
+	document.querySelector(".member-photo img").style.borderColor = highlightColorVarStr;
+	document.querySelector(".member-photo img").style.boxShadow = "16px 16px 0px 0px " + highlightColorVarStr;
 
 
 }
@@ -95,22 +96,22 @@ document.querySelector(".member-photo img").style.boxShadow = "16px 16px 0px 0px
 
 
 function directoryFilterFab_addEventListener() {
-document.querySelector("#directoryFilterFab a").addEventListener("click", function() {
+	document.querySelector("#directoryFilterFab a").addEventListener("click", function() {
 
-// Get directory filter panel state and use that as the definitive state in case the states get mixed up.
-var directoryFilterIsDisplayed = true;
+		// Get directory filter panel state and use that as the definitive state in case the states get mixed up.
+		var directoryFilterIsDisplayed = true;
 
-if (document.querySelector("#directoryFilterModuleRow").classList.contains("panel-closed")) {
-directoryFilterIsDisplayed = false;
-}
+		if (document.querySelector("#directoryFilterModuleRow").classList.contains("panel-closed")) {
+		directoryFilterIsDisplayed = false;
+		}
 
-// Change panel state
-toggleDirectoryFilterDisplay(directoryFilterIsDisplayed);
+		// Change panel state
+		toggleDirectoryFilterDisplay(directoryFilterIsDisplayed);
 
-// Update Fab styling
-toggleDirectoryFilterFabDisplay(directoryFilterIsDisplayed);
+		// Update Fab styling
+		toggleDirectoryFilterFabDisplay(directoryFilterIsDisplayed);
 
-}); // end addEventListener
+	}); // end addEventListener
 } // end function
 
 
@@ -119,29 +120,29 @@ toggleDirectoryFilterFabDisplay(directoryFilterIsDisplayed);
 function toggleDirectoryFilterDisplay(directoryFilterIsDisplayed){
 // If panel has "panel-closed" class, remove it. If it doesn't have it, add it.
 
-if (directoryFilterIsDisplayed) {
-document.querySelector("#directoryFilterModuleRow").classList.add("panel-closed");
-} else {
-document.querySelector("#directoryFilterModuleRow").classList.remove("panel-closed");
-} // end if
+	if (directoryFilterIsDisplayed) {
+		document.querySelector("#directoryFilterModuleRow").classList.add("panel-closed");
+	} else {
+		document.querySelector("#directoryFilterModuleRow").classList.remove("panel-closed");
+	} // end if
 
 } // end function
 
 
 
 function toggleDirectoryFilterFabDisplay(directoryFilterIsDisplayed){
-// If panel has "panel-closed" class, remove it. If it doesn't have it, add it.
-if (directoryFilterIsDisplayed) {
-document.querySelector("#directoryFilterFab").classList.add("panel-closed");
-document.querySelector("#directoryFilterFab a.nectar-button span").textContent = "Filters";
-document.querySelector("#directoryFilterFab a.nectar-button i").classList.add("fa-filter"); /* filter icon */
-document.querySelector("#directoryFilterFab a.nectar-button i").classList.remove("fa-times"); /* x icon */
-} else {
-document.querySelector("#directoryFilterFab").classList.remove("panel-closed");
-document.querySelector("#directoryFilterFab a.nectar-button span").textContent = "Close";
-document.querySelector("#directoryFilterFab a.nectar-button i").classList.add("fa-times"); /* x icon */
-document.querySelector("#directoryFilterFab a.nectar-button i").classList.remove("fa-filter"); /* filter icon */
-} // end if
+	// If panel has "panel-closed" class, remove it. If it doesn't have it, add it.
+	if (directoryFilterIsDisplayed) {
+		document.querySelector("#directoryFilterFab").classList.add("panel-closed");
+		document.querySelector("#directoryFilterFab a.nectar-button span").textContent = "Filters";
+		document.querySelector("#directoryFilterFab a.nectar-button i").classList.add("fa-filter"); /* filter icon */
+		document.querySelector("#directoryFilterFab a.nectar-button i").classList.remove("fa-times"); /* x icon */
+	} else {
+		document.querySelector("#directoryFilterFab").classList.remove("panel-closed");
+		document.querySelector("#directoryFilterFab a.nectar-button span").textContent = "Close";
+		document.querySelector("#directoryFilterFab a.nectar-button i").classList.add("fa-times"); /* x icon */
+		document.querySelector("#directoryFilterFab a.nectar-button i").classList.remove("fa-filter"); /* filter icon */
+	} // end if
 } // end function
 
 
