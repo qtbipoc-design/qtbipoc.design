@@ -46,7 +46,7 @@ $( document ).on( "change","#input_3_68 input", function() { // 3_68 is highligh
 	updateDirectoryFormPreviewFrameColor( this );
     } );
 
-/*
+
 $( "#input_3_24" ).ready(function() { // 3_24 is highlight color select version 1
 	updateDirectoryFormPreviewFrameColor( document.querySelector("#input_3_24") );
     } );
@@ -55,16 +55,13 @@ $( "#input_3_24" ).ready(function() { // 3_24 is highlight color select version 
 $( "#input_3_68" ).ready(function() { // 3_68 is highlight color selector version 2
 	updateDirectoryFormPreviewFrameColor( document.querySelector("#input_3_68 input[checked]") ); // 3_68 is highlight color selector
     } );
-*/
 
 ///// Directory Filter FAB /////
 
-/*
 $("#directoryFilterFab").ready(function () {
 	directoryFilterFab_addEventListener();
 	$("#directoryFilterFab a").removeAttr("href");
 });
-*/
 
 
 ///// Page Submenu ////
