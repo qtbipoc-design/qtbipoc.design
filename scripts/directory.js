@@ -46,16 +46,16 @@ $( document ).on( "change","#input_3_68 input", function() { // 3_68 is highligh
 	updateDirectoryFormPreviewFrameColor( this );
     } );
 
+  if ($("#input_3_24") || $("#input_3_68")) {
+    $("#input_3_24").ready(function () { // 3_24 is highlight color select version 1
+      updateDirectoryFormPreviewFrameColor(document.querySelector("#input_3_24"));
+    });
 
-$( "#input_3_24" ).ready(function() { // 3_24 is highlight color select version 1
-	updateDirectoryFormPreviewFrameColor( document.querySelector("#input_3_24") );
-    } );
 
-
-$( "#input_3_68" ).ready(function() { // 3_68 is highlight color selector version 2
-	updateDirectoryFormPreviewFrameColor( document.querySelector("#input_3_68 input[checked]") ); // 3_68 is highlight color selector
-    } );
-
+    $("#input_3_68").ready(function () { // 3_68 is highlight color selector version 2
+      updateDirectoryFormPreviewFrameColor(document.querySelector("#input_3_68 input[checked]")); // 3_68 is highlight color selector
+    });
+  }
 ///// Directory Filter FAB /////
 
 $("#directoryFilterFab").ready(function () {
@@ -93,6 +93,9 @@ function updateDirectoryFormPreviewFrameColor( input ) {
 
 
 function directoryFilterFab_addEventListener() {
+  if (!document.querySelector("#directoryFilterFab a")) {
+    return;
+  }
 	document.querySelector("#directoryFilterFab a").addEventListener("click", function() {
 
 		// Get directory filter panel state and use that as the definitive state in case the states get mixed up.
