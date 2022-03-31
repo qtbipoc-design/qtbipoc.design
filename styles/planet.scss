@@ -363,6 +363,7 @@
 }
 
 
+/*
 .planet.scheme-blackidentify,
 .planetContainer.scheme-blackidentify {
 	--color-base-hue: var(--color-hue-brand-red);
@@ -383,14 +384,20 @@
 	--fill-svg-7: var(--color-fill-2);
 }
 
+*/
+
+/*
 .planet.scheme-blackidentify,
 .planet.scheme-blackidentify *,
 .planetContainer.scheme-blackidentify,
 .planetContainer.scheme-blackidentify * {
+  */
     /* applies to the areas both outside and inside of SVG bounds */
-	--color-base: var(--color-fill-1);
+
+/*    --color-base: var(--color-fill-1);
 	--color-base: hsl(var(--color-base-hue) var(--color-base-saturation) var(--color-base-lightness));
 }
+*/
 
 
 /* Planet Color Scheme Template */
