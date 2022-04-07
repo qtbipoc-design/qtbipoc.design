@@ -5,7 +5,6 @@ console.log('Main Loaded');
 (function ($) {
   $(function () {
     if ($('.search-filter-results')) {
-      console.log('results exists');
       $('.search-filter-results')
         .contents()
         .filter(function () {
@@ -16,7 +15,3 @@ console.log('Main Loaded');
     }
   });
 })(jQuery);
-
-(($) => $(() => {
-  console.log("jquery + ready");
-}))(jQuery);
