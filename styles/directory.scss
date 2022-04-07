@@ -1,4 +1,6 @@
-/* DIRECTORY RESULTS */
+/* 
+ * DIRECTORY RESULTS 
+ */
 
 /* Flex grid item */
 .member-listing>.vc_row>.col {
@@ -105,4 +107,60 @@ body .member-card .nectar-button[data-color-override="false"].see-through.large:
 
 .inner-row-directory-result-member-socials a:hover+i {
     color: var(--color-member-highlight) !important;
+}
+
+
+
+
+/* 
+ * DIRECTORY FILTERS
+ */
+
+ /* WPBPB Row for Directory Filters */
+ #directoryFilterModuleRow {
+  --directoryFiltersBottomMargin: 5rem;    
+}
+
+.sf-directory-filters .searchandfilter>ul {
+  display: flex;
+  margin-left: 0;
+  width: 100%;
+  flex-wrap: wrap;
+  --gap: 2rem;
+  gap: var(--gap);
+}
+
+/* Filter category container */
+.sf-directory-filters .searchandfilter>ul>li {
+  --column-width: calc((100% - (3 * var(--gap))) / 4);
+  flex: 1 1 var(--column-width);
+}
+
+/* Filter category heading */
+.sf-directory-filters .searchandfilter>ul li h4 {
+  font-size: var(--font-size-paragraph);
+  line-height: var(--line-height-paragraph);
+}
+
+/* Years of Experience option units */
+.sf-directory-filters .searchandfilter>ul li.sf-field-taxonomy-years_of_experience ul li {
+  display: inline-block;
+  margin-right: 1rem;
+  white-space: nowrap;
+}
+
+/* Reset button */
+.sf-directory-filters .searchandfilter>ul li.sf-field-reset a{
+  /* Align button with other input options */
+  --sf-h4-vert-padding: calc(5px + 10px);
+  --sf-h4-height: calc(var(--font-size-paragraph) * var(--line-height-paragraph));
+  --sf-h4-vert-margin: 12px; /* manual */
+  margin-top: calc(var(--sf-h4-vert-padding) + var(--sf-h4-height) + var(--sf-h4-vert-margin));
+  display: block; /* to make margin-top take effect */
+}
+
+
+/* Direcotry Combo box layout */
+.sf-directory-filters .chosen-container.chosen-container-multi {
+  width: 100% !important;
 }
