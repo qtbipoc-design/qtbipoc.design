@@ -69,7 +69,8 @@ input[type="checkbox"]:checked::before {
   top: 21px;
   background-color: var(--color-text-dark-on-light-default); /* TODO: Use variable about standard dark icon color on light */
   cursor: pointer;
-  --mask-image: url('/wp-content/themes/salient-child/images/icon_dropdown_down.svg');
+  // --mask-image: url('/wp-content/themes/salient-child/images/icon_dropdown_down.svg');
+  --mask-image: var(--url-icon-dropdown_down);
   --mask-repeat: no-repeat;
   -webkit-mask-image: var(--mask-image);
   mask-image: var(--mask-image);
@@ -169,7 +170,8 @@ input[type="checkbox"]:checked::before {
   height: 8px;
   position: absolute;
   background-color: var(--color-text-light-on-dark-default); /* TODO: Use variable for default light graphic on dark */
-  --mask-image: url('/wp-content/themes/salient-child/images/icon_delete_x.svg');
+  // --mask-image: url('/wp-content/themes/salient-child/images/icon_delete_x.svg');
+  --mask-image: var(--url-icon-delete-x);
   -webkit-mask-image: var(--mask-image);
   mask-image: var(--mask-image);
   -webkit-mask-repeat: no-repeat;
