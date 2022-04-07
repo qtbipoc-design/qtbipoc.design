@@ -16,3 +16,7 @@ console.log('Main Loaded');
     }
   });
 })(jQuery);
+
+(($) => $(() => {
+  console.log("jquery + ready");
+}))(jQuery);
