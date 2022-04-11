@@ -80,7 +80,7 @@ input[type="checkbox"]:checked::before {
   height: 11px;
   right: 1rem;
   top: 21px;
-  background-color: var(--color-graphic-accent-on-light);
+  background-color: var(--color-text-default);
   cursor: pointer;
   --mask-image: var(--url-icon-dropdown-down);
   --mask-repeat: no-repeat;
