@@ -24,11 +24,11 @@ input[type="checkbox"] {
 }
 
 input[type="checkbox"]:focus {
-    outline: 1px solid var(--color-accent-text-ondark); /* TODO: Update to correct variable */
+    outline: 1px solid var(--color-outline-default);
 }
 
 input[type="checkbox"]:checked {
-    background-color: var(--color-accent); /* TODO: Update variable */
+    background-color: var(--color-bg-color-default);
 }
 
 input[type="checkbox"]:checked::before {
@@ -80,7 +80,7 @@ input[type="checkbox"]:checked::before {
   height: 11px;
   right: 1rem;
   top: 21px;
-  background-color: var(--color-text-dark-on-light-default); /* TODO: Use variable about standard dark icon color on light */
+  background-color: var(--color-graphic-accent-on-light);
   cursor: pointer;
   --mask-image: var(--url-icon-dropdown-down);
   --mask-repeat: no-repeat;
@@ -101,7 +101,7 @@ input[type="checkbox"]:checked::before {
 /* Main combo box container - Text Field */
 .searchandfilter li[data-sf-field-input-type=multiselect] .chosen-container .chosen-choices li.search-field input[type="text"],
 .gform_legacy_markup_wrapper .chosen-container .chosen-choices li.search-field input[type="text"]{
-  color: var(--color-text-dark-on-light-default); /* TODO: Use color-mode indifferent variable */
+  color: var(--color-text-form-field-default);
   font-size: var(--font-size-paragraph);
   line-height: var(--line-height-paragraph);
   margin:0.25rem;
@@ -116,7 +116,7 @@ input[type="checkbox"]:checked::before {
 .gform_legacy_markup_wrapper .chosen-container .chosen-drop{
   border-radius: 0 0 0.25rem 0.25rem;
   border: none;
-  border-top: 1px solid #CCC; /* TODO: Use variable for subtle divider line color */
+  border-top: 1px solid var(--color-line-subtle-on-light);
 }
 
 .searchandfilter li[data-sf-field-input-type=multiselect] .chosen-container .chosen-results,
@@ -136,15 +136,15 @@ input[type="checkbox"]:checked::before {
 
 .searchandfilter li[data-sf-field-input-type=multiselect] .chosen-container .chosen-results li.highlighted,
 .gform_legacy_markup_wrapper .chosen-container .chosen-results li.highlighted{
-  background-color: hsla(276 100% 90%); /* TODO: Use correct color for focus background */
+  background-color: var(--color-graphic-color-tint-default);
   background-image: none;
-  color: var(--color-text-dark-on-light-default); /* Override */ /* TODO: Use variable for text on light color */
+  color: var(--color-text-form-field-default); /* Override */
 }
 
 /* Combo box option - selected (and therefore disabled) */
 .searchandfilter li[data-sf-field-input-type=multiselect] .chosen-container-multi .chosen-drop .result-selected,
 .gform_legacy_markup_wrapper .chosen-container-multi .chosen-drop .result-selected{
-  color: #767676; /* TODO: User variable for disabled text color */
+  color: var(--color-text-disabled-default);
 }
 
 /* Combo box - active/open state */
@@ -163,7 +163,7 @@ input[type="checkbox"]:checked::before {
   font-size: var(--font-size-paragraph); /* Override */
   line-height: var(--line-height-paragraph) !important; /* Override */
   font-weight: 500; /* Override */ /* TODO: Use default font weight */
-  background-color: hsla(276 100% 90%) !important; /* Override */ /* TODO: User variable for highlight */
+  background-color: var(--color-graphic-color-tint-default) !important; /* Override */
   background-image: none !important; /* Override */
   box-shadow: none !important; /* Override */
   border-radius: 0.25rem !important; /* Override */ /* TODO: Use variable for default border radius */
@@ -172,7 +172,7 @@ input[type="checkbox"]:checked::before {
 
 .searchandfilter li[data-sf-field-input-type=multiselect] .chosen-container .search-choice span,
 .gform_legacy_markup_wrapper .chosen-container .search-choice span{
-  color: var(--color-text-dark-on-light-default); /* Override */ /* TODO: Use variable for text color on light color */
+  color: var(--color-text-form-field-default); /* Override */
 }
 
 /* Combo Box Chip X button */
@@ -183,7 +183,7 @@ input[type="checkbox"]:checked::before {
   background-image: none !important; 
   top: 10px; 
   right: 0.5rem;
-  background-color: var(--color-accent);  /* TODO: Use variable for standard button color */
+  background-color: var(--color-bg-color-accent);
   border-radius: 100%;
   font-size: var(--font-size-paragraph);
   line-height: 15px;
@@ -196,7 +196,7 @@ input[type="checkbox"]:checked::before {
   width: 8px;
   height: 8px;
   position: absolute;
-  background-color: var(--color-text-light-on-dark-default); /* TODO: Use variable for default light graphic on dark */
+  background-color: var(--color-text-on-color-default);
   --mask-image: var(--url-icon-delete-x);
   -webkit-mask-image: var(--mask-image);
   mask-image: var(--mask-image);

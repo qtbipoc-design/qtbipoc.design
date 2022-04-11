@@ -29,20 +29,28 @@
   --color-lightness-default:      50%;
   --color-lightness-shade:        calc(var(--color-lightness-default) * var(--pct-color-lightness-shade));
   --color-lightness-tint:         calc(var(--color-lightness-default) * var(--pct-color-lightness-tint));
+  --color-lightness-faint:        90%;
   
   --color-lightness-brand-brown:  45%;
   --color-lightness-shade-brand-brown:  calc(var(--color-lightness-brand-brown) * var(--pct-color-lightness-shade));
 
-  --color-lightness-neutral-gray-darkest: 14%;
+  --color-lightness-neutral-mid-light:      25%;
+  --color-lightness-neutral-mid-dark:       75%;
+  --color-lightness-neutral-gray-darkest:   14%;
   --color-lightness-shade-neutral-gray-darkest: calc(var(--color-lightness-neutral-gray-darkest) * var(--pct-color-lightness-shade));
 
   --color-lightness-neutral-black: 20%;
+
+  --color-lightness-disabled-on-light: 50%;
+  --color-lightness-disabled-on-dark: 50%;
+  --color-lightness-disabled-default: var(--color-lightness-disabled-on-dark);
   
   /* Alpha */
   --color-alpha-default:          1;
 
 
   /* Common Combo properties */
+  --color-hs-neutral:       var(--color-hue-neutral) var(--color-saturation-neutra);
   --color-sla-default: var(--color-saturation-default) var(--color-lightness-default) / var(--color-alpha-default);
   --color-sla-shade: var(--color-saturation-default) var(--color-lightness-shade) / var(--color-alpha-default);
   --color-sla-tint: var(--color-saturation-default) var(--color-lightness-tint) / var(--color-alpha-default);
@@ -107,22 +115,6 @@
   --color-analogous-degree-shift-higher: var(--color-analogous-degree-shift);
 
 
-  /* TEXT AND BACKGROUND */
-  
-  /* Dark on light */
-  --color-bg-light-default:               var(--color-brand-white);
-  --color-text-dark-on-light-default:     var(--color-brand-gray-darkest);
-
-  /* Light on Dark */
-  --color-bg-dark-default:                var(--color-brand-gray-darkest);
-  --color-text-light-on-dark-default:     var(--color-brand-white);
-  
-  /* Default */
-  --color-bg-default:                     var(--color-bg-dark-default);
-  --color-text-default:                   var(--color-text-light-on-dark-default);
-
-  --color-text-on-color-default:          var(--color-text-light-on-dark-default);
-
       
   /*
   --BrightTurquoise: #00CEF8;
@@ -141,20 +133,73 @@
   --color-extra-2: var(--Cerise); /* TEMP */
   --color-extra-3: var(--LavenderRose); /* TEMP */
 
-  --color-hue-accent:         var(--color-hue-brand-purple);
-  --color-accent:             var(--color-brand-purple);
+  --color-hue-accent:           var(--color-hue-brand-purple);
+  --color-accent:               var(--color-brand-purple);
+  --color-accent-tint:          var(--color-brand-purple-tint);
   --color-accent-text-ondark: hsl(268 76% 68%); /* TEMP variable name. Should standardize */
+  --color-text-accent-on-dark:  var(--color-brand-purple-tint);
 
-  --color-hue-extra-1:        var(--color-hue-brand-lightblue);
-  --color-extra-1:            var(--color-brand-lightblue);
+  --color-hue-extra-1:          var(--color-hue-brand-lightblue);
+  --color-extra-1:              var(--color-brand-lightblue);
   
-  --color-hue-extra-2:        var(--color-hue-brand-pink);
-  --color-extra-2:            var(--color-brand-pink);
+  --color-hue-extra-2:          var(--color-hue-brand-pink);
+  --color-extra-2:              var(--color-brand-pink);
   
-  --color-hue-extra-3:        var(--color-hue-brand-purple);
-  --color-extra-3:            var(--color-brand-purple-tint);
+  --color-hue-extra-3:          var(--color-hue-brand-purple);
+  --color-extra-3:              var(--color-brand-purple-tint);
   
 
+  /* TEXT AND BACKGROUND */
+  
+  /* Dark on light */
+  --color-bg-light-default:               var(--color-brand-white);
+  --color-text-dark-on-light-default:     var(--color-brand-gray-darkest);
+  --color-text-dark-on-light-disabled:    hsl(var(--color-hs-neutral) var(--color-lightness-disabled-on-light));
+
+  /* Light on Dark */
+  --color-bg-dark-default:                var(--color-brand-gray-darkest);
+  --color-text-light-on-dark-default:     var(--color-brand-white);
+  --color-text-light-on-dark-disabled:     hsl(var(--color-hs-neutral) var(--color-lightness-disabled-on-dark));
+  
+  /* On Color Background */
+  --color-bg-color-accent:                var(--color-accent);
+  --color-bg-color-default:               var(--color-bg-color-accent);
+  --color-text-on-color-default:          var(--color-text-light-on-dark-default);
+  --color-graphic-accent-tint:            hsl(var(--color-hue-accent) var(--color-saturation-default) var(--color-lightness-faint));
+  --color-graphic-color-tint-default:     var(--color-graphic-accent-tint);
+
+  /* Color Foreground */
+  --color-text-accent-on-light:           var(--color-accent);
+  --color-text-accent-on-dark:            var(--color-accent);
+  --color-text-accent-default:            var(--color-text-accent-on-dark);
+  --color-graphic-accent-on-light:        var(--color-accent);
+  --color-graphic-accent-on-dark:         var(--color-accent);
+  --color-graphic-accent-default:         var(--color-graphic-accent-on-dark);
+  
+  /* Default */
+  --color-bg-default:                     var(--color-bg-dark-default);
+  --color-text-default:                   var(--color-text-light-on-dark-default);
+  --color-text-disabled-default:          var(--color-text-light-on-dark-disabled);
+
+  --color-bg-form-field-default:          var(--color-bg-light-default);
+  --color-text-form-field-default:        var(--color-text-dark-on-light-default);
+
+
+  /* LINES */
+
+  --color-line-strong-on-light:           hsl(var(--color-hs-neutral) var(--color-lightness-neutral-mid-dark));
+  --color-line-subtle-on-light:           hsl(var(--color-hs-neutral) var(--color-lightness-neutral-mid-light));
+  --color-line-strong-on-dark:            hsl(var(--color-hs-neutral) var(--color-lightness-neutral-mid-light));
+  --color-line-subtle-on-dark:            hsl(var(--color-hs-neutral) var(--color-lightness-neutral-mid-dark));
+  --color-line-default:                   var(--line-subtle-on-subtle-on-dark);
+
+
+
+
+
+  --color-outline-on-light:               var(--color-accent);
+  --color-outline-on-dark:                var(--color-accent-tint)
+  --color-outline-default:                var(--color-outline-default);
 
 }
 
