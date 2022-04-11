@@ -74,20 +74,20 @@ input[type="checkbox"]:checked::before {
 /* Main combo box container - dropdown arrow */
 .searchandfilter li[data-sf-field-input-type=multiselect] .chosen-container .chosen-choices::after,
 .gform_legacy_markup_wrapper .chosen-container .chosen-choices::after{
- content: "";
+  content: "";
   position: absolute;
   width: 20px;
   height: 11px;
   right: 1rem;
   top: 21px;
-  background-color: var(--color-text-default);
+  background-color: var(--color-text-form-field-default);
   cursor: pointer;
   --mask-image: var(--url-icon-dropdown-down);
   --mask-repeat: no-repeat;
   -webkit-mask-image: var(--mask-image);
   mask-image: var(--mask-image);
   -webkit-mask-repeat: var(--mask-repeat);
-  mask-repeat: var(--mask-repeat);
+mask-repeat: var(--mask-repeat);
 }
 
 /* Main combo box container - Remove dropdown arrow when box is open */
