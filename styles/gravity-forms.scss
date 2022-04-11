@@ -34,12 +34,17 @@ form .ginput_container label {
 .gform_wrapper.gravity-theme .gfield_description, 
 .gform_wrapper.gravity-theme .gsection_description, 
 .gform_wrapper.gravity-theme .instruction,
+body .gform_wrapper .description, 
+body .gform_wrapper .gfield_description, 
+body .gform_wrapper .gsection_description, 
+body .gform_wrapper .instruction,
+body .gform_wrapper div.charleft,
 /* legacy */
 .gform_legacy_markup_wrapper .description, 
 .gform_legacy_markup_wrapper .gfield_description, 
 .gform_legacy_markup_wrapper .gsection_description, 
 .gform_legacy_markup_wrapper .instruction {
-    font-size: var(--font-size-sub-paragraph);
+    font-size: var(--font-size-sub-paragraph); /* override */
     line-height: var(--line-height-sub-paragraph);
 }
 
@@ -91,7 +96,7 @@ form .ginput_container label {
 /* Field error - Field container */
 .gform_legacy_markup_wrapper li.gfield.gfield_error, 
 .gform_legacy_markup_wrapper li.gfield.gfield_error.gfield_contains_required.gfield_creditcard_warning {
-    background-color: hsla(var(--color-hue-brand-red) 100% 50% / 15%); /* override */
+    background-color: hsla(var(--color-hue-brand-red) 100% 50% / 10%); /* override */ /* TODO: Use variable for attention light background */
     --color-line-attention: var(--color-brand-red); /* override */
     border-top-color: var(--color-line-attention); /* override */
     border-bottom-color: var(--color-line-attention); /* override */
