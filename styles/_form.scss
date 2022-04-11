@@ -60,14 +60,20 @@ input[type="checkbox"]:checked::before {
 /* COMBO BOX */
 
 /* Main combo box container */
-.searchandfilter li[data-sf-field-input-type=multiselect] .chosen-container .chosen-choices {
+.searchandfilter li[data-sf-field-input-type=multiselect] .chosen-container .chosen-choices,
+.gform_legacy_markup_wrapper .chosen-container .chosen-choices {
   border-radius: 0.25rem; /* TODO: Use variable for standard border radius */
-  padding:0.5rem;
+  --right-dropdown-icon: 1rem;
+  --width-dropdown-icon: 20px;
+  --padding-right-normal: 0.5rem;
+  --padding-right: calc(var(--right-dropdown-icon) + var(--width-dropdown-icon) + var(--padding-right-normal)); 
+  padding: 0.5rem var(--padding-right) 0.5rem 0.5rem;
   border: none;
 }
 
 /* Main combo box container - dropdown arrow */
-.searchandfilter li[data-sf-field-input-type=multiselect] .chosen-container .chosen-choices::after {
+.searchandfilter li[data-sf-field-input-type=multiselect] .chosen-container .chosen-choices::after,
+.gform_legacy_markup_wrapper .chosen-container .chosen-choices::after{
  content: "";
   position: absolute;
   width: 20px;
@@ -76,7 +82,6 @@ input[type="checkbox"]:checked::before {
   top: 21px;
   background-color: var(--color-text-dark-on-light-default); /* TODO: Use variable about standard dark icon color on light */
   cursor: pointer;
-  // --mask-image: url('/wp-content/themes/salient-child/images/icon_dropdown_down.svg');
   --mask-image: var(--url-icon-dropdown-down);
   --mask-repeat: no-repeat;
   -webkit-mask-image: var(--mask-image);
@@ -86,7 +91,8 @@ input[type="checkbox"]:checked::before {
 }
 
 /* Main combo box container - Remove dropdown arrow when box is open */
-.searchandfilter li[data-sf-field-input-type=multiselect] .chosen-container.chosen-container-active .chosen-choices::after {
+.searchandfilter li[data-sf-field-input-type=multiselect] .chosen-container.chosen-with-drop .chosen-choices::after,
+.gform_legacy_markup_wrapper .chosen-container.chosen-with-drop .chosen-choices::after{
   --mask-image: none;
   background-color: transparent;
   cursor: default;
@@ -94,26 +100,33 @@ input[type="checkbox"]:checked::before {
 
 /* Main combo box container - Text Field */
 .searchandfilter li[data-sf-field-input-type=multiselect] .chosen-container .chosen-choices li.search-field input[type="text"],
-.gform_legacy_markup_wrapper .chosen-container-multi .chosen-choices li.search-field {
+.gform_legacy_markup_wrapper .chosen-container .chosen-choices li.search-field input[type="text"]{
   color: var(--color-text-dark-on-light-default); /* TODO: Use color-mode indifferent variable */
   font-size: var(--font-size-paragraph);
   line-height: var(--line-height-paragraph);
+  margin:0.25rem;
+  padding-top: 0.25rem !important;
+  padding-bottom: 0.5rem !important;
+  height: auto;
 }
 
 
 /* Combox box options container */
-.searchandfilter li[data-sf-field-input-type=multiselect] .chosen-container .chosen-drop {
+.searchandfilter li[data-sf-field-input-type=multiselect] .chosen-container .chosen-drop,
+.gform_legacy_markup_wrapper .chosen-container .chosen-drop{
   border-radius: 0 0 0.25rem 0.25rem;
   border: none;
   border-top: 1px solid #CCC; /* TODO: Use variable for subtle divider line color */
 }
 
-.searchandfilter li[data-sf-field-input-type=multiselect] .chosen-container .chosen-results {
+.searchandfilter li[data-sf-field-input-type=multiselect] .chosen-container .chosen-results,
+.gform_legacy_markup_wrapper .chosen-container .chosen-results{
   padding: 0.25rem; /* TODO: Use variable for container padding */
 }
 
 /* Combox box option */
-.searchandfilter li[data-sf-field-input-type=multiselect] .chosen-container .chosen-results li {
+.searchandfilter li[data-sf-field-input-type=multiselect] .chosen-container .chosen-results li,
+.gform_legacy_markup_wrapper .chosen-container .chosen-results li{
   font-size: var(--font-size-paragraph);
   line-height: var(--line-height-paragraph);
   padding: 0.5rem 1rem;
@@ -121,45 +134,50 @@ input[type="checkbox"]:checked::before {
   border-radius: 0.25rem; /* TODO: Use variable for standard border radius */
 }
 
-.searchandfilter li[data-sf-field-input-type=multiselect] .chosen-container .chosen-results li.highlighted {
+.searchandfilter li[data-sf-field-input-type=multiselect] .chosen-container .chosen-results li.highlighted,
+.gform_legacy_markup_wrapper .chosen-container .chosen-results li.highlighted{
   background-color: hsla(276 100% 90%); /* TODO: Use correct color for focus background */
   background-image: none;
   color: var(--color-text-dark-on-light-default); /* Override */ /* TODO: Use variable for text on light color */
 }
 
 /* Combo box option - selected (and therefore disabled) */
-.searchandfilter li[data-sf-field-input-type=multiselect] .chosen-container-multi .chosen-drop .result-selected {
+.searchandfilter li[data-sf-field-input-type=multiselect] .chosen-container-multi .chosen-drop .result-selected,
+.gform_legacy_markup_wrapper .chosen-container-multi .chosen-drop .result-selected{
   color: #767676; /* TODO: User variable for disabled text color */
 }
 
 /* Combo box - active/open state */
-.searchandfilter li[data-sf-field-input-type=multiselect] .chosen-container.chosen-container-active .chosen-choices{
+.searchandfilter li[data-sf-field-input-type=multiselect] .chosen-container.chosen-with-drop .chosen-choices,
+.gform_legacy_markup_wrapper .chosen-container.chosen-with-drop .chosen-choices{
   border-radius: 0.25rem 0.25rem 0 0; /* TODO: Use variables for default border radius */
 }
 
 /* Combo box Chips */
-.searchandfilter li[data-sf-field-input-type=multiselect] .chosen-container .search-choice {
-  margin: 0.25rem; /* TODO: Use variable for default small spacing */
+.searchandfilter li[data-sf-field-input-type=multiselect] .chosen-container .search-choice,
+.gform_legacy_markup_wrapper .chosen-container .search-choice{
+  margin: 0.25rem !important; /* override */ /* TODO: Use variable for default small spacing */
   --delete-x-button-size: 1rem;
   --padding-right: calc(0.5rem + var(--delete-x-button-size) + 0.5rem); /* TODO: Use variables for default container padding */
-  padding: 0.25rem var(--padding-right) 0.5rem 1rem; /* Override */ /* TODO Use variables for default container padding */
+  padding: 0.25rem var(--padding-right) 0.5rem 1rem !important; /* Override */ /* TODO Use variables for default container padding */
   font-size: var(--font-size-paragraph); /* Override */
-  line-height: var(--line-height-paragraph); /* Override */
+  line-height: var(--line-height-paragraph) !important; /* Override */
   font-weight: 500; /* Override */ /* TODO: Use default font weight */
-  background-color: hsla(276 100% 90%); /* Override */ /* TODO: User variable for highlight */
-  background-image: none; /* Override */
-  box-shadow: none; /* Override */
-  border-radius: 0.25rem; /* Override */ /* TODO: Use variable for default border radius */
-  border: none; /* Override */
+  background-color: hsla(276 100% 90%) !important; /* Override */ /* TODO: User variable for highlight */
+  background-image: none !important; /* Override */
+  box-shadow: none !important; /* Override */
+  border-radius: 0.25rem !important; /* Override */ /* TODO: Use variable for default border radius */
+  border: none !important; /* Override */
 }
 
-.searchandfilter li[data-sf-field-input-type=multiselect] .chosen-container .search-choice span {
+.searchandfilter li[data-sf-field-input-type=multiselect] .chosen-container .search-choice span,
+.gform_legacy_markup_wrapper .chosen-container .search-choice span{
   color: var(--color-text-dark-on-light-default); /* Override */ /* TODO: Use variable for text color on light color */
-  
 }
 
 /* Combo Box Chip X button */
-.searchandfilter li[data-sf-field-input-type=multiselect] .chosen-container-multi .chosen-choices li.search-choice .search-choice-close {
+.searchandfilter li[data-sf-field-input-type=multiselect] .chosen-container-multi .chosen-choices li.search-choice .search-choice-close,
+.gform_legacy_markup_wrapper .chosen-container-multi .chosen-choices li.search-choice .search-choice-close{
   width: 15px; 
   height: 15px; 
   background-image: none !important; 
@@ -172,13 +190,13 @@ input[type="checkbox"]:checked::before {
   text-align: center;
 }
 
-.searchandfilter li[data-sf-field-input-type=multiselect] .chosen-container-multi .chosen-choices li.search-choice .search-choice-close::after {
+.searchandfilter li[data-sf-field-input-type=multiselect] .chosen-container-multi .chosen-choices li.search-choice .search-choice-close::after,
+.gform_legacy_markup_wrapper .chosen-container-multi .chosen-choices li.search-choice .search-choice-close::after{
   content: "";
   width: 8px;
   height: 8px;
   position: absolute;
   background-color: var(--color-text-light-on-dark-default); /* TODO: Use variable for default light graphic on dark */
-  // --mask-image: url('/wp-content/themes/salient-child/images/icon_delete_x.svg');
   --mask-image: var(--url-icon-delete-x);
   -webkit-mask-image: var(--mask-image);
   mask-image: var(--mask-image);
