@@ -1,5 +1,6 @@
 /* Set up Variable */
 
+.VARIABLES------------------------ { color: inherit;}
 
 body.material .nectar-button.accent-color {
     --color-button-assigned: var(--color-accent);
@@ -33,6 +34,8 @@ body.material .nectar-button.extra-color-3 {
 
 /* Override Nectar Buttons */
 
+
+.NECTAR-BUTTON-OVERRIDES------------------------ { color: inherit;}
 
 .nectar-button, 
 .nectar-button[data-color-override="false"].regular-button, /* for override */
@@ -149,6 +152,7 @@ body .nectar-button[data-color-override="false"].see-through.extra_jumbo /* over
 
 
 /* Hover */
+.HOVER-STATE------------------------ { color: inherit;}
 
 .full-width-section .light .nectar-button:hover,  /* Nectar override */
 .nectar-button:hover { /* Nectar override */
@@ -192,6 +196,7 @@ body .nectar-button[data-color-override="false"].see-through.extra_jumbo:hover /
 }
 
 /* Active */
+.ACTIVE-STATE------------------------ { color: inherit;}
 
 .nectar-button.small:active,
 .nectar-button[data-color-override="false"].regular-button.small:active /* override */,
@@ -230,7 +235,16 @@ body.nectar-button[data-color-override="false"].see-through.large:active /* over
 
 
 
+.MISCELLANEOUS------------------------ { color: inherit;}
+
+/* Form submit button */
 /* TODO: Refactor when working on Gravity Forms elements */
+body[data-form-submit=see-through] .container-wrap .gform_wrapper input[type=submit] {
+  background-color: var(--color-accent) !important; /* Override */ /* TODO: Use variable for default button color */
+  color: var(--color-text-light-on-dark-default) !important; /* Override */ /* TODO: Use variable for default button color */
+  padding: 1rem 3rem !important; /* Override */
+}
+
 .before-footer .gform_button,
 .before-footer .gform_legacy_markup_wrapper .gform_footer input.button, /* for override */
 .before-footer .gform_legacy_markup_wrapper .gform_footer input[type=submit],  /* for override */

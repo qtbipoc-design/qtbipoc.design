@@ -18,7 +18,7 @@ input[type="checkbox"] {
     border-radius: 0.25rem;
     background-color: var(--color-bg-light-default);
     vertical-align: sub;
-    margin: 0;
+    margin: 0 0.5em 0 0;
     font-size: var(--font-size-paragraph);
     position:relative;
 }
@@ -43,6 +43,7 @@ input[type="checkbox"]:checked::before {
 
 
 
+
 /*
  * SEARCH & FILTER - FILTER FORM ELEMENTS
  */
@@ -51,7 +52,7 @@ input[type="checkbox"]:checked::before {
 .searchandfilter li[data-sf-field-input-type=radio] label, 
 .searchandfilter li[data-sf-field-input-type=range-radio] label, 
 .searchandfilter li[data-sf-field-input-type=range-checkbox] label {
-    padding-left: 0.5rem;
+    /* padding-left: 0.5rem; */ /* Add right margin to checkbox/radio instead */
     font-weight: 500 !important; /* TODO: Use variable for standard weight */
 }
 
@@ -92,7 +93,8 @@ input[type="checkbox"]:checked::before {
 }
 
 /* Main combo box container - Text Field */
-.searchandfilter li[data-sf-field-input-type=multiselect] .chosen-container .chosen-choices li.search-field input[type="text"] {
+.searchandfilter li[data-sf-field-input-type=multiselect] .chosen-container .chosen-choices li.search-field input[type="text"],
+.gform_legacy_markup_wrapper .chosen-container-multi .chosen-choices li.search-field {
   color: var(--color-text-dark-on-light-default); /* TODO: Use color-mode indifferent variable */
   font-size: var(--font-size-paragraph);
   line-height: var(--line-height-paragraph);

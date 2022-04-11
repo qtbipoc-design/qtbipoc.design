@@ -1,4 +1,5 @@
 /* LABELS */
+.LABELS------------------------ { color: inherit;}
 
 .gform_wrapper.gravity-theme .gfield_label,
 .gform_wrapper.gravity-theme .gfield_checkbox label, 
@@ -13,7 +14,21 @@
 
 
 
+/* Labels for checkboxes */
+.gform_legacy_markup_wrapper .gfield_checkbox li label,
+.gform_legacy_markup_wrapper .gfield_radio li label {
+    font-size: var(--font-size-paragraph); /* override */
+}
+
+form .ginput_container label {
+  font-weight: normal !important; /* override */
+}
+
+
+
+
 /* DESCRIPTIONS, INSTRUCTIONS */
+.DESCRIPTIONS-INSTRUCTIONS------------------------ { color: inherit;}
 
 .gform_wrapper.gravity-theme .description, 
 .gform_wrapper.gravity-theme .gfield_description, 
@@ -28,16 +43,78 @@
     line-height: var(--line-height-sub-paragraph);
 }
 
+.gform_legacy_markup_wrapper .left_label div.charleft, 
+.gform_legacy_markup_wrapper .right_label div.charleft {
+  /* Example: textarea character counter */
+  margin-left: 0;
+  color: var(--color-brand-white);
+}
+
+
 
 /* "REQUIRED" LABEL */
+.REQUIRED-LABEL------------------------ { color: inherit;}
 
 .gform_wrapper.gravity-theme .gfield_required {
     font-size: var(--font-size-sub-paragraph);
     line-height: var(--line-height-sub-paragraph);
 }
 
+/* ATTENTION ELEMENTS */
+.ATTENTION-ELEMENTS------------------------ { color: inherit;}
+
+/* Primary attention message */
+.gform_legacy_markup_wrapper div.validation_error {
+  --color-attention: var(--color-brand-red); /* TODO: Move to variable declaration */
+  color: var(--color-attention); /* override */ /* TODO: Use variable for proper attention text */
+  border-color: var(--color-attention); /* override */ /* TODO: Use variable for proper attention border */
+  border-width: 1px; /* override */
+}
+
+.gform_validation_errors {
+  border-radius: 0.25rem; /* override */
+}
+
+.gform_validation_errors>h2 {
+  color: var(--color-text-attention); /* override */ /* TODO: Use variable for proper attention text */
+}
+
+.gform_validation_errors>h2:before {
+  content: '\f06a'; /* override */
+  background-image: none; /* Override */
+  font-family: 'FontAwesome';
+  font-size: 150%;
+  margin-right: 0.5em;
+}
+
+/* Field error  */
+/* Field error - Field container */
+.gform_legacy_markup_wrapper li.gfield.gfield_error, 
+.gform_legacy_markup_wrapper li.gfield.gfield_error.gfield_contains_required.gfield_creditcard_warning {
+    background-color: hsla(var(--color-hue-brand-red) 100% 50% / 15%); /* override */
+    --color-line-attention: var(--color-brand-red); /* override */
+    border-top-color: var(--color-line-attention); /* override */
+    border-bottom-color: var(--color-line-attention); /* override */
+}
+
+/* Field error - Field Label */
+.gform_legacy_markup_wrapper .gfield_error .gfield_label {
+    color: inherit; /* Reset to default */
+}
+
+
+/* Field error - Field Description */
+.gform_legacy_markup_wrapper .gfield_required, 
+body .gform_wrapper.gform_legacy_markup_wrapper .gfield_description.validation_message {
+    color: var(--color-brand-red); /* TODO: Use variable for warning/attention text color over dark */
+    font-size: var(--font-size-paragraph); /* override */
+}
+
+
+
 
 /* TEXT-RELATED INPUTS */
+.TEXT-RELATED-INPUTS------------------------ { color: inherit;}
 
 .gform_wrapper.gravity-theme input[type=color], 
 .gform_wrapper.gravity-theme input[type=date], 
@@ -134,7 +211,14 @@ div[data-style="minimal"] .toggle.accent-color:hover i,
 }
 
 
+/* Checkboxes */
+.gform_legacy_markup_wrapper .left_label li.hidden_label input, 
+.gform_legacy_markup_wrapper .right_label li.hidden_label input {
+    margin-left: 0 !important;
+}
+
 /* MISCELLANEOUS */
+.MISCELLANEOUS------------------------ { color: inherit;}
 
 /* Dropdown arrow icon */
 .gform_wrapper .chosen-container-single .chosen-single div b {

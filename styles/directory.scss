@@ -2,6 +2,8 @@
  * DIRECTORY RESULTS 
  */
 
+ .DIRECTORY-RESULTS------------------------ { color: inherit;}
+
 /* Flex grid item */
 .member-listing>.vc_row>.col {
     row-gap: 2rem;
@@ -116,6 +118,8 @@ body .member-card .nectar-button[data-color-override="false"].see-through.large:
  * DIRECTORY FILTERS
  */
 
+
+.DIRECTORY-FILTERS------------------------ { color: inherit;}
  /* WPBPB Row for Directory Filters */
  #directoryFilterModuleRow {
   --directoryFiltersBottomMargin: 5rem;    
@@ -163,4 +167,160 @@ body .member-card .nectar-button[data-color-override="false"].see-through.large:
 /* Direcotry Combo box layout */
 .sf-directory-filters .chosen-container.chosen-container-multi {
   width: 100% !important;
+}
+
+
+
+
+/* 
+ * DIRECTORY FORM
+ */
+
+.DIRECTORY-FORM------------------------ { color: inherit;}
+
+/* Field Row */
+body #directory-form-form .gform_wrapper ul li.gfield, 
+#directory-form-form .gform_wrapper .gfield_html.gfield_no_follows_desc {
+    margin-top: 2.5em;
+}
+
+/* Section headings */
+.gform_wrapper li.gfield.field_description_below+li.gsection {
+  margin-top: 6em !important;
+}
+
+#directory-form-form .gform_legacy_markup_wrapper .gsection .gfield_label, 
+#directory-form-form .gform_legacy_markup_wrapper h2.gsection_title, 
+#directory-form-form .gform_legacy_markup_wrapper h3.gform_title {
+  font-size: var(--font-size-h4);
+  line-height: var(--line-height-h4);
+}
+
+/* Color selection */
+/* Color options Group */
+#directory-form-form #field_3_68 .gfield_radio {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: var(--color-bg-light-default);
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+/* Individual color option - group */
+#directory-form-form #field_3_68 .gfield_radio .gchoice {
+  margin-bottom: 0;
+}
+
+/* Individual color option - radio button */
+#directory-form-form #field_3_68 .gchoice input[type=radio] {
+  display: none;
+}
+
+/* Individual color option - label/faux-button */
+#directory-form-form #field_3_68 .gchoice label {
+  background-color: var(--color-option);
+  border-radius: 0.25rem;
+  padding: 0.75rem 2.5rem;
+  text-transform: uppercase;
+  position: relative;
+  white-space: nowrap;
+  max-width: none;
+  margin: 0.5rem;
+  transition-duration: 0.1s;
+  outline-offset: 0px;
+  font-weight: 700 !important; /* override */ /* TODO: Use variable for bold weight */
+}
+
+
+#directory-form-form #field_3_68 .gchoice input[type=radio]:checked+label {
+  outline: 2px solid var(--color-option);
+  outline-offset: 2px;
+}
+
+/* Individual color option - label check mark */
+#directory-form-form #field_3_68 .gchoice input[type=radio]+label::before {
+  content: "\2713";
+  position: absolute;
+  transform: none;
+  width: 1em;
+  height: 1em;
+  text-align: center;
+  line-height: 1em;
+  display: block;
+  font-size: var(--font-size-super-paragraph);
+  opacity: 0;
+  transition-duration: 0.3s;
+}
+
+#directory-form-form #field_3_68 .gchoice input[type=radio]:checked+label::before {
+  transform: translate(-1.75rem, 0rem);
+  opacity: 1;
+}
+
+#directory-form-form #field_3_68 .gchoice [value="Dark Gray"]+label {
+  --color-option: var(--color-brand-gray-darkest);
+}
+
+
+#directory-form-form #field_3_68 .gchoice [value="Brown"]+label {
+  --color-option: var(--color-brand-brown);
+}
+
+#directory-form-form #field_3_68 .gchoice [value="Pink"]+label {
+  --color-option: var(--color-brand-pink);
+}
+
+#directory-form-form #field_3_68 .gchoice [value="Red"]+label {
+  --color-option: var(--color-brand-red);
+}
+
+#directory-form-form #field_3_68 .gchoice [value="Orange"]+label {
+  --color-option: var(--color-brand-orange);
+}
+
+#directory-form-form #field_3_68 .gchoice [value="Yellow"]+label {
+ --color-option: var(--color-brand-yellow);
+}
+
+#directory-form-form #field_3_68 .gchoice [value="Green"]+label {
+ --color-option: var(--color-brand-green);
+}
+
+#directory-form-form #field_3_68 .gchoice [value="Blue"]+label {
+  --color-option: var(--color-brand-blue);
+}
+
+#directory-form-form #field_3_68 .gchoice [value="Purple"]+label {
+  --color-option: var(--color-brand-purple);
+}
+
+/* Member Photo preview */
+.directory-form-photo-preview .member-photo {
+  display: none; /* Hide by default; JS will set to show when an image is added */
+  aspect-ratio: 1;
+  overflow: hidden;
+  width: 25rem;
+  max-height: 25rem;
+}
+
+.directory-form-photo-preview .member-photo img {
+  object-fit: cover;
+  min-width: 100%;
+  min-height: 100%;
+  border-radius: 1rem; /* TODO: Use variable for image border radius */
+}
+
+#directory-form-form .gform_fileupload_rules {
+  display: block;
+}
+
+/* Shield icon */
+.gform_wrapper li.gf-form-section-directory-verification h2::before {
+  content: "\f132";
+  font-family: FontAwesome;
+  margin-right: 0.5em;
+  vertical-align: text-top;
+  font-size: var(--font-size-h3);
+  line-height: 1;
+  font-weight: normal;
 }
