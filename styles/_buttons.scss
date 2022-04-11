@@ -138,7 +138,8 @@ body .nectar-button[data-color-override="false"].see-through.medium /* override 
 
 body.material .nectar-button.large,
 .nectar-button[data-color-override="false"].regular-button.large /* override */,
-body .nectar-button[data-color-override="false"].see-through.large /* override */{
+body .nectar-button[data-color-override="false"].see-through.large /* override */,
+body[data-form-submit=see-through] .container-wrap .gform_wrapper input[type=submit]{
     padding: 1em 3em !important; /* override */
     box-shadow: 0 0px 0 var(--color-button-assigned-shadow) !important; /* override */
     font-size: var(--font-size-paragraph);
@@ -191,7 +192,8 @@ body .nectar-button[data-color-override="false"].see-through.medium:hover /* ove
 
 body.material .nectar-button.large:hover /* override */,
 .nectar-button[data-color-override="false"].regular-button.large:hover /* override */,
-body .nectar-button[data-color-override="false"].see-through.large:hover /* override */ {
+body .nectar-button[data-color-override="false"].see-through.large:hover /* override */,
+body[data-form-submit=see-through] .container-wrap .gform_wrapper input[type=submit]:hover {
     box-shadow: 0 6px 0 var(--color-button-assigned-shadow) !important;
     transform: translateY(-6px);
 }
@@ -229,7 +231,8 @@ body .nectar-button[data-color-override="false"].see-through.medium:active /* ov
 
 body.material .nectar-button.large:active /* override */,
 .nectar-button[data-color-override="false"].regular-button.large:active /* override */,
-body.nectar-button[data-color-override="false"].see-through.large:active /* override */ {
+body.nectar-button[data-color-override="false"].see-through.large:active /* override */,
+body[data-form-submit=see-through] .container-wrap .gform_wrapper input[type=submit]:active {
     box-shadow: 0 0px 0 var(--color-button-assigned-shadow) !important;
     transform: translateY(2px);
 }
@@ -256,7 +259,7 @@ body.nectar-button[data-color-override="false"].see-through.large:active /* over
 body[data-form-submit=see-through] .container-wrap .gform_wrapper input[type=submit] {
   background-color: var(--color-button-default) !important; /* Override */
   color: var(--color-text-button) !important; /* Override */
-  padding: 1rem 3rem !important; /* Override */ /* TODO: Use variable for button paddings */
+  border: none !important; /* Override */
 }
 
 .before-footer .gform_button,
