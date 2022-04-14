@@ -16,6 +16,10 @@ body #header-outer, body[data-header-color="dark"] #header-outer { /* overrides 
     }    
 }
 
+.sf-menu .menu-item a {
+  white-space: nowrap; /* Ensure links and dropdown arrows stay on one line */
+}
+
 #header-outer .sf-menu a .menu-title-text {
     font-weight: 500;
 }
