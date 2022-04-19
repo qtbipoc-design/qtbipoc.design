@@ -1,5 +1,16 @@
+
 .container.main-content {
     margin-bottom: 3rem;
+}
+
+
+/* WP top-level row */
+.material .row .wpb_row,
+.wpb_row.full-width-content, 
+.wpb_row.full-width-section, 
+body.material .wpb_row.full-width-content, 
+body.material .wpb_row.full-width-section {
+    margin-bottom: 5rem; /* override */
 }
 
 .search-filter-results-heading {
