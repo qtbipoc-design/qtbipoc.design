@@ -191,7 +191,7 @@
   --color-line-subtle-on-light:           hsl(var(--color-hs-neutral) var(--color-lightness-neutral-mid-light));
   --color-line-strong-on-dark:            hsl(var(--color-hs-neutral) var(--color-lightness-neutral-mid-light));
   --color-line-subtle-on-dark:            hsl(var(--color-hs-neutral) var(--color-lightness-neutral-mid-dark));
-  --color-line-default:                   var(--line-subtle-on-subtle-on-dark);
+  --color-line-default:                   var(--color-line-subtle-on-dark);
 
 
   --color-outline-on-light:               var(--color-accent);
