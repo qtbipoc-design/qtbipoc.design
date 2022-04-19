@@ -63,6 +63,7 @@
     border-radius: 1rem;
     border: 1px solid hsla(0 0.01% 100% / 15%);
     max-width: calc(var(--width-text-default) + 1rem + 1rem);
+    margin-bottom: 0.5rem;
 }
 
 @media only screen and (min-width:1000px) {
