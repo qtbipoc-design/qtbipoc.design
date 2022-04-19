@@ -1,0 +1,20 @@
+/* Carousel */
+
+/* "carouFredSel */
+
+/* Arrow line */
+.material .carousel-next,
+.material .carousel-prev,
+.material .carousel-next i,
+.material .carousel-prev i {
+    color: var(--color-line-default); /* override */
+}
+
+.material [data-full-width=false] .carousel-next:after, 
+.material [data-full-width=false] .carousel-prev:after {
+    background-color: var(--color-line-default); /* override */
+}
+
+.carousel-heading .control-wrap i[class*="fa-"] {
+    text-decoration: none; /* override */
+}

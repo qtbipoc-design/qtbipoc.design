@@ -1,0 +1,28 @@
+.programs-programming-list h1, 
+.programs-programming-list h2, 
+.programs-programming-list h3, 
+.programs-programming-list h4, 
+.programs-programming-list h5, 
+.programs-programming-list h6 {
+    margin-top: 1em;
+}
+
+/* Programs Programming list items */
+.programs-programming-list .vc_row-fluid>.span_12 {
+  row-gap: 4rem;
+}
+
+/* Image alignment */
+.programs-programming-list .img-with-aniamtion-wrap .hover-wrap-inner {
+  aspect-ratio: 16/9;
+  overflow: hidden;
+}
+
+.programs-programming-list .img-with-aniamtion-wrap .hover-wrap .hover-wrap-inner img.img-with-animation {
+  /* Help vertically center image in container */
+  -webkit-transform: translate(0, -50%); /* override */
+  transform: translate(0, -50%); /* override */
+  position: relative;
+  top: 50%;
+}
+

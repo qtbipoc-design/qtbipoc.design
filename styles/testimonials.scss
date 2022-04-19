@@ -1,0 +1,58 @@
+/* Single Testimonial */
+
+blockquote.nectar_single_testimonial .inner {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Photo */
+blockquote.nectar_single_testimonial .image-icon {
+    order: 1;
+    width: 12rem;
+    height: 12rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Name and Title */
+blockquote.nectar_single_testimonial .wrap {
+    order: 2;
+    font-family: var(--font-family-display);
+    font-weight: 500; /* TODO: Use variable for proper weight */
+    margin-top: 1em;
+}
+
+/* Name */
+blockquote.nectar_single_testimonial .wrap span {
+    font-size: var(--font-size-h4);
+    line-height: var(--line-height-h4);
+    color: var(--color-text-default);
+}
+
+/* Title */
+blockquote.nectar_single_testimonial .wrap .title {
+    font-size: var(--font-size-pragraph);
+    line-height: var(--line-height-paragraph);
+    color: var(--color-text-default);
+    opacity: 1;
+}
+
+/* Quote */
+blockquote.nectar_single_testimonial p {
+    order: 3;
+    font-weight: 400; /* TODO: Use variable for proper weight */
+    margin-top: 1em;
+}
+
+blockquote.nectar_single_testimonial p::before {
+    content: '\201c'; /* 201c = Left double quotes */
+}
+
+blockquote.nectar_single_testimonial p::after {
+    content: '\201d'; /* 201d = Right double quotes */
+}
+
+/* Decorative quote mark */
+blockquote.nectar_single_testimonial p .open-quote {
+    display: none;
+}

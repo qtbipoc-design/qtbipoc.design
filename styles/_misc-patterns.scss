@@ -4,6 +4,6 @@
 .calendar-google iframe {
     padding: 3%; /* TODO: Use rems to make responsive */
     background-color: white;
-    border-radius: 1rem;
+    border-radius: 0.5rem; /* Use variable for standard border radii */
     opacity: 0.9;
 }
