@@ -4,7 +4,8 @@
   position:absolute;
   top:0;
   left:0;
-  display: block !important;
+  z-index: -100; /* should be the same or less than the content planet parent row z-index */
+  display: block !important; /* TODO: 4/21/22: Temporary. Remove this after live site uses Github stylesheet sitewide */
 }
 
 /* .spaceBg .planet, */
