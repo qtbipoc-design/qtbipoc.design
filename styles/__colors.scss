@@ -175,7 +175,16 @@
   --color-graphic-accent-on-light:        var(--color-accent);
   --color-graphic-accent-on-dark:         var(--color-accent);
   --color-graphic-accent-default:         var(--color-graphic-accent-on-dark);
-  
+
+  /* Interactable */
+
+  // --color-bg-interactable-primary:        var(--color-bg-color-default);
+  // --color-text-interactable-primary:      var(--color-text-dark-on-light-default);
+  // --color-bg-interactable-secondary:      var(--color-bg-light-default);
+  // --color-text-interactable-secondary:    var(--color-text-dark-on-light-default);
+  // --color-bg-interactable-tertiary:       transparent;
+  // --color-text-interactable-tertiary:     var(--color-text-light-on-dark-default);
+
   /* Default */
   --color-bg-default:                     var(--color-bg-dark-default);
   --color-text-default:                   var(--color-text-light-on-dark-default);
@@ -183,6 +192,7 @@
 
   --color-bg-form-field-default:          var(--color-bg-light-default);
   --color-text-form-field-default:        var(--color-text-dark-on-light-default);
+
 
 
   /* LINES */
