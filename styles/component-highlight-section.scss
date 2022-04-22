@@ -1,0 +1,37 @@
+/* For full-width highlight section component */
+
+.row-highlight>.span_12 {
+    margin-left: -50vw;
+    margin-left: calc(-50vw + var(--scroll-bar-w)/ 2);
+    left: 50%;
+    width: 100vw;
+    width: calc(100vw - var(--scroll-bar-w));
+    overflow: hidden;
+}
+
+.row-highlight .vc_column-inner>.wpb_wrapper>*,
+.row-highlight .vc_column-inner>.wpb_wrapper p {
+    /* Center content */
+    margin-left: auto; 
+    margin-right: auto;
+}
+
+.row-highlight.vc_row-fluid>.span_12 .wpb_column {
+    padding-left: 0; /* override */
+    padding-right: 0; /* override */
+}
+
+
+.row-highlight>.span_12>.column_container>.vc_column-inner>.wpb_wrapper>*{
+    max-width: 1440px; /* Back up; Use variable for screen-width-based width */
+    max-width: var(--max-width-main-content);
+    padding-left: 90px; /* Back up : Use variable for screen-width-based padding */
+    padding-left: var(--padding-horizontal-container-and-row);
+    padding-right: 90px; /* Back up: Use variable for screen-width-based padding */
+    padding-right: var(--padding-horizontal-container-and-row);
+}
+
+.row-highlight>.span_12>.column_container>.vc_column-inner>.wpb_wrapper>*>.row_col_wrap_12 {
+    padding-left: 5%; /* Simulate default */
+    padding-right: 5%; /* Simulate default */
+}
