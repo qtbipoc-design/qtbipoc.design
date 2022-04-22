@@ -47,6 +47,7 @@
   
   /* Alpha */
   --color-alpha-default:          1;
+  --color-alpha-subtle:           10%;
 
 
   /* Common Combo properties */
@@ -158,8 +159,9 @@
 
   /* Light on Dark */
   --color-bg-dark-default:                var(--color-brand-gray-darkest);
+  --color-bg-dark-subtle-semitransparent: hsla(var(--color-hs-neutral) var(--color-lightness-neutral-gray-darkest) / var(--color-alpha-subtle));
   --color-text-light-on-dark-default:     var(--color-brand-white);
-  --color-text-light-on-dark-disabled:     hsl(var(--color-hs-neutral) var(--color-lightness-disabled-on-dark));
+  --color-text-light-on-dark-disabled:    hsl(var(--color-hs-neutral) var(--color-lightness-disabled-on-dark));
   
   /* On Color Background */
   --color-bg-color-accent:                var(--color-accent);
@@ -176,14 +178,6 @@
   --color-graphic-accent-on-dark:         var(--color-accent);
   --color-graphic-accent-default:         var(--color-graphic-accent-on-dark);
 
-  /* Interactable */
-
-  // --color-bg-interactable-primary:        var(--color-bg-color-default);
-  // --color-text-interactable-primary:      var(--color-text-dark-on-light-default);
-  // --color-bg-interactable-secondary:      var(--color-bg-light-default);
-  // --color-text-interactable-secondary:    var(--color-text-dark-on-light-default);
-  // --color-bg-interactable-tertiary:       transparent;
-  // --color-text-interactable-tertiary:     var(--color-text-light-on-dark-default);
 
   /* Default */
   --color-bg-default:                     var(--color-bg-dark-default);
