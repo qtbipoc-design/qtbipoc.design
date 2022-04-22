@@ -2,6 +2,7 @@
   display: flex;
   justify-content: center;
   gap: 0.5rem;
+  flex-wrap: wrap;
     
   --color-bg-local-accent:      var(--color-bg-color-default);
   --color-fg-local-accent:      var(--color-text-light-on-color-default);
@@ -62,7 +63,7 @@
     /* background-color: white; /* TODO: use variable (color) */
     background-color: var(--color-bg-local-secondary);
     /* color: black; /* TODO user variable (color) */
-    color: var(--color-text-local-secondary);
+    color: var(--color-fg-local-secondary);
     transition: none;
     padding: 0; /* override */
     margin: 0; /* override */
@@ -84,6 +85,7 @@
     background-color: transparent;
     background-color: var(--color-bg-local-default);
     color: var(--color-fg-local-default);
+    white-space: nowrap;
 }
 
 .wp-pagenavi .extend {
