@@ -1,8 +1,16 @@
 .wp-pagenavi {
-    display: flex;
-    justify-content: center;
-    gap: 0.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
     
+  --color-bg-local-accent:      var(--color-bg-color-default);
+  --color-fg-local-accent:      var(--color-text-light-on-color-default);
+
+  --color-bg-local-secondary:   var(--color-bg-light-default);
+  --color-fg-local-secondary:   var(--color-text-dark-on-light-default);
+
+  --color-bg-local-default:     transparent;
+  --color-fg-local-default:     var(--color-text-light-on-dark-default);
 }
 
 /* Ordering */
@@ -52,9 +60,9 @@
     text-align: center;
     border-radius: 0.25rem; 
     /* background-color: white; /* TODO: use variable (color) */
-    background-color: var(--color-bg-interactable-secondary);
+    background-color: var(--color-bg-local-secondary);
     /* color: black; /* TODO user variable (color) */
-    color: var(--color-text-interactable-secondary);
+    color: var(--color-text-local-secondary);
     transition: none;
     padding: 0; /* override */
     margin: 0; /* override */
@@ -64,16 +72,6 @@
 
 /* Specific */
 
-.wp-pagenavi {
-  --color-bg-local-accent:      var(--color-bg-color-default);
-  --color-fg-local-accent:      var(--color-text-light-on-color-default);
-
-  --color-bg-local-secondary:   var(--color-bg-light-default);
-  --color-fg-local-secondary:   var(--color-text-dark-on-light-default);
-
-  --color-bg-local-default:     transparent;
-  --color-fg-local-default:     var(--color-text-light-on-dark-default);
-}
 
 .wp-pagenavi .pages /* Page detail (ex. 1 of 10) */{
     display: none;
