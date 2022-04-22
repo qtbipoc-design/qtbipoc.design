@@ -51,8 +51,10 @@
     line-height: 2.5rem;
     text-align: center;
     border-radius: 0.25rem; 
-    background-color: white; /* TODO: use variable (color) */
-    color: black; /* TODO user variable (color) */
+    /* background-color: white; /* TODO: use variable (color) */
+    background-color: var(--color-bg-interactable-secondary);
+    /* color: black; /* TODO user variable (color) */
+    color: var(--color-text-interactable-secondary);
     transition: none;
     padding: 0; /* override */
     margin: 0; /* override */
@@ -61,6 +63,18 @@
 
 
 /* Specific */
+
+.wp-pagenavi {
+  --color-bg-local-accent:      var(--color-bg-color-default);
+  --color-fg-local-accent:      var(--color-text-light-on-color-default);
+
+  --color-bg-local-secondary:   var(--color-bg-light-default);
+  --color-fg-local-secondary:   var(--color-text-dark-on-light-default);
+
+  --color-bg-local-default:     transparent;
+  --color-fg-local-default:     var(--color-text-light-on-dark-default);
+}
+
 .wp-pagenavi .pages /* Page detail (ex. 1 of 10) */{
     display: none;
 }
@@ -70,25 +84,29 @@
     padding-left: 1em;
     padding-right: 1em;
     background-color: transparent;
-    color: white; /* TODO: use variable (color) */
+    background-color: var(--color-bg-local-default);
+    color: var(--color-fg-local-default);
 }
 
 .wp-pagenavi .extend {
     background-color: transparent;
-    color: white; /* TODO use variable (color) */
+    background-color: var(--color-bg-local-default);
+    color: var(--color-fg-local-default);
     margin-left: -0.5em;
     margin-right: -0.5em;
 }
 
 .wp-pagenavi span.current {
-    background-color: var(--color-brand-purple);
-    color: white; /* TODO: use variable (color) */
-    font-weight: normal;
+    // background-color: var(--color-brand-purple);
+    color: var(--color-fg-local-accent);
+    font-weight: normal; /* TODO: Use variable for font weight */
     
     /* alternative styling */
     background-color: transparent;
-    border: 2px solid white;
-    border-color: hsl(0 0.01% 75%); /* TODO: use variable (color) */
+    background-color: var(--color-bg-local-default);
+    border: 2px solid var(--color-fg-local-default);
+    /* border-color: hsl(0 0.01% 75%); /* TODO: use variable (color) */
+    border-color: var(--color-line-strong-on-dark);
     box-sizing: border-box;
     line-height: calc(2.5rem - 4px); /* offset border */
 }
@@ -98,11 +116,14 @@
 .wp-pagenavi .page:hover,
 .wp-pagenavi .last:hover {
     background-color: var(--color-brand-purple);
-    color: white; /* TODO: use variable (color) */
+    background-color: var(--color-bg-local-accent);
+    /* color: white; /* TODO: use variable (color) */
+    color: var(--color-fg-local-accent);
 }
 
 .wp-pagenavi .previouspostslink:hover,
 .wp-pagenavi .nextpostslink:hover {
     background-color: hsla(0 0.01% 100% / 10%); /* TODO: use variable (color) */
-    color: white; /* TODO: use variable for hover text  (color)*/
+    /* color: white; /* TODO: use variable for hover text  (color)*/
+    color: var(--color-fg-local-default);
 }
