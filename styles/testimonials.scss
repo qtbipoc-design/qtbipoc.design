@@ -42,6 +42,7 @@ blockquote.nectar_single_testimonial .wrap .title {
 blockquote.nectar_single_testimonial p {
     order: 3;
     /* font-weight: 400; /* TODO: Use variable for proper weight */
+    font-weight: var(--font-weight-default);
     margin-top: 1em;
 }
 

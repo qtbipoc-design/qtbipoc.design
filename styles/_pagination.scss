@@ -97,7 +97,6 @@
 .wp-pagenavi span.current {
     // background-color: var(--color-brand-purple);
     color: var(--color-fg-local-on-accent-bg);
-    font-weight: normal; /* TODO: Use variable for font weight */
     font-weight: var(--font-weight-default);
     
     /* alternative styling */

@@ -53,7 +53,7 @@ input[type="checkbox"]:checked::before {
 .searchandfilter li[data-sf-field-input-type=range-radio] label, 
 .searchandfilter li[data-sf-field-input-type=range-checkbox] label {
     /* padding-left: 0.5rem; */ /* Add right margin to checkbox/radio instead */
-    font-weight: var(--font-weight-default) !important; /* TODO: Use variable for standard weight */
+    font-weight: var(--font-weight-default) !important;
 }
 
 
@@ -131,6 +131,7 @@ mask-repeat: var(--mask-repeat);
   line-height: var(--line-height-paragraph);
   padding: 0.5rem 1rem;
   font-weight: normal;
+  font-weight: var(--font-weight-default);
   border-radius: 0.25rem; /* TODO: Use variable for standard border radius */
 }
 
@@ -162,7 +163,6 @@ mask-repeat: var(--mask-repeat);
   padding: 0.25rem var(--padding-right) 0.5rem 1rem !important; /* Override */ /* TODO Use variables for default container padding */
   font-size: var(--font-size-paragraph); /* Override */
   line-height: var(--line-height-paragraph) !important; /* Override */
-  font-weight: 500; /* Override */ /* TODO: Use default font weight */
   font-weight: var(--font-weight-default); /* Override */
   background-color: var(--color-graphic-color-tint-default) !important; /* Override */
   background-image: none !important; /* Override */

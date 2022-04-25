@@ -228,7 +228,6 @@ body #directory-form-form .gform_wrapper ul li.gfield,
   margin: 0.5rem;
   transition-duration: 0.1s;
   outline-offset: 0px;
-  font-weight: 700 !important; /* override */ /* TODO: Use variable for bold weight */
   font-weight: var(--font-weight-bold) !important; /* override */
 }
 
