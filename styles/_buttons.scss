@@ -131,6 +131,7 @@ body .nectar-button[data-color-override="false"].see-through.small /* override *
     box-shadow: 0 0px 0 var(--color-button-assigned-shadow) !important; /* override */
     font-size: var(--font-size-sub-sub-paragraph);
     border-radius: 4px !important; /* override */
+    border-radius: var(--border-radius-button-default) !important; /* override */
 }
 
 .nectar-button.medium,
@@ -159,6 +160,7 @@ body .nectar-button[data-color-override="false"].see-through.jumbo /* override *
     box-shadow: 0 0px 0 var(--color-button-assigned-shadow) !important; /* override */
     font-size: var(--font-size-super-paragraph);
     border-radius: 6px !important; /* override */
+    border-radius: 0.375rem !important; /* override */
 }
 
 body.material .nectar-button.extra_jumbo,
@@ -168,6 +170,7 @@ body .nectar-button[data-color-override="false"].see-through.extra_jumbo /* over
     box-shadow: 0 0px 0 var(--color-button-assigned-shadow) !important; /* override */
     font-size: var(--font-size-h5);
     border-radius: 8px !important; /* override */
+    border-radius: var(--border-radius-large) !important; /* override */
     border-width: 2px;
     line-height: var(--line-height-h5);
 }
