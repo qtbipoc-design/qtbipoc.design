@@ -64,7 +64,7 @@ input[type="checkbox"]:checked::before {
 .searchandfilter li[data-sf-field-input-type=multiselect] .chosen-container .chosen-choices,
 .gform_legacy_markup_wrapper .chosen-container .chosen-choices {
   border-radius: 0.25rem; /* TODO: Use variable for standard border radius */
-  border-radius: var(--border-radius-default);
+  border-radius: var(--border-radius-form-field-default);
   --right-dropdown-icon: 1rem;
   --width-dropdown-icon: 20px;
   --padding-right-normal: 0.5rem;
@@ -122,7 +122,7 @@ mask-repeat: var(--mask-repeat);
 /* Combox box options container */
 .searchandfilter li[data-sf-field-input-type=multiselect] .chosen-container .chosen-drop,
 .gform_legacy_markup_wrapper .chosen-container .chosen-drop{
-  border-radius: 0 0 var(--border-radius-default) var(--border-radius-default);
+  border-radius: 0 0 var(--border-radius-form-field-default) var(--border-radius-form-field-default);
   border: none;
   border-top: 1px solid var(--color-line-subtle-on-light);
 }
@@ -160,7 +160,7 @@ mask-repeat: var(--mask-repeat);
 .searchandfilter li[data-sf-field-input-type=multiselect] .chosen-container.chosen-with-drop .chosen-choices,
 .gform_legacy_markup_wrapper .chosen-container.chosen-with-drop .chosen-choices{
   border-radius: 0.25rem 0.25rem 0 0; /* TODO: Use variables for default border radius */
-  border-radius: var(--border-radius-default) var(--border-radius-default) 0 0;
+  border-radius: var(--border-radius-form-field-default) var(--border-radius-form-field-default) 0 0;
 }
 
 /* Combo box Chips */
@@ -177,7 +177,7 @@ mask-repeat: var(--mask-repeat);
   background-image: none !important; /* Override */
   box-shadow: none !important; /* Override */
   border-radius: 0.25rem !important; /* Override */ /* TODO: Use variable for default border radius */
-  border-radius: var(--border-radius-default);
+  border-radius: var(--border-radius-default) !important;
   border: none !important; /* Override */
 }
 
