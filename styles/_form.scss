@@ -127,7 +127,6 @@ mask-repeat: var(--mask-repeat);
 
 .searchandfilter li[data-sf-field-input-type=multiselect] .chosen-container .chosen-results,
 .gform_legacy_markup_wrapper .chosen-container .chosen-results{
-  padding: 0.25rem; /* TODO: Use variable for container padding */
   padding: var(--spacing-small);
 }
 
@@ -163,12 +162,9 @@ mask-repeat: var(--mask-repeat);
 /* Combo box Chips */
 .searchandfilter li[data-sf-field-input-type=multiselect] .chosen-container .search-choice,
 .gform_legacy_markup_wrapper .chosen-container .search-choice{
-  margin: 0.25rem !important; /* override */ /* TODO: Use variable for default small spacing */
   margin: var(--spacing-small); /* override */
   --delete-x-button-size: 1rem;
-  --padding-right: calc(0.5rem + var(--delete-x-button-size) + 0.5rem); /* TODO: Use variables for default container padding */
   --padding-right: calc(var(--spacing-medium) + var(--delete-x-button-size) + var(--spacing-medium));
-  padding: 0.25rem var(--padding-right) 0.5rem 1rem !important; /* Override */ /* TODO Use variables for default container padding */
   padding: var(--spacing-small) var(--padding-right) var(--spacing-medium) var(--spacing-large) !important; /* override */
   font-size: var(--font-size-paragraph); /* Override */
   line-height: var(--line-height-paragraph) !important; /* Override */
