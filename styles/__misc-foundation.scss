@@ -25,4 +25,11 @@
   --shadow-length-extra-jumbo:  8px;
   
   --shadow-length-default: var(--shadow-length-medium);
+
+
+  /* Spacing */
+  --spacing-small:              0.25rem;  /* 0.25rem    = 4px */
+  --spacing-medium:             0.5rem;   /* 0.5rem     = 8px */
+  --spacing-large:              1rem;     /* 1rem       = 16px */
+
 }
