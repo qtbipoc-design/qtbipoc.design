@@ -5,7 +5,7 @@
   flex-wrap: wrap;
     
   --color-bg-local-accent:      var(--color-bg-color-default);
-  --color-fg-local-accent:      var(--color-text-light-on-color-default);
+  --color-fg-local-on-accent-bg:      var(--color-text-light-on-color-default);
 
   --color-bg-local-secondary:   var(--color-bg-light-default);
   --color-fg-local-secondary:   var(--color-text-dark-on-light-default);
@@ -96,7 +96,7 @@
 
 .wp-pagenavi span.current {
     // background-color: var(--color-brand-purple);
-    color: var(--color-fg-local-accent);
+    color: var(--color-fg-local-on-accent-bg);
     font-weight: normal; /* TODO: Use variable for font weight */
     
     /* alternative styling */
@@ -113,12 +113,11 @@
 .wp-pagenavi .page:hover,
 .wp-pagenavi .last:hover {
     background-color: var(--color-bg-local-accent);
-    color: var(--color-fg-local-accent);
+    color: var(--color-fg-local-on-accent-bg);
 }
 
 .wp-pagenavi .previouspostslink:hover,
 .wp-pagenavi .nextpostslink:hover {
-    /* background-color: hsla(0 0.01% 100% / 10%); /* TODO: use variable (color) */
     background-color: var(--color-bg-neutral-subtle-semitransparent);
     color: var(--color-fg-local-default);
 }
