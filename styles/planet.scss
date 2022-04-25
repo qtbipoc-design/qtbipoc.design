@@ -123,10 +123,6 @@
 
 .planet.scheme-lesbian,
 .planetContainer.scheme-lesbian {
-	--color-base-hue: 0; /* TODO: use variable for white hue */
-	--color-base-saturation: 0.01%; /* TODO: use variable for white saturation */
-	--color-base-lightness: 100%; /* TODO: use variable for white lightness */
-
 	--color-base-hue: var(--color-hue-neutral);
 	--color-base-saturation: var(--color-saturation-neutral);
 	--color-base-lightness: var(--color-lightness-white);
@@ -222,10 +218,6 @@
 
 .planet.scheme-trans,
 .planetContainer.scheme-trans {
-	--color-base-hue: 0; /* TODO: use variable for white hue */
-	--color-base-saturation: 0.01%; /* TODO: use variable for white saturation */
-	--color-base-lightness: 100%; /* TODO: use variable for white lightness */
-	
 	--color-base-hue: var(--color-hue-neutral);
 	--color-base-saturation: var(--color-saturation-neutral);
 	--color-base-lightness: var(--color-lightness-white);
@@ -239,8 +231,8 @@
 	--fill-svg-3: var(--color-fill-1);
 	--fill-svg-4: var(--color-fill-3);
 	--fill-svg-5: var(--color-fill-1);
-	--fill-svg-6: var(--color-fill-2);
-	--fill-svg-7: var(--color-fill-3);
+	--fill-svg-6: var(--color-fill-3);
+	--fill-svg-7: var(--color-fill-1);
 }
 
 .planet.scheme-trans,
@@ -343,11 +335,7 @@
 
 
 .planet.scheme-genderqueer,
-.planetContainer.scheme-genderqueer {
-	--color-base-hue: 0; /* TODO: use variable for white hue */
-	--color-base-saturation: 0.01%; /* TODO: use variable for white saturation */
-	--color-base-lightness: 100%; /* TODO: use variable for white lightness */
-	
+.planetContainer.scheme-genderqueer {	
 	--color-base-hue: var(--color-hue-neutral);
 	--color-base-saturation: var(--color-saturation-neutral);
 	--color-base-lightness: var(--color-lightness-white);
