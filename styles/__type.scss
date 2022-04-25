@@ -1,46 +1,46 @@
 :root {
 
-    // --font-family-default: "Quicksand";
-    --font-family-default: proxima-soft;
-    --font-family-display: new-spirit;
+  // --font-family-default: "Quicksand";
+  --font-family-default: proxima-soft;
+  --font-family-display: new-spirit;
 
-    /* 
-    
-    USE THESE VARIABLE NAMES:
+  /* 
+  
+  USE THESE VARIABLE NAMES:
 
-    Just use these following variables to override default styling, 
-    and they will automatically calculate the correct responsive values based on screen widths
+  Just use these following variables to override default styling, 
+  and they will automatically calculate the correct responsive values based on screen widths
 
-    --font-size-super-heading
-    --font-size-h1
-    --font-size-h2
-    --font-size-h3
-    --font-size-h4
-    --font-size-h5
-    --font-size-h6
-    --font-size-super-paragraph
-    --font-size-paragraph
-    --font-size-sub-paragraph
-    --font-size-sub-sub-paragraph
-
-
-    --line-height-super-heading
-    --line-height-h1
-    --line-height-h2
-    --line-height-h3
-    --line-height-h4
-    --line-height-h5
-    --line-height-h6
-    --line-height-super-paragraph
-    --line-height-paragraph
-    --line-height-sub-paragraph
-    --line-height-sub-sub-paragraph
-
-    */
+  --font-size-super-heading
+  --font-size-h1
+  --font-size-h2
+  --font-size-h3
+  --font-size-h4
+  --font-size-h5
+  --font-size-h6
+  --font-size-super-paragraph
+  --font-size-paragraph
+  --font-size-sub-paragraph
+  --font-size-sub-sub-paragraph
 
 
-    /* Font size multiplier values are based on WordPress/Salient's own responsive scaling, with some adjustments */
-    --multiplier-font-size-super-heading-desktop-wide: 1;
+  --line-height-super-heading
+  --line-height-h1
+  --line-height-h2
+  --line-height-h3
+  --line-height-h4
+  --line-height-h5
+  --line-height-h6
+  --line-height-super-paragraph
+  --line-height-paragraph
+  --line-height-sub-paragraph
+  --line-height-sub-sub-paragraph
+
+  */
+
+
+  /* Font size multiplier values are based on WordPress/Salient's own responsive scaling, with some adjustments */
+  --multiplier-font-size-super-heading-desktop-wide: 1;
 	--multiplier-font-size-super-heading-desktop: 0.75;
 	--multiplier-font-size-super-heading-tablet: 0.7;
 	--multiplier-font-size-super-heading-mobile: 0.65;
@@ -89,7 +89,7 @@
 	--multiplier-font-size-paragraph-current: var(--multiplier-font-size-paragraph-desktop-wide);
 
 
-    /* Font size values based on typographic scale of 1.26, with base size of 18 (https://type-scale.com/?size=18&scale=1.26)*/
+  /* Font size values based on typographic scale of 1.26, with base size of 18 (https://type-scale.com/?size=18&scale=1.26)*/
 	--font-size-super-heading-default:  90.75px;
 	--font-size-super-heading:              calc(var(--font-size-super-heading-default) * var(--multiplier-font-size-super-heading-current));
 	--font-size-h1-default:             72.03px;
@@ -107,14 +107,14 @@
 	--font-size-super-paragraph:        var(--font-size-h6);
     --font-size-paragraph-default:      18px;
 	--font-size-paragraph:                  calc(var(--font-size-paragraph-default) * var(--multiplier-font-size-paragraph-current));
-    --font-size-sub-paragraph:          14.29px;
+  --font-size-sub-paragraph:          14.29px;
 	--font-size-sub-sub-paragraph:      11.34px;
 
-    /* Font sizes based on Steven's definitions in Figma as of 2/2022 */
-    --font-size-super-h1-default:       68px;
-    --font-size-super-h1:                   calc(var(--font-size-super-h1-default) * var(--multiplier-font-size-h1-current));
-    --font-size-super-heading:          var(--font-size-super-h1);
-    --font-size-h1-default:             53px;
+  /* Font sizes based on Steven's definitions in Figma as of 2/2022 */
+  --font-size-super-h1-default:       68px;
+  --font-size-super-h1:                   calc(var(--font-size-super-h1-default) * var(--multiplier-font-size-h1-current));
+  --font-size-super-heading:          var(--font-size-super-h1);
+  --font-size-h1-default:             53px;
 	--font-size-h1:                         calc(var(--font-size-h1-default) * var(--multiplier-font-size-h1-current));
 	--font-size-h2-default:             42px;
 	--font-size-h2:                         calc(var(--font-size-h2-default) * var(--multiplier-font-size-h2-current));
@@ -127,35 +127,42 @@
 	--font-size-h6-default:             16px;
 	--font-size-h6:                         calc(var(--font-size-h6-default) * var(--multiplier-font-size-h6-current));
 	--font-size-super-paragraph-default:var(--font-size-h5);
-    --font-size-super-paragraph:            calc(var(--font-size-super-paragraph-default) * var(--multiplier-font-size-paragraph-current));
-    --font-size-paragraph-default:      16px;
+  --font-size-super-paragraph:            calc(var(--font-size-super-paragraph-default) * var(--multiplier-font-size-paragraph-current));
+  --font-size-paragraph-default:      16px;
 	--font-size-paragraph:                  calc(var(--font-size-paragraph-default) * var(--multiplier-font-size-paragraph-current));
-    --font-size-sub-paragraph:          13px;
+  --font-size-sub-paragraph:          13px;
 	
 
 
-    /* Line height values are based on manual optical review of ideal line-height of paragraphs and headings */
-    --line-height-super-heading:        1.5;
-    --line-height-super-h1:             1.5;
-    --line-height-h1:                   1.5;
-    --line-height-h1-as-paragraph:          1.5;
-    --line-height-h2:                   1.5;
-    --line-height-h2-as-paragraph:          1.5;
-    --line-height-h3:                   1.5;
-    --line-height-h3-as-paragraph:          1.7;
-    --line-height-h4:                   1.5;
-    --line-height-h4-as-paragraph:          1.7;
-    --line-height-h5:                   1.5;
-    --line-height-h5-as-paragraph:          1.75;
-    --line-height-h6:                   1.5;
-    --line-height-h6-as-paragraph:          1.75;
-    --line-height-super-paragraph:          1.75;
-    --line-height-paragraph:                1.5;
-    --line-height-sub-paragraph:            1.5;
-    --line-height-sub-sub-paragraph:        1.5;
+  /* Line height values are based on manual optical review of ideal line-height of paragraphs and headings */
+  --line-height-super-heading:        1.5;
+  --line-height-super-h1:             1.5;
+  --line-height-h1:                   1.5;
+  --line-height-h1-as-paragraph:          1.5;
+  --line-height-h2:                   1.5;
+  --line-height-h2-as-paragraph:          1.5;
+  --line-height-h3:                   1.5;
+  --line-height-h3-as-paragraph:          1.7;
+  --line-height-h4:                   1.5;
+  --line-height-h4-as-paragraph:          1.7;
+  --line-height-h5:                   1.5;
+  --line-height-h5-as-paragraph:          1.75;
+  --line-height-h6:                   1.5;
+  --line-height-h6-as-paragraph:          1.75;
+  --line-height-super-paragraph:          1.75;
+  --line-height-paragraph:                1.5;
+  --line-height-sub-paragraph:            1.5;
+  --line-height-sub-sub-paragraph:        1.5;
 
 
-    --width-text-default: 65ch;
+  --width-text-default: 65ch;
+
+  /* Font weight */
+
+  --font-weight-default: 500;
+  --font-weight-bold: 700;
+  --font-weight-extra-bold: 900;
+
 }
 
 body {

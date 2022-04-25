@@ -53,7 +53,7 @@ input[type="checkbox"]:checked::before {
 .searchandfilter li[data-sf-field-input-type=range-radio] label, 
 .searchandfilter li[data-sf-field-input-type=range-checkbox] label {
     /* padding-left: 0.5rem; */ /* Add right margin to checkbox/radio instead */
-    font-weight: 500 !important; /* TODO: Use variable for standard weight */
+    font-weight: var(--font-weight-default) !important; /* TODO: Use variable for standard weight */
 }
 
 
@@ -163,6 +163,7 @@ mask-repeat: var(--mask-repeat);
   font-size: var(--font-size-paragraph); /* Override */
   line-height: var(--line-height-paragraph) !important; /* Override */
   font-weight: 500; /* Override */ /* TODO: Use default font weight */
+  font-weight: var(--font-weight-default); /* Override */
   background-color: var(--color-graphic-color-tint-default) !important; /* Override */
   background-image: none !important; /* Override */
   box-shadow: none !important; /* Override */
