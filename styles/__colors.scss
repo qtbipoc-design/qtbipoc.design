@@ -213,13 +213,13 @@
   --color-line-subtle-on-dark:            hsl(var(--color-hs-neutral) var(--color-lightness-neutral-mid-dark));
   --color-line-attention-on-light:        var(--color-attention);
   --color-line-attention-on-dark:         var(--color-attention);
-  --color-line-attention-default:         var(--color-attention-on-dark);
+  --color-line-attention-default:         var(--color-line-attention-on-dark);
   --color-line-default:                   var(--color-line-subtle-on-dark);
 
 
   --color-outline-on-light:               var(--color-accent);
   --color-outline-on-dark:                var(--color-accent-tint)
-  --color-outline-default:                var(--color-outline-default);
+  --color-outline-default:                var(--color-outline-on-dark);
 
   --color-outline-focus-default:          var(--color-outline-default);
 
