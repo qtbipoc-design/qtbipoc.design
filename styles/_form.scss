@@ -15,7 +15,6 @@ input[type="checkbox"] {
     -webkit-appearance: none;
     width: 1.25rem;
     height: 1.25rem;
-    border-radius: 0.25rem;
     border-radius: var(--border-radius-default);
     background-color: var(--color-bg-light-default);
     vertical-align: sub;
@@ -63,7 +62,6 @@ input[type="checkbox"]:checked::before {
 /* Main combo box container */
 .searchandfilter li[data-sf-field-input-type=multiselect] .chosen-container .chosen-choices,
 .gform_legacy_markup_wrapper .chosen-container .chosen-choices {
-  border-radius: 0.25rem; /* TODO: Use variable for standard border radius */
   border-radius: var(--border-radius-form-field-default);
   --right-dropdown-icon: 1rem;
   --width-dropdown-icon: 20px;
@@ -139,7 +137,6 @@ mask-repeat: var(--mask-repeat);
   line-height: var(--line-height-paragraph);
   padding: 0.5rem 1rem;
   font-weight: var(--font-weight-default);
-  border-radius: 0.25rem; /* TODO: Use variable for standard border radius */
   border-radius: var(--border-radius-default);
 }
 
@@ -159,7 +156,6 @@ mask-repeat: var(--mask-repeat);
 /* Combo box - active/open state */
 .searchandfilter li[data-sf-field-input-type=multiselect] .chosen-container.chosen-with-drop .chosen-choices,
 .gform_legacy_markup_wrapper .chosen-container.chosen-with-drop .chosen-choices{
-  border-radius: 0.25rem 0.25rem 0 0; /* TODO: Use variables for default border radius */
   border-radius: var(--border-radius-form-field-default) var(--border-radius-form-field-default) 0 0;
 }
 
@@ -176,8 +172,7 @@ mask-repeat: var(--mask-repeat);
   background-color: var(--color-graphic-color-tint-default) !important; /* Override */
   background-image: none !important; /* Override */
   box-shadow: none !important; /* Override */
-  border-radius: 0.25rem !important; /* Override */ /* TODO: Use variable for default border radius */
-  border-radius: var(--border-radius-default) !important;
+  border-radius: var(--border-radius-default) !important; /* override */
   border: none !important; /* Override */
 }
 
@@ -195,7 +190,6 @@ mask-repeat: var(--mask-repeat);
   top: 10px; 
   right: 0.5rem;
   background-color: var(--color-bg-color-accent);
-  border-radius: 100%;
   border-radius: var(--border-radius-circle);
   font-size: var(--font-size-paragraph);
   line-height: 15px;

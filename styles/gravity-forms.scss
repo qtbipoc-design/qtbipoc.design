@@ -76,7 +76,6 @@ body .gform_wrapper div.charleft,
 }
 
 .gform_validation_errors {
-  border-radius: 0.25rem; /* override */
   border-radius: var(--border-radius-medium); /* override */
 }
 
@@ -172,7 +171,6 @@ body .gform_legacy_markup_wrapper .chosen-container a.chosen-single {
   border: 2px solid var(--color-bg-local-default); /* Should be same as bg to prepare for hover state */
   box-shadow: none;
   -webkit-box-shadow: none;
-  border-radius: 0.25rem;
   border-radius: var(--border-radius-form-field-default);
   padding: 8px;
 }

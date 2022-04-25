@@ -460,8 +460,7 @@
 	top: calc((var(--planet-ring_diameter) - var(--planet-diameter)) / -2);  /* includes moving planet center to origin */
 	z-index: -1;
 	transform-origin: bottom center;
-	border-radius: 100000px 100000px 0 0;
-  border-radius: var(--border-radius-circle) var(--border-radius-circle)  0 0;
+	border-radius: var(--border-radius-circle) var(--border-radius-circle)  0 0;
 	transform:  rotate(var(--planet-ring_rotation))  translateY(0px) scaleY(var(--planet-ring_flatness)) ;
 
 	// transform: rotate(var(--planet-ring_rotation)) scaleY(var(--planet-ring_flatness));
@@ -475,8 +474,7 @@
 }
 
 .planet-ring-front {
-	border-radius: 0 0 100000px 100000px;
-  border-radius: 0 0 var(--border-radius-circle) var(--border-radius-circle);
+	border-radius: 0 0 var(--border-radius-circle) var(--border-radius-circle);
 	top: calc((var(--planet-diameter) / 2) - var(--hack-seam-offset));
 	top: calc((var(--planet-diameter) / 2));
 	transform-origin: top center;
