@@ -52,7 +52,7 @@ body .gform_wrapper div.charleft,
 .gform_legacy_markup_wrapper .right_label div.charleft {
   /* Example: textarea character counter */
   margin-left: 0;
-  color: var(--color-brand-white);
+  color: var(--color-brand-white); /* TODO: Use variable */
 }
 
 
@@ -101,7 +101,7 @@ body .gform_wrapper div.charleft,
 .gform_legacy_markup_wrapper li.gfield.gfield_error.gfield_contains_required.gfield_creditcard_warning {
     background-color: hsla(var(--color-hue-brand-red) 100% 50% / 10%); /* override */ /* TODO: Use variable for attention light background */
     background-color: var(--color-attention-faint-semitransparent);
-    --color-line-attention: var(--color-brand-red); /* override */ /* TODO: Use variable */
+    /* --color-line-attention: var(--color-brand-red); /* override */ /* TODO: Use variable */
     border-top-color: var(--color-line-attention); /* override */
     border-top-color: var(--color-line-attention-default); /* override */
     border-bottom-color: var(--color-line-attention); /* override */ /* TODO: Use variable */
