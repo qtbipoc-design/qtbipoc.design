@@ -1,0 +1,12 @@
+:root {
+
+  /* Box Shadows */
+  --shadow-length-minimal:      1px;
+  --shadow-length-small:        3px;
+  --shadow-length-medium:       5px;
+  --shadow-length-large:        6px;
+  --shadow-length-jumbo:        8px;
+  --shadow-length-extra-jumbo:  8px;
+  
+  --shadow-length-default: var(--shadow-length-medium);
+}

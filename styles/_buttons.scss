@@ -180,6 +180,7 @@ body .nectar-button[data-color-override="false"].see-through.extra_jumbo /* over
 .nectar-button[data-color-override="false"].regular-button.small:hover /* override */,
 body .nectar-button[data-color-override="false"].see-through.small:hover /* override */{
     box-shadow: 0 3px 0 var(--color-button-assigned-shadow) !important;
+    box-shadow: 0 var(--shadow-length-small) 0 var(--color-button-assigned-shadow) !important;
     transform: translateY(-3px);
 }
 
@@ -187,6 +188,7 @@ body .nectar-button[data-color-override="false"].see-through.small:hover /* over
 .nectar-button[data-color-override="false"].regular-button.medium:hover /* override */,
 body .nectar-button[data-color-override="false"].see-through.medium:hover /* override */{
     box-shadow: 0 5px 0 var(--color-button-assigned-shadow) !important;
+    box-shadow: 0 var(--shadow-length-medium) 0 var(--color-button-assigned-shadow) !important;
     transform: translateY(-5px);
 }
 
@@ -195,6 +197,7 @@ body.material .nectar-button.large:hover /* override */,
 body .nectar-button[data-color-override="false"].see-through.large:hover /* override */,
 body[data-form-submit=see-through] .container-wrap .gform_wrapper input[type=submit]:hover {
     box-shadow: 0 6px 0 var(--color-button-assigned-shadow) !important;
+    box-shadow: 0 var(--shadow-length-large) 0 var(--color-button-assigned-shadow) !important;
     transform: translateY(-6px);
 }
 
@@ -202,6 +205,7 @@ body.material .nectar-button.jumbo:hover,
 .nectar-button[data-color-override="false"].regular-button.extra_jumbo:hover /* override */,
 body .nectar-button[data-color-override="false"].see-through.extra_jumbo:hover /* override */{
     box-shadow: 0 8px 0 var(--color-button-assigned-shadow) !important;
+    box-shadow: 0 var(--shadow-length-jumbo) 0 var(--color-button-assigned-shadow) !important;
     transform: translateY(-8px);
 }
 
@@ -209,6 +213,7 @@ body.material .nectar-button.extra_jumbo:hover,
 .nectar-button[data-color-override="false"].regular-button.extra_jumbo:hover /* override */,
 body .nectar-button[data-color-override="false"].see-through.extra_jumbo:hover /* override */{
     box-shadow: 0 8px 0 var(--color-button-assigned-shadow) !important;
+    box-shadow: 0 var(--shadow-length-extra-jumbo) 0 var(--color-button-assigned-shadow) !important;
     transform: translateY(-8px);
 }
 
@@ -268,6 +273,7 @@ body[data-form-submit=see-through] .container-wrap .gform_wrapper input[type=sub
 .before-footer .gform_legacy_markup_wrapper .gform_page_footer input.button,  /* for override */
 .before-footer .gform_legacy_markup_wrapper .gform_page_footer input[type=submit] /* for override */ {
     box-shadow: 0px 4px 0px var(--color-button-assigned-shadow); /* TODO: Use variable for shadow lengths */
+    box-shadow: 0px var(--shadow-length-default) 0px var(--color-button-assigned-shadow);
     font-size: 14px; /* override */
 }
 
