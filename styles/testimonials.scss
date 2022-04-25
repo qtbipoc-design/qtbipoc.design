@@ -19,6 +19,7 @@ blockquote.nectar_single_testimonial .wrap {
     order: 2;
     font-family: var(--font-family-display);
     font-weight: 500; /* TODO: Use variable for proper weight */
+    font-weight: var(--font-weight-default);
     margin-top: 1em;
 }
 
@@ -40,7 +41,7 @@ blockquote.nectar_single_testimonial .wrap .title {
 /* Quote */
 blockquote.nectar_single_testimonial p {
     order: 3;
-    font-weight: 400; /* TODO: Use variable for proper weight */
+    /* font-weight: 400; /* TODO: Use variable for proper weight */
     margin-top: 1em;
 }
 
