@@ -5,8 +5,7 @@
 .event-widget-column-summary,
 .event-widget-future-book-club-column-info,
 .event-widget-future-ux-nights-column-info {
-    /* font-family: proxima-soft; /* TODO: Use css variable (font family) */
-    font-family: var(--font-family-default);
+  font-family: var(--font-family-default);
 }
 
 /* Columns */
@@ -16,45 +15,45 @@
 
 body .container-wrap .search-filter-results .vc_row-fluid[data-column-margin="40px"] .wpb_column:not(.child_column), 
 body .container-wrap .search-filter-results .inner_row[data-column-margin="40px"] .child_column {
-    padding-left: 20px;
-    padding-right: 20px;
-    
+  padding-left: 20px;
+  padding-right: 20px;
+  
 }
 
 
 /* Featured Image */
 
 .row .col.event-widget-column-summary .event-widget-element-featured-image {
-    margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 
 
 /* Crop featured image by aspect ratio - Post summary */
 .event-widget-column-summary .event-widget-element-featured-image {
-    overflow: hidden;
+  overflow: hidden;
 }
 
 .event-widget-column-summary-book-club .event-widget-element-featured-image {
-    aspect-ratio: 6/9;
+  aspect-ratio: 6/9;
 }
 
 .event-widget-column-summary-ux-nights .event-widget-element-featured-image {
-    aspect-ratio: 16/9;
+  aspect-ratio: 16/9;
 }
 
 .event-widget-column-summary .event-widget-element-featured-image .wpb_wrapper {
-    transform: translate(0, -50%);
-    position: relative;
-    top: 50%;
-    height: 100%;
+  transform: translate(0, -50%);
+  position: relative;
+  top: 50%;
+  height: 100%;
 }
 
 .event-widget-column-summary .event-widget-element-featured-image .wpb_wrapper p {
-    /* height: 100%; */
-    transform: translate(0, -50%);
-    position: relative;
-    top: 50%;
-    /* height: 100%; */
+  /* height: 100%; */
+  transform: translate(0, -50%);
+  position: relative;
+  top: 50%;
+  /* height: 100%; */
 }
 
 
@@ -64,17 +63,16 @@ body .container-wrap .search-filter-results .inner_row[data-column-margin="40px"
 /* Dates */
 .event-widget-element-event-date,
 .event-widget-element-event-date span{
-    /* font-family: new-spirit; /* TODO: Use CSS Variable (font family) */
-    font-family: var(--font-family-display);
+  font-family: var(--font-family-display);
 }
 
 .event-widget-column-summary .event-widget-element-event-date{
-    padding-bottom: 0;
+  padding-bottom: 0;
 }
 
 .event-widget-future-ux-nights-column-info .event-widget-element-event-date,
 .event-widget-future-book-club-column-info .event-widget-element-event-date {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 
@@ -84,30 +82,30 @@ body .container-wrap .search-filter-results .inner_row[data-column-margin="40px"
 .event-widget-future-ux-nights-column-info .event-widget-element-event-name,
 .event-widget-future-book-club-column-info .event-widget-element-post-heading,
 .vc_custom_heading.book-subtitle{
-    margin-top: 0;
+  margin-top: 0;
 }
 
 .row_inner_book_subtitle {
-    margin-top: -1.5rem;
+  margin-top: -1.5rem;
 }
 
 .vc_custom_heading.book-subtitle {
-    margin-top: 0;
-    font-family: var(--font-family-default);
-    font-size: var(--font-size-h4);
-    line-height: var(--line-height-h4);
+  margin-top: 0;
+  font-family: var(--font-family-default);
+  font-size: var(--font-size-h4);
+  line-height: var(--line-height-h4);
 }
 
 /* SPECIFIC WIDGETS */
 
 /* Widget: Post Summary */
 .event-widget-column-summary {
-    margin-bottom: 4rem;
-    text-align: left; /* force assign to offset center alignment in some parent containers */
+  margin-bottom: 4rem;
+  text-align: left; /* force assign to offset center alignment in some parent containers */
 }
 
 .row .col.event-widget-column-summary img {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 
@@ -115,8 +113,8 @@ body .container-wrap .search-filter-results .inner_row[data-column-margin="40px"
 
 /* Vertically center info container for future UX Nights */
 .event-widget-future-ux-nights-column-info .vc_column-inner {
-    transform: translate(0, -50%);
-    position: relative;
-    top: 50%;
+  transform: translate(0, -50%);
+  position: relative;
+  top: 50%;
 }
 
