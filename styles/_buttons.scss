@@ -18,31 +18,37 @@
 }
 
 body.material .nectar-button.accent-color {
-    --color-button-assigned: var(--color-button-default);
-    --color-button-shadow: hsl(var(--color-hue-button-default) var(--color-saturation-button-shadow-default) var(--color-lightness-button-shadow-default));
+  --color-button-assigned: var(--color-button-default);
+  --color-button-shadow: hsl(var(--color-hue-button-default) var(--color-saturation-button-shadow-default) var(--color-lightness-button-shadow-default));
 }
 
 body.material .nectar-button.extra-color-1 {
-    --color-button-assigned: var(--color-button-extra-1);
-    --color-button-shadow: hsl(var(--color-hue-extra-1) var(--color-saturation-button-shadow-default) var(--color-lightness-button-shadow-default));
+  --color-button-assigned: var(--color-button-extra-1);
+  --color-button-shadow: hsl(var(--color-hue-extra-1) var(--color-saturation-button-shadow-default) var(--color-lightness-button-shadow-default));
 }
 
 body.material .nectar-button.extra-color-2 {
-    --color-button-assigned: var(--color-button-extra-2);
-    --color-button-shadow: hsl(var(--color-hue-extra-2) var(--color-saturation-button-shadow-default) var(--color-lightness-button-shadow-default));
+  --color-button-assigned: var(--color-button-extra-2);
+  --color-button-shadow: hsl(var(--color-hue-extra-2) var(--color-saturation-button-shadow-default) var(--color-lightness-button-shadow-default));
 }
 
 body.material .nectar-button.extra-color-3 {
-    --color-button-assigned: var(--color-button-extra-3);
-    --color-button-shadow: hsl(var(--color-hue-extra-3) var(--color-saturation-button-shadow-default) var(--color-lightness-button-shadow-default));
+  --color-button-assigned: var(--color-button-extra-3);
+  --color-button-shadow: hsl(var(--color-hue-extra-3) var(--color-saturation-button-shadow-default) var(--color-lightness-button-shadow-default));
 }
 
 body.material .nectar-button.accent-color,
 body.material .nectar-button.extra-color-1,
 body.material .nectar-button.extra-color-2,
 body.material .nectar-button.extra-color-3 {
-    --color-button-assigned-border: var(--color-button-assigned);
-    --color-button-assigned-shadow: var(--color-button-shadow);
+  --color-button-assigned-border: var(--color-button-assigned);
+  --color-button-assigned-shadow: var(--color-button-shadow);
+}
+
+/* To define variables */
+.orbit-wrapper .slider-nav .right, .orbit-wrapper .slider-nav .left, .progress li span, .nectar-progress-bar span, #footer-outer #footer-widgets .col .tagcloud a:hover, #sidebar .widget .tagcloud a:hover, #fp-nav.tooltip ul li .fp-tooltip .tooltip-inner, #pagination .next a:hover, #pagination .prev a:hover, .comment-list .reply a:hover, .comment-list .reply a:focus, .icon-normal, .bar_graph li span, .nectar-button[data-color-override=false].regular-button, .nectar-button.tilt.accent-color, body .swiper-slide .button.transparent_2 .primary-color:hover, #footer-outer #footer-widgets .col input[type=submit], .blog-recent .more-link span:hover, .post-tags a:hover, #to-top:hover, #to-top.dark:hover, body[data-button-style*=rounded] #to-top:after, #pagination a.page-numbers:hover, #pagination span.page-numbers.current, .portfolio-items .col[data-default-color=true] .work-item:not(.style-3) .work-info-bg, .portfolio-items .col[data-default-color=true] .bottom-meta, .portfolio-items .col.nectar-new-item .inner-wrap:before, .portfolio-filters-inline[data-color-scheme=accent-color-underline] a:after, .portfolio-filters a, .portfolio-filters #sort-portfolio, .project-attrs li span, .portfolio-filters, .portfolio-filters-inline[data-color-scheme=accent-color], .bottom_controls #portfolio-nav .controls li a i:after, .bottom_controls #portfolio-nav ul:first-child li#all-items a:hover i, .single-portfolio .facebook-share a:hover, .single-portfolio .twitter-share a:hover, .single-portfolio .pinterest-share a:hover, .single-post .facebook-share a:hover, .single-post .twitter-share a:hover, .single-post .pinterest-share a:hover, .mejs-controls .mejs-time-rail .mejs-time-current, .mejs-controls .mejs-volume-button .mejs-volume-slider .mejs-volume-current, .mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-current, .post.quote .content-inner .quote-inner .whole-link, .masonry.classic_enhanced .post.quote.wide_tall .post-content a:hover .quote-inner, .masonry.classic_enhanced .post.link.wide_tall .post-content a:hover .link-inner, .iosSlider .prev_slide:hover, .iosSlider .next_slide:hover, #header-outer .widget_shopping_cart a.button, #header-outer a.cart-contents .cart-wrap span, #header-outer #mobile-cart-link .cart-wrap span, #top nav ul .slide-out-widget-area-toggle a:hover .lines, #top nav ul .slide-out-widget-area-toggle a:hover .lines:after, #top nav ul .slide-out-widget-area-toggle a:hover .lines:before, #top nav ul .slide-out-widget-area-toggle a:hover .lines-button:after, #header-outer .widget_shopping_cart a.button, body[data-header-format=left-header] #header-outer[data-lhe=animated_underline] #top nav ul li:not([class*=button_])>a span:after, #buddypress a.button:focus, .swiper-slide .button.solid_color a, .swiper-slide .button.solid_color_2 a, .select2-container .select2-choice:hover, .select2-dropdown-open .select2-choice, body[data-fancy-form-rcs="1"] .select2-container--default .select2-selection--single:hover, body[data-fancy-form-rcs="1"] .select2-container--default.select2-container--open .select2-selection--single, #top nav>ul>.button_solid_color>a:before, #header-outer.transparent #top nav>ul>.button_solid_color>a:before, .twentytwenty-handle, .twentytwenty-horizontal .twentytwenty-handle:before, .twentytwenty-horizontal .twentytwenty-handle:after, .twentytwenty-vertical .twentytwenty-handle:before, .twentytwenty-vertical .twentytwenty-handle:after, .masonry.classic_enhanced .posts-container article .meta-category a:hover, .blog-recent[data-style*=classic_enhanced] .meta-category a:hover, .masonry.classic_enhanced .posts-container article .video-play-button, .masonry.material .masonry-blog-item .meta-category a:before, .material.masonry .masonry-blog-item .video-play-button, .masonry.material .quote-inner:before, .masonry.material .link-inner:before, .nectar-recent-posts-slider .container .strong span:before, #page-header-bg[data-post-hs=default_minimal] .inner-wrap>a:hover, #page-header-bg[data-post-hs=default_minimal] .inner-wrap>a:focus, .single .heading-title[data-header-style=default_minimal] .meta-category a:hover, .single .heading-title[data-header-style=default_minimal] .meta-category a:focus, .nectar-fancy-box:after, .divider-small-border[data-color=accent-color], .divider-border[data-color=accent-color], .nectar-animated-title[data-color=accent-color] .nectar-animated-title-inner:after, #fp-nav:not(.light-controls).tooltip_alt ul li a span:after, #fp-nav.tooltip_alt ul li a span:after, .nectar-video-box[data-color=default-accent-color] .nectar_video_lightbox, body .nectar-video-box[data-color=default-accent-color][data-hover=zoom_button] .nectar_video_lightbox:after, .nectar_video_lightbox.play_button_with_text[data-color=default-accent-color]:not([data-style=small]) .play>.inner-wrap:before, .span_12.dark .owl-theme .owl-dots .owl-dot.active span, .span_12.dark .owl-theme .owl-dots .owl-dot:hover span, .nectar-recent-posts-single_featured .strong a, .post-area.standard-minimal .post .more-link span:before, .nectar-slide-in-cart .widget_shopping_cart a.button, .related-posts[data-style=material] .meta-category a:before, .post-area.featured_img_left .meta-category a:before, body.material #page-header-bg.fullscreen-header .inner-wrap>a, .nectar-hor-list-item[data-color=accent-color]:before, .material #sidebar .widget .tagcloud a:before, .single .post-area .content-inner>.post-tags a:before, .auto_meta_overlaid_spaced .post.quote .n-post-bg:after, .auto_meta_overlaid_spaced .post.link .n-post-bg:after, .post-area.featured_img_left .posts-container .article-content-wrap .video-play-button, .post-area.featured_img_left .post .quote-inner:before, .post-area.featured_img_left .link-inner:before, .nectar-recent-posts-single_featured.multiple_featured .controls li:after, .nectar-recent-posts-single_featured.multiple_featured .controls .active:before, .nectar-fancy-box[data-color=accent-color]:not([data-style=default]) .box-bg:after, body.material[data-button-style^=rounded] .nectar-button.see-through.accent-color[data-color-override=false] i, body.material .nectar-video-box[data-color=default-accent-color] .nectar_video_lightbox:before, .nectar_team_member_overlay .team_member_details .bio-inner .mobile-close:before, .nectar_team_member_overlay .team_member_details .bio-inner .mobile-close:after, .fancybox-navigation button:hover:before, button[type=submit]:hover, button[type=submit]:focus, body[data-form-submit=see-through] input[type=submit]:hover, body[data-form-submit=see-through] button[type=submit]:hover, body[data-form-submit=see-through] .container-wrap .span_12.light input[type=submit]:hover, body[data-form-submit=see-through] .container-wrap .span_12.light button[type=submit]:hover, body.original .bypostauthor .comment-body:before, .widget_layered_nav ul.yith-wcan-label li a:hover, .widget_layered_nav ul.yith-wcan-label .chosen a, .nectar-next-section-wrap.bounce a:before, body .nectar-button.see-through-2[data-hover-color-override=false]:hover {
+  --color-button-assigned: var(--color-button-default);
+  --color-button-shadow: hsl(var(--color-hue-button-default) var(--color-saturation-button-shadow-default) var(--color-lightness-button-shadow-default));
 }
 
 
@@ -272,9 +278,8 @@ body[data-form-submit=see-through] .container-wrap .gform_wrapper input[type=sub
 .before-footer .gform_legacy_markup_wrapper .gform_footer input[type=submit],  /* for override */
 .before-footer .gform_legacy_markup_wrapper .gform_page_footer input.button,  /* for override */
 .before-footer .gform_legacy_markup_wrapper .gform_page_footer input[type=submit] /* for override */ {
-    box-shadow: 0px 4px 0px var(--color-button-assigned-shadow); /* TODO: Use variable for shadow lengths */
-    box-shadow: 0px var(--shadow-length-default) 0px var(--color-button-assigned-shadow);
-    font-size: 14px; /* override */
+  box-shadow: 0px var(--shadow-length-default) 0px var(--color-button-assigned-shadow);
+  font-size: 14px; /* override */
 }
 
 
@@ -285,5 +290,5 @@ body[data-form-submit="regular"] .container-wrap .before-footer input[type=submi
 body[data-form-submit="regular"] .container-wrap .before-footer button[type=submit],  /* for override */
 body[data-form-submit="see-through"] .container-wrap .before-footer input[type=submit],  /* for override */
 body[data-form-submit="see-through"] .container-wrap .before-footer button[type=submit]:not(.search-widget-btn)  /* for override */{
-    padding: 0.5rem 1rem !important; /* override */
+  padding: 0.5rem 1rem !important; /* override */
 }
