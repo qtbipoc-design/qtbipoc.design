@@ -2,8 +2,15 @@
 /* Google Calendar */
 
 .calendar-google iframe {
-    padding: 3%; /* TODO: Use rems to make responsive */
-    background-color: white;
-    border-radius: var(--border-radius-container-default);
-    opacity: 0.9;
+  padding: 3%; /* TODO: Use rems to make responsive */
+  padding: 1.25rem;
+  background-color: white;
+  border-radius: var(--border-radius-container-default);
+  opacity: 0.9;
+}
+
+@media only screen and (min-width: 690px) {
+  .calendar-google iframe {
+    padding: 1.5rem;
+  }
 }
