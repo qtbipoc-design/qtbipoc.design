@@ -74,7 +74,7 @@ body .gform_wrapper div.charleft,
   color: var(--color-attention); /* override */ /* TODO: Use variable for proper attention text */
   color: var(--color-text-attention-default); /* override */
   border-color: var(--color-attention); /* override */ /* TODO: Use variable for proper attention border */
-  border-color: var(--color-line-attention-on-dark); /* override */
+  border-color: var(--color-line-attention-default);
   border-width: 1px; /* override */
 }
 
@@ -101,9 +101,11 @@ body .gform_wrapper div.charleft,
 .gform_legacy_markup_wrapper li.gfield.gfield_error.gfield_contains_required.gfield_creditcard_warning {
     background-color: hsla(var(--color-hue-brand-red) 100% 50% / 10%); /* override */ /* TODO: Use variable for attention light background */
     background-color: var(--color-attention-faint-semitransparent);
-    --color-line-attention: var(--color-brand-red); /* override */
+    --color-line-attention: var(--color-brand-red); /* override */ /* TODO: Use variable */
     border-top-color: var(--color-line-attention); /* override */
-    border-bottom-color: var(--color-line-attention); /* override */
+    border-top-color: var(--color-line-attention-default); /* override */
+    border-bottom-color: var(--color-line-attention); /* override */ /* TODO: Use variable */
+    border-bottom-color: var(--color-line-attention-default); /* override */
 }
 
 /* Field error - Field Label */
