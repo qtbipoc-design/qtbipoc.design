@@ -1,6 +1,7 @@
 body a, label span, body [class^="icon-"].icon-default-style, .blog-recent[data-style*="classic_enhanced"] .post-meta a:hover i, .masonry.classic_enhanced .post .post-meta a:hover i, .post .post-header h2 a, .post .post-header a:hover, .post .post-header a:focus, #single-below-header a:hover, #single-below-header a:focus, .comment-list .pingback .comment-body > a:hover, [data-style="list_featured_first_row"] .meta-category a, [data-style="list_featured_first_row"] .meta-category a, .nectar-fancy-box[data-style="color_box_hover"][data-color="accent-color"] .icon-default-style, div[data-style="minimal"] .toggle:hover h3 a, div[data-style="minimal"] .toggle.open h3 a, #footer-outer #copyright li a i:hover, .ascend .comment-list .reply a, body.material .widget:not(.nectar_popular_posts_widget):not(.recent_posts_extra_widget) li a:hover, body.material #sidebar .widget:not(.nectar_popular_posts_widget):not(.recent_posts_extra_widget) li a:hover, body.material #footer-outer .widget:not(.nectar_popular_posts_widget):not(.recent_posts_extra_widget) li a:hover, #top nav .sf-menu .current_page_item > a .sf-sub-indicator i, #top nav .sf-menu .current_page_ancestor > a .sf-sub-indicator i, .sf-menu > .current_page_ancestor > a > .sf-sub-indicator i, .material .widget .tagcloud a, #single-below-header a:hover [class^="icon-"], .wpcf7-form .wpcf7-not-valid-tip, #header-outer .nectar-menu-label {
     /* override */
     color: var(--color-accent-text-ondark);
+    color: var(--color-text-accent-on-dark);
 }
 
 a {

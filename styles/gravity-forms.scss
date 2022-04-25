@@ -70,9 +70,11 @@ body .gform_wrapper div.charleft,
 
 /* Primary attention message */
 .gform_legacy_markup_wrapper div.validation_error {
-  --color-attention: var(--color-brand-red); /* TODO: Move to variable declaration */
+  /*--color-attention: var(--color-brand-red); /* TODO: Move to variable declaration */
   color: var(--color-attention); /* override */ /* TODO: Use variable for proper attention text */
+  color: var(--color-text-attention-default); /* override */
   border-color: var(--color-attention); /* override */ /* TODO: Use variable for proper attention border */
+  border-color: var(--color-line-attention-on-dark); /* override */
   border-width: 1px; /* override */
 }
 
@@ -82,6 +84,7 @@ body .gform_wrapper div.charleft,
 
 .gform_validation_errors>h2 {
   color: var(--color-text-attention); /* override */ /* TODO: Use variable for proper attention text */
+  color: var(--color-text-attention-default); /* override */
 }
 
 .gform_validation_errors>h2:before {
@@ -97,6 +100,7 @@ body .gform_wrapper div.charleft,
 .gform_legacy_markup_wrapper li.gfield.gfield_error, 
 .gform_legacy_markup_wrapper li.gfield.gfield_error.gfield_contains_required.gfield_creditcard_warning {
     background-color: hsla(var(--color-hue-brand-red) 100% 50% / 10%); /* override */ /* TODO: Use variable for attention light background */
+    background-color: var(--color-attention-faint-semitransparent);
     --color-line-attention: var(--color-brand-red); /* override */
     border-top-color: var(--color-line-attention); /* override */
     border-bottom-color: var(--color-line-attention); /* override */
@@ -112,6 +116,7 @@ body .gform_wrapper div.charleft,
 .gform_legacy_markup_wrapper .gfield_required, 
 body .gform_wrapper.gform_legacy_markup_wrapper .gfield_description.validation_message {
     color: var(--color-brand-red); /* TODO: Use variable for warning/attention text color over dark */
+    color: var(--color-text-attention-default);
     font-size: var(--font-size-paragraph); /* override */
 }
 
@@ -158,7 +163,11 @@ body .gform_wrapper.gravity-theme .chosen-container a.chosen-single,
 .gform_legacy_markup_wrapper textarea,
 .gform_legacy_markup_wrapper .chosen-container-single .chosen-single,
 body .gform_legacy_markup_wrapper .chosen-container a.chosen-single {
+  --color-bg-local-default: var(--color-bg-light-default);
+  --color-fg-local-default: var(--color-text-dark-on-light-default);
+
   background: white; /* TODO: temporary, needs variable  (color)*/
+  background: var(--color-bg-local-default);
   backdrop-filter: blur(var(--radius-background-blur));
   -webkit-backdrop-filter: blur(var(--radius-background-blur));
   
@@ -166,7 +175,10 @@ body .gform_legacy_markup_wrapper .chosen-container a.chosen-single {
   line-height: var(--line-height-paragraph);
   
   color: var(--color-text-dark-on-light-default); /* TODO: Use color variable for default font color */
+  color: var(--color-fg-local-default);
+
   border: 2px solid hsla(0 0.01% 100% / 20%); /* TODO: needs variable  (color)*/
+  border: 2px solid var(--color-bg-local-default); /* Should be same as bg to prepare for hover state */
   box-shadow: none;
   -webkit-box-shadow: none;
   border-radius: 0.25rem;
@@ -242,6 +254,7 @@ div[data-style="minimal"] .toggle.accent-color:hover i,
 .gform_wrapper .ginput_complex .ginput_container_date select:focus,
 .gform_wrapper .chosen-container:focus {
   outline: 2px solid var(--color-accent-text-ondark);/* TODO: Use variable for focus state */
+  outline: 2px solid var(--color-outline-focus-default);
 }
 
 

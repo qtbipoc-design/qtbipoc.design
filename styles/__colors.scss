@@ -48,6 +48,7 @@
   /* Alpha */
   --color-alpha-default:          1;
   --color-alpha-subtle:           25%;
+  --color-alpha-faint:            10%;
 
 
   /* Common Combo properties */
@@ -137,7 +138,7 @@
   --color-hue-accent:           var(--color-hue-brand-purple);
   --color-accent:               var(--color-brand-purple);
   --color-accent-tint:          var(--color-brand-purple-tint);
-  --color-accent-text-ondark: hsl(268 76% 68%); /* TEMP variable name. Should standardize */
+  --color-accent-text-ondark: hsl(268 76% 68%); /* TODO: TEMP variable name. Should standardize */
   --color-text-accent-on-dark:  var(--color-brand-purple-tint);
 
   --color-hue-extra-1:          var(--color-hue-brand-lightblue);
@@ -148,6 +149,11 @@
   
   --color-hue-extra-3:          var(--color-hue-brand-purple);
   --color-extra-3:              var(--color-brand-purple-tint);
+
+
+  /* ATTENTION */
+  --color-attention:              var(--color-brand-red);
+  --color-attention-faint-semitransparent: hsla(var(--color-hue-brand-red) var(--color-saturation-default) var(--color-lightness-default) / var(--color-alpha-faint));
   
 
   /* TEXT AND BACKGROUND */
@@ -166,7 +172,11 @@
   /* On Color Background */
   --color-bg-color-accent:                var(--color-accent);
   --color-bg-color-default:               var(--color-bg-color-accent);
+  --color-bg-attention-default:           var(--color-attention);
+
   --color-text-on-color-default:          var(--color-text-light-on-dark-default);
+  --color-text-on-attention-bg-default:   var(--color-text-on-color-default);
+
   --color-graphic-accent-tint:            hsl(var(--color-hue-accent) var(--color-saturation-default) var(--color-lightness-faint));
   --color-graphic-color-tint-default:     var(--color-graphic-accent-tint);
 
@@ -174,9 +184,15 @@
   --color-text-accent-on-light:           var(--color-accent);
   --color-text-accent-on-dark:            var(--color-accent);
   --color-text-accent-default:            var(--color-text-accent-on-dark);
+  --color-text-attention-on-light:        var(--color-attention);
+  --color-text-attention-on-dark:         var(--color-attention);
+  --color-text-attention-default:         var(--color-text-attention-on-dark);
   --color-graphic-accent-on-light:        var(--color-accent);
   --color-graphic-accent-on-dark:         var(--color-accent);
   --color-graphic-accent-default:         var(--color-graphic-accent-on-dark);
+  --color-graphic-attention-on-light:     var(--color-attention);
+  --color-graphic-attention-on-dark:      var(--color-attention);
+  --color-graphic-attention-default:      var(--color-attention-on-dark);
 
 
   /* Default */
@@ -195,12 +211,16 @@
   --color-line-subtle-on-light:           hsl(var(--color-hs-neutral) var(--color-lightness-neutral-mid-light));
   --color-line-strong-on-dark:            hsl(var(--color-hs-neutral) var(--color-lightness-neutral-mid-light));
   --color-line-subtle-on-dark:            hsl(var(--color-hs-neutral) var(--color-lightness-neutral-mid-dark));
+  --color-line-attention-on-light:        var(--color-attention);
+  --color-line-attention-on-dark:        var(--color-attention);
   --color-line-default:                   var(--color-line-subtle-on-dark);
 
 
   --color-outline-on-light:               var(--color-accent);
   --color-outline-on-dark:                var(--color-accent-tint)
   --color-outline-default:                var(--color-outline-default);
+
+  --color-outline-focus-default:          var(--color-outline-default);
 
 }
 
