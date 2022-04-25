@@ -60,6 +60,7 @@
     line-height: 2.5rem;
     text-align: center;
     border-radius: 0.25rem; 
+    border-radius: var(--border-radius-button-default);
     background-color: var(--color-bg-local-secondary);
     color: var(--color-fg-local-secondary);
     transition: none;

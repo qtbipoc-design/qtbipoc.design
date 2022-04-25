@@ -18,6 +18,7 @@
     background-color: var(--color-bg-light-default);
     color: var(--color-text-dark-on-light-default);
     border-radius: 1rem;
+    border-radius: var(--border-radius-extra-large);
     overflow: hidden;
     
     /* Make cards same height */
@@ -204,6 +205,7 @@ body #directory-form-form .gform_wrapper ul li.gfield,
   background-color: var(--color-bg-light-default);
   padding: 1rem;
   border-radius: 0.5rem;
+  border-radius: var(--border-radius-container-default);
 }
 
 /* Individual color option - group */
@@ -220,6 +222,7 @@ body #directory-form-form .gform_wrapper ul li.gfield,
 #directory-form-form #field_3_68 .gchoice label {
   background-color: var(--color-option);
   border-radius: 0.25rem;
+  border-radius: var(--border-radius-button-default);
   padding: 0.75rem 2.5rem;
   text-transform: uppercase;
   position: relative;
@@ -308,6 +311,7 @@ body #directory-form-form .gform_wrapper ul li.gfield,
   min-width: 100%;
   min-height: 100%;
   border-radius: 1rem; /* TODO: Use variable for image border radius */
+  border-radius: var(--border-radius-extra-large);
 }
 
 #directory-form-form .gform_fileupload_rules {
