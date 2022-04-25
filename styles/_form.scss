@@ -16,6 +16,7 @@ input[type="checkbox"] {
     width: 1.25rem;
     height: 1.25rem;
     border-radius: 0.25rem;
+    border-radius: var(--border-radius-default);
     background-color: var(--color-bg-light-default);
     vertical-align: sub;
     margin: 0 0.5em 0 0;
@@ -63,6 +64,7 @@ input[type="checkbox"]:checked::before {
 .searchandfilter li[data-sf-field-input-type=multiselect] .chosen-container .chosen-choices,
 .gform_legacy_markup_wrapper .chosen-container .chosen-choices {
   border-radius: 0.25rem; /* TODO: Use variable for standard border radius */
+  border-radius: var(--border-radius-default);
   --right-dropdown-icon: 1rem;
   --width-dropdown-icon: 20px;
   --padding-right-normal: 0.5rem;
@@ -120,7 +122,7 @@ mask-repeat: var(--mask-repeat);
 /* Combox box options container */
 .searchandfilter li[data-sf-field-input-type=multiselect] .chosen-container .chosen-drop,
 .gform_legacy_markup_wrapper .chosen-container .chosen-drop{
-  border-radius: 0 0 0.25rem 0.25rem;
+  border-radius: 0 0 var(--border-radius-default) var(--border-radius-default);
   border: none;
   border-top: 1px solid var(--color-line-subtle-on-light);
 }
@@ -138,6 +140,7 @@ mask-repeat: var(--mask-repeat);
   padding: 0.5rem 1rem;
   font-weight: var(--font-weight-default);
   border-radius: 0.25rem; /* TODO: Use variable for standard border radius */
+  border-radius: var(--border-radius-default);
 }
 
 .searchandfilter li[data-sf-field-input-type=multiselect] .chosen-container .chosen-results li.highlighted,
@@ -157,6 +160,7 @@ mask-repeat: var(--mask-repeat);
 .searchandfilter li[data-sf-field-input-type=multiselect] .chosen-container.chosen-with-drop .chosen-choices,
 .gform_legacy_markup_wrapper .chosen-container.chosen-with-drop .chosen-choices{
   border-radius: 0.25rem 0.25rem 0 0; /* TODO: Use variables for default border radius */
+  border-radius: var(--border-radius-default) var(--border-radius-default) 0 0;
 }
 
 /* Combo box Chips */
@@ -173,6 +177,7 @@ mask-repeat: var(--mask-repeat);
   background-image: none !important; /* Override */
   box-shadow: none !important; /* Override */
   border-radius: 0.25rem !important; /* Override */ /* TODO: Use variable for default border radius */
+  border-radius: var(--border-radius-default);
   border: none !important; /* Override */
 }
 
@@ -191,6 +196,7 @@ mask-repeat: var(--mask-repeat);
   right: 0.5rem;
   background-color: var(--color-bg-color-accent);
   border-radius: 100%;
+  border-radius: var(--border-radius-circle);
   font-size: var(--font-size-paragraph);
   line-height: 15px;
   text-align: center;
