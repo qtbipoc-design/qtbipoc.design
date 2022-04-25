@@ -126,6 +126,10 @@
 	--color-base-hue: 0; /* TODO: use variable for white hue */
 	--color-base-saturation: 0.01%; /* TODO: use variable for white saturation */
 	--color-base-lightness: 100%; /* TODO: use variable for white lightness */
+
+	--color-base-hue: var(--color-hue-neutral);
+	--color-base-saturation: var(--color-saturation-neutral);
+	--color-base-lightness: var(--color-lightness-white);
 	
 	--color-fill-1: hsla(var(--color-hue-brand-pink) var(--color-sla-shade)); /* dark pink */
 	--color-fill-2: hsla(var(--color-hue-brand-pink) var(--color-sla-default)); /* pink */
@@ -222,7 +226,11 @@
 	--color-base-saturation: 0.01%; /* TODO: use variable for white saturation */
 	--color-base-lightness: 100%; /* TODO: use variable for white lightness */
 	
-	--color-fill-1: var(--color-brand-lightblue);
+	--color-base-hue: var(--color-hue-neutral);
+	--color-base-saturation: var(--color-saturation-neutral);
+	--color-base-lightness: var(--color-lightness-white);
+  
+  --color-fill-1: var(--color-brand-lightblue);
 	--color-fill-2: var(--color-brand-white);
 	--color-fill-3: var(--color-brand-pink-tint);
 
@@ -339,6 +347,10 @@
 	--color-base-hue: 0; /* TODO: use variable for white hue */
 	--color-base-saturation: 0.01%; /* TODO: use variable for white saturation */
 	--color-base-lightness: 100%; /* TODO: use variable for white lightness */
+	
+	--color-base-hue: var(--color-hue-neutral);
+	--color-base-saturation: var(--color-saturation-neutral);
+	--color-base-lightness: var(--color-lightness-white);
 
 	--color-fill-1: var(--color-brand-purple-tint);
 	--color-fill-2: var(--color-brand-white);

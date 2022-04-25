@@ -30,6 +30,7 @@
   --color-lightness-shade:        calc(var(--color-lightness-default) * var(--pct-color-lightness-shade));
   --color-lightness-tint:         calc(var(--color-lightness-default) * var(--pct-color-lightness-tint));
   --color-lightness-faint:        90%;
+  --color-lightness-white:        100%;
   
   --color-lightness-brand-brown:  45%;
   --color-lightness-shade-brand-brown:  calc(var(--color-lightness-brand-brown) * var(--pct-color-lightness-shade));
