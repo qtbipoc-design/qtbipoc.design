@@ -1,3 +1,8 @@
+/* Toggle Panel Columns */
+body .component-toggle-panels .wpb_column {
+  margin-bottom: 0; /* override */
+}
+
 .toggle.default {
   --color-bg-local-default: var(--color-bg-light-default);
   --color-fg-local-default: var(--color-text-dark-on-light-default);

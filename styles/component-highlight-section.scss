@@ -16,6 +16,13 @@
     margin-right: auto;
 }
 
+/* Spacing between content */
+.row-highlight .vc_column-inner>.wpb_wrapper h3, 
+.row-highlight .vc_column-inner>.wpb_wrapper h4,
+.row-highlight .vc_column-inner>.wpb_wrapper div.wpb_text_column {
+    margin-bottom: 2.5rem;
+}
+
 .row-highlight.vc_row-fluid>.span_12 .wpb_column {
     padding-left: 0; /* override */
     padding-right: 0; /* override */

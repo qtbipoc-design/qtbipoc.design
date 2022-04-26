@@ -10,6 +10,8 @@
 :root {
   --max-width-main-content: 300px;
   --padding-horizontal-container: 0px;
+  --padding-horizontal-row: 0%;
+  --padding-horizontal-container-and-row: calc(var(--padding-horizontal-row) + var(--padding-horizontal-container));
 }
 
 @media only screen and (max-width: 321px){
@@ -40,8 +42,8 @@
   :root {
     --max-width-main-content: 1440px;
     --padding-horizontal-container: 90px;
-    --padding-horizontal-row: 5%;
-    --padding-horizontal-container-and-row: calc(var(--padding-horizontal-row) + var(--padding-horizontal-container));
+    --padding-horizontal-row: 0%;
+    /* --padding-horizontal-container-and-row: calc(var(--padding-horizontal-row) + var(--padding-horizontal-container)); */
     }
 }
 
