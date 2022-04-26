@@ -10,7 +10,7 @@
 :root {
   --max-width-main-content: 300px;
   --padding-horizontal-container: 0px;
-  --padding-horizontal-row: 0%;
+  --padding-horizontal-row: 0.01%;
   --padding-horizontal-container-and-row: calc(var(--padding-horizontal-row) + var(--padding-horizontal-container));
 }
 
@@ -42,7 +42,7 @@
   :root {
     --max-width-main-content: 1440px;
     --padding-horizontal-container: 90px;
-    --padding-horizontal-row: 0%;
+    --padding-horizontal-row: 0.01%;
     /* --padding-horizontal-container-and-row: calc(var(--padding-horizontal-row) + var(--padding-horizontal-container)); */
     }
 }
