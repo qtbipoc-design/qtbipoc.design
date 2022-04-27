@@ -44,14 +44,6 @@ blockquote.nectar_single_testimonial p {
     margin-top: 1em;
 }
 
-blockquote.nectar_single_testimonial p::before {
-    content: '\201c'; /* 201c = Left double quotes */
-}
-
-blockquote.nectar_single_testimonial p::after {
-    content: '\201d'; /* 201d = Right double quotes */
-}
-
 /* Decorative quote mark */
 blockquote.nectar_single_testimonial p .open-quote {
     display: none;
