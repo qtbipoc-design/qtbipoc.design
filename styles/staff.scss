@@ -1,0 +1,87 @@
+/* 
+ * STAFF RESULTS 
+ */
+
+ /* Based on Directory stylesheet */
+ 
+
+ .STAFF-RESULTS------------------------ { color: inherit;}
+
+/* Flex grid item */
+.staff-listing>.vc_row>.col {
+  row-gap: 2.5rem;
+}
+
+/* Card container */
+.staff-listing>.vc_row-fluid>.span_12>.wpb_column {
+  --length-card-gap: 2.5rem;
+  padding-left: calc(var(--length-card-gap) / 2);
+  padding-right: calc(var(--length-card-gap) / 2);
+}
+
+.staff-card>.vc_column-inner,
+.staff-card>.vc_column-inner>.wpb_wrapper {
+  height: 100%; /* Make cards same height */
+}
+
+.staff-card>.vc_column-inner>.wpb_wrapper {
+  /* Make cards same height */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Featured Image */
+
+.staff-card .staff-result-element-featured-image img {
+  margin-bottom: 0;
+  height: 100%;  /* To make image fill height */
+  object-fit: cover; /* To make image fill height */
+  min-width: 100%; /* To make image fill width */
+  border-radius: var(--border-radius-large);
+  aspect-ratio: 1;
+}
+
+/* Content */
+
+body .staff-card h4,  /* Salient override */
+.staff-card .staff-result-element-member-name {
+  margin-top: 1rem;
+}
+
+.staff-card .wpb_text_column.wpb_content_element:not(.staff-result-staff-bio) {
+  margin-bottom: 0;
+}
+
+body .staff-card .wpb_text_column.wpb_content_element:not(.staff-result-staff-bio) p { /* Override */
+  font-family: var(--font-family-display);
+}
+
+body .staff-card .staff-result-staff-bio {
+  margin-top: 1em;
+}
+
+
+/* Links */
+@media (min-width: 690px) {
+  .inner-row-staff-result-staff-links .vc_col-sm-4 { /* Salient override */
+    width: 100%;
+  }
+}
+
+body .inner-row-staff-result-staff-links .nectar_icon i {
+  width: 0px !important; /* make no-link icons have no width */
+  overflow: hidden; /* Hide no-link icons */
+  color: var(--color-text-default) !important;
+}
+
+.inner-row-staff-result-staff-links .nectar_icon a+i {
+  margin-right: 1rem;
+  width: auto !important; /* offset 0px for no-link icons */
+  font-size: 1.5rem !important; /* override */
+}
+
+.inner-row-staff-result-staff-links a:hover+i {
+  color: var(--color-graphic-accent-default) !important;
+}
+
+
