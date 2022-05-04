@@ -1,0 +1,58 @@
+/* Home page title */
+.row-home-hero h1 {
+    text-transform: lowercase;
+    font-weight: var(--font-weight-extra-bold);
+    font-size: var(--font-size-super-heading);
+}
+
+
+/* Home: "Choose Your Adventure section */
+.row-home-choose-your-adventure .inner_row .wpb_column,
+.row-home-choose-your-adventure .inner_row .wpb_column p,
+.row-home-choose-your-adventure .inner_row .wpb_column li{
+    color: var(--color-text-dark-on-light-default); /* partial override */
+}
+
+.row-home-choose-your-adventure ul {
+    margin-left: 0;
+}
+
+.row-home-choose-your-adventure li {
+    list-style-type: none;
+}
+
+.row-home-choose-your-adventure a {
+    color: var(--color-text-accent-on-light);
+}
+
+.row-home-choose-your-adventure .inner_row .wpb_column .vc_column-inner>.wpb_wrapper {
+    padding: var(--spacing-large);
+}
+
+
+/* Home: "Explore Our Programming section */
+.row-home-explore-our-programming img{
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    
+}
+
+.row-home-explore-our-programming a {
+    color: var(--color-text-default);
+}
+
+
+/* Home - Highlight Section - Newsletter sign up form */
+.row-highlight #gform_1 .ginput_container,
+.row-highlight #gform_1 .gform_footer{
+    text-align: center;
+}
+
+.row-highlight #gform_1 input[type=email] {
+    max-width: 300px; /* 300px based on content max-width at 320px screen width */
+}
+
+/* remove space between form and privacy text */
+.row-highlight #gform_wrapper_1 {
+    margin-bottom: 0;
+}
