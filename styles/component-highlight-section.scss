@@ -42,3 +42,9 @@
     padding-left: 5%; /* Simulate default */
     padding-right: 5%; /* Simulate default */
 }
+
+/* Spacing between buttons */
+.row-highlight .vc_column-inner>.wpb_wrapper>.nectar-button {
+  margin-right: var(--spacing-large);
+  margin-left: var(--spacing-large);
+}

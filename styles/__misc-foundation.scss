@@ -32,4 +32,12 @@
   --spacing-medium:             0.5rem;   /* 0.5rem     = 8px */
   --spacing-large:              1rem;     /* 1rem       = 16px */
 
+  .invisible {
+    opacity: 0;
+  }
+
+  .img-with-aniamtion-wrap .hover-wrap .hover-wrap-inner img.img-with-animation.invisible {
+    opacity: 0 !important;
+  }
+
 }

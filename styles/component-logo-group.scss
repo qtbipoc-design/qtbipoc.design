@@ -1,0 +1,24 @@
+.group-logos .wpb_column {
+    margin-bottom:1rem;
+}
+
+/* Logo Graphic container */
+
+.group-logos .hover-wrap-inner {
+    background-color: var(--color-bg-light-default);
+    border-radius: var(--border-radius-large);
+    aspect-ratio: 2;
+    overflow: hidden;
+    padding: 8%; /* 8% = by eye */
+}
+
+.group-logos .hover-wrap-inner,
+.group-logos .hover-wrap-inner a {
+    display: flex; /* Vertially centers content */
+}
+
+
+.group-logos img {
+    object-fit: contain;
+    max-height: 100%; /* restrict height to be within container*/
+}

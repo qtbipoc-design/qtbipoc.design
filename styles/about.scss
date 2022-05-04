@@ -1,0 +1,23 @@
+/* About page: High Level section */
+
+/* High level section headings */
+.group-about-high-level-info h2, 
+.group-about-high-level-info h3, 
+.group-about-high-level-info h4 {
+    margin-top: 0;
+    margin-bottom: .5em;
+}
+
+/* Graphic container */
+.group-about-high-level-info .hover-wrap-inner {
+    aspect-ratio: 3;
+    text-align: center;
+    display: flex;
+    align-items: center; /* vertical centering */
+    justify-content: center; /* horizontal centering */
+}
+
+/* Graphic */
+.group-about-high-level-info img {
+    width: 1%; /* to be overridden by flexbox */
+}
