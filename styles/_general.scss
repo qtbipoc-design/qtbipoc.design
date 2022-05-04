@@ -54,3 +54,13 @@
 li.gfield {
   max-width: none;
 }
+
+
+
+.invisible {
+  opacity: 0;
+}
+
+.img-with-aniamtion-wrap .hover-wrap .hover-wrap-inner img.img-with-animation.invisible {
+  opacity: 0 !important;
+}
