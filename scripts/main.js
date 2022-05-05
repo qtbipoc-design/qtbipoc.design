@@ -1,6 +1,7 @@
 console.log('Main Loaded');
 
 
+/*
 // This wraps the string of the Search & Filter result count in a heading tag
 (function ($) {
   $(function () {
@@ -15,3 +16,4 @@ console.log('Main Loaded');
     }
   });
 })(jQuery);
+*/
