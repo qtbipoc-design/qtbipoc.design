@@ -273,7 +273,8 @@ pre {
     background-color: hsla(0 0.01% 0% / 100%); /* temporary color */
     border: 1px solid hsla(0 0.01% 100% / 20%); /* temporary color */
     border-radius: var(--border-radius-container-default);
-    padding: 1rem;
+    // padding: 1rem;
+    padding: var(--padding-container-default);
 }
 
 

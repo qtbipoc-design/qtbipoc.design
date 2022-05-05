@@ -32,5 +32,6 @@
   --spacing-medium:             0.5rem;   /* 0.5rem     = 8px */
   --spacing-large:              1rem;     /* 1rem       = 16px */
 
-
+  --padding-container-default:      var(--spacing-medium);
+  --padding-input-field-default:    var(--spacing-medium);
 }
