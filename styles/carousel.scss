@@ -3,6 +3,8 @@
 .carousel li {
   padding-left: 1rem;
   padding-right: 1rem;
+  padding-left: var(--spacing-large);
+  padding-right: var(--spacing-large);
 }
 
 

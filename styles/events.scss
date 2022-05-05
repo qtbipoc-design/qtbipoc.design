@@ -15,8 +15,12 @@
 
 body .container-wrap .search-filter-results .vc_row-fluid[data-column-margin="40px"] .wpb_column:not(.child_column), 
 body .container-wrap .search-filter-results .inner_row[data-column-margin="40px"] .child_column {
+  --local-margin-column: 40px;
+  --local-margin-column-half: calc(var(--local-margin-column) / 2);
   padding-left: 20px;
   padding-right: 20px;
+  padding-left: var(--local-margin-column-half);
+  padding-right: var(--local-margin-column-half);
   
 }
 

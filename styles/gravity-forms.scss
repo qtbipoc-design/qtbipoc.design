@@ -173,6 +173,7 @@ body .gform_legacy_markup_wrapper .chosen-container a.chosen-single {
   -webkit-box-shadow: none;
   border-radius: var(--border-radius-form-field-default);
   padding: 8px;
+  padding: var(--padding-input-field-default);
 }
 
 .gform_wrapper .chosen-container-single .chosen-single {
@@ -275,4 +276,5 @@ form .gform_body .gfield input::placeholder {
 /* Footer */
 .before-footer .gform_legacy_markup_wrapper input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]) {
     padding: 0.5rem; /* override */
+    padding: var(--padding-input-field-default); /* override */
 }

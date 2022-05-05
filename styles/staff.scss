@@ -15,8 +15,9 @@
 /* Card container */
 .staff-listing>.vc_row-fluid>.span_12>.wpb_column {
   --length-card-gap: 2.5rem;
-  padding-left: calc(var(--length-card-gap) / 2);
-  padding-right: calc(var(--length-card-gap) / 2);
+  --length-card-gap-half: calc(var(--length-card-gap) / 2);
+  padding-left: var(--length-card-gap-half);
+  padding-right: var(--length-card-gap-half);
 }
 
 .staff-card>.vc_column-inner,
