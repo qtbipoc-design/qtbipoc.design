@@ -5,7 +5,6 @@
 
 /* Fields */
 .gform_legacy_markup_wrapper input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]) {
-  padding: 8px; /* override */
   padding: var(--padding-input-field-default); /* override */
 }
 
@@ -66,10 +65,8 @@ input[type="checkbox"]:checked::before {
   border-radius: var(--border-radius-form-field-default);
   --right-dropdown-icon: 1rem;
   --width-dropdown-icon: 20px;
-  --padding-right-normal: 0.5rem;
   --padding-right-normal: var(--padding-input-field-default);
-  --padding-right: calc(var(--right-dropdown-icon) + var(--width-dropdown-icon) + var(--padding-right-normal)); 
-  padding: 0.5rem var(--padding-right) 0.5rem 0.5rem;
+  --padding-right: calc(var(--right-dropdown-icon) + var(--width-dropdown-icon) + var(--padding-right-normal));
   padding: var(--padding-input-field-default) var(--padding-right) var(--padding-input-field-default) var(--padding-input-field-default);
   border: none;
 }
@@ -113,8 +110,6 @@ mask-repeat: var(--mask-repeat);
   font-size: var(--font-size-paragraph);
   line-height: var(--line-height-paragraph);
   margin:0.25rem;
-  padding-top: 0.25rem !important;
-  padding-bottom: 0.5rem !important;
   padding-top: var(--spacing-small) !important;
   padding-bottom: var(--padding-input-field-default) !important;
   height: auto;
@@ -140,7 +135,6 @@ mask-repeat: var(--mask-repeat);
 .gform_legacy_markup_wrapper .chosen-container .chosen-results li{
   font-size: var(--font-size-paragraph);
   line-height: var(--line-height-paragraph);
-  padding: 0.5rem 1rem;
   padding: var(--spacing-medium) var(--spacing-large);
   font-weight: var(--font-weight-default);
   border-radius: var(--border-radius-default);
