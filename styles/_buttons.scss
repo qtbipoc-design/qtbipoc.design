@@ -172,7 +172,7 @@ body .nectar-button[data-color-override="false"].see-through.extra_jumbo /* over
     line-height: var(--line-height-h5);
 }
 
-@media screen and (max-width:320px) {
+@media screen and (max-width:321px) {
   /* Minimize horizontal label padding and make word wrap (when necessary) when screen is narrow */
   body.material .nectar-button,
   body[data-form-submit=see-through] .container-wrap .gform_wrapper input[type=submit] {
@@ -180,6 +180,13 @@ body .nectar-button[data-color-override="false"].see-through.extra_jumbo /* over
     padding-right: 3% !important; /* 3% by eye */
     white-space: normal;
     text-align:center;
+  }
+}
+
+@media screen and (max-width:480px) {
+  /* Minimize horizontal label padding and make word wrap (when necessary) when screen is narrow */
+  body.material .nectar-button,
+  body[data-form-submit=see-through] .container-wrap .gform_wrapper input[type=submit] {
     width:100%;
   }
 }
