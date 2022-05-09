@@ -179,7 +179,6 @@ body .nectar-button[data-color-override="false"].see-through.extra_jumbo /* over
     padding-left: 3% !important; /* 3% by eye */
     padding-right: 3% !important; /* 3% by eye */
     white-space: normal;
-    text-align:center;
   }
 }
 
@@ -187,6 +186,7 @@ body .nectar-button[data-color-override="false"].see-through.extra_jumbo /* over
   /* Minimize horizontal label padding and make word wrap (when necessary) when screen is narrow */
   body.material .nectar-button,
   body[data-form-submit=see-through] .container-wrap .gform_wrapper input[type=submit] {
+    text-align:center;
     width:100%;
   }
 }
