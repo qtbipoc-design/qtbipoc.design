@@ -26,15 +26,11 @@
   aspect-ratio: 3; /* To align items correctly */
 }
 
-@media screen and (max-width: 356px) {
+@media screen and (max-width: 999px) {
   .group-about-high-level-info .hover-wrap-inner {
     aspect-ratio: unset;
   }
 
-}
-
-
-@media screen and (max-width: 999px) {
   .group-about-high-level-info .invisible {
     display: none;
   }
