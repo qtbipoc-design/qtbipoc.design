@@ -19,8 +19,10 @@
 .footer-inline ul li {
   display: inline;
   padding-right: 20px;
+}
 
-  @media screen and (max-width: 480px) {
+@media screen and (max-width: 480px) {
+  .footer-inline ul li {
     display: list-item;
     list-style: none;
   }
