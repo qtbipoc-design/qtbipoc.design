@@ -3,6 +3,14 @@
     margin-bottom: 3rem;
 }
 
+@media only screen and (max-width: 321px){
+  .container, 
+  .post-area.standard-minimal.full-width-content .post .inner-wrap, 
+  .slider-nav {
+    max-width: 90vw; /* override */
+  }
+}
+
 .main-content>.row {
   z-index: 0; /* To allow low-z-index planet-included rows to be selectable in inspector */
 }
