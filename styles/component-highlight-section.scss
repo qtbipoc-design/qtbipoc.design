@@ -52,8 +52,10 @@
 }
 
 /* Spacing between buttons */
-.row-highlight .vc_column-inner>.wpb_wrapper>.nectar-button {
-  margin-right: var(--spacing-large);
-  margin-left: var(--spacing-large);
+@media screen and (min-width:480px) {
+  .row-highlight .vc_column-inner>.wpb_wrapper>.nectar-button {
+    margin-right: var(--spacing-large);
+    margin-left: var(--spacing-large);
+  }
 }
 
