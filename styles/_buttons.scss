@@ -146,9 +146,9 @@ body.material .nectar-button.large,
 .nectar-button[data-color-override="false"].regular-button.large /* override */,
 body .nectar-button[data-color-override="false"].see-through.large /* override */,
 body[data-form-submit=see-through] .container-wrap .gform_wrapper input[type=submit]{
-    padding: 1em 3em !important; /* override */
-    box-shadow: 0 0px 0 var(--color-button-assigned-shadow) !important; /* override */
-    font-size: var(--font-size-paragraph);
+  padding: 1em 3em !important; /* override */
+  box-shadow: 0 0px 0 var(--color-button-assigned-shadow) !important; /* override */
+  font-size: var(--font-size-paragraph);
     
 }
 
@@ -170,6 +170,16 @@ body .nectar-button[data-color-override="false"].see-through.extra_jumbo /* over
     border-radius: var(--border-radius-large) !important; /* override */
     border-width: 2px;
     line-height: var(--line-height-h5);
+}
+
+@media screen and (max-width:320px) {
+  /* Minimize horizontal label padding and make word wrap (when necessary) when screen is narrow */
+  body.material .nectar-button,
+  body[data-form-submit=see-through] .container-wrap .gform_wrapper input[type=submit] {
+    padding-left: 3% !important; /* 3% by eye */
+    padding-right: 3% !important; /* 3% by eye */
+    white-space: normal;
+  }
 }
 
 
