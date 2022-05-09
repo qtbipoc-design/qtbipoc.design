@@ -48,8 +48,16 @@
     text-align: center;
 }
 
-.row-highlight #gform_1 input[type=email] {
-    max-width: 300px; /* 300px based on content max-width at 320px screen width */
+@media screen and (max-width:356px) { /* 356px = 320px/0.9 */
+  .row-highlight #gform_1 input[type=email] {
+      max-width: 100%; /* 300px based on content max-width at 320px screen width */
+  }
+}
+
+@media screen and (max-width:480px) {
+  .row-highlight #gform_1 input[type=email] {
+      max-width: 320px; /* 300px based on content max-width at 320px screen width */
+  }
 }
 
 /* remove space between form and privacy text */
