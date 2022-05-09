@@ -9,7 +9,7 @@
     overflow: hidden;
 }
 
-@media screen and (max-width:321px) {
+@media screen and (max-width:356px) { /* 356px = 320px/0.9 */
   .row-highlight .vc_row-fluid.inner_row .span_12 {
     max-width: 90vw; 
     margin-left: auto; /* Override */
