@@ -20,13 +20,14 @@
 /* Graphic */
 .group-about-high-level-info img {
     width: 1%; /* to be overridden by flexbox */
+    aspect-ratio: 3;
 }
 
 @media screen and (max-width: 356px) {
   .group-about-high-level-info .hover-wrap-inner {
     aspect-ratio: unset;
   }
-  
+
   .group-about-high-level-info .img-with-aniamtion-wrap .hover-wrap .hover-wrap-inner img.img-with-animation.invisible {
     display: none;
   }
