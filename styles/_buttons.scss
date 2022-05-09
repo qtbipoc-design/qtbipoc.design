@@ -172,10 +172,24 @@ body .nectar-button[data-color-override="false"].see-through.extra_jumbo /* over
     line-height: var(--line-height-h5);
 }
 
-@media screen and (max-width:321px) {
+@media screen and (max-width:356px) { /* 356px = 320px/0.9 */
   /* Minimize horizontal label padding and make word wrap (when necessary) when screen is narrow */
-  body.material .nectar-button,
-  body[data-form-submit=see-through] .container-wrap .gform_wrapper input[type=submit] {
+  .nectar-button.small,
+  .nectar-button[data-color-override="false"].regular-button.small /* override */,
+  body .nectar-button[data-color-override="false"].see-through.small /* override */,
+  .nectar-button.medium,
+  .nectar-button[data-color-override="false"].regular-button.medium /* override */,
+  body .nectar-button[data-color-override="false"].see-through.medium /* override */,
+  body.material .nectar-button.large,
+  .nectar-button[data-color-override="false"].regular-button.large /* override */,
+  body .nectar-button[data-color-override="false"].see-through.large /* override */,
+  body[data-form-submit=see-through] .container-wrap .gform_wrapper input[type=submit],
+  body.material .nectar-button.jumbo,
+  .nectar-button[data-color-override="false"].regular-button.jumbo /* override */,
+  body .nectar-button[data-color-override="false"].see-through.jumbo /* override */,
+  body.material .nectar-button.extra_jumbo,
+  .nectar-button[data-color-override="false"].regular-button.extra_jumbo /* override */,
+  body .nectar-button[data-color-override="false"].see-through.extra_jumbo /* override */ {
     padding-left: 3% !important; /* 3% by eye */
     padding-right: 3% !important; /* 3% by eye */
     white-space: normal;
