@@ -192,6 +192,11 @@ body .nectar-button[data-color-override="false"].see-through.extra_jumbo /* over
   body .nectar-button[data-color-override="false"].see-through.extra_jumbo /* override */ {
     padding-left: 3% !important; /* 3% by eye */
     padding-right: 3% !important; /* 3% by eye */
+  }
+
+
+  body[data-form-submit=see-through] .container-wrap .gform_wrapper input[type=submit],
+  .nectar-button span {
     white-space: normal;
   }
 }
