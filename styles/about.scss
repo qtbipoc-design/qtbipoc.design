@@ -22,6 +22,10 @@
   width: 1%; /* to be overridden by flexbox */
 }
 
+.group-about-high-level-info img.invisible {
+  aspect-ratio: 3; /* To align items correctly */
+}
+
 @media screen and (max-width: 356px) {
   .group-about-high-level-info .hover-wrap-inner {
     aspect-ratio: unset;
