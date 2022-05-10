@@ -238,6 +238,24 @@ body #directory-form-form .gform_wrapper ul li.gfield,
   font-weight: var(--font-weight-bold) !important; /* override */
 }
 
+@media screen and (max-width:480px) {
+
+  #directory-form-form #field_3_68 .gfield_radio {
+    padding: var(--spacing-medium);
+  }
+
+  #directory-form-form #field_3_68 .gchoice label {
+    --padding-local: 1.5rem;
+    padding-left: var(--padding-local);
+    padding-right: var(--padding-local);
+  }
+
+  #directory-form-form #field_3_68 .gchoice input[type=radio]+label::before {
+    content: unset;
+  }
+  
+}
+
 
 #directory-form-form #field_3_68 .gchoice input[type=radio]:checked+label {
   outline: 2px solid var(--color-option);
