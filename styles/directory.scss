@@ -141,6 +141,7 @@ body .member-card .nectar-button[data-color-override="false"].see-through.large:
   gap: var(--gap);
 }
 
+
 /* Filter category container */
 .sf-directory-filters .searchandfilter>ul>li {
   --column-width: calc((100% - (3 * var(--gap))) / 4);
@@ -174,6 +175,19 @@ body .member-card .nectar-button[data-color-override="false"].see-through.large:
 /* Direcotry Combo box layout */
 .sf-directory-filters .chosen-container.chosen-container-multi {
   width: 100% !important;
+}
+
+
+@media screen and (max-width:999px) {
+  /* Filter categories */
+  .sf-directory-filters .searchandfilter>ul {
+    display: block;
+  }
+
+  /* Reset button */
+  .sf-directory-filters .searchandfilter>ul li.sf-field-reset a {
+    display: inline;
+  }
 }
 
 
