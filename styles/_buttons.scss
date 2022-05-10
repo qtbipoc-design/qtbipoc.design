@@ -190,6 +190,7 @@ body .nectar-button[data-color-override="false"].see-through.extra_jumbo /* over
   body.material .nectar-button.extra_jumbo,
   .nectar-button[data-color-override="false"].regular-button.extra_jumbo /* override */,
   body .nectar-button[data-color-override="false"].see-through.extra_jumbo /* override */ {
+    /* Minimize horizontal label padding */
     padding-left: 3% !important; /* 3% by eye */
     padding-right: 3% !important; /* 3% by eye */
   }
@@ -201,8 +202,30 @@ body .nectar-button[data-color-override="false"].see-through.extra_jumbo /* over
   }
 }
 
+
+@media screen and (min-width:356px) and (max-width:480px) {
+  .nectar-button.small,
+  .nectar-button[data-color-override="false"].regular-button.small /* override */,
+  body .nectar-button[data-color-override="false"].see-through.small /* override */,
+  .nectar-button.medium,
+  .nectar-button[data-color-override="false"].regular-button.medium /* override */,
+  body .nectar-button[data-color-override="false"].see-through.medium /* override */,
+  body.material .nectar-button.large,
+  .nectar-button[data-color-override="false"].regular-button.large /* override */,
+  body .nectar-button[data-color-override="false"].see-through.large /* override */,
+  body[data-form-submit=see-through] .container-wrap .gform_wrapper input[type=submit],
+  body.material .nectar-button.jumbo,
+  .nectar-button[data-color-override="false"].regular-button.jumbo /* override */,
+  body .nectar-button[data-color-override="false"].see-through.jumbo /* override */,
+  body.material .nectar-button.extra_jumbo,
+  .nectar-button[data-color-override="false"].regular-button.extra_jumbo /* override */,
+  body .nectar-button[data-color-override="false"].see-through.extra_jumbo /* override */ {
+    padding-left: 1em !important;
+    padding-right: 1em !important;
+  }
+}
+
 @media screen and (max-width:480px) {
-  /* Minimize horizontal label padding and make word wrap (when necessary) when screen is narrow */
   body.material .nectar-button,
   body[data-form-submit=see-through] .container-wrap .gform_wrapper input[type=submit] {
     text-align:center;
