@@ -231,6 +231,11 @@ body .nectar-button[data-color-override="false"].see-through.extra_jumbo /* over
     text-align:center;
     width:100%;
   }
+
+
+  body.material .member-card .nectar-button {
+    width: calc(100% - (2 * var(--padding-horizontal-member-card-content)));
+  }
 }
 
 

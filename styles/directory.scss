@@ -44,6 +44,13 @@
 :root {
   --padding-horizontal-member-card-content: 2rem;
 }
+
+@media screen and (max-width: 480px) {
+  :root {
+    --padding-horizontal-member-card-content: 5%;
+  } 
+}
+
 .member-card .directory-result-element-member-name, 
 .member-card .wpb_content_element:not(.directory-result-element-featured-image), 
 .member-card .inner-row-directory-result-member-socials {
