@@ -146,7 +146,8 @@ select.sf-input-select option /* for mobile */{
 }
 
 .searchandfilter li[data-sf-field-input-type=multiselect] .chosen-container .chosen-results li.highlighted,
-.gform_legacy_markup_wrapper .chosen-container .chosen-results li.highlighted{
+.gform_legacy_markup_wrapper .chosen-container .chosen-results li.highlighted,
+select.sf-input-select option[selected=selected] /* Selected on mobile */ {
   background-color: var(--color-graphic-color-tint-default);
   background-image: none;
   color: var(--color-text-form-field-default); /* Override */
