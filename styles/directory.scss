@@ -238,23 +238,6 @@ body #directory-form-form .gform_wrapper ul li.gfield,
   font-weight: var(--font-weight-bold) !important; /* override */
 }
 
-@media screen and (max-width:480px) {
-
-  #directory-form-form #field_3_68 .gfield_radio {
-    padding: var(--spacing-medium);
-  }
-
-  #directory-form-form #field_3_68 .gchoice label {
-    --padding-local: 1.5rem;
-    padding-left: var(--padding-local);
-    padding-right: var(--padding-local);
-  }
-
-  #directory-form-form #field_3_68 .gchoice input[type=radio]+label::before {
-    content: unset;
-  }
-  
-}
 
 
 #directory-form-form #field_3_68 .gchoice input[type=radio]:checked+label {
@@ -276,6 +259,28 @@ body #directory-form-form .gform_wrapper ul li.gfield,
   opacity: 0;
   transition-duration: 0.3s;
 }
+
+@media screen and (max-width:480px) {
+
+  /* color option container */
+  #directory-form-form #field_3_68 .gfield_radio {
+    padding: var(--spacing-medium);
+  }
+
+  /* color options */
+  #directory-form-form #field_3_68 .gchoice label {
+    --padding-local: 1.5rem;
+    padding-left: var(--padding-local);
+    padding-right: var(--padding-local);
+  }
+
+  /* color option icon */
+  #directory-form-form #field_3_68 .gchoice input[type=radio]+label::before {
+    content: unset;
+  }
+  
+}
+
 
 #directory-form-form #field_3_68 .gchoice input[type=radio]:checked+label::before {
   transform: translate(-1.75rem, 0rem);
