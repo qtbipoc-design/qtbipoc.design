@@ -71,6 +71,10 @@ input[type="checkbox"]:checked::before {
   border: none;
 }
 
+select.sf-input-select {
+  background: var(--color-bg-form-field-default);
+}
+
 /* Main combo box container - dropdown arrow */
 .searchandfilter li[data-sf-field-input-type=multiselect] .chosen-container .chosen-choices::after,
 .gform_legacy_markup_wrapper .chosen-container .chosen-choices::after{
@@ -132,7 +136,8 @@ mask-repeat: var(--mask-repeat);
 
 /* Combox box option */
 .searchandfilter li[data-sf-field-input-type=multiselect] .chosen-container .chosen-results li,
-.gform_legacy_markup_wrapper .chosen-container .chosen-results li{
+.gform_legacy_markup_wrapper .chosen-container .chosen-results li,
+select.sf-input-select option /* for mobile */{
   font-size: var(--font-size-paragraph);
   line-height: var(--line-height-paragraph);
   padding: var(--spacing-medium) var(--spacing-large);
