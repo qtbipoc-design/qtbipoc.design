@@ -65,6 +65,13 @@ body .gform_wrapper div.charleft,
     line-height: var(--line-height-sub-paragraph);
 }
 
+@media only screen and (max-width: 641px) {
+  /* example: Directory form agree to privacy checkbox */
+  .gform_legacy_markup_wrapper .ginput_container span:not(.ginput_price) {
+    display: inline; /* override */
+  }
+}
+
 /* ATTENTION ELEMENTS */
 .ATTENTION-ELEMENTS------------------------ { color: inherit;}
 
