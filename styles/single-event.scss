@@ -78,9 +78,8 @@
   border-top: 0.25rem solid var(--color-brand-white);
 }
 
-.row_inner_transcript .vc_acf>*:last-child {
+.row .row_inner_transcript .vc_acf>*:last-child {
   margin-bottom: 3rem;
   border-bottom: 0.25rem solid var(--color-brand-white);
+  padding-bottom: 2rem; /* override */
 }
-
-
