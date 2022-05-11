@@ -8,6 +8,14 @@
   padding: var(--padding-input-field-default); /* override */
 }
 
+/* Highlight row fields */
+.row-highlight ul.gform_fields li.gfield {
+  max-width: var(--width-text-default); /* override */
+  margin-left: auto !important; /* override */
+  margin-right: auto; /* override */
+  padding-right: 0; /* override */
+}
+
 
 /* Checkbox */
 input[type="checkbox"] {
