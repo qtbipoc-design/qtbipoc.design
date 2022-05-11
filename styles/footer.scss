@@ -1,3 +1,4 @@
+/* Newsletter form section */
 .footer-styling h2 {
     font-weight: 600;
     font-size: 1em;
@@ -12,6 +13,15 @@
 .footer-styling ul li {
     list-style-type: none;
 }
+
+/* Newsletter Submit button */
+.before-footer #gform_wrapper_1,
+.before-footer .gform_legacy_markup_wrapper .gform_footer input[type=submit] {
+  margin-bottom: 0;
+}
+
+
+/* Footer: Legal */
 
 .footer-inline ul {
     margin-left: 0;
@@ -34,3 +44,6 @@
 }
 
 
+.before-footer #gform_wrapper_1 {
+  margin-bottom: 0;
+}
