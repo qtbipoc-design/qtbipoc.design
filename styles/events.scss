@@ -101,8 +101,8 @@ body .container-wrap .search-filter-results .inner_row[data-column-margin="40px"
 /* SPECIFIC WIDGETS */
 
 /* Widget: Post Summary */
-.event-widget-column-summary {
-  margin-bottom: 4rem;
+body .vc_row-fluid .event-widget-column-summary {
+  margin-bottom: 4rem; /* override */
   text-align: left; /* force assign to offset center alignment in some parent containers */
 }
 
