@@ -3,7 +3,6 @@
   --qty-planet-peek-into-content: 0.05;
   --width-planet-peek-into-content: calc(var(--width-content) * var(--qty-planet-peek-into-content));
   --pos_x-planet-edge: calc(var(--width-content) - var(--width-planet-peek-into-content)); /* temporary: need unified formula for left and right peeks */
-  --pos_x-planet-center: calc(var(--pos_x-planet-edge) + (var(-planet-diameter) / 2 )); /* temporary: need unified formula for left and right peeks */
 }
 
 .planetContainer {
@@ -25,6 +24,7 @@
 
 @media screen and (min-width: 690px) and (max-width: 999px) {
   .planetContainer:not(.ignore-responsive-layout) {
+    --pos_x-planet-center: calc(var(--pos_x-planet-edge) + (var(-planet-diameter) / 2 )); /* temporary: need unified formula for left and right peeks */
     left: var(--pos_x-planet-center);
   }
 }
