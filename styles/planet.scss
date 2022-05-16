@@ -24,7 +24,7 @@
 
 $breakpoint-vw-tablet:    690px;
 $breakpoint-vw-desktop:   999px;
-$mixin tablet {
+@mixin tablet {
   @media screen and (min-width: #{$breakpoint-vw-tablet}) and (max-width: #{$breakpoint-vw-desktop}) {  
     @content;
   }
