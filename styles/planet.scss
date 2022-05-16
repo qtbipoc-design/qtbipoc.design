@@ -22,7 +22,7 @@
 
 }
 
-@media screen and (min-width: 690px) and (max-width: 999px) {
+@media screen and (min-width: var(--breakpoint-vw-tablet)) and (max-width: var(--breakpoint-vw-desktop)) {
   .planetContainer:not(.ignore-responsive-layout) {
     --pos_x-planet-center: calc(var(--pos_x-planet-edge) + (var(--planet-diameter) / 2 )); /* temporary: need unified formula for left and right peeks */
     left: var(--pos_x-planet-center);
