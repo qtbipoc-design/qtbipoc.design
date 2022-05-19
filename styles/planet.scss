@@ -1,7 +1,8 @@
 :root {
   --perc-peek-planet: 5%;
   --perc-planet-peek-from-content-center: calc(50% - var(--perc-peek-planet));
-  
+  --planet-ring_color_alpha_responsive-threshold: 50%;
+    
 }
 
 .planetContainer {
@@ -41,6 +42,10 @@
     --planet-offset_x_preferred: calc((var(--width-content) / 2) + (var(--planet-offset_x_sign) * var(--pos-preferred-abs)));
 
 	  left: var(--planet-offset_x_preferred);
+
+    /* Update ring alpha, between threshold or initial value, whichever is lower */
+    --planet-ring_color_alpha: min(var(--planet-ring_color_alpha), var(--planet-ring_color_alpha_responsive-threshold));
+  
   }
 }
 

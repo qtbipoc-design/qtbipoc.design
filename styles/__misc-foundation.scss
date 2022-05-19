@@ -22,6 +22,42 @@
   --width-content-half:                 calc(var(--width-content) / 2);
 
 
+}
+
+@media screen and (max-width:355px) {
+  :root {
+    --width-content: var(--width-content-mobile-min);
+  }  
+}
+
+@media screen and (min-width: 355px) and (max-width:480px) {
+  :root {
+    --width-content: var(--width-content-mobile);
+  }  
+}
+
+@media screen and (min-width: 480px) and (max-width:690px) {
+  :root {
+    --width-content: var(--width-content-tablet);
+  }  
+}
+
+@media screen and (min-width: 690px) and (max-width:999px) {
+  :root {
+    --width-content: var(--width-content-desktop);
+  }  
+}
+
+@media screen and (min-width: 999px) and (max-width:1440px) {
+  :root {
+    --margin-horizontal-desktop: 90px;
+    --width-content: calc(100vw - (2 * var(--margin-horizontal-desktop)));
+  }  
+}
+
+
+:root {
+
   /* Border radius */
 
   --border-radius-small:        0.125rem; /* 0.125rem   = 2px */
