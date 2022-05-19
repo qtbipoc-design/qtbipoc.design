@@ -51,26 +51,23 @@
   }
 }
 
-/*
-$breakpoint-vw-tablet:    690px;
-$breakpoint-vw-desktop:   999px;
-@mixin tablet {
-  @media screen and (min-width: #{$breakpoint-vw-tablet}) and (max-width: #{$breakpoint-vw-desktop}) {  
-    @content;
-  }
-}
-*/
+// $breakpoint-vw-tablet:    690px;
+// $breakpoint-vw-desktop:   999px;
+// @mixin tablet {
+//   @media screen and (min-width: #{$breakpoint-vw-tablet}) and (max-width: #{$breakpoint-vw-desktop}) {  
+//     @content;
+//   }
+// }
 
-/* @media screen and (min-width: $breakpoint-vw-tablet) and (max-width: $breakpoint-vw-desktop) { */
 
-  /*
-@include tablet {
-  .planetContainer:not(.ignore-responsive-layout) {
-    --pos_x-planet-center: calc(var(--pos_x-planet-edge) + (var(--planet-diameter) / 2 )); // temporary: need unified formula for left and right peeks
-    left: var(--pos_x-planet-center);
-  }
-}
-*/
+// @media screen and (min-width: $breakpoint-vw-tablet) and (max-width: $breakpoint-vw-desktop) {
+
+// @include tablet {
+//   .planetContainer:not(.ignore-responsive-layout) {
+//     --pos_x-planet-center: calc(var(--pos_x-planet-edge) + (var(--planet-diameter) / 2 )); // temporary: need unified formula for left and right peeks
+//     left: var(--pos_x-planet-center);
+//   }
+// }
 
 .planet {
 
