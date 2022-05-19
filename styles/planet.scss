@@ -21,6 +21,8 @@
 	left: var(--planet-offset_x);
 	top: var(--planet-offset_y);
 	transform: translate(-50%, -50%);
+
+  --planet-ring_color_alpha-preferred: var(--planet-ring_color_alpha);
 }
 
 @media screen and (max-width:1440px) {
@@ -44,7 +46,7 @@
 	  left: var(--planet-offset_x_preferred);
 
     /* Update ring alpha, between threshold or initial value, whichever is lower */
-    --planet-ring_color_alpha: min(var(--planet-ring_color_alpha), var(--planet-ring_color_alpha_responsive-threshold));
+    --planet-ring_color_alpha-preferred: min(var(--planet-ring_color_alpha), var(--planet-ring_color_alpha_responsive-threshold));
   
   }
 }
@@ -501,7 +503,7 @@ $breakpoint-vw-desktop:   999px;
 	
 	// transform: rotate(var(--planet-ring_rotation)) scaleY(var(--planet-ring_flatness));
 
-	--planet-ring_color: HSLA(var(--color-base-hue) var(--color-base-saturation) var(--color-lightness-ring) / var(--planet-ring_color_alpha));
+	--planet-ring_color: HSLA(var(--color-base-hue) var(--color-base-saturation) var(--color-lightness-ring) / var(--planet-ring_color_alpha-preferred));
 
 	/* for border-based rings */
 	// border: var(--planet-ring_width) solid var(--planet-ring_color);
