@@ -67,13 +67,19 @@
   --planet-offset_x_preferred: calc((var(--width-content) / 2) + (var(--planet-offset_x_sign) * var(--pos-preferred-abs)));
 
 	position: absolute;
-	left: var(--planet-offset_x_preferred);
+	// left: var(--planet-offset_x_preferred);
+  left: var(--planet-offset_x);
 	top: var(--planet-offset_y);
 	transform: translate(-50%, -50%);
 }
 
 .planetContainer.ignore-responsive-layout {
-  left: var(--planet-offset_x);
+}
+
+@media screen and (max-width:999px) {
+  .planetContainer:not(.ignore-responsive-layout) {    
+	  left: var(--planet-offset_x_preferred);
+  }
 }
 
 /*
