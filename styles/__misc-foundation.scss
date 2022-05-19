@@ -18,6 +18,8 @@
   --width-content-tablet:               420px;
   --width-content-mobile:               320px;
   --width-content-mobile-min:           calc(100vw - (2 * var(--margin-horizontal-mobile-min)));
+  --width-content:                      var(--width-content-desktop);
+  --width-content-half:                 calc(var(--width-content) / 2);
 
 
   /* Border radius */
