@@ -270,8 +270,8 @@ h2 {
 /* Misc. Element Types */
 
 pre {
-    background-color: hsla(0 0.01% 0% / 100%); /* temporary color */
-    border: 1px solid hsla(0 0.01% 100% / 20%); /* temporary color */
+    background-color: HSLA(0 0.01% 0% / 100%); /* temporary color */
+    border: 1px solid HSLA(0 0.01% 100% / 20%); /* temporary color */
     border-radius: var(--border-radius-container-default);
     padding: var(--padding-container-default);
 }

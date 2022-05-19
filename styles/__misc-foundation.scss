@@ -1,57 +1,174 @@
 :root {
+  /* Hue, Saturation, Lightness values */
+  /* Hue */
+  --color-hue-brand-red: 347;
+  --color-hue-brand-orange: 29;
+  --color-hue-brand-yellow: 45;
+  --color-hue-brand-green: 131;
+  --color-hue-brand-turquoise: 164;
+  --color-hue-brand-lightblue: 197;
+  --color-hue-brand-blue: 229;
+  --color-hue-brand-purple: 276;
+  --color-hue-brand-pink: 302;
+  --color-hue-brand-rose: 324.5;
+  --color-hue-brand-brown: 29;
+  --color-hue-neutral: 0;
+  /* Saturation */
+  --color-saturation-default: 100%;
+  --color-saturation-neutral: 0.01%;
+  /* Bug: Need to set 0% to 0.01%, else the 0% becomes 0 when compiling and become invalid */
+  --color-saturation-brand-brown: 54%;
+  /* Lightness */
+  --pct-color-lightness-shade: 0.85;
+  --pct-color-lightness-tint: 1.5;
+  --color-lightness-default: 50%;
+  --color-lightness-shade: calc(var(--color-lightness-default) * var(--pct-color-lightness-shade));
+  --color-lightness-tint: calc(var(--color-lightness-default) * var(--pct-color-lightness-tint));
+  --color-lightness-faint: 90%;
+  --color-lightness-white: 100%;
+  --color-lightness-brand-brown: 45%;
+  --color-lightness-shade-brand-brown: calc(var(--color-lightness-brand-brown) * var(--pct-color-lightness-shade));
+  --color-lightness-neutral-mid-light: 25%;
+  --color-lightness-neutral-mid-dark: 75%;
+  --color-lightness-neutral-gray-darkest: 14%;
+  --color-lightness-shade-neutral-gray-darkest: calc(var(--color-lightness-neutral-gray-darkest) * var(--pct-color-lightness-shade));
+  --color-lightness-neutral-black: 20%;
+  --color-lightness-disabled-on-light: 50%;
+  --color-lightness-disabled-on-dark: 50%;
+  --color-lightness-disabled-default: var(--color-lightness-disabled-on-dark);
+  /* Alpha */
+  --color-alpha-default: 1;
+  --color-alpha-subtle: 25%;
+  --color-alpha-faint: 10%;
+  /* Common Combo properties */
+  --color-hs-neutral: var(--color-hue-neutral) var(--color-saturation-neutral);
+  --color-sla-default: var(--color-saturation-default) var(--color-lightness-default) / var(--color-alpha-default);
+  --color-sla-shade: var(--color-saturation-default) var(--color-lightness-shade) / var(--color-alpha-default);
+  --color-sla-tint: var(--color-saturation-default) var(--color-lightness-tint) / var(--color-alpha-default);
+  /* Color Definitions */
+  --color-brand-white: hsla(var(--color-hue-neutral) var(--color-saturation-neutral) 100% / var(--color-alpha-default));
+  --color-brand-black: hsla(var(--color-hue-neutral) var(--color-saturation-neutral) var(--color-lightness-neutral-black) / var(--color-alpha-default));
+  --color-brand-gray-darkest: hsla(var(--color-hue-neutral) var(--color-saturation-neutral) var(--color-lightness-neutral-gray-darkest) / var(--color-alpha-default));
+  --color-brand-gray-darkest-shade: hsla(var(--color-hue-neutral) var(--color-saturation-neutral) var(--color-lightness-shade-neutral-gray-darkest) / var(--color-alpha-default));
+  --color-brand-red: hsla(var(--color-hue-brand-red) var(--color-sla-default));
+  --color-brand-red-tint: hsla(var(--color-hue-brand-red) var(--color-sla-tint));
+  --color-brand-red-shade: hsla(var(--color-hue-brand-red) var(--color-sla-shade));
+  --color-brand-orange: hsla(var(--color-hue-brand-orange) var(--color-sla-default));
+  --color-brand-orange-tint: hsla(var(--color-hue-brand-orange) var(--color-sla-tint));
+  --color-brand-orange-shade: hsla(var(--color-hue-brand-orange) var(--color-sla-shade));
+  --color-brand-yellow: hsla(var(--color-hue-brand-yellow) var(--color-sla-default));
+  --color-brand-yellow-tint: hsla(var(--color-hue-brand-yellow) var(--color-sla-tint));
+  --color-brand-yellow-shade: hsla(var(--color-hue-brand-yellow) var(--color-sla-shade));
+  --color-brand-green: hsla(var(--color-hue-brand-green) var(--color-sla-default));
+  --color-brand-green-tint: hsla(var(--color-hue-brand-green) var(--color-sla-tint));
+  --color-brand-green-shade: hsla(var(--color-hue-brand-green) var(--color-sla-shade));
+  --color-brand-turquoise: hsla(var(--color-hue-brand-turquoise) var(--color-sla-default));
+  --color-brand-turquoise-tint: hsla(var(--color-hue-brand-turquoise) var(--color-sla-tint));
+  --color-brand-turquoise-shade: hsla(var(--color-hue-brand-turquoise) var(--color-sla-shade));
+  --color-brand-lightblue: hsla(var(--color-hue-brand-lightblue) var(--color-sla-default));
+  --color-brand-blue: hsla(var(--color-hue-brand-blue) var(--color-sla-default));
+  --color-brand-blue-tint: hsla(var(--color-hue-brand-blue) var(--color-sla-tint));
+  --color-brand-blue-shade: hsla(var(--color-hue-brand-blue) var(--color-sla-shade));
+  --color-brand-purple: hsla(var(--color-hue-brand-purple) var(--color-sla-default));
+  --color-brand-purple-tint: hsla(var(--color-hue-brand-purple) var(--color-sla-tint));
+  --color-brand-purple-shade: hsla(var(--color-hue-brand-purple) var(--color-sla-shade));
+  --color-brand-pink: hsla(var(--color-hue-brand-pink) var(--color-sla-default));
+  --color-brand-pink-tint: hsla(var(--color-hue-brand-pink) var(--color-sla-tint));
+  --color-brand-pink-shade: hsla(var(--color-hue-brand-pink) var(--color-sla-shade));
+  --color-brand-rose: hsla(var(--color-hue-brand-rose) var(--color-sla-default));
+  --color-brand-rose-tint: hsla(var(--color-hue-brand-rose) var(--color-sla-tint));
+  --color-brand-rose-shade: hsla(var(--color-hue-brand-rose) var(--color-sla-shade));
+  --color-brand-brown: hsla(var(--color-hue-brand-brown) var(--color-saturation-brand-brown) var(--color-lightness-brand-brown) / var(--color-alpha-default));
+  --color-brand-brown-shade: hsla(var(--color-hue-brand-brown) var(--color-saturation-brand-brown) var(--color-lightness-shade-brand-brown) / var(--color-alpha-default));
+  /* Color Scheme Properties */
+  --color-analogous-degree-shift: 30;
+  --color-analogous-degree-shift-lower: calc(360 - var(--color-analogous-degree-shift));
+  --color-analogous-degree-shift-higher: var(--color-analogous-degree-shift);
+  /*
+  --BrightTurquoise: #00CEF8;
+  --LavenderRose: #F89CE4;
+  --Cerise: #E52A98;
+  --PurpleHeart: #751ED9;
+  --Meteorite: #46267F;
+  --Christalle: #35006A;
+  --NeutralDark: #3B3B3B;
+  --NeutralLight: #FAFAFA;
+  */
+  /* Note: These should match in WordPress > Salient > Accent Colors definitions */
+  --color-accent: var(--PurpleHeart);
+  /* TEMP */
+  --color-extra-1: var(--BrightTurquoise);
+  /* TEMP */
+  --color-extra-2: var(--Cerise);
+  /* TEMP */
+  --color-extra-3: var(--LavenderRose);
+  /* TEMP */
+  --color-hue-accent: var(--color-hue-brand-purple);
+  --color-accent: var(--color-brand-purple);
+  --color-accent-tint: var(--color-brand-purple-tint);
+  --color-hue-extra-1: var(--color-hue-brand-lightblue);
+  --color-extra-1: var(--color-brand-lightblue);
+  --color-hue-extra-2: var(--color-hue-brand-pink);
+  --color-extra-2: var(--color-brand-pink);
+  --color-hue-extra-3: var(--color-hue-brand-purple);
+  --color-extra-3: var(--color-brand-purple-tint);
+  /* ATTENTION */
+  --color-attention: var(--color-brand-red);
+  --color-attention-faint-semitransparent: hsla(var(--color-hue-brand-red) var(--color-saturation-default) var(--color-lightness-default) / var(--color-alpha-faint));
+  /* TEXT AND BACKGROUND */
+  /* Dark on light */
+  --color-bg-light-default: var(--color-brand-white);
+  --color-text-dark-on-light-default: var(--color-brand-gray-darkest);
+  --color-text-dark-on-light-disabled: hsl(var(--color-hs-neutral) var(--color-lightness-disabled-on-light));
+  /* Light on Dark */
+  --color-bg-dark-default: var(--color-brand-gray-darkest);
+  --color-bg-neutral-subtle-semitransparent: hsla(var(--color-hs-neutral) var(--color-lightness-default) / var(--color-alpha-subtle));
+  --color-text-light-on-dark-default: var(--color-brand-white);
+  --color-text-light-on-dark-disabled: hsl(var(--color-hs-neutral) var(--color-lightness-disabled-on-dark));
+  /* On Color Background */
+  --color-bg-color-accent: var(--color-accent);
+  --color-bg-color-default: var(--color-bg-color-accent);
+  --color-bg-attention-default: var(--color-attention);
+  --color-text-on-color-default: var(--color-text-light-on-dark-default);
+  --color-text-on-attention-bg-default: var(--color-text-on-color-default);
+  --color-graphic-accent-tint: hsl(var(--color-hue-accent) var(--color-saturation-default) var(--color-lightness-faint));
+  --color-graphic-color-tint-default: var(--color-graphic-accent-tint);
+  /* Color Foreground */
+  --color-text-accent-on-light: var(--color-accent);
+  --color-text-accent-on-dark: var(--color-accent-tint);
+  --color-text-accent-default: var(--color-text-accent-on-dark);
+  --color-text-attention-on-light: var(--color-attention);
+  --color-text-attention-on-dark: var(--color-attention);
+  --color-text-attention-default: var(--color-text-attention-on-dark);
+  --color-graphic-accent-on-light: var(--color-accent);
+  --color-graphic-accent-on-dark: var(--color-accent-tint);
+  --color-graphic-accent-default: var(--color-graphic-accent-on-dark);
+  --color-graphic-attention-on-light: var(--color-attention);
+  --color-graphic-attention-on-dark: var(--color-attention);
+  --color-graphic-attention-default: var(--color-attention-on-dark);
+  /* Default */
+  --color-bg-default: var(--color-bg-dark-default);
+  --color-text-default: var(--color-text-light-on-dark-default);
+  --color-text-disabled-default: var(--color-text-light-on-dark-disabled);
+  --color-bg-form-field-default: var(--color-bg-light-default);
+  --color-text-form-field-default: var(--color-text-dark-on-light-default);
+  /* LINES */
+  --color-line-strong-on-light: hsl(var(--color-hs-neutral) var(--color-lightness-neutral-mid-dark));
+  --color-line-subtle-on-light: hsl(var(--color-hs-neutral) var(--color-lightness-neutral-mid-light));
+  --color-line-strong-on-dark: hsl(var(--color-hs-neutral) var(--color-lightness-neutral-mid-light));
+  --color-line-subtle-on-dark: hsl(var(--color-hs-neutral) var(--color-lightness-neutral-mid-dark));
+  --color-line-attention-on-light: var(--color-attention);
+  --color-line-attention-on-dark: var(--color-attention);
+  --color-line-attention-default: var(--color-line-attention-on-dark);
+  --color-line-default: var(--color-line-subtle-on-dark);
+  --color-outline-on-light: var(--color-accent);
+  --color-outline-on-dark: var(--color-accent-tint);
+  --color-outline-default: var(--color-outline-on-dark);
+  --color-outline-focus-default: var(--color-outline-default); }
 
-  /* Margins */
-  --margin-horizontal-mobile-min:       5vw;
+/* body { */
+/* background: var(--NeutralDark); /* New color pending */
+/* color: var(--NeutralLight); /* New color pending */
+/* } */
 
-  /* Screen Width Breakpoints */
-  --breakpoint-vw-desktop-wide:         1440px;
-  --breakpoint-vw-desktop:              999px;
-  --breakpoint-vw-tablet:               690px;
-  --breakpoint-vw-mobile:               480px;
-  --breakpoint-vw-mobile-min-margins:   355px;
-  --breakpoint-vw-mobile-min:           320px;
-
-  /* Content Widths */
-  --width-content-desktop-wide:         1260px;
-  --width-content-desktop-mid:          100%;
-  --width-content-desktop:              600px;
-  --width-content-tablet:               420px;
-  --width-content-mobile:               320px;
-  --width-content-mobile-min:           calc(100vw - (2 * var(--margin-horizontal-mobile-min)));
-
-
-  /* Border radius */
-
-  --border-radius-small:        0.125rem; /* 0.125rem   = 2px */
-  --border-radius-medium:       0.25rem;  /* 0.25rem    = 4px */
-  --border-radius-large:        0.5rem;   /* 0.5rem     = 8px */
-  --border-radius-extra-large:  1rem;     /* 1rem       = 16px */
-  --border-radius-circle:       100%;
-
-  --border-radius-button-default:       var(--border-radius-medium);
-  --border-radius-form-field-default:   var(--border-radius-medium);
-  --border-radius-container-default:    var(--border-radius-large);
-  --border-radius-person-photo:         var(--border-radius-circle);
-
-
-  --border-radius-default:      var(--border-radius-medium);
-
-  /* Box Shadows */
-  --shadow-length-minimal:      1px;
-  --shadow-length-small:        3px;
-  --shadow-length-medium:       5px;
-  --shadow-length-large:        6px;
-  --shadow-length-jumbo:        8px;
-  --shadow-length-extra-jumbo:  8px;
-  
-  --shadow-length-default: var(--shadow-length-medium);
-
-
-  /* Spacing */
-  --spacing-small:              0.25rem;  /* 0.25rem    = 4px */
-  --spacing-medium:             0.5rem;   /* 0.5rem     = 8px */
-  --spacing-large:              1rem;     /* 1rem       = 16px */
-
-  --padding-container-default:      var(--spacing-medium);
-  --padding-input-field-default:    var(--spacing-medium);
-}
+/*# sourceMappingURL=__misc-foundation.scss.map */
