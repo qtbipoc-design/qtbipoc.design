@@ -76,7 +76,7 @@
 .planetContainer.ignore-responsive-layout {
 }
 
-@media screen and (max-width:999px) {
+@media screen and (max-width:1440px) {
   .planetContainer:not(.ignore-responsive-layout) {    
 	  left: var(--planet-offset_x_preferred);
   }
