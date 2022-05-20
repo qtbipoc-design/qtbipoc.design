@@ -595,14 +595,15 @@ https://www.notion.so/qtbipocdesign/Learndash-Login-Modal-93e71dfba7cc4a78873318
 
 @media only screen and (max-width:690px) {
   .learndash-wrapper .ld-item-list .ld-item-list-item {    
-      background-color: hsla(0 100% 100% / 70%);
-      /* border-radius: 1rem; */
-      border-radius: var(--border-radius-container-default); /* New for redesign 5/20/22 */
-      border: 1px solid var(--color-line-deemphasis-onlight);
+    /* background-color: hsla(0 100% 100% / 70%); */
+    background-color: hsla(0 100% 100% / 90%); /* New for redesign 5/20/22 */
+    /* border-radius: 1rem; */
+    border-radius: var(--border-radius-container-default); /* New for redesign 5/20/22 */
+    border: 1px solid var(--color-line-deemphasis-onlight);
   }
   
   .learndash-wrapper .ld-item-list .ld-item-list-item.learndash-complete {
-      background-image: linear-gradient(45deg, var(--color-bg-highlight-purple-onlight), var(--color-bg-highlight-purple-onlight)), linear-gradient(45deg, var(--color-bg-default-light), var(--color-bg-default-light));
+    background-image: linear-gradient(45deg, var(--color-bg-highlight-purple-onlight), var(--color-bg-highlight-purple-onlight)), linear-gradient(45deg, var(--color-bg-default-light), var(--color-bg-default-light));
   }
 
   
@@ -623,6 +624,7 @@ https://www.notion.so/qtbipocdesign/Learndash-Login-Modal-93e71dfba7cc4a78873318
       /*border: 1px solid var(--color-line-deemphasis-onlight);*/
       /*border-bottom: none;*/
       /*border-radius: 1rem;*/
+      background-color: var(--color-bg-default-light); /* New for redesign 5/20/22 */
   }
   
   .learndash-wrapper .ld-item-list .ld-item-list-item.ld-expanded .ld-item-list-item-preview {
