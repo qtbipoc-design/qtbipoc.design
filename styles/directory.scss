@@ -346,6 +346,7 @@ body #directory-form-form .gform_wrapper ul li.gfield,
   overflow: hidden;
   width: 25rem;
   max-height: 25rem;
+  max-width: 100%; /* for mobile */
 }
 
 .directory-form-photo-preview .member-photo img {
