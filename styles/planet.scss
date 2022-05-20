@@ -51,23 +51,6 @@
   }
 }
 
-// $breakpoint-vw-tablet:    690px;
-// $breakpoint-vw-desktop:   999px;
-// @mixin tablet {
-//   @media screen and (min-width: #{$breakpoint-vw-tablet}) and (max-width: #{$breakpoint-vw-desktop}) {  
-//     @content;
-//   }
-// }
-
-
-// @media screen and (min-width: $breakpoint-vw-tablet) and (max-width: $breakpoint-vw-desktop) {
-
-// @include tablet {
-//   .planetContainer:not(.ignore-responsive-layout) {
-//     --pos_x-planet-center: calc(var(--pos_x-planet-edge) + (var(--planet-diameter) / 2 )); // temporary: need unified formula for left and right peeks
-//     left: var(--pos_x-planet-center);
-//   }
-// }
 
 .planet {
 
@@ -102,10 +85,6 @@
 	width: calc(100% / var(--ratio-planet-diameter-to-sprite));
 	transform: var(--translate);
  	-webkit-transform: var(--translate);
-	
-	// background-color: transparent;
-	// background-image: none;
-	// background-blend-mode: normal;
 
 }
 
@@ -498,14 +477,14 @@
 	
 	left: calc((var(--planet-ring_diameter) - var(--planet-diameter)) / -2); /* includes moving planet center to origin */
 	
-	// transform: rotate(var(--planet-ring_rotation)) scaleY(var(--planet-ring_flatness));
+	/* transform: rotate(var(--planet-ring_rotation)) scaleY(var(--planet-ring_flatness)); */
 
 	--planet-ring_color: HSLA(var(--color-base-hue) var(--color-base-saturation) var(--color-lightness-ring) / var(--planet-ring_color_alpha-preferred));
 
 	/* for border-based rings */
-	// border: var(--planet-ring_width) solid var(--planet-ring_color);
-	// box-sizing: border-box;	
-	// background-image: none !important;
+	/* border: var(--planet-ring_width) solid var(--planet-ring_color); */
+	/* box-sizing: border-box;	 */
+	/* background-image: none !important; */
 	
 }
 
@@ -517,11 +496,11 @@
 	border-radius: var(--border-radius-circle) var(--border-radius-circle)  0 0;
 	transform:  rotate(var(--planet-ring_rotation))  translateY(0px) scaleY(var(--planet-ring_flatness)) ;
 
-	// transform: rotate(var(--planet-ring_rotation)) scaleY(var(--planet-ring_flatness));
+	/* transform: rotate(var(--planet-ring_rotation)) scaleY(var(--planet-ring_flatness)); */
 
 
 	/* For border-based rings */
-	// border-bottom-width: 0;
+	/* border-bottom-width: 0; */
 
 	/* Gradient-based rings */
 	background-image: radial-gradient(circle at 50% bottom, var(--planet-ring_color_gradient));
@@ -533,13 +512,13 @@
 	top: calc((var(--planet-diameter) / 2));
 	transform-origin: top center;
 	
-	// --hack-seam-offset: 0.3px;
+	/* --hack-seam-offset: 0.3px; */
 	--translate-y: calc(-4px / 10);
 	--translate-y: 0; /* Ivan 3/21/22: reset until better solution */
 	transform:  rotate(var(--planet-ring_rotation)) translateY(var(--translate-y)) scaleY(var(--planet-ring_flatness))  ;
 
 	/* For border-based rings */
-	// border-top-width: 0;
+	/* border-top-width: 0; */
 	
 	/* Gradient-based rings */
 	background-image: radial-gradient(circle at 50% top, var(--planet-ring_color_gradient));
