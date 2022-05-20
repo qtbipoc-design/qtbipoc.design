@@ -15,9 +15,3 @@
   --planet-offset_y_spacer: 100vh;
   top: calc(var(--planet_offset_y_initial) + (var(--planet-offset_y_spacer) * var(--planet-index)) + var(--planet-offset_y));
 }
-
-@media screen and (max-height:1000px) {
-  .spaceBg .planetContainer {
-    --planet_offset_y_initial: 1000px;
-  }  
-}
