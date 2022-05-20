@@ -596,7 +596,8 @@ https://www.notion.so/qtbipocdesign/Learndash-Login-Modal-93e71dfba7cc4a78873318
 @media only screen and (max-width:690px) {
   .learndash-wrapper .ld-item-list .ld-item-list-item {    
       background-color: hsla(0 100% 100% / 70%);
-      border-radius: 1rem;
+      /* border-radius: 1rem; */
+      border-radius: var(--border-radius-container-default); /* New for redesign 5/20/22 */
       border: 1px solid var(--color-line-deemphasis-onlight);
   }
   
@@ -724,7 +725,7 @@ https://www.notion.so/qtbipocdesign/Learndash-Login-Modal-93e71dfba7cc4a78873318
   justify-content: flex-end;
   border: 1px solid var(--color-line-deemphasis-onlight);
   max-width: 100%;
-  border-radius: var(--border-radius-large); /* New for Redesign 5/20/22 */
+  border-radius: var(--border-radius-container-default); /* New for Redesign 5/20/22 */
 }
 
 .learndash-wrapper .ld-item-list .ld-item-list-item .ld-item-details .ld-expand-button,
@@ -756,7 +757,7 @@ https://www.notion.so/qtbipocdesign/Learndash-Login-Modal-93e71dfba7cc4a78873318
 
 .learndash-wrapper .ld-item-list .ld-item-list-item.ld-expanded .ld-item-details .ld-expand-button {
   /* border-radius: 1rem 1rem 0 0; */
-  border-radius: var(--border-radius-large) var(--border-radius-large) 0 0; /* New for Redesign 5/20/22 */
+  border-radius: var(--border-radius-container-default) var(--border-radius-container-default) 0 0; /* New for Redesign 5/20/22 */
   border-bottom: none;
   
   /* To account for accordion expansion/collapse transition */
@@ -847,7 +848,7 @@ https://www.notion.so/qtbipocdesign/Learndash-Login-Modal-93e71dfba7cc4a78873318
   border-bottom: none;
   border-top: none;
   /* border-radius: 0 0 1rem 1rem; */
-  border-radius: 0 0 var(--border-radius-large) var(--border-radius-large); /* New for redesign 5/20/22 */
+  border-radius: 0 0 var(--border-radius-container-default) var(--border-radius-container-default); /* New for redesign 5/20/22 */
   
   transition-property: max-height, border-color;
   transition-duration: 0.5s, 0s, 0s;
