@@ -755,7 +755,8 @@ https://www.notion.so/qtbipocdesign/Learndash-Login-Modal-93e71dfba7cc4a78873318
 
 
 .learndash-wrapper .ld-item-list .ld-item-list-item.ld-expanded .ld-item-details .ld-expand-button {
-  border-radius: 1rem 1rem 0 0;
+  /* border-radius: 1rem 1rem 0 0; */
+  border-radius: var(--border-radius-large) var(--border-radius-large) 0 0; /* New for Redesign 5/20/22 */
   border-bottom: none;
   
   /* To account for accordion expansion/collapse transition */
@@ -844,7 +845,8 @@ https://www.notion.so/qtbipocdesign/Learndash-Login-Modal-93e71dfba7cc4a78873318
   border: 1px solid transparent;
   border-bottom: none;
   border-top: none;
-  border-radius: 0 0 1rem 1rem;
+  /* border-radius: 0 0 1rem 1rem; */
+  border-radius: 0 0 var(--border-radius-large) var(--border-radius-large); /* New for redesign 5/20/22 */
   
   transition-property: max-height, border-color;
   transition-duration: 0.5s, 0s, 0s;
