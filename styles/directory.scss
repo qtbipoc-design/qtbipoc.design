@@ -225,6 +225,7 @@ body #directory-form-form .gform_wrapper ul li.gfield,
   background-color: var(--color-bg-light-default);
   padding: var(--spacing-large);
   border-radius: var(--border-radius-container-default);
+  width: 100%; /* override */
 }
 
 /* Individual color option - group */
