@@ -13,7 +13,9 @@
 }
 
 /* Image alignment */
-.programs-programming-list .img-with-aniamtion-wrap .hover-wrap {
+.programs-programming-list .img-with-aniamtion-wrap .hover-wrap,
+.programs-programming-list .img-with-aniamtion-wrap .hover-wrap:not([data-hover-animation]) /* overflow */
+.programs-programming-list .img-with-aniamtion-wrap .hover-wrap[data-hover-animation=none] /* overflow */ {
   overflow: hidden; /* Needed for the img's position: absolute to work */
 }
 
