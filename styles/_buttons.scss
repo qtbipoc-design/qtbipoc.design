@@ -149,6 +149,7 @@ body .nectar-button[data-color-override="false"].see-through.medium /* override 
 body.material .nectar-button.large,
 .nectar-button[data-color-override="false"].regular-button.large /* override */,
 body .nectar-button[data-color-override="false"].see-through.large /* override */,
+body[data-form-submit=regular] .container-wrap .gform_wrapper input[type=submit],
 body[data-form-submit=see-through] .container-wrap .gform_wrapper input[type=submit]{
   padding: 1em 3em !important; /* override */
   box-shadow: 0 0px 0 var(--color-button-assigned-shadow) !important; /* override */
