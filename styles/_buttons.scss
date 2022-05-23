@@ -243,50 +243,52 @@ body .nectar-button[data-color-override="false"].see-through.extra_jumbo /* over
 .HOVER-STATE------------------------ { color: inherit;}
 
 .full-width-section .light .nectar-button:hover,  /* Nectar override */
-.nectar-button:hover { /* Nectar override */
-    opacity: 1;
+.nectar-button:hover, /* Nectar override */
+.container-wrap .span_12.light input[type=submit]:hover {
+  opacity: 1;
 }
 
 
 .nectar-button.small:hover,
 .nectar-button[data-color-override="false"].regular-button.small:hover /* override */,
 body .nectar-button[data-color-override="false"].see-through.small:hover /* override */{
-    box-shadow: 0 3px 0 var(--color-button-assigned-shadow) !important;
-    box-shadow: 0 var(--shadow-length-small) 0 var(--color-button-assigned-shadow) !important;
-    transform: translateY(-3px);
+  box-shadow: 0 3px 0 var(--color-button-assigned-shadow) !important;
+  box-shadow: 0 var(--shadow-length-small) 0 var(--color-button-assigned-shadow) !important;
+  transform: translateY(-3px);
 }
 
 .nectar-button.medium:hover,
 .nectar-button[data-color-override="false"].regular-button.medium:hover /* override */,
 body .nectar-button[data-color-override="false"].see-through.medium:hover /* override */{
-    box-shadow: 0 5px 0 var(--color-button-assigned-shadow) !important;
-    box-shadow: 0 var(--shadow-length-medium) 0 var(--color-button-assigned-shadow) !important;
-    transform: translateY(-5px);
+  box-shadow: 0 5px 0 var(--color-button-assigned-shadow) !important;
+  box-shadow: 0 var(--shadow-length-medium) 0 var(--color-button-assigned-shadow) !important;
+  transform: translateY(-5px);
 }
 
 body.material .nectar-button.large:hover /* override */,
 .nectar-button[data-color-override="false"].regular-button.large:hover /* override */,
 body .nectar-button[data-color-override="false"].see-through.large:hover /* override */,
+body[data-form-submit=regular] .container-wrap .gform_wrapper input[type=submit]:hover,
 body[data-form-submit=see-through] .container-wrap .gform_wrapper input[type=submit]:hover {
-    box-shadow: 0 6px 0 var(--color-button-assigned-shadow) !important;
-    box-shadow: 0 var(--shadow-length-large) 0 var(--color-button-assigned-shadow) !important;
-    transform: translateY(-6px);
+  box-shadow: 0 6px 0 var(--color-button-assigned-shadow) !important;
+  box-shadow: 0 var(--shadow-length-large) 0 var(--color-button-assigned-shadow) !important;
+  transform: translateY(-6px);
 }
 
 body.material .nectar-button.jumbo:hover,
 .nectar-button[data-color-override="false"].regular-button.extra_jumbo:hover /* override */,
 body .nectar-button[data-color-override="false"].see-through.extra_jumbo:hover /* override */{
-    box-shadow: 0 8px 0 var(--color-button-assigned-shadow) !important;
-    box-shadow: 0 var(--shadow-length-jumbo) 0 var(--color-button-assigned-shadow) !important;
-    transform: translateY(-8px);
+  box-shadow: 0 8px 0 var(--color-button-assigned-shadow) !important;
+  box-shadow: 0 var(--shadow-length-jumbo) 0 var(--color-button-assigned-shadow) !important;
+  transform: translateY(-8px);
 }
 
 body.material .nectar-button.extra_jumbo:hover,
 .nectar-button[data-color-override="false"].regular-button.extra_jumbo:hover /* override */,
 body .nectar-button[data-color-override="false"].see-through.extra_jumbo:hover /* override */{
-    box-shadow: 0 8px 0 var(--color-button-assigned-shadow) !important;
-    box-shadow: 0 var(--shadow-length-extra-jumbo) 0 var(--color-button-assigned-shadow) !important;
-    transform: translateY(-8px);
+  box-shadow: 0 8px 0 var(--color-button-assigned-shadow) !important;
+  box-shadow: 0 var(--shadow-length-extra-jumbo) 0 var(--color-button-assigned-shadow) !important;
+  transform: translateY(-8px);
 }
 
 /* Active */
@@ -295,37 +297,38 @@ body .nectar-button[data-color-override="false"].see-through.extra_jumbo:hover /
 .nectar-button.small:active,
 .nectar-button[data-color-override="false"].regular-button.small:active /* override */,
 body .nectar-button[data-color-override="false"].see-through.small:active /* override */{
-    box-shadow: 0 0px 0 var(--color-button-assigned-shadow) !important;
-    transform: translateY(2px);
+  box-shadow: 0 0px 0 var(--color-button-assigned-shadow) !important;
+  transform: translateY(2px);
 }
 
 .nectar-button.medium:active,
 .nectar-button[data-color-override="false"].regular-button.medium:active /* override */,
 body .nectar-button[data-color-override="false"].see-through.medium:active /* override */{
-    box-shadow: 0 0px 0 var(--color-button-assigned-shadow) !important;
-    transform: translateY(2px);
+  box-shadow: 0 0px 0 var(--color-button-assigned-shadow) !important;
+  transform: translateY(2px);
 }
 
 body.material .nectar-button.large:active /* override */,
 .nectar-button[data-color-override="false"].regular-button.large:active /* override */,
 body.nectar-button[data-color-override="false"].see-through.large:active /* override */,
-body[data-form-submit=see-through] .container-wrap .gform_wrapper input[type=submit]:active {
-    box-shadow: 0 0px 0 var(--color-button-assigned-shadow) !important;
-    transform: translateY(2px);
+body[data-form-submit=regular] .container-wrap .gform_wrapper input[type=submit]:active,
+body[data-form-submit=see-through] .container-wrap .gform_wrapper input[type=submit]:active  {
+  box-shadow: 0 0px 0 var(--color-button-assigned-shadow) !important;
+  transform: translateY(2px);
 }
 
 body.material .nectar-button.jumbo:active,
 .nectar-button[data-color-override="false"].regular-button.extra_jumbo:active /* override */,
 body.nectar-button[data-color-override="false"].see-through.large:active /* override */{
-    box-shadow: 0 0px 0 var(--color-button-assigned-shadow) !important;
-    transform: translateY(2px);
+  box-shadow: 0 0px 0 var(--color-button-assigned-shadow) !important;
+  transform: translateY(2px);
 }
 
 body.material .nectar-button.extra_jumbo:active,
 .nectar-button[data-color-override="false"].regular-button.extra_jumbo:active /* override */,
 body.nectar-button[data-color-override="false"].see-through.large:active /* override */{
-    box-shadow: 0 0px 0 var(--color-button-assigned-shadow) !important;
-    transform: translateY(2px);
+  box-shadow: 0 0px 0 var(--color-button-assigned-shadow) !important;
+  transform: translateY(2px);
 }
 
 
