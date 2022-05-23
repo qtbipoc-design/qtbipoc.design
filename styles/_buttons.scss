@@ -333,7 +333,8 @@ body.nectar-button[data-color-override="false"].see-through.large:active /* over
 .MISCELLANEOUS------------------------ { color: inherit;}
 
 /* Form submit button */
-body[data-form-submit=see-through] .container-wrap .gform_wrapper input[type=submit] {
+body[data-form-submit=see-through] .container-wrap .gform_wrapper input[type=submit],
+body[data-form-submit=regular] .container-wrap .gform_wrapper input[type=submit] {
   background-color: var(--color-button-default) !important; /* Override */
   color: var(--color-text-button) !important; /* Override */
   border: none !important; /* Override */
