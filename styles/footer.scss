@@ -14,11 +14,33 @@
     list-style-type: none;
 }
 
+.material .footer-newsletter-valueProp {
+  margin-bottom: 0;
+}
+
+#footer-custom #field_1_1 {
+  /* Text field container */
+  margin-top: 0;
+}
+
+#footer-custom #field_1_1 .ginput_container {
+  /* Text field container */
+  margin-top: 0;
+}
+
+
 /* Newsletter Submit button */
+#footer-custom .gform_legacy_markup_wrapper .gform_footer {
+  /* Button container */
+  margin-top: var(--spacing-small);
+}
+
 .before-footer #gform_wrapper_1,
 .before-footer .gform_legacy_markup_wrapper .gform_footer input[type=submit] {
   margin-bottom: 0;
 }
+
+
 
 
 /* Footer: Legal */
