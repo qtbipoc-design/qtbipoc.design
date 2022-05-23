@@ -48,6 +48,7 @@ body .container-wrap .search-filter-results .inner_row[data-column-margin="40px"
   position: relative;
   top: 50%;
   height: 100%;
+  position: absolute; /* For Safari to work */
 }
 
 .event-widget-column-summary .event-widget-element-featured-image .wpb_wrapper p {
