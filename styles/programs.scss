@@ -13,6 +13,10 @@
 }
 
 /* Image alignment */
+.programs-programming-list .img-with-aniamtion-wrap {
+  overflow: hidden; /* Needed for the img's position: absolute to work */
+}
+
 .programs-programming-list .img-with-aniamtion-wrap .hover-wrap-inner {
   aspect-ratio: 16/9;
   overflow: hidden;
@@ -22,7 +26,7 @@
   /* Help vertically center image in container */
   -webkit-transform: translate(0, -50%); /* override */
   transform: translate(0, -50%); /* override */
-  position: relative;
+  position: absolute; /* Need to be "absolute" to work in Safari */
   top: 50%;
 }
 
