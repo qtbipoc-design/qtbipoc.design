@@ -45,10 +45,10 @@ body .container-wrap .search-filter-results .inner_row[data-column-margin="40px"
 
 .event-widget-column-summary .event-widget-element-featured-image .wpb_wrapper {
   transform: translate(0, -50%);
-  position: relative;
   top: 50%;
   height: 100%;
   position: absolute; /* For Safari to work */
+  z-index: -1; /* -1 z-index so the invisible container doesn't cover the interactivity content */
 }
 
 .event-widget-column-summary .event-widget-element-featured-image .wpb_wrapper p {
