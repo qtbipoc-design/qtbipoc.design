@@ -247,7 +247,9 @@ body .nectar-button[data-color-override="false"].see-through.extra_jumbo /* over
 
 .full-width-section .light .nectar-button:hover,  /* Nectar override */
 .nectar-button:hover, /* Nectar override */
-.container-wrap .span_12.light input[type=submit]:hover {
+.container-wrap .span_12.light input[type=submit]:hover,
+body[data-form-submit=regular] button[type=submit]:hover, /* Override */
+body[data-form-submit=regular] input[type=submit]:hover /* Override */ {
   opacity: 1;
 }
 
