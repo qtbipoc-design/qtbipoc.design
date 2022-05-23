@@ -15,8 +15,11 @@
   --color-lightness-button-shadow-default: 33%;
 
   --color-text-button:      var(--color-text-on-color-default);
+
+  
 }
 
+:root,
 body.material .nectar-button.accent-color {
   --color-button-assigned: var(--color-button-default);
   --color-button-shadow: hsl(var(--color-hue-button-default) var(--color-saturation-button-shadow-default) var(--color-lightness-button-shadow-default));
