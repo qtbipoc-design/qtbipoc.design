@@ -429,6 +429,36 @@
 }
 
 
+.planet.scheme-bipoctrans,
+.planetContainer.scheme-bipoctrans {	
+	--color-base-hue: var(--color-hue-brand-pink);
+	--color-base-saturation: var(--color-saturation-default);
+	--color-base-lightness: var(--color-lightness-tint);
+
+	--color-fill-1: var(--color-brand-lightblue);
+	--color-fill-2: var(--color-brand-white);
+	--color-fill-3: var(--color-brand-black);
+	--color-fill-4: var(--color-brand-brown);
+	
+	--fill-svg-1: var(--color-fill-1);
+	--fill-svg-2: var(--color-fill-2);
+	--fill-svg-3: var(--color-fill-3);
+	--fill-svg-4: var(--color-fill-4);
+	--fill-svg-5: var(--color-fill-1);
+	--fill-svg-6: var(--color-fill-3);
+	--fill-svg-7: var(--color-fill-4);
+}
+
+.planet.scheme-bipoctrans,
+.planet.scheme-bipoctrans *,
+.planetContainer.scheme-bipoctrans,
+.planetContainer.scheme-bipoctrans * {
+    /* applies to the areas both outside and inside of SVG bounds */
+	/* --color-base: var(--color-fill-1); */
+	--color-base: hsl(var(--color-base-hue) var(--color-base-saturation) var(--color-base-lightness));
+}
+
+
 /*
 .planet.scheme-blackidentify,
 .planetContainer.scheme-blackidentify {
