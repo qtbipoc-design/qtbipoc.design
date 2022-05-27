@@ -398,14 +398,14 @@
 
 .planet.scheme-unitypride,
 .planetContainer.scheme-unitypride {	
-	--color-base-hue: var(--color-hue-neutral);
-	--color-base-saturation: var(--color-saturation-neutral);
-	--color-base-lightness: var(--color-lightness-white);
+	--color-base-hue: var(--color-hue-default);
+	--color-base-saturation: var(--color-saturation-default);
+	--color-base-lightness: var(--color-lightness-default);
 
 	--color-fill-1: var(--color-brand-pink-tint);
 	--color-fill-2: var(--color-brand-lightblue);
 	--color-fill-3: var(--color-brand-black);
-	--color-fill-4: var(--color-brand-green-shade);
+	--color-fill-4: var(--color-brand-brown);
 	--color-fill-5: var(--color-brand-yellow);
 	--color-fill-6: var(--color-brand-green);
 	--color-fill-7: var(--color-brand-purple);
