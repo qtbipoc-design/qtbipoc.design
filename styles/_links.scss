@@ -4,15 +4,16 @@ body a, label span, body [class^="icon-"].icon-default-style, .blog-recent[data-
 }
 
 a {
-    text-decoration: underline;
+  text-decoration: underline;
+  word-break: break-word;
 }
 
 a.nectar-button+a {
-    margin-left: 1rem;
+  margin-left: 1rem;
 }
 
 a.link-back::before {
-    content: '\276E  '; /* \276E is left chevron */
+  content: '\276E  '; /* \276E is left chevron */
 }
 
 /* Link icons */
@@ -21,10 +22,10 @@ a.link-back::before {
 a[rel=external]::after, 
 a[href^="mailto"]::after,
 a[href^="tel"]::after{
-    font-family: FontAwesome;
-    padding-left: 0.5em;
-    font-size: 0.9em;
-    display: inline-block;
+  font-family: FontAwesome;
+  padding-left: 0.5em;
+  font-size: 0.9em;
+  display: inline-block;
 }
 
 /* External link */
