@@ -14,3 +14,30 @@ a.nectar-button+a {
 a.link-back::before {
     content: '\276E  '; /* \276E is left chevron */
 }
+
+/* Link icons */
+
+/* General link icon settings */
+a[rel=external]::after, 
+a[href^="mailto"]::after,
+a[href^="tel"]::after{
+    font-family: FontAwesome;
+    padding-left: 0.5em;
+    font-size: 0.9em;
+    display: inline-block;
+}
+
+/* External link */
+a[rel=external]::after {
+  content: "\f08e";
+}
+
+/* Mail icon */
+a[href^="mailto"]::after {
+  content: "\f003";
+}
+
+/* Phone icon */
+a[href^="tel"]::after {
+  content: "\f095";
+}
