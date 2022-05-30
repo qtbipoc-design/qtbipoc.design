@@ -180,33 +180,36 @@ body {
 .nectar-hor-list-item[data-font-family=h6], .row .col h6, body h6 {font-size: var(--font-size-h6);line-height: var(--line-height-h6);}
 
 @media only screen and (min-width:1000px) and (max-width:1300px) {
-    .full-width-content .recent-post-container .inner-wrap h2, body .row .col.section-title h1, body h1 {font-size: var(--font-size-h1);line-height: var(--line-height-h1);}
-    .single-product div.product h1.product_title, body h2 {font-size: var(--font-size-h2);line-height: var(--line-height-h2);}
-    .row .col h3, .row .span_2 h3, .row .span_3 h3, .row .span_4 h3, .row .vc_col-sm-2 h3, .row .vc_col-sm-3 h3, .row .vc_col-sm-4 h3, body h3 {font-size: var(--font-size-h3);line-height: var(--line-height-h3);}
-    .row .col h4, body h4 {font-size: var(--font-size-h4);line-height: var(--line-height-h4);}
-    .row .col h5, body h5 {font-size: var(--font-size-h5);line-height: var(--line-height-h5);}
-    .row .col h6, body h6 {font-size: var(--font-size-h6);line-height: var(--line-height-h6);}
+  .full-width-content .recent-post-container .inner-wrap h2, body .row .col.section-title h1, body h1 {font-size: var(--font-size-h1);line-height: var(--line-height-h1);}
+  .single-product div.product h1.product_title, body h2 {font-size: var(--font-size-h2);line-height: var(--line-height-h2);}
+  .row .col h3, .row .span_2 h3, .row .span_3 h3, .row .span_4 h3, .row .vc_col-sm-2 h3, .row .vc_col-sm-3 h3, .row .vc_col-sm-4 h3, body h3 {font-size: var(--font-size-h3);line-height: var(--line-height-h3);}
+  .row .col h4, body h4 {font-size: var(--font-size-h4);line-height: var(--line-height-h4);}
+  .row .col h5, body h5 {font-size: var(--font-size-h5);line-height: var(--line-height-h5);}
+  .row .col h6, body h6 {font-size: var(--font-size-h6);line-height: var(--line-height-h6);}
 }
 
 @media only screen and (min-width:690px) and (max-width:1000px) {
-    #page-header-bg .span_6 h1, #page-header-bg.fullscreen-header .span_6 h1, .full-width-content .nectar-recent-posts-slider .recent-post-container .inner-wrap h2, .full-width-content .recent-post-container .inner-wrap h2, body .row .col.section-title h1, body h1, html body .row .col.section-title.span_12 h1 {font-size: var(--font-size-h1);line-height: var(--line-height-h1);}
-    .col h2, .nectar_single_testimonial[data-style=bold] p, .single-product div.product h1.product_title, .woocommerce-account .woocommerce>#customer_login .nectar-form-controls .control, h2 {font-size: var(--font-size-h2);line-height: var(--line-height-h2);}
-    .row .col h3, .row .span_2 h3, .row .span_3 h3, .row .span_4 h3, .row .vc_col-sm-2 h3, .row .vc_col-sm-3 h3, .row .vc_col-sm-4 h3, body h3 {font-size: var(--font-size-h3);line-height: var(--line-height-h3);}
-    .row .col h4, body h4 {font-size: var(--font-size-h4);line-height: var(--line-height-h4);}
-    .row .col h5, body h5 {font-size: var(--font-size-h5);line-height: var(--line-height-h5);}
-    .row .col h6, body h6 {font-size: var(--font-size-h6);line-height: var(--line-height-h6);}
+  #page-header-bg .span_6 h1, #page-header-bg.fullscreen-header .span_6 h1, .full-width-content .nectar-recent-posts-slider .recent-post-container .inner-wrap h2, .full-width-content .recent-post-container .inner-wrap h2, body .row .col.section-title h1, body h1, html body .row .col.section-title.span_12 h1 {font-size: var(--font-size-h1);line-height: var(--line-height-h1);}
+  .col h2, .nectar_single_testimonial[data-style=bold] p, .single-product div.product h1.product_title, .woocommerce-account .woocommerce>#customer_login .nectar-form-controls .control, h2 {font-size: var(--font-size-h2);line-height: var(--line-height-h2);}
+  .row .col h3, .row .span_2 h3, .row .span_3 h3, .row .span_4 h3, .row .vc_col-sm-2 h3, .row .vc_col-sm-3 h3, .row .vc_col-sm-4 h3, body h3 {font-size: var(--font-size-h3);line-height: var(--line-height-h3);}
+  .row .col h4, body h4 {font-size: var(--font-size-h4);line-height: var(--line-height-h4);}
+  .row .col h5, body h5 {font-size: var(--font-size-h5);line-height: var(--line-height-h5);}
+  .row .col h6, body h6 {font-size: var(--font-size-h6);line-height: var(--line-height-h6);}
 }
 
 @media only screen and (max-width:690px) {
-    #page-header-bg .span_6 h1, #page-header-bg.fullscreen-header .span_6 h1, .full-width-content .nectar-recent-posts-slider .recent-post-container .inner-wrap h2, body .row .col.section-title h1, body h1, body.single.single-post .row .col.section-title.span_12 h1, html body .row .col.section-title.span_12 h1 {font-size: var(--font-size-h1);line-height: var(--line-height-h1);}
-    .col h2, .nectar_single_testimonial[data-style=bold] p, .single-product div.product h1.product_title, .woocommerce-account .woocommerce>#customer_login .nectar-form-controls .control, h2 {font-size: var(--font-size-h2);line-height: var(--line-height-h2);}
-    .row .col h3, .row .span_2 h3, .row .span_3 h3, .row .span_4 h3, .row .vc_col-sm-2 h3, .row .vc_col-sm-3 h3, .row .vc_col-sm-4 h3, body h3 {font-size: var(--font-size-h3);line-height: var(--line-height-h3);}
-    .row .col h4, body h4 {font-size: var(--font-size-h4);line-height: var(--line-height-h4);}
-    .row .col h5, body h5 {font-size: var(--font-size-h5);line-height: var(--line-height-h5);}
-    .row .col h6, body h6 {font-size: var(--font-size-h6);line-height: var(--line-height-h6);}
+  #page-header-bg .span_6 h1, #page-header-bg.fullscreen-header .span_6 h1, .full-width-content .nectar-recent-posts-slider .recent-post-container .inner-wrap h2, body .row .col.section-title h1, body h1, body.single.single-post .row .col.section-title.span_12 h1, html body .row .col.section-title.span_12 h1 {font-size: var(--font-size-h1);line-height: var(--line-height-h1);}
+  .col h2, .nectar_single_testimonial[data-style=bold] p, .single-product div.product h1.product_title, .woocommerce-account .woocommerce>#customer_login .nectar-form-controls .control, h2 {font-size: var(--font-size-h2);line-height: var(--line-height-h2);}
+  .row .col h3, .row .span_2 h3, .row .span_3 h3, .row .span_4 h3, .row .vc_col-sm-2 h3, .row .vc_col-sm-3 h3, .row .vc_col-sm-4 h3, body h3 {font-size: var(--font-size-h3);line-height: var(--line-height-h3);}
+  .row .col h4, body h4 {font-size: var(--font-size-h4);line-height: var(--line-height-h4);}
+  .row .col h5, body h5 {font-size: var(--font-size-h5);line-height: var(--line-height-h5);}
+  .row .col h6, body h6 {font-size: var(--font-size-h6);line-height: var(--line-height-h6);}
 }
 
-p {font-size: var(--font-size-paragraph);line-height: var(--line-height-paragraph);}
+p {
+  font-size: var(--font-size-paragraph);
+  line-height: var(--line-height-paragraph);
+}
 
 
 /* Heading-as-paragraph line-height  */
@@ -221,32 +224,32 @@ body h6.as-paragraph, body .as-paragraph h6 {line-height: var(--line-height-h6-a
 
 .super-heading,
 .super-heading *{
-    font-size: var(--font-size-super-heading);
-    line-height: var(--line-height-super-heading);
+  font-size: var(--font-size-super-heading);
+  line-height: var(--line-height-super-heading);
 }
 
 .super-paragraph,
 .super-paragraph *{
-    font-size: var(--font-size-super-paragraph);
-    line-height: var(--line-height-super-paragraph);
+  font-size: var(--font-size-super-paragraph);
+  line-height: var(--line-height-super-paragraph);
 }
 
 .sub-paragraph,
 .sub-paragraph *{
-    font-size: var(--font-size-sub-paragraph);
-    line-height: var(--line-height-sub-paragraph);
+  font-size: var(--font-size-sub-paragraph);
+  line-height: var(--line-height-sub-paragraph);
 }
 
 .sub-sub-paragraph,
 .sub-sub-paragraph *{
-    font-size: var(--font-size-sub-sub-paragraph);
-    line-height: var(--line-height-sub-sub-paragraph);
+  font-size: var(--font-size-sub-sub-paragraph);
+  line-height: var(--line-height-sub-sub-paragraph);
 }
 
 
 /* Text Container Sizing */
 p, li {
-    max-width: var(--width-text-default);
+  max-width: var(--width-text-default);
 }
 
 li.gfield {
@@ -258,7 +261,7 @@ li.gfield {
 /* Spacing */
 h1, h2, h3, h4, h5, h6,
 .super-heading {
-    margin-top: 1.5em; /* 1.5em by eye */
+  margin-top: 1.5em; /* 1.5em by eye */
 }
 
 h2 {
@@ -269,14 +272,16 @@ h2 {
 /* Misc. Element Types */
 
 pre {
-    background-color: HSLA(0 0.01% 0% / 100%); /* temporary color */
-    border: 1px solid HSLA(0 0.01% 100% / 20%); /* temporary color */
-    border-radius: var(--border-radius-container-default);
-    padding: var(--padding-container-default);
+  /* background-color: HSLA(0 0.01% 0% / 100%); /* temporary color */
+  background-color: var(--color-bg-light-default);
+  /* border: 1px solid HSLA(0 0.01% 100% / 20%); /* temporary color */
+  border-radius: var(--border-radius-container-default);
+  padding: var(--padding-container-default);
+  color: var(--color-text-dark-on-light-default);
 }
 
 
 /* Paragraphs that goes after h1 heading (presumably page title/intro blurb) */
 h1+p, h1+* p {
-    font-size: var(--font-size-super-paragraph);
+  font-size: var(--font-size-super-paragraph);
 }
