@@ -285,3 +285,13 @@ pre {
 h1+p, h1+* p {
   font-size: var(--font-size-super-paragraph);
 }
+
+
+/* 
+
+Text Shadow declaration idea:
+Outline + blurred
+
+text-shadow: 0 0 2px hsl(0deg 0% 0% / 25%), 0 0 16px hsl(0deg 0% 0% / 99%);
+
+*/

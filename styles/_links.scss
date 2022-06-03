@@ -33,6 +33,12 @@ a[rel=external]::after {
   content: "\f08e";
 }
 
+/* Hide external icon if the link is an nectar icon */
+.nectar_icon a[rel=external]::after {
+  content: "";
+  display: none;
+}
+
 /* Mail icon */
 a[href^="mailto"]::after {
   content: "\f003";
