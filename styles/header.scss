@@ -21,9 +21,10 @@
 }
 
 #header-outer #top nav > ul > .button_bordered > a:hover {
-  color: var(--color-brand-purple-tint); /*Override */
+  --local-color-button-hover: var(--color-brand-purple-tint);
+  color: var(--local-color-button-hover) !important; /*Override */
 }
 
 #header-outer:not(.transparent) #top nav > ul > .button_bordered > a:hover:before {
-  border-color: var(--color-brand-purple-tint); /*Override */
+  border-color: var(--local-color-button-hover) !important; /*Override */
 }
