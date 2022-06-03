@@ -15,3 +15,15 @@
 .nav-button a:before {
   border-color: rgba(255,255,255,.75)!important;
 }
+
+#top nav>ul>li[class*=button_bordered]>a:before {
+  border-color: var(--color-text-on-color-default); /* Override */
+}
+
+#header-outer #top nav > ul > .button_bordered > a:hover {
+  color: var(--color-brand-purple-tint); /*Override */
+}
+
+#header-outer:not(.transparent) #top nav > ul > .button_bordered > a:hover:before {
+  border-color: var(--color-brand-purple-tint); /*Override */
+}
