@@ -13,3 +13,30 @@
     padding: 1.5rem;
   }
 }
+
+
+/* Graphic and copy groups (For sections with a series graphic above and copy below */
+
+/* Graphic container */
+.group-graphic-and-copy .hover-wrap-inner {
+  aspect-ratio: 2;
+  text-align: center;
+  display: flex;
+  align-items: center; /* vertical centering */
+  justify-content: center; /* horizontal centering */
+}
+
+/* Graphic */
+.group-graphic-and-copy img {
+width: 1%; /* to be overridden by flexbox */
+}
+
+@media screen and (max-width: 999px) {
+  .group-graphic-and-copy .hover-wrap-inner {
+    aspect-ratio: unset;
+  }
+
+  .group-graphic-and-copy .invisible {
+    display: none;
+  }
+}

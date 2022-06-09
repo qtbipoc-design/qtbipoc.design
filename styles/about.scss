@@ -11,21 +11,23 @@
 /* Graphic container */
 .group-about-high-level-info .hover-wrap-inner {
     aspect-ratio: 3;
+    /*
     text-align: center;
     display: flex;
     align-items: center; /* vertical centering */
-    justify-content: center; /* horizontal centering */
+    /* justify-content: center; /* horizontal centering */
 }
 
 /* Graphic */
 .group-about-high-level-info img {
-  width: 1%; /* to be overridden by flexbox */
+  /* width: 1%; /* to be overridden by flexbox */
 }
 
 .group-about-high-level-info img.invisible {
   aspect-ratio: 3; /* To align items correctly */
 }
 
+/*
 @media screen and (max-width: 999px) {
   .group-about-high-level-info .hover-wrap-inner {
     aspect-ratio: unset;
@@ -35,3 +37,4 @@
     display: none;
   }
 }
+*/
