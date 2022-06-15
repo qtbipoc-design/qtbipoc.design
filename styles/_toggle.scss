@@ -22,6 +22,7 @@ div[data-style="default"] .toggle h3 {
   margin-top: 0;
   text-decoration: none;
   font-family: var(--font-family-default);
+  font-size: var(--font-size-paragraph); /* Override */
 }
 
 .toggle h3 a {
