@@ -6,18 +6,22 @@
 
 /* Newsletter form section */
 .footer-styling h2 {
-    font-weight: 600;
-    font-size: 1em;
-    color: rgba(255, 255, 255, 0.6);
+  font-weight: 600;
+  font-size: 1em;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+h5.footer-styling {
+  margin-top: 0;
 }
 
 .footer-styling ul {
-    margin-left: 0;
-    margin-bottom: 0;
+  margin-left: 0;
+  margin-bottom: 0;
 }
 
 .footer-styling ul li {
-    list-style-type: none;
+  list-style-type: none;
 }
 
 .material .footer-newsletter-valueProp {
@@ -52,7 +56,7 @@
 /* Footer: Legal */
 
 .footer-inline ul {
-    margin-left: 0;
+  margin-left: 0;
 }
 .footer-inline ul li {
   display: inline;
