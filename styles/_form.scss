@@ -2,6 +2,11 @@
  * GENERIC FORM ELEMENTS
  */
 
+/* Form */
+.gravity-theme .gform_body.gform-body {
+  margin-bottom: 2.5rem; /* Add spacing for entire group of fields, before submit button (footer) */
+}
+
 
 /* Fields */
 @media screen and (min-width: 641px) {
@@ -15,6 +20,15 @@
 
 .gform_legacy_markup_wrapper input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]) {
   padding: var(--padding-input-field-default); /* override */
+}
+
+.gform_wrapper.gravity-theme fieldset, 
+.gform_wrapper.gravity-theme .gfield {
+  margin-top: 2.5em; /* Space out each field entry */
+}
+
+.gravity-theme .right_label .ginput_container.ginput_container_checkbox {
+  margin-left: 30%; /* Indent checkbox field entries for right-label layout */
 }
 
 /* Highlight row fields */
