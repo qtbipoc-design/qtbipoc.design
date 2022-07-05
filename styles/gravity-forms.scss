@@ -95,6 +95,12 @@ body .gform_wrapper div.charleft,
     line-height: var(--line-height-sub-paragraph);
 }
 
+@media only screen and (min-width: 690px) {
+  .gform_wrapper.gravity-theme .gfield_required {
+    display: block; /* put label on another line */
+  }
+}
+
 @media only screen and (max-width: 641px) {
   /* example: Directory form agree to privacy checkbox */
   .gform_legacy_markup_wrapper .ginput_container span:not(.ginput_price) {
