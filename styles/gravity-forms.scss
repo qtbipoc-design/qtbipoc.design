@@ -6,7 +6,7 @@
 
 /* LAYOUT */
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 690px) {
 
   .gform_wrapper.gravity-theme .gform_fields.left_label fieldset .ginput_container, 
   .gform_wrapper.gravity-theme .gform_fields.right_label fieldset .ginput_container {
@@ -44,7 +44,7 @@ form .ginput_container label {
   font-weight: normal !important; /* override */
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 690px) {
   .gform_wrapper.gravity-theme .gform_fields.left_label legend.gfield_label, 
   .gform_wrapper.gravity-theme .gform_fields.right_label legend.gfield_label,
   .gform_wrapper.gravity-theme .right_label .gfield_label {
@@ -158,7 +158,7 @@ body .gform_wrapper.gform_legacy_markup_wrapper .gfield_description.validation_m
   margin-top: 2.5em; /* Space out each field entry */
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 690px) {
   .gform_wrapper.gravity-theme .left_label .gfield:not(.gsection):not(.gfield_html):not(fieldset), 
   .gform_wrapper.gravity-theme .right_label .gfield:not(.gsection):not(.gfield_html):not(fieldset) {
     display: block; /* removes display flex */
@@ -301,7 +301,7 @@ div[data-style="minimal"] .toggle.accent-color:hover i,
   outline: 2px solid var(--color-outline-focus-default);
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 690px) {
   .gform_wrapper.gravity-theme .gfield input.small, 
   .gform_wrapper.gravity-theme .gfield select.small,
   .gform_wrapper.gravity-theme .gfield input.medium, 
@@ -317,7 +317,7 @@ div[data-style="minimal"] .toggle.accent-color:hover i,
     margin-left: 0 !important;
 }
 
-@media screen and (min-width:641px) {
+@media screen and (min-width:690px) {
   .gravity-theme .right_label .ginput_container.ginput_container_checkbox {
     margin-left: 30%; /* Indent checkbox field entries for right-label layout */
   }    
