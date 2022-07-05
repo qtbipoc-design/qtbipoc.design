@@ -163,6 +163,11 @@ body .gform_wrapper.gform_legacy_markup_wrapper .gfield_description.validation_m
   .gform_wrapper.gravity-theme .right_label .gfield:not(.gsection):not(.gfield_html):not(fieldset) {
     display: block; /* removes display flex */
   }
+
+  .gform_wrapper.gravity-theme .left_label div.gfield>div:not(.ui-resizable-handle):not(.gfield-admin-icons), 
+  .gform_wrapper.gravity-theme .right_label div.gfield>div:not(.ui-resizable-handle):not(.gfield-admin-icons) {
+    width: 100%; /* make container fit full content width */
+  }
 }
 
 
@@ -294,6 +299,15 @@ div[data-style="minimal"] .toggle.accent-color:hover i,
 .gform_wrapper .ginput_complex .ginput_container_date select:focus,
 .gform_wrapper .chosen-container:focus {
   outline: 2px solid var(--color-outline-focus-default);
+}
+
+@media screen and (max-width: 640px) {
+  .gform_wrapper.gravity-theme .gfield input.small, 
+  .gform_wrapper.gravity-theme .gfield select.small,
+  .gform_wrapper.gravity-theme .gfield input.medium, 
+  .gform_wrapper.gravity-theme .gfield select.medium {
+    width: 100%; /* make small and medium fields full width on mobile */
+  }
 }
 
 
