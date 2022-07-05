@@ -4,6 +4,18 @@
   margin-bottom: 2.5rem; /* Add spacing for entire group of fields, before submit button (footer) */
 }
 
+/* LAYOUT */
+
+@media screen and (max-width: 640px) {
+
+  .gform_wrapper.gravity-theme .gform_fields.left_label fieldset .ginput_container, 
+  .gform_wrapper.gravity-theme .gform_fields.right_label fieldset .ginput_container {
+    clear:both;
+    width: 100%;
+  }
+
+  
+}
 
 
 /* LABELS */
@@ -32,6 +44,16 @@ form .ginput_container label {
   font-weight: normal !important; /* override */
 }
 
+@media screen and (max-width: 640px) {
+  .gform_wrapper.gravity-theme .gform_fields.left_label legend.gfield_label, 
+  .gform_wrapper.gravity-theme .gform_fields.right_label legend.gfield_label,
+  .gform_wrapper.gravity-theme .right_label .gfield_label {
+    float: none;
+    padding-right: 0;
+    text-align: left;
+    width: auto;
+  }
+}
 
 
 
@@ -134,6 +156,13 @@ body .gform_wrapper.gform_legacy_markup_wrapper .gfield_description.validation_m
 .gform_wrapper.gravity-theme fieldset, 
 .gform_wrapper.gravity-theme .gfield {
   margin-top: 2.5em; /* Space out each field entry */
+}
+
+@media screen and (max-width: 640px) {
+  .gform_wrapper.gravity-theme .left_label .gfield:not(.gsection):not(.gfield_html):not(fieldset), 
+  .gform_wrapper.gravity-theme .right_label .gfield:not(.gsection):not(.gfield_html):not(fieldset) {
+    display: block; /* removes display flex */
+  }
 }
 
 
@@ -274,12 +303,14 @@ div[data-style="minimal"] .toggle.accent-color:hover i,
     margin-left: 0 !important;
 }
 
-.gravity-theme .right_label .ginput_container.ginput_container_checkbox {
-  margin-left: 30%; /* Indent checkbox field entries for right-label layout */
+@media screen and (min-width:641px) {
+  .gravity-theme .right_label .ginput_container.ginput_container_checkbox {
+    margin-left: 30%; /* Indent checkbox field entries for right-label layout */
+  }    
 }
 
 .gravity-theme .gfield-choice-input[type=checkbox] {
-  float: left;
+  float: left; /* Make checkbox label align next to the checkbox */
 }
 
 
