@@ -1,3 +1,11 @@
+/* FORM */
+
+.gravity-theme .gform_body.gform-body {
+  margin-bottom: 2.5rem; /* Add spacing for entire group of fields, before submit button (footer) */
+}
+
+
+
 /* LABELS */
 .LABELS------------------------ { color: inherit;}
 
@@ -121,6 +129,12 @@ body .gform_wrapper.gform_legacy_markup_wrapper .gfield_description.validation_m
 }
 
 
+
+/* FIELDS */
+.gform_wrapper.gravity-theme fieldset, 
+.gform_wrapper.gravity-theme .gfield {
+  margin-top: 2.5em; /* Space out each field entry */
+}
 
 
 /* TEXT-RELATED INPUTS */
@@ -259,6 +273,15 @@ div[data-style="minimal"] .toggle.accent-color:hover i,
 .gform_legacy_markup_wrapper .right_label li.hidden_label input {
     margin-left: 0 !important;
 }
+
+.gravity-theme .right_label .ginput_container.ginput_container_checkbox {
+  margin-left: 30%; /* Indent checkbox field entries for right-label layout */
+}
+
+.gravity-theme .gfield-choice-input[type=checkbox] {
+  float: left;
+}
+
 
 /* MISCELLANEOUS */
 .MISCELLANEOUS------------------------ { color: inherit;}
