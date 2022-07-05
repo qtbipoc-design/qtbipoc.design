@@ -44,6 +44,13 @@ form .ginput_container label {
   font-weight: normal !important; /* override */
 }
 
+
+.gform_wrapper.gravity-theme .gfield-choice-input+label {
+  /* Vertical align checkbox labels */
+  top: -0.35em;
+  position: relative;
+}
+
 @media screen and (max-width: 690px) {
   .gform_wrapper.gravity-theme .gform_fields.left_label legend.gfield_label, 
   .gform_wrapper.gravity-theme .gform_fields.right_label legend.gfield_label,
@@ -54,6 +61,8 @@ form .ginput_container label {
     width: auto;
   }
 }
+
+
 
 
 
@@ -85,6 +94,14 @@ body .gform_wrapper div.charleft,
   color: var(--color-text-default);
 }
 
+
+@media screen and (min-width: 690px) {
+  .gform_wrapper.gravity-theme .field_description_above .description, .gform_wrapper.gravity-theme .field_description_above .gfield_description, .gform_wrapper.gravity-theme .field_description_above .gsection_description, .gform_wrapper.gravity-theme .field_description_above .instruction {
+    margin-left: 30%;
+    width: 70%;
+    padding-top: 0.25em;
+  }
+}
 
 
 /* "REQUIRED" LABEL */
@@ -339,12 +356,12 @@ div[data-style="minimal"] .toggle.accent-color:hover i,
 
 /* Dropdown arrow icon */
 .gform_wrapper .chosen-container-single .chosen-single div b {
-    margin-top: 4px;
+  margin-top: 4px;
 }
 
 /* Soft hide placeholder text */
 form .gform_body .gfield input::placeholder {
-    color: transparent;
+  color: transparent;
 }
 
 /* Time input AM/PM size */
