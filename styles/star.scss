@@ -1,0 +1,85 @@
+:root {
+	
+	--color-star-default: 			white;
+	--color-star-special: 			orange; /* TODO: Placeholder for now until adding color options */
+	
+	
+	--width-star-pointed: 			calc(106px / 7);
+	--height-star-pointed: 			calc(150px / 7);
+	--size-star-dot: 				4px;
+	
+	
+	--color-star:					var(--color-star-default);
+	--width-star: 					var(--width-star-pointed);
+	--height-star: 					var(--height-star-pointed);
+
+
+
+	--opacity-star-visible:			1;
+	--opacity-star-invisible: 		0;
+	
+	--scale-base-star-visible:		1;
+	--scale-base-star-invisible:	0.5;
+
+	
+	--scale-base-star-default:		1;
+	--scale-base-star-small:		0.6;
+	
+	--scale-star-visible:			var(--scale-base-star-visible);
+	--scale-star-invisible:			var(--scale-base-star-invisible);
+	
+}
+
+.star {
+	width: var(--width-star);
+	height: var(--height-star);
+	--offset-horizontal: 0%;
+	--offset-vertical: 0%;
+
+
+	position: absolute;
+	left: var(--offset-horizontal);
+	top: var(--offset-vertical);
+	
+}
+
+.star.star-alwayson {
+	animation-name: none;
+}
+
+.star,
+.star.star-twinkle {
+	animation-name: starblink; /* NOTE: @keyframes starblink is defined in starSettings.php */
+	animation-duration: calc(var(--duration-star-cycle) / 2); /* NOTE: --duration-star-cycle is defined in starSettings.php */
+	animation-direction: alternate-reverse;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in;
+}
+
+.star.star-dot {
+	--width-star: calc(var(--size-star-dot));
+	--height-star: calc(var(--size-star-dot));
+	
+	background-color: var(--color-star);
+	border-radius: var(--size-star-dot);
+	
+	animation-name: none !important; /* Overrides .star-twinkle */
+}
+
+.star.star-dot .svgStar {
+	display: none;
+}
+
+.star.star-small {
+	--width-star: calc(var(--width-star-pointed) * var(--scale-base-star-small));
+	--height-star: calc(var(--height-star-pointed) * var(--scale-base-star-small));
+}
+
+.star.star-dot.star-small {
+	--width-star: var(--size-star-dot);
+	--height-star: var(--size-star-dot);
+}
+
+.star-color-special {
+	--color-star: var(--color-star-special);
+}
