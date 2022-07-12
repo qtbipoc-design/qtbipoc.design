@@ -1,31 +1,31 @@
 :root {
 	
-	--color-star-default: 			white;
+	--color-star-default: 			var(--color-text-light-on-dark-default);
 	--color-star-special: 			orange; /* TODO: Placeholder for now until adding color options */
 	
 	
 	--width-star-pointed: 			calc(106px / 7);
 	--height-star-pointed: 			calc(150px / 7);
-	--size-star-dot: 				4px;
+	--size-star-dot: 				    4px;
 	
 	
-	--color-star:					var(--color-star-default);
-	--width-star: 					var(--width-star-pointed);
-	--height-star: 					var(--height-star-pointed);
+	--color-star:					      var(--color-star-default);
+	--width-star: 					    var(--width-star-pointed);
+	--height-star: 					    var(--height-star-pointed);
 
 
 
 	--opacity-star-visible:			1;
-	--opacity-star-invisible: 		0;
+	--opacity-star-invisible: 	0;
 	
 	--scale-base-star-visible:		1;
 	--scale-base-star-invisible:	0.5;
 
 	
 	--scale-base-star-default:		1;
-	--scale-base-star-small:		0.6;
+	--scale-base-star-small:		  0.6;
 	
-	--scale-star-visible:			var(--scale-base-star-visible);
+	--scale-star-visible:			  var(--scale-base-star-visible);
 	--scale-star-invisible:			var(--scale-base-star-invisible);
 	
 }
