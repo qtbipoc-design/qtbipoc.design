@@ -50,12 +50,9 @@
 .star,
 .star.star-twinkle {
 	animation-name: starblink; /* NOTE: @keyframes starblink is defined in starSettings.php */
-	/* animation-duration: calc(var(--duration-star-cycle) / 2); /* NOTE: --duration-star-cycle is defined in starSettings.php */
-  animation-duration: var(--duration-star-cycle); /* NOTE: --duration-star-cycle is defined in starSettings.php */
-	/* animation-direction: alternate-reverse; */
+	animation-duration: var(--duration-star-cycle); /* NOTE: --duration-star-cycle is defined in starSettings.php */
 	animation-direction: normal;
 	animation-iteration-count: infinite;
-	/* animation-timing-function: ease-in; */
 	animation-timing-function: linear;
 }
 
