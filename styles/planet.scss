@@ -25,7 +25,7 @@
   --planet-ring_color_alpha-preferred: var(--planet-ring_color_alpha);
 }
 
-@media screen and (min-width:999px) and (max-width:1440px) {
+@media screen and (max-width:1440px) {
   .planetContainer:not(.ignore-responsive-layout) {
     /* Prep */
     --diff_x-content-start_x-tablet-v-desktop: calc(((var(--breakpoint-vw-desktop) - var(--width-content-desktop)) / 2 ) - var(--margin-horizontal-desktop)); /* should be 110px */
@@ -38,19 +38,9 @@
 
     --width-content-current-half: calc((100vw - (2 * var(--margin-horizontal-desktop))) / 2); /* example: 550px */
     --num-perc-vw-of-desktop-range: calc((100vw - var(--breakpoint-vw-desktop)) / var(--diff_x-vw-breakpoint-desktop-wide-v-desktop)); /* example: should be 0.3636 at 1280vw */
-    --planet-offset_x-at-current: calc(var(--planet-offset_x-at-breakpoint-desktop) + (var(--planet-offset_x_sign) * (var(--num-perc-vw-of-desktop-range) * var(--diff_x-planet-offset_x-desktop-wide-v-desktop))));
-    --planet-offset_x-from-content-center: calc(var(--planet-offset_x-at-current) + (var(--planet-offset_x_sign) * var(--width-content-current-half)));
+    --planet-offset_x-at-current: calc(var(--planet-offset_x-at-breakpoint-desktop) + (var(--planet-offset_x_sign) * (var(--num-perc-vw-of-desktop-range) * var(--diff_x-planet-offset_x-desktop-wide-v-desktop)))); /* example: 972.35px */
+    --planet-offset_x-from-content-center: calc(var(--planet-offset_x-at-current) + (var(--planet-offset_x_sign) * var(--width-content-current-half))); /* example: 422.35px */
 
-    /* Prep for final position */
-    --x: var(--planet-offset_x-from-content-center);
-    --planet-offset_x-from-content-center-abs: max(var(--x), calc(-1 * var(--x)));
-    --pos-preferred-abs: var(--planet-offset_x-from-content-center-abs);
-  }
-}
-
-@media screen and (max-width:999px) {
-  .planetContainer:not(.ignore-responsive-layout) {
-    
     /* Get abs of original planet offset */
     --planet-offset_x-from-content-center: calc(var(--planet-offset_x) - 50%);
     --x: var(--planet-offset_x-from-content-center);
@@ -65,12 +55,7 @@
     --max-offset-or-peek: max(var(--pos-planet-center-peek-abs), var(--planet-offset_x-from-content-center-abs));
     --min-offset-or-peek: min(var(--pos-planet-center-peek-abs), var(--planet-offset_x-from-content-center-abs)); 
     --pos-preferred-abs: var(--max-offset-or-peek);
-  }
-}
 
-@media screen and (max-width:1440px) {
-  .planetContainer:not(.ignore-responsive-layout) {
-    
     /* Set up preferred planet position */
     --planet-offset_x_preferred: calc((var(--width-content) / 2) + (var(--planet-offset_x_sign) * var(--pos-preferred-abs)));
 
