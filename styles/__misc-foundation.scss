@@ -4,19 +4,29 @@
   --margin-horizontal-mobile-min:       5vw;
 
   /* Screen Width Breakpoints */
-  --breakpoint-vw-desktop-wide:         1440px;
-  --breakpoint-vw-desktop:              999px;
-  --breakpoint-vw-tablet:               690px;
-  --breakpoint-vw-mobile:               480px;
-  --breakpoint-vw-mobile-min-margins:   355px;
-  --breakpoint-vw-mobile-min:           320px;
+  --breakpoint-vw-desktop-wide:             1440px;
+  --num-breakpoint-vw-desktop-wide:         1440;
+  --breakpoint-vw-desktop:                  999px;
+  --num-breakpoint-vw-desktop:              999;
+  --breakpoint-vw-tablet:                   690px;
+  --num-breakpoint-vw-tablet:               690;
+  --breakpoint-vw-mobile:                   480px;
+  --num-breakpoint-vw-mobile:               480;
+  --breakpoint-vw-mobile-min-margins:       355px;
+  --num-breakpoint-vw-mobile-min-margins:   355;
+  --breakpoint-vw-mobile-min:               320px;
+  --num-breakpoint-vw-mobile-min:           320;
 
   /* Content Widths */
   --width-content-desktop-wide:         1260px;
+  --num-width-content-desktop-wide:     1260;
   --width-content-desktop-mid:          100%;
   --width-content-desktop:              600px;
+  --num-width-content-desktop:          600;
   --width-content-tablet:               420px;
+  --num-width-content-tablet:           420;
   --width-content-mobile:               320px;
+  --num-width-content-mobile:           320;
   --width-content-mobile-min:           calc(100vw - (2 * var(--margin-horizontal-mobile-min)));
   --width-content:                      var(--width-content-desktop-wide);
   --width-content-half:                 calc(var(--width-content) / 2);
@@ -50,7 +60,8 @@
 
 @media screen and (min-width: 999px) and (max-width:1440px) {
   :root {
-    --margin-horizontal-desktop: 90px;
+    --margin-horizontal-desktop:      90px;
+    --num-margin-horizontal-desktop:  90;
     --width-content: calc(100vw - (2 * var(--margin-horizontal-desktop)));
   }  
 }

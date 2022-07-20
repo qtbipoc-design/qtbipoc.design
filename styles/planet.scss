@@ -27,19 +27,6 @@
 
 @media screen and (max-width:1440px) {
   .planetContainer:not(.ignore-responsive-layout) {
-    /* Prep */
-    --diff_x-content-start_x-tablet-v-desktop: calc(((var(--breakpoint-vw-desktop) - var(--width-content-desktop)) / 2 ) - var(--margin-horizontal-desktop)); /* should be 110px */
-
-    --diff_x-vw-breakpoint-desktop-wide-v-desktop: calc(var(--breakpoint-vw-desktop-wide) - var(--breakpoint-vw-desktop)); /* should be 440px */
-
-    --planet-offset_x-at-breakpoint-desktop-wide: calc(var(--planet-offset_x) * var(--width-content-desktop-wide)); /* example: 1134px; */
-    --planet-offset_x-at-breakpoint-desktop: calc((var(--width-content-desktop) * (50% + (var(--planet-offset_x_sign) * (50% - var(--per-peek-planet))))) + (var(--planet-offset_x_sign) * (var(--planet-diameter) / 2)) + var(--diff_x-content-start_x-tablet-v-desktop)); /* example: 880px */
-    --diff_x-planet-offset_x-desktop-wide-v-desktop: calc(var(--planet-offset_x-at-breakpoint-desktop-wide) - var(--planet-offset_x-at-breakpoint-desktop)); /* example should result in 254px */
-
-    --width-content-current-half: calc((100vw - (2 * var(--margin-horizontal-desktop))) / 2); /* example: 550px */
-    --num-perc-vw-of-desktop-range: calc((100vw - var(--breakpoint-vw-desktop)) / var(--diff_x-vw-breakpoint-desktop-wide-v-desktop)); /* example: should be 0.3636 at 1280vw */
-    --planet-offset_x-at-current: calc(var(--planet-offset_x-at-breakpoint-desktop) + (var(--planet-offset_x_sign) * (var(--num-perc-vw-of-desktop-range) * var(--diff_x-planet-offset_x-desktop-wide-v-desktop)))); /* example: 972.35px */
-    --planet-offset_x-from-content-center: calc(var(--planet-offset_x-at-current) + (var(--planet-offset_x_sign) * var(--width-content-current-half))); /* example: 422.35px */
 
     /* Get abs of original planet offset */
     --planet-offset_x-from-content-center: calc(var(--planet-offset_x) - 50%);
