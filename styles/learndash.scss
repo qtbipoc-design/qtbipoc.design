@@ -16,3 +16,44 @@ body.ld-in-focus-mode, .learndash-wrapper .ld-focus .ld-focus-main, .ld-focus-co
   /* Course list */
   background-color: var(--color-bg-light-default);
 }
+
+
+
+/* LOGIN MODAL
+
+Part of a fix to prevent scrolling and keep the login model
+fixed positioning in the center of the page
+
+https://www.notion.so/qtbipocdesign/Learndash-Login-Modal-93e71dfba7cc4a78873318f2b58c0916
+
+*/
+
+
+.learndash-wrapper .ld-login-modal {
+  margin: 0; /* overrides default */
+  /*margin-top: calc((100vh + 5rem) / 2); /* 5rem for header height at desktop size */
+  /*margin-left: 50%;*/
+  /*margin-bottom: 0;*/
+  /*margin-right: 0;*/
+  transform: translate(-50%, -50%); /* override default */
+}
+
+.learndash-wrapper .ld-modal {
+  position: fixed; /* overrides default */
+  top: calc((100vh + 5rem) / 2); /* 5rem for header height */
+  left: 50%;
+  max-height: calc(100vh - 5rem - 4rem); /* 5rem for header height, 4rem for 2x2rem of spacing above and below */
+  box-shadow: 0 0 20px var(--color-shadow-default-onlight);
+  border-radius: 1rem; /* overrides default */
+}
+
+@media (max-width: 640px) {
+  .learndash-wrapper .ld-modal {
+      top: calc((100vh + 3rem) / 2);; /* 3rem for header height at 640px viewport width */
+  }    
+}
+
+
+.learndash-wrapper .ld-login-modal .ld-login-modal-login {
+  justify-content: flex-start; /* overrides default */
+}
