@@ -283,7 +283,8 @@ pre {
 
 
 /* Paragraphs that goes after h1 heading (presumably page title/intro blurb) */
-h1+p, h1+* p {
+h1+p, 
+h1+*:not(.learndash)  p {
   font-size: var(--font-size-super-paragraph);
 }
 
