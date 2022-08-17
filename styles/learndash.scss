@@ -57,3 +57,150 @@ https://www.notion.so/qtbipocdesign/Learndash-Login-Modal-93e71dfba7cc4a78873318
 .learndash-wrapper .ld-login-modal .ld-login-modal-login {
   justify-content: flex-start; /* overrides default */
 }
+
+
+/* LearnDash modal internal styling */
+
+
+/* Section: Log-in */
+.learndash-wrapper .ld-login-modal .ld-login-modal-login {
+  background-color: var(--color-bg-default-light);
+}
+
+.learndash-wrapper .ld-login-modal:not(.ld-can-register) {
+  max-width: 40rem ;
+}
+
+
+/* Headings */
+.learndash-wrapper .ld-modal .ld-modal-heading {
+  font-family: var(--font-family-special);
+  font-size: var(--font-size-h5);
+  line-height: var(--line-height-h5);
+}
+
+/* Copy */
+.learndash-wrapper .ld-modal a, 
+.learndash-wrapper .ld-login-modal .ld-forgot-password-link, 
+.learndash-wrapper .ld-modal .ld-login-modal-login .ld-modal-text,
+.learndash-wrapper .ld-modal .ld-login-modal-register .ld-modal-text{
+  font-size: var(--font-size-paragraph);
+  line-height: var(--line-height-paragraph);
+}
+
+.learndash-wrapper .ld-login-modal .ld-login-modal-form p,
+.learndash-wrapper .ld-login-modal .ld-login-modal-register form p{
+  padding-bottom: 0;
+  margin-bottom: 1rem;
+}
+
+/* Form labels */
+.learndash-wrapper .ld-login-modal .ld-login-modal-form label,
+.learndash-wrapper .ld-login-modal .ld-login-modal-register label{
+  font-size: var(--font-size-sub-paragraph);
+  line-height: var(--line-height-sub-paragraph);
+}
+
+.learndash-wrapper .ld-login-modal .ld-login-modal-register #reg_passmail {
+  font-size: var(--font-size-sub-paragraph);
+  line-height: var(--line-height-sub-paragraph);
+}
+
+
+/* Login modal buttons */
+.learndash-wrapper .ld-login-modal input[type='submit'] {
+  font-size: var(--font-size-paragraph); /* override default */
+  line-height: var(--line-height-paragraph);
+  margin: 1rem 0;
+  
+}
+
+.learndash-wrapper .ld-login-modal-register .ld-button:not(.learndash-link-previous-incomplete):not(.ld-button-transparent),
+.learndash-wrapper .ld-login-modal .ld-login-modal-register #wp-submit{
+  border-radius: 100rem; /* override default */
+  font-family: var(--font-family-special);
+  font-size: var(--font-size-paragraph); /* override default */
+  line-height: var(--line-height-paragraph);
+  padding: 0.75em 5em !important;
+  border-radius: 100rem; /* override default */
+  border: 0;
+  margin: 1rem 0;
+}
+
+
+.learndash-wrapper .ld-login-modal>:not(.ld-login-modal-register) input[type='submit'] {
+  background-color: var(--color-site-accent) !important; /* override defaut */
+  color: var(--color-text-default-ondark);
+}
+
+/* LD Form fields */
+
+.learndash-wrapper .ld-login-modal input[type='text'],
+.learndash-wrapper .ld-login-modal input[type='password'], 
+.learndash-wrapper .ld-login-modal input[type='email'], 
+.learndash-wrapper .ld-login-modal .ld-login-field, 
+.learndash-wrapper .ld-login-modal .ld-password-field,
+.learndash-wrapper .ld-login-modal .ld-login-modal-register input[type='text'],
+.learndash-wrapper .ld-login-modal .ld-login-modal-register input[type='password'],
+.learndash-wrapper .ld-login-modal .ld-login-modal-register input[type='email']{
+  font-size: var(--font-size-paragraph);
+  line-height: var(--line-height-paragraph);
+}
+
+.learndash-wrapper #loginform input[type='checkbox'] {
+  width: var(--font-size-paragraph);
+  height: var(--font-size-paragraph);
+  vertical-align: bottom;
+}
+
+/* LD form field icons */
+.learndash-wrapper .ld-login-modal .ld-login-modal-form .login-username:before,
+.learndash-wrapper .ld-login-modal .ld-login-modal-form .login-password:before{
+  top: 2.75rem; /* override default */
+}
+
+
+/* LD login modal colors and styling */
+
+.learndash-wrapper .ld-modal .ld-login-modal-login .ld-modal-heading {
+  color: var(--color-text-default-onlight) !important;
+}
+
+.learndash-wrapper .ld-modal .ld-login-modal-register .ld-modal-heading {
+  color: var(--color-text-default-ondark);
+}
+
+
+.learndash-wrapper .ld-modal .ld-login-modal-login .ld-modal-text,
+.learndash-wrapper .ld-login-modal .ld-login-modal-form label {
+  color: var(--color-text-deemphasis-onlight);
+}
+
+.learndash-wrapper .ld-login-modal .ld-login-modal-register .ld-modal-text,
+.learndash-wrapper .ld-login-modal .ld-login-modal-register label,
+.learndash-wrapper .ld-login-modal .ld-login-modal-register p{
+  color: var(--color-text-default-ondark);
+}
+
+
+.learndash-wrapper .ld-login-modal input[type='text'],
+.learndash-wrapper .ld-login-modal input[type='password'], 
+.learndash-wrapper .ld-login-modal input[type='email'], 
+.learndash-wrapper .ld-login-modal .ld-login-field, 
+.learndash-wrapper .ld-login-modal .ld-password-field,
+.learndash-wrapper .ld-login-modal .ld-login-modal-register input[type='text']:focus,
+.learndash-wrapper .ld-login-modal .ld-login-modal-register input[type='password']:focus,
+.learndash-wrapper .ld-login-modal .ld-login-modal-register input[type='email']:focus{
+  border: 0;
+  background-color: var(--color-bg-emphasis-light);
+  color: var(--color-text-default-onlight);
+}
+
+
+.learndash-wrapper .ld-login-modal .ld-login-modal-register input[type='text'],
+.learndash-wrapper .ld-login-modal .ld-login-modal-register input[type='password'],
+.learndash-wrapper .ld-login-modal .ld-login-modal-register input[type='email'] {
+  border: 0;
+  padding: 0.5rem;
+  margin-top: 0.25em; /* minor offset to match the login side */
+}
