@@ -1,0 +1,622 @@
+:root {
+  --perc-peek-planet: 5%;
+  --num-perc-peek-planet: 0.05;
+  --perc-planet-peek-from-content-center: calc(50% - var(--perc-peek-planet));
+  --planet-ring_color_alpha_responsive-threshold: 50%;
+    
+}
+
+.planetContainer {
+
+	/* Defaults */
+	--planet-diameter: 150px;
+	--planet-sprite_x: 50%;
+	--planet-sprite_y: 50%;
+	--planet-offset_x: 0%;
+	--planet-offset_y: 0px;
+	--color-base: #9700FF;
+	
+
+
+	position: absolute;
+	left: var(--planet-offset_x);
+	top: var(--planet-offset_y);
+	transform: translate(-50%, -50%);
+
+  --planet-ring_color_alpha-preferred: var(--planet-ring_color_alpha);
+}
+
+@media screen and (min-width:999px) and (max-width:1440px) {
+  /* NOTE 7/20/22: This is the failed leftover styling for responsive planet positioning for between 1000px and 1440px viewport width. Two main problems: 1) it's hard to get the right formula from so many steps, 2) it's not possible/easy to change a value with unit into a pure number; once a number has a value, you can't get it out. That adds to complication of calculation */
+  .planetContainer:not(.ignore-responsive-layout) {
+    /* Prep */
+    --diff_x-content-start_x-tablet-v-desktop: calc(((var(--num-breakpoint-vw-desktop) - var(--num-width-content-desktop)) / 2 ) - var(--num-margin-horizontal-desktop)); /* should be 110 */
+
+    --diff_x-vw-breakpoint-desktop-wide-v-desktop: calc(var(--num-breakpoint-vw-desktop-wide) - var(--num-breakpoint-vw-desktop)); /* should be 440 */
+
+    --planet-offset_x-at-breakpoint-desktop-wide: calc(var(--planet-offset_x_num_perc_decimal) * var(--num-width-content-desktop-wide)); /* example: 1134; */
+    --planet-offset_x-at-breakpoint-desktop: calc((var(--num-width-content-desktop) * (0.5 + (var(--planet-offset_x_sign) * (0.5 - var(--num-perc-peek-planet))))) + (var(--planet-offset_x_sign) * (var(--planet-diameter-num) / 2)) + var(--diff_x-content-start_x-tablet-v-desktop)); /* example: 880 */
+    --diff_x-planet-offset_x-desktop-wide-v-desktop: calc(var(--planet-offset_x-at-breakpoint-desktop-wide) - var(--planet-offset_x-at-breakpoint-desktop)); /* example should result in 254 */
+
+    /* --width-content-current-half: calc((100vw - (2 * var(--num-margin-horizontal-desktop))) / 2); /* example: 550px */
+    --width-content-current-half: 50%;
+    --px-perc-vw-of-desktop-range: calc((100vw - var(--breakpoint-vw-desktop)) / var(--diff_x-vw-breakpoint-desktop-wide-v-desktop)); /* example: should be .3636px at 1280vw */
+    --planet-offset_x-at-current: calc((1px * var(--planet-offset_x-at-breakpoint-desktop)) + (var(--planet-offset_x_sign) * (var(--px-perc-vw-of-desktop-range) * var(--diff_x-planet-offset_x-desktop-wide-v-desktop)))); /* example: 972.35px */
+    --planet-offset_x-from-content-center: calc(var(--planet-offset_x-at-current) + (var(--planet-offset_x_sign) * var(--width-content-current-half))); /* example: 422.35px */
+
+    /* Prep for final position */
+    --x: var(--planet-offset_x-from-content-center);
+    --planet-offset_x-from-content-center-abs: max(var(--x), calc(-1 * var(--x)));
+    --pos-preferred-abs: var(--planet-offset_x-from-content-center-abs);
+  }
+}
+
+@media screen and (max-width:999px) {
+  .planetContainer:not(.ignore-responsive-layout) {
+    
+    /* Get abs of original planet offset */
+    --planet-offset_x-from-content-center: calc(var(--planet-offset_x) - 50%);
+    --x: var(--planet-offset_x-from-content-center);
+    --planet-offset_x-from-content-center-abs: max(var(--x), calc(-1 * var(--x)));
+
+    /* Get (absolute value) of peeking position */
+    --pos-peek-abs: calc((var(--width-content) / 2) - var(--perc-peek-planet));
+    --planet-radius: calc(var(--planet-diameter) / 2);
+    --pos-planet-center-peek-abs: calc(var(--pos-peek-abs) + var(--planet-radius));
+
+    /* Choose (absolute value) of planet position by selecting option that's farther from center  */
+    --max-offset-or-peek: max(var(--pos-planet-center-peek-abs), var(--planet-offset_x-from-content-center-abs));
+    --min-offset-or-peek: min(var(--pos-planet-center-peek-abs), var(--planet-offset_x-from-content-center-abs)); 
+    --pos-preferred-abs: var(--max-offset-or-peek);
+  }
+}
+
+@media screen and (max-width:1440px) {
+  .planetContainer:not(.ignore-responsive-layout) {
+    
+    /* Set up preferred planet position */
+    --planet-offset_x_preferred: calc((var(--width-content) / 2) + (var(--planet-offset_x_sign) * var(--pos-preferred-abs)));
+
+	  left: var(--planet-offset_x_preferred);
+
+    /* Update ring alpha, between threshold or initial value, whichever is lower */
+    --planet-ring_color_alpha-preferred: min(var(--planet-ring_color_alpha), var(--planet-ring_color_alpha_responsive-threshold));
+  
+  }
+}
+
+
+.planet {
+
+	background-color: red;
+	background-color: var(--color-base);
+	width: var(--planet-diameter);
+	height: var(--planet-diameter);
+
+	clip-path: circle(50% at 50% 50%);
+}
+
+.planet::after{
+	display: block;
+	width: 100%;
+	height: 100%;
+	content: "";
+	background-image: radial-gradient(circle at 25% 25%, HSLA(0 0.01% 100% / 0.35) 0%, HSLA(0 0.01% 100% / 0) 50%, HSLA(0 0.01% 0.01% / .5) 100%);
+	position: absolute;
+	left:0;
+	top:0;
+}
+
+
+.planet .svgTexture {
+
+	--ratio-planet-diameter-to-sprite: 0.2;
+	--translate-offset: calc(var(--ratio-planet-diameter-to-sprite) / 2 * 100%); /* Half of planet diameter as percentage of sprite */
+	--translate-sprite-x: calc(-1 * (var(--planet-sprite_x) - var(--translate-offset)));
+	--translate-sprite-y: calc(-1 * (var(--planet-sprite_y) - var(--translate-offset)));
+	--translate: translate(var(--translate-sprite-x), var(--translate-sprite-y));
+	
+	width: calc(100% / var(--ratio-planet-diameter-to-sprite));
+	transform: var(--translate);
+ 	-webkit-transform: var(--translate);
+
+}
+
+
+.planetContainer .planetMicroTexture {
+	/* Same as .planet */
+	width: var(--planet-diameter);
+	height: var(--planet-diameter);
+	clip-path: circle(50% at 50% 50%);
+
+	/* specific properties */
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	background-image: var(--base64-texture-grain);
+	mix-blend-mode: overlay;
+
+	/* should be same stops as planet shadow gradient */
+	--gradient-radial-planet-shading: radial-gradient(circle at 25% 25%,
+		HSLA(0 .01% 100% / 1) 0,
+		HSLA(0 .01% 100% / .2) 50%, 
+		HSLA(0 .01% 0.01% / 0) 100%);
+
+	mask-image: var(--gradient-radial-planet-shading);
+	-webkit-mask-image: var(--gradient-radial-planet-shading);
+	
+}
+
+
+/* Planet Color Schemes */
+
+.planet.scheme-monochromatic .svgTexture,
+.planetContainer.scheme-monochromatic .svgTexture {
+    --color-fill-1: HSLA(var(--color-base-hue) var(--color-sla-tint));
+    --color-fill-2: HSLA(var(--color-base-hue) var(--color-sla-shade));
+    
+    
+	--fill-svg-1: var(--color-fill-1);
+	--fill-svg-2: var(--color-fill-2);
+	--fill-svg-3: var(--color-fill-1);
+	--fill-svg-4: var(--color-fill-2);
+	--fill-svg-5: var(--color-fill-1);
+	--fill-svg-6: var(--color-fill-2);
+	--fill-svg-7: var(--color-fill-1);
+}
+
+
+.planet.scheme-analogous .svgTexture,
+.planetContainer.scheme-analogous .svgTexture {
+    --color-lower-hue:  calc(var(--color-base-hue) + var(--color-analogous-degree-shift-lower));
+    --color-higher-hue: calc(var(--color-base-hue) + var(--color-analogous-degree-shift-higher));
+	--color-saturation-child: calc(var(--color-base-saturation) * 0.8);
+    --color-lightness-child: calc(var(--color-base-lightness) * 0.8);
+    /* --color-fill-1: hsl(var(--color-lower-hue) var(--color-base-saturation) var(--color-base-lightness)); */
+    /* --color-fill-2: hsl(var(--color-higher-hue) var(--color-base-saturation) var(--color-base-lightness)); */
+    --color-fill-1: hsl(var(--color-lower-hue) var(--color-saturation-child) var(--color-lightness-child)); /* experiment */
+    --color-fill-2: hsl(var(--color-higher-hue) var(--color-saturation-child) var(--color-lightness-child)); /* experiment */
+
+	--fill-svg-1: var(--color-fill-1);
+	--fill-svg-2: var(--color-fill-2);
+	--fill-svg-3: var(--color-fill-1);
+	--fill-svg-4: var(--color-fill-2);
+	--fill-svg-5: var(--color-fill-1);
+	--fill-svg-6: var(--color-fill-2);
+	--fill-svg-7: var(--color-fill-1);
+	
+}
+
+.planet.scheme-lesbian,
+.planetContainer.scheme-lesbian {
+	--color-base-hue: var(--color-hue-neutral);
+	--color-base-saturation: var(--color-saturation-neutral);
+	--color-base-lightness: var(--color-lightness-white);
+	
+	--color-fill-1: HSLA(var(--color-hue-brand-pink) var(--color-sla-shade)); /* dark pink */
+	--color-fill-2: HSLA(var(--color-hue-brand-pink) var(--color-sla-default)); /* pink */
+	--color-fill-3: HSLA(var(--color-hue-brand-pink) var(--color-sla-tint)); /* light pink */
+	--color-fill-4: var(--color-brand-white); /* white */
+	--color-fill-5: HSLA(var(--color-hue-brand-orange) var(--color-sla-tint)); /* light orange */
+	--color-fill-6: HSLA(var(--color-hue-brand-orange) var(--color-sla-default)); /* orange */
+	--color-fill-7: HSLA(var(--color-hue-brand-orange) var(--color-sla-shade)); /* dark orange */
+	
+	
+	--fill-svg-1: var(--color-fill-1);
+	--fill-svg-2: var(--color-fill-2);
+	--fill-svg-3: var(--color-fill-3);
+	--fill-svg-4: var(--color-fill-2);
+	--fill-svg-5: var(--color-fill-5);
+	--fill-svg-6: var(--color-fill-6);
+	--fill-svg-7: var(--color-fill-7);
+}
+
+.planet.scheme-lesbian,
+.planet.scheme-lesbian *,
+.planetContainer.scheme-lesbian,
+.planetContainer.scheme-lesbian * {
+    /* applies to the areas both outside and inside of SVG bounds */
+	--color-base: var(--color-fill-4);
+	--color-base: hsl(var(--color-base-hue) var(--color-base-saturation) var(--color-base-lightness));
+}
+
+
+
+.planet.scheme-pansexual,
+.planetContainer.scheme-pansexual {
+	--color-base-hue: var(--color-hue-brand-yellow);
+	--color-base-saturation: var(--color-saturation-default);
+	--color-base-lightness: var(--color-lightness-default);
+	
+	--color-fill-1: var(--color-brand-pink); /* pink */
+	--color-fill-2: var(--color-brand-yellow); /* yellow */
+	--color-fill-3: var(--color-brand-lightblue); /* light blue */	
+
+	--fill-svg-1: var(--color-fill-1);
+	--fill-svg-2: var(--color-fill-3);
+	--fill-svg-3: var(--color-fill-1);
+	--fill-svg-4: var(--color-fill-3);
+	--fill-svg-5: var(--color-fill-1);
+	--fill-svg-6: var(--color-fill-3);
+	--fill-svg-7: var(--color-fill-1);
+}
+
+
+
+.planet.scheme-pansexual,
+.planet.scheme-pansexual *,
+.planetContainer.scheme-pansexual,
+.planetContainer.scheme-pansexual * {
+    /* applies to the areas both outside and inside of SVG bounds */
+	--color-base: var(--color-fill-2);
+	--color-base: hsl(var(--color-base-hue) var(--color-base-saturation) var(--color-base-lightness));
+}
+
+
+.planet.scheme-bisexual,
+.planetContainer.scheme-bisexual {
+	--color-base-hue: var(--color-hue-brand-purple);
+	--color-base-saturation: var(--color-saturation-default);
+	--color-base-lightness: var(--color-lightness-default);
+	
+	--color-fill-1: var(--color-brand-pink);
+	--color-fill-2: var(--color-brand-purple);
+	--color-fill-3: var(--color-brand-blue);
+
+	--fill-svg-1: var(--color-fill-1);
+	--fill-svg-2: var(--color-fill-3);
+	--fill-svg-3: var(--color-fill-1);
+	--fill-svg-4: var(--color-fill-3);
+	--fill-svg-5: var(--color-fill-1);
+	--fill-svg-6: var(--color-fill-3);
+	--fill-svg-7: var(--color-fill-1);
+}
+
+.planet.scheme-bisexual,
+.planet.scheme-bisexual *,
+.planetContainer.scheme-bisexual,
+.planetContainer.scheme-bisexual * {
+    /* applies to the areas both outside and inside of SVG bounds */
+	--color-base: var(--color-fill-2);
+	--color-base: hsl(var(--color-base-hue) var(--color-base-saturation) var(--color-base-lightness));
+}
+
+
+.planet.scheme-trans,
+.planetContainer.scheme-trans {
+	--color-base-hue: var(--color-hue-neutral);
+	--color-base-saturation: var(--color-saturation-neutral);
+	--color-base-lightness: var(--color-lightness-white);
+  
+  --color-fill-1: var(--color-brand-lightblue);
+	--color-fill-2: var(--color-brand-white);
+	--color-fill-3: var(--color-brand-pink-tint);
+
+	--fill-svg-1: var(--color-fill-1);
+	--fill-svg-2: var(--color-fill-3);
+	--fill-svg-3: var(--color-fill-1);
+	--fill-svg-4: var(--color-fill-3);
+	--fill-svg-5: var(--color-fill-1);
+	--fill-svg-6: var(--color-fill-3);
+	--fill-svg-7: var(--color-fill-1);
+}
+
+.planet.scheme-trans,
+.planet.scheme-trans *,
+.planetContainer.scheme-trans,
+.planetContainer.scheme-trans * {
+    /* applies to the areas both outside and inside of SVG bounds */
+	--color-base: var(--color-fill-2);
+	--color-base: hsl(var(--color-base-hue) var(--color-base-saturation) var(--color-base-lightness));
+}
+
+
+.planet.scheme-asexual,
+.planetContainer.scheme-asexual {
+	--color-base-hue: var(--color-hue-brand-purple);
+	--color-base-saturation: var(--color-saturation-default);
+	--color-base-lightness: var(--color-lightness-default);
+
+	--color-fill-1: var(--color-brand-black);
+	--color-fill-2: hsl(0 0.01% var(--color-lightness-tint));
+	--color-fill-3: var(--color-brand-white);
+	--color-fill-4: var(--color-brand-purple);
+
+	--fill-svg-1: var(--color-fill-1);
+	--fill-svg-2: var(--color-fill-2);
+	--fill-svg-3: var(--color-fill-3);
+	--fill-svg-4: var(--color-fill-1);
+	--fill-svg-5: var(--color-fill-2);
+	--fill-svg-6: var(--color-fill-3);
+	--fill-svg-7: var(--color-fill-1);
+}
+
+.planet.scheme-asexual,
+.planet.scheme-asexual *,
+.planetContainer.scheme-asexual,
+.planetContainer.scheme-asexual * {
+    /* applies to the areas both outside and inside of SVG bounds */
+	--color-base: var(--color-fill-4);
+	--color-base: hsl(var(--color-base-hue) var(--color-base-saturation) var(--color-base-lightness));
+}
+
+
+
+.planet.scheme-intersex,
+.planetContainer.scheme-intersex {
+	--color-base-hue: var(--color-hue-brand-yellow);
+	--color-base-saturation: var(--color-saturation-default);
+	--color-base-lightness: var(--color-lightness-default);
+
+	--color-fill-1: var(--color-brand-yellow);
+	--color-fill-2: var(--color-brand-purple);
+
+	--fill-svg-1: var(--color-fill-2);
+	--fill-svg-2: var(--color-fill-2);
+	--fill-svg-3: var(--color-fill-2);
+	--fill-svg-4: var(--color-fill-2);
+	--fill-svg-5: var(--color-fill-2);
+	--fill-svg-6: var(--color-fill-2);
+	--fill-svg-7: var(--color-fill-2);
+}
+
+.planet.scheme-intersex,
+.planet.scheme-intersex *,
+.planetContainer.scheme-intersex,
+.planetContainer.scheme-intersex * {
+    /* applies to the areas both outside and inside of SVG bounds */
+	--color-base: var(--color-fill-1);
+	--color-base: hsl(var(--color-base-hue) var(--color-base-saturation) var(--color-base-lightness));
+}
+
+
+.planet.scheme-nonbinary,
+.planetContainer.scheme-nonbinary {
+	--color-base-hue: var(--color-hue-brand-yellow);
+	--color-base-saturation: var(--color-saturation-default);
+	--color-base-lightness: var(--color-lightness-default);
+
+	--color-fill-1: var(--color-brand-yellow);
+	--color-fill-2: var(--color-brand-white);
+	--color-fill-3: var(--color-brand-purple);
+	--color-fill-4: var(--color-brand-black);
+
+	--fill-svg-1: var(--color-fill-2);
+	--fill-svg-2: var(--color-fill-3);
+	--fill-svg-3: var(--color-fill-4);
+	--fill-svg-4: var(--color-fill-2);
+	--fill-svg-5: var(--color-fill-3);
+	--fill-svg-6: var(--color-fill-4);
+	--fill-svg-7: var(--color-fill-3);
+}
+
+.planet.scheme-nonbinary,
+.planet.scheme-nonbinary *,
+.planetContainer.scheme-nonbinary,
+.planetContainer.scheme-nonbinary * {
+    /* applies to the areas both outside and inside of SVG bounds */
+	--color-base: var(--color-fill-1);
+	--color-base: hsl(var(--color-base-hue) var(--color-base-saturation) var(--color-base-lightness));
+}
+
+
+.planet.scheme-genderqueer,
+.planetContainer.scheme-genderqueer {	
+	--color-base-hue: var(--color-hue-neutral);
+	--color-base-saturation: var(--color-saturation-neutral);
+	--color-base-lightness: var(--color-lightness-white);
+
+	--color-fill-1: var(--color-brand-purple-tint);
+	--color-fill-2: var(--color-brand-white);
+	--color-fill-3: var(--color-brand-green-shade);
+	
+	--fill-svg-1: var(--color-fill-1);
+	--fill-svg-2: var(--color-fill-3);
+	--fill-svg-3: var(--color-fill-1);
+	--fill-svg-4: var(--color-fill-3);
+	--fill-svg-5: var(--color-fill-1);
+	--fill-svg-6: var(--color-fill-3);
+	--fill-svg-7: var(--color-fill-1);
+}
+
+.planet.scheme-genderqueer,
+.planet.scheme-genderqueer *,
+.planetContainer.scheme-genderqueer,
+.planetContainer.scheme-genderqueer * {
+    /* applies to the areas both outside and inside of SVG bounds */
+	--color-base: var(--color-fill-2);
+	--color-base: hsl(var(--color-base-hue) var(--color-base-saturation) var(--color-base-lightness));
+}
+
+
+.planet.scheme-unitypride,
+.planetContainer.scheme-unitypride {	
+	--color-base-hue: var(--color-hue-brand-purple);
+	--color-base-saturation: var(--color-saturation-default);
+	--color-base-lightness: var(--color-lightness-default);
+
+	--color-fill-1: var(--color-brand-pink-tint);
+	--color-fill-2: var(--color-brand-lightblue);
+	--color-fill-3: var(--color-brand-black);
+	--color-fill-4: var(--color-brand-brown);
+	--color-fill-5: var(--color-brand-yellow);
+	--color-fill-6: var(--color-brand-green);
+	--color-fill-7: var(--color-brand-white);
+	
+	--fill-svg-1: var(--color-fill-1);
+	--fill-svg-2: var(--color-fill-2);
+	--fill-svg-3: var(--color-fill-3);
+	--fill-svg-4: var(--color-fill-4);
+	--fill-svg-5: var(--color-fill-5);
+	--fill-svg-6: var(--color-fill-6);
+	--fill-svg-7: var(--color-fill-7);
+}
+
+.planet.scheme-unitypride,
+.planet.scheme-unitypride *,
+.planetContainer.scheme-unitypride,
+.planetContainer.scheme-unitypride * {
+    /* applies to the areas both outside and inside of SVG bounds */
+	--color-base: var(--color-fill-7);
+	--color-base: hsl(var(--color-base-hue) var(--color-base-saturation) var(--color-base-lightness));
+}
+
+
+.planet.scheme-bipoctrans,
+.planetContainer.scheme-bipoctrans {	
+	--color-base-hue: var(--color-hue-brand-pink);
+	--color-base-saturation: var(--color-saturation-default);
+	--color-base-lightness: var(--color-lightness-tint);
+
+	--color-fill-1: var(--color-brand-white);
+	--color-fill-2: var(--color-brand-lightblue);
+	--color-fill-3: var(--color-brand-black);
+	--color-fill-4: var(--color-brand-brown);
+	
+	--fill-svg-1: var(--color-fill-1);
+	--fill-svg-2: var(--color-fill-2);
+	--fill-svg-3: var(--color-fill-1);
+	--fill-svg-4: var(--color-fill-3);
+	--fill-svg-5: var(--color-fill-2);
+	--fill-svg-6: var(--color-fill-4);
+	--fill-svg-7: var(--color-fill-3);
+}
+
+.planet.scheme-bipoctrans,
+.planet.scheme-bipoctrans *,
+.planetContainer.scheme-bipoctrans,
+.planetContainer.scheme-bipoctrans * {
+    /* applies to the areas both outside and inside of SVG bounds */
+	/* --color-base: var(--color-fill-1); */
+	--color-base: hsl(var(--color-base-hue) var(--color-base-saturation) var(--color-base-lightness));
+}
+
+
+/*
+.planet.scheme-blackidentify,
+.planetContainer.scheme-blackidentify {
+	--color-base-hue: var(--color-hue-brand-red);
+	--color-base-saturation: var(--color-saturation-default);
+	--color-base-lightness: var(--color-lightness-default);
+
+	--color-fill-1: var(--color-brand-red);
+	--color-fill-2: var(--color-brand-black);
+	--color-fill-3: var(--color-brand-green-shade);
+	--color-fill-4: var(--color-brand-yellow);
+
+	--fill-svg-1: var(--color-fill-2);
+	--fill-svg-2: var(--color-fill-3);
+	--fill-svg-3: var(--color-fill-4);
+	--fill-svg-4: var(--color-fill-2);
+	--fill-svg-5: var(--color-fill-3);
+	--fill-svg-6: var(--color-fill-4);
+	--fill-svg-7: var(--color-fill-2);
+}
+
+*/
+
+/*
+.planet.scheme-blackidentify,
+.planet.scheme-blackidentify *,
+.planetContainer.scheme-blackidentify,
+.planetContainer.scheme-blackidentify * {
+  */
+    /* applies to the areas both outside and inside of SVG bounds */
+
+/*    --color-base: var(--color-fill-1);
+	--color-base: hsl(var(--color-base-hue) var(--color-base-saturation) var(--color-base-lightness));
+}
+*/
+
+
+/* Planet Color Scheme Template */
+/*
+
+.planet.scheme- {
+	--color-base-hue: var(--color-hue-);
+	--color-base-saturation: var(--color-saturation-);
+	--color-base-lightness: var(--color-lightness-);
+
+	--color-fill-1: var(--color-);
+	--color-fill-2: var(--color-);
+	--color-fill-3: var(--color-);
+	
+	--color-base: var(--color-fill-);
+
+	--fill-svg-1: var(--color-fill-1);
+	--fill-svg-2: var(--color-fill-);
+	--fill-svg-3: var(--color-fill-);
+	--fill-svg-4: var(--color-fill-);
+	--fill-svg-5: var(--color-fill-);
+	--fill-svg-6: var(--color-fill-);
+	--fill-svg-7: var(--color-fill-);
+}
+
+.planet.scheme- .svgTexture {
+	--color-base: hsl(var(--color-base-hue) var(--color-base-saturation) var(--color-base-lightness));
+}
+
+
+*/
+
+
+/* PLANET RINGS */
+
+
+.planet-ring {
+	--color-lightness-ring: 90%;
+	
+	display: block;
+	position: absolute;
+	width: var(--planet-ring_diameter);
+	height: calc( var(--planet-ring_diameter) / 2);
+	
+	left: calc((var(--planet-ring_diameter) - var(--planet-diameter)) / -2); /* includes moving planet center to origin */
+	
+	/* transform: rotate(var(--planet-ring_rotation)) scaleY(var(--planet-ring_flatness)); */
+
+	--planet-ring_color: HSLA(var(--color-base-hue) var(--color-base-saturation) var(--color-lightness-ring) / var(--planet-ring_color_alpha-preferred));
+
+	/* for border-based rings */
+	/* border: var(--planet-ring_width) solid var(--planet-ring_color); */
+	/* box-sizing: border-box;	 */
+	/* background-image: none !important; */
+	
+}
+
+
+.planet-ring-behind {
+	top: calc((var(--planet-ring_diameter) - var(--planet-diameter)) / -2);  /* includes moving planet center to origin */
+	z-index: -1;
+	transform-origin: bottom center;
+	border-radius: var(--border-radius-circle) var(--border-radius-circle)  0 0;
+	transform:  rotate(var(--planet-ring_rotation))  translateY(0px) scaleY(var(--planet-ring_flatness)) ;
+
+	/* transform: rotate(var(--planet-ring_rotation)) scaleY(var(--planet-ring_flatness)); */
+
+
+	/* For border-based rings */
+	/* border-bottom-width: 0; */
+
+	/* Gradient-based rings */
+	background-image: radial-gradient(circle at 50% bottom, var(--planet-ring_color_gradient));
+}
+
+.planet-ring-front {
+	border-radius: 0 0 var(--border-radius-circle) var(--border-radius-circle);
+	top: calc((var(--planet-diameter) / 2) - var(--hack-seam-offset));
+	top: calc((var(--planet-diameter) / 2));
+	transform-origin: top center;
+	
+	/* --hack-seam-offset: 0.3px; */
+	--translate-y: calc(-4px / 10);
+	--translate-y: 0; /* Ivan 3/21/22: reset until better solution */
+	transform:  rotate(var(--planet-ring_rotation)) translateY(var(--translate-y)) scaleY(var(--planet-ring_flatness))  ;
+
+	/* For border-based rings */
+	/* border-top-width: 0; */
+	
+	/* Gradient-based rings */
+	background-image: radial-gradient(circle at 50% top, var(--planet-ring_color_gradient));
+}
