@@ -12,7 +12,7 @@
 
 .learndash-shortcode-wrap-ld_infobar-302_302_0 {
   /* Course Status module (shows whether you're enrolled, course price, course info, etc.) */
-  display:none;
+  display: none;
 }
 
 .ld-tab-content p {
@@ -20,15 +20,21 @@
   font-size: var(--font-size-super-paragraph);
 }
 
-/* Course page: User type section (For Login/Logout button) */
-/* 
-.learndash-course-visitor-message,
-.learndash-course-student-message{
-  text-align: center;
+.learndash-wrapper .ld-item-list-actions>.ld-expand-button {
+  background-color: var(--color-bg-light-default) !important;
+  color: var(--color-text-dark-on-light-default);
+  border-radius: var(--border-radius-button-default);
 }
 
-*/
+.learndash-wrapper .ld-expand-button .ld-text {
+  padding: 0 0.5em 0 1em; /* override */
+}
 
+.learndash-wrapper .ld-item-list-actions>.ld-expand-button {
+  background-color: var(--color-bg-light-default) !important;
+  color: var(--color-text-dark-on-light-default);
+  border-radius: var(--border-radius-button-default);
+}
 
 /* COURSE CONTENT PAGE */
 
