@@ -20,6 +20,13 @@
   font-size: var(--font-size-super-paragraph);
 }
 
+
+/* Course List */
+.learndash-wrapper.learndash-wrap.learndash-shortcode-wrap.learndash-shortcode-wrap-course_content-302_302_0 {
+  margin-top: 5rem;
+}
+
+/* Course List Expand All/Collapse All Button */
 .learndash-wrapper .ld-item-list-actions>.ld-expand-button {
   background-color: var(--color-bg-light-default) !important;
   color: var(--color-text-dark-on-light-default);
@@ -31,10 +38,14 @@
 }
 
 .learndash-wrapper .ld-item-list-actions>.ld-expand-button {
-  background-color: var(--color-bg-light-default) !important;
-  color: var(--color-text-dark-on-light-default);
-  border-radius: var(--border-radius-button-default);
+  background-color: var(--color-bg-color-accent) !important;
+  color: var(--color-text-on-color-default);
+  opacity: 1; /* override */
 }
+
+
+
+
 
 /* COURSE CONTENT PAGE */
 
