@@ -52,6 +52,11 @@
   padding: 20px 2rem 20px 60px;
 }
 
+.learndash-wrapper .ld-topic-list.ld-table-list .ld-table-list-lesson-details {
+  /* ex. "0% COMPLETE | 0/8 STEPS" */
+  font-size: var(--font-size-paragraph); /* override */
+}
+
 /* Course List Item */
 .learndash-wrapper .ld-item-list .ld-item-list-item .ld-item-title .ld-item-components {
   /* ex. "8 Topics" */
@@ -136,9 +141,10 @@ https://www.notion.so/qtbipocdesign/Learndash-Login-Modal-93e71dfba7cc4a78873318
 
 /* Headings */
 .learndash-wrapper .ld-modal .ld-modal-heading {
-  font-family: var(--font-family-special);
+  font-family: var(--font-family-display);
   font-size: var(--font-size-h5);
   line-height: var(--line-height-h5);
+  font-weight: var(--font-weight-bold);
 }
 
 /* Copy */
@@ -159,8 +165,8 @@ https://www.notion.so/qtbipocdesign/Learndash-Login-Modal-93e71dfba7cc4a78873318
 /* Form labels */
 .learndash-wrapper .ld-login-modal .ld-login-modal-form label,
 .learndash-wrapper .ld-login-modal .ld-login-modal-register label{
-  font-size: var(--font-size-sub-paragraph);
-  line-height: var(--line-height-sub-paragraph);
+  font-size: var(--font-size-paragraph);
+  line-height: var(--line-height-paragraph);
 }
 
 .learndash-wrapper .ld-login-modal .ld-login-modal-register #reg_passmail {
@@ -212,7 +218,7 @@ https://www.notion.so/qtbipocdesign/Learndash-Login-Modal-93e71dfba7cc4a78873318
 .learndash-wrapper #loginform input[type='checkbox'] {
   width: var(--font-size-paragraph);
   height: var(--font-size-paragraph);
-  vertical-align: bottom;
+  vertical-align: middle;
 }
 
 /* LD form field icons */
@@ -253,11 +259,21 @@ https://www.notion.so/qtbipocdesign/Learndash-Login-Modal-93e71dfba7cc4a78873318
 .learndash-wrapper .ld-login-modal .ld-login-modal-register input[type='text']:focus,
 .learndash-wrapper .ld-login-modal .ld-login-modal-register input[type='password']:focus,
 .learndash-wrapper .ld-login-modal .ld-login-modal-register input[type='email']:focus{
-  border: 0;
   background-color: var(--color-bg-emphasis-light);
   color: var(--color-text-default-onlight);
 }
 
+.learndash-wrapper .ld-login-modal input[type='text'],
+.learndash-wrapper .ld-login-modal input[type='password'], 
+.learndash-wrapper .ld-login-modal input[type='email'], 
+.learndash-wrapper .ld-login-modal input[type=checkbox],
+.learndash-wrapper .ld-login-modal .ld-login-field, 
+.learndash-wrapper .ld-login-modal .ld-password-field,
+.learndash-wrapper .ld-login-modal .ld-login-modal-register input[type='text']:focus,
+.learndash-wrapper .ld-login-modal .ld-login-modal-register input[type='password']:focus,
+.learndash-wrapper .ld-login-modal .ld-login-modal-register input[type='email']:focus{
+  border: 1px solid var(--color-line-default);
+}
 
 .learndash-wrapper .ld-login-modal .ld-login-modal-register input[type='text'],
 .learndash-wrapper .ld-login-modal .ld-login-modal-register input[type='password'],
