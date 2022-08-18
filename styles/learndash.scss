@@ -438,22 +438,6 @@ https://www.notion.so/qtbipocdesign/Learndash-Login-Modal-93e71dfba7cc4a78873318
   background-color: var(--color-button-default) !important; /* override */
 }
 
-.container-button-learndash .ld-button:hover,
-.ld-course-list-items .ld_course_grid .ld_course_grid_button .btn:hover /* course list card button */{
-  
-  /* Mimic Nectar button style */
-  /*
-  transform: translateY(-3px);
-  -webkit-transform: translateY(-3px);
-  box-shadow: 0 20px 38px var(--color-shadow-diffused-onlight) !important;
-  */
-}
-
-/*
-.container-button-learndash.button-primary .ld-button {
-  font-size:var(--font-size-super-paragraph);
-}
-*/
 
 .container-button-learndash.button-primary .learndash-wrapper .ld-button:not(.ld-button-reverse):not(.learndash-link-previous-incomplete):not(.ld-button-transparent) {
   background-color: var(--color-bg-color-default) !important;

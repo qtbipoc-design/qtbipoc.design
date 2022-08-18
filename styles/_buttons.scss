@@ -69,80 +69,80 @@ form .gform_button
 body.material .nectar-button.large /* override */,
 body[data-form-submit="regular"] .container-wrap input[type=submit] /* override */, 
 body[data-form-submit="regular"] .container-wrap button[type=submit] /* override */ {
-    text-transform: uppercase;
-    margin-bottom: 1rem;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
 }
 
 
 body[data-button-style*="slightly_rounded"] .nectar-button {
-    -webkit-transition-duration: 0.45s, 0.2s, 0.45s, 0.45s, 0.45s, 0.2s; /* override */
-    transition-duration: 0.45s, 0.2s, 0.45s, 0.45s, 0.45s, 0.2s; /* override */
+  -webkit-transition-duration: 0.45s, 0.2s, 0.45s, 0.45s, 0.45s, 0.2s; /* override */
+  transition-duration: 0.45s, 0.2s, 0.45s, 0.45s, 0.45s, 0.2s; /* override */
 }
 
 body.material .nectar-button.accent-color,
 body.material .nectar-button.extra-color-1,
 body.material .nectar-button.extra-color-2,
 body.material .nectar-button.extra-color-3 {
-    border-color: var(--color-button-assigned-border);
+  border-color: var(--color-button-assigned-border);
 }
 
 
 .nectar-button::before {
-    position: absolute;
-    content: "";
-    width: 100%;
-    left:0;
-    height: 8px; /* make height dynamic to button size */ 
-    bottom:-8px; /* make height dynamic to button size */
-    background-color:transparent;
+  position: absolute;
+  content: "";
+  width: 100%;
+  left:0;
+  height: 8px; /* make height dynamic to button size */ 
+  bottom:-8px; /* make height dynamic to button size */
+  background-color:transparent;
 }
 
 .nectar-button:hover::before {
-    /*display: block;*/
-    height: 10px; /* make height dynamic to button size */ 
-    bottom:-10px; /* make height dynamic to button size */
+  /*display: block;*/
+  height: 10px; /* make height dynamic to button size */ 
+  bottom:-10px; /* make height dynamic to button size */
     
 }
 
 .nectar-button span {
-    white-space: nowrap;
+  white-space: nowrap;
 }
 
 /* Override spacing when button has icon */
 .nectar-button.has-icon:hover span,  /* override */
 .nectar-button.tilt.has-icon span,  /* override */
 body.material .nectar-button.has-icon span /* override */ {
-    transform: translateX(0); /* override */
+  transform: translateX(0); /* override */
 }
 
 /* Override spacing when button has icon */
 body.material .nectar-button.has-icon i,
 body.material .nectar-button.has-icon.large:not([class*=see-through]) i /* override */ {
-    position: relative;
-    right: -0.5em;
-    transform: translate(0, 0);
-    text-decoration: none;
+  position: relative;
+  right: -0.5em;
+  transform: translate(0, 0);
+  text-decoration: none;
 }
 
 body.material .nectar-button.see-through.accent-color[data-color-override="false"] {
-    color: white !important; /* TEMP: Color */
+  color: white !important; /* TEMP: Color */
 }
 
 .nectar-button.small,
 .nectar-button[data-color-override="false"].regular-button.small /* override */,
 body .nectar-button[data-color-override="false"].see-through.small /* override */{
-    padding: 0.25em 1em !important; /* override */
-    box-shadow: 0 0px 0 var(--color-button-assigned-shadow) !important; /* override */
-    font-size: var(--font-size-sub-sub-paragraph);
-    border-radius: var(--border-radius-button-default) !important; /* override */
+  padding: 0.25em 1em !important; /* override */
+  box-shadow: 0 0px 0 var(--color-button-assigned-shadow) !important; /* override */
+  font-size: var(--font-size-sub-sub-paragraph);
+  border-radius: var(--border-radius-button-default) !important; /* override */
 }
 
 .nectar-button.medium,
 .nectar-button[data-color-override="false"].regular-button.medium /* override */,
 body .nectar-button[data-color-override="false"].see-through.medium /* override */{
-    padding: 0.75em 2em !important; /* override */
-    box-shadow: 0 0px 0 var(--color-button-assigned-shadow) !important; /* override */
-    font-size: var(--font-size-sub-paragraph);
+  padding: 0.75em 2em !important; /* override */
+  box-shadow: 0 0px 0 var(--color-button-assigned-shadow) !important; /* override */
+  font-size: var(--font-size-sub-paragraph);
 }
 
 
@@ -160,21 +160,21 @@ body[data-form-submit=see-through] .container-wrap .gform_wrapper input[type=sub
 body.material .nectar-button.jumbo,
 .nectar-button[data-color-override="false"].regular-button.jumbo /* override */,
 body .nectar-button[data-color-override="false"].see-through.jumbo /* override */{
-    padding: 1.5em 3.5em !important; /* override */
-    box-shadow: 0 0px 0 var(--color-button-assigned-shadow) !important; /* override */
-    font-size: var(--font-size-super-paragraph);
-    border-radius: 0.375rem !important; /* override */
+  padding: 1.5em 3.5em !important; /* override */
+  box-shadow: 0 0px 0 var(--color-button-assigned-shadow) !important; /* override */
+  font-size: var(--font-size-super-paragraph);
+  border-radius: 0.375rem !important; /* override */
 }
 
 body.material .nectar-button.extra_jumbo,
 .nectar-button[data-color-override="false"].regular-button.extra_jumbo /* override */,
 body .nectar-button[data-color-override="false"].see-through.extra_jumbo /* override */{
-    padding: 1.25em 4em !important; /* override */
-    box-shadow: 0 0px 0 var(--color-button-assigned-shadow) !important; /* override */
-    font-size: var(--font-size-h5);
-    border-radius: var(--border-radius-large) !important; /* override */
-    border-width: 2px;
-    line-height: var(--line-height-h5);
+  padding: 1.25em 4em !important; /* override */
+  box-shadow: 0 0px 0 var(--color-button-assigned-shadow) !important; /* override */
+  font-size: var(--font-size-h5);
+  border-radius: var(--border-radius-large) !important; /* override */
+  border-width: 2px;
+  line-height: var(--line-height-h5);
 }
 
 @media screen and (max-width:356px) { /* 356px = 320px/0.9 */
@@ -195,9 +195,9 @@ body .nectar-button[data-color-override="false"].see-through.extra_jumbo /* over
   body.material .nectar-button.extra_jumbo,
   .nectar-button[data-color-override="false"].regular-button.extra_jumbo /* override */,
   body .nectar-button[data-color-override="false"].see-through.extra_jumbo /* override */ {
-    /* Minimize horizontal label padding */
-    padding-left: 3% !important; /* 3% by eye */
-    padding-right: 3% !important; /* 3% by eye */
+  /* Minimize horizontal label padding */
+  padding-left: 3% !important; /* 3% by eye */
+  padding-right: 3% !important; /* 3% by eye */
   }
 
 
