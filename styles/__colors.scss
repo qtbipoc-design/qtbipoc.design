@@ -48,6 +48,7 @@
   
   /* Alpha */
   --color-alpha-default:          1;
+  --color-alpha-default:1         75%;
   --color-alpha-subtle:           25%;
   --color-alpha-faint:            10%;
 
@@ -165,6 +166,7 @@
   /* Light on Dark */
   --color-bg-dark-default:                var(--color-brand-gray-darkest);
   --color-bg-neutral-subtle-semitransparent: hsla(var(--color-hs-neutral) var(--color-lightness-default) / var(--color-alpha-subtle));
+  --color-bg-neutral-dark-strong-semitransparent: hsla(var(--color-hs-neutral) var(--color-lightness-neutral-gray-darkest) / var(--color-alpha-strong));
   --color-text-light-on-dark-default:     var(--color-brand-white);
   --color-text-light-on-dark-disabled:    hsl(var(--color-hs-neutral) var(--color-lightness-disabled-on-dark));
   
