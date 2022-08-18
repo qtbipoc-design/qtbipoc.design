@@ -10,9 +10,23 @@
   display: none;
 }
 
+.label-ld-enrollment.label-outlined {
+  border: 2px solid var(--color-extra-1);
+  display: inline-block;
+  padding: .25em 1em;
+  font-size: var(--font-size-super-paragraph);
+  color: var(--color-extra-1);
+  border-radius: var(--border-radius-button-default);
+}
+
 .learndash-wrapper.learndash-wrap.learndash-shortcode-wrap .ld-course-status {
   /* Course Status module (shows whether you're enrolled, course price, course info, etc.) */
   display: none;
+}
+
+/* Resume Course button */
+.learndash-course-inprogress-message .container-button-learndash {
+  margin: 5rem 0 0;
 }
 
 .ld-tab-content p {
