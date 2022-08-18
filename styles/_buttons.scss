@@ -150,7 +150,8 @@ body.material .nectar-button.large,
 .nectar-button[data-color-override="false"].regular-button.large /* override */,
 body .nectar-button[data-color-override="false"].see-through.large /* override */,
 body[data-form-submit=regular] .container-wrap .gform_wrapper input[type=submit],
-body[data-form-submit=see-through] .container-wrap .gform_wrapper input[type=submit]{
+body[data-form-submit=see-through] .container-wrap .gform_wrapper input[type=submit],
+.learndash-wrapper input[type=submit] {
   padding: 1em 3em !important; /* override */
   box-shadow: 0 0px 0 var(--color-button-assigned-shadow) !important; /* override */
   font-size: var(--font-size-paragraph);
@@ -252,7 +253,8 @@ body .nectar-button[data-color-override="false"].see-through.extra_jumbo /* over
 .container-wrap .span_12.light input[type=submit]:hover,
 body[data-form-submit=regular] button[type=submit]:hover, /* Override */
 body[data-form-submit=regular] input[type=submit]:hover /* Override */,
-.learndash-wrapper .ld-button:hover /* Override */ {
+.learndash-wrapper .ld-button:hover /* Override */,
+.learndash-wrapper .ld-login-modal input[type=submit]:hover /* Override */ {
   opacity: 1;
 }
 
@@ -278,7 +280,8 @@ body.material .nectar-button.large:hover /* override */,
 body .nectar-button[data-color-override="false"].see-through.large:hover /* override */,
 body[data-form-submit=regular] .container-wrap .gform_wrapper input[type=submit]:hover,
 body[data-form-submit=see-through] .container-wrap .gform_wrapper input[type=submit]:hover,
-.learndash-wrapper .ld-button:hover {
+.learndash-wrapper .ld-button:hover,
+.learndash-wrapper input[type=submit]:hover {
   box-shadow: 0 6px 0 var(--color-button-assigned-shadow) !important;
   box-shadow: 0 var(--shadow-length-large) 0 var(--color-button-assigned-shadow) !important;
   transform: translateY(-6px);
@@ -322,7 +325,8 @@ body.material .nectar-button.large:active /* override */,
 body.nectar-button[data-color-override="false"].see-through.large:active /* override */,
 body[data-form-submit=regular] .container-wrap .gform_wrapper input[type=submit]:active,
 body[data-form-submit=see-through] .container-wrap .gform_wrapper input[type=submit]:active,
-.learndash-wrapper .ld-button:active  {
+.learndash-wrapper .ld-button:active,
+.learndash-wrapper input[type=submit]:active  {
   box-shadow: 0 0px 0 var(--color-button-assigned-shadow) !important;
   transform: translateY(2px);
 }
