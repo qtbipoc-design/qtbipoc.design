@@ -4,6 +4,19 @@
   z-index: -1;
 }
 
+.section-title h1.entry-title {
+  text-align: left;
+  max-width: 65ch;
+}
+
+/* Course page: User type section (For Login/Logout button) */
+.learndash-course-visitor-message,
+.learndash-course-student-message{
+  text-align: center;
+}
+
+
+
 /* COURSE CONTENT PAGE */
 
 
@@ -204,4 +217,183 @@ https://www.notion.so/qtbipocdesign/Learndash-Login-Modal-93e71dfba7cc4a78873318
   border: 0;
   padding: 0.5rem;
   margin-top: 0.25em; /* minor offset to match the login side */
+}
+
+
+
+/* Course Status Widget */
+/* Not enrolled state */
+
+.learndash-wrapper .ld-course-status,
+.learndash-wrapper .ld-course-status.ld-course-status-not-enrolled {
+  background-color: var(--color-bg-neutral-subtle-light);
+  border: 1px solid var(--color-line-deemphasis-ondark);
+  border-radius: 1rem;
+  margin: 3rem 0;
+}
+
+/* Status widget: Divider */
+.learndash-wrapper .ld-course-status.ld-course-status-not-enrolled > * {
+  border-right: 1px solid var(--color-line-default-onlight);
+}
+
+@media only screen and (max-width: 640px) {
+  .learndash-wrapper .ld-course-status.ld-course-status-not-enrolled > * {
+      border-bottom: 1px solid var(--color-line-default-onlight);
+      border-right: 0;
+  }
+}
+
+/* Status widget: Label headings */
+.learndash-wrapper .ld-course-status.ld-course-status-not-enrolled .ld-course-status-label {
+  color: var(--color-text-deemphasis-ondark);
+  font-size: var(--font-size-sub-paragraph);
+  line-height: var(--line-height-sub-paragraph);
+}
+
+
+/* Status widget: price text */
+.learndash-wrapper .ld-course-status.ld-course-status-not-enrolled .ld-course-status-price {
+  font-size: var(--font-size-h5);
+  line-height: var(--line-height-h5);
+  color: var(--color-text-default-ondark);
+}
+
+
+
+/* Enrolled state */
+.learndash-wrapper .ld-course-status.ld-course-status-enrolled{
+  display: none;
+}
+
+
+/* Course Status Last activity label */
+.learndash-wrapper .ld-progress .ld-progress-heading {
+  font-size: var(--font-size-sub-paragraph);
+  line-height: var(--line-height-sub-paragraph);
+}
+
+
+/* Progress bar */
+
+/* Progress bar related */ /* Hiding per Liz's request 3/2021 */
+.learndash-wrapper .ld-focus .ld-focus-header .ld-progress, /* Class page header */
+.learndash-wrapper .ld-progress.ld-progress-inline .ld-progress-bar, /* Course page bar graphic */
+.learndash-wrapper .ld-progress .ld-progress-heading .ld-progress-stats .ld-progress-percentage  /* Course page progress label */ {
+  display: none;
+}
+
+
+
+/* Progress bar container */
+.learndash-wrapper .ld-progress .ld-progress-bar /* Course page, class page */ {
+  height: 1rem;
+}
+
+@media only screen and (min-width: 769px) {
+  
+  .learndash-wrapper .ld-progress .ld-progress-bar /* Course page, class page */ {
+      margin: 0 0 0.5rem 0;
+  }
+}
+
+
+
+/* Progress bar fill */
+.learndash-wrapper .ld-progress .ld-progress-bar .ld-progress-bar-percentage /* Course page */ {
+  height: 100%;
+  background-color: var(--color-text-default-onlight) !important;
+}
+
+/* Progress label */
+.learndash-wrapper .ld-progress .ld-progress-heading .ld-progress-stats .ld-progress-percentage /* Course page */ {
+  color: var(--color-text-default-onlight) !important;
+}
+
+
+
+/* Focus Header (Class page) */
+.learndash-wrapper .ld-focus .ld-focus-header .ld-user-menu {
+  min-width: 75px; /* adding min width so that even with hidden avatar element, there's still a large enough target to interact with  */
+  
+}
+
+/* Focus header profile avatar */
+.learndash-wrapper .ld-focus .ld-focus-header .ld-user-menu .ld-profile-avatar {
+  display: none; /* Can't really add a profile image, so we're removing it */
+}
+
+
+/* LearnDash button container */
+
+.container-button-learndash {
+  display: inline-block;
+}
+
+.container-button-learndash .ld-button,
+.ld-course-list-items .ld_course_grid .ld_course_grid_button .btn /* course list card button */ {
+  
+  /* Mimic Nectar button style */
+  padding-left: 3em;
+  padding-right: 3em;
+  font-family: var(--font-family-special);
+  font-size: var(--font-size-paragraph);
+  line-height: var(--line-height-paragraph);
+  border-radius: 10rem;
+  transition: opacity .45s cubic-bezier(.25,1,.33,1),transform .45s cubic-bezier(.25,1,.33,1),border-color .45s cubic-bezier(.25,1,.33,1),color .45s cubic-bezier(.25,1,.33,1),background-color .45s cubic-bezier(.25,1,.33,1),box-shadow .45s cubic-bezier(.25,1,.33,1);
+  -webkit-transition: opacity .45s cubic-bezier(.25,1,.33,1),transform .45s cubic-bezier(.25,1,.33,1),border-color .45s cubic-bezier(.25,1,.33,1),color .45s cubic-bezier(.25,1,.33,1),background-color .45s cubic-bezier(.25,1,.33,1),box-shadow .45s cubic-bezier(.25,1,.33,1);
+}
+
+.container-button-learndash .ld-button:hover,
+.ld-course-list-items .ld_course_grid .ld_course_grid_button .btn:hover /* course list card button */{
+  
+  /* Mimic Nectar button style */
+  transform: translateY(-3px);
+  -webkit-transform: translateY(-3px);
+  box-shadow: 0 20px 38px var(--color-shadow-diffused-onlight) !important;
+  
+}
+
+.container-button-learndash.button-primary .ld-button {
+  font-size:var(--font-size-super-paragraph);
+  
+}
+
+.container-button-learndash.button-primary .learndash-wrapper .ld-button:not(.ld-button-reverse):not(.learndash-link-previous-incomplete):not(.ld-button-transparent) {
+  background-color: var(--color-bg-default-dark-purple) !important;
+  
+}
+
+
+/* Login/out button */
+.container-login-ld /* Course page */,
+.container-loginout-ld /* Course page */{
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.container-login-ld .ld-button.ld-login-button,
+.container-loginout-ld .ld-button.ld-login-button{
+  margin: 0 auto;
+  display: block;
+  
+}
+
+
+/* Resume course button */
+.container-cta-ld-resume-course {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+.container-cta-ld-resume-course .ld-button.ld-course-resume {
+  margin: 0 auto;
+}
+
+.container-login-ld .ld-button.ld-login-button:hover,
+.container-loginout-ld .ld-button.ld-login-button:hover,
+.container-cta-ld-resume-course .ld-button.ld-course-resume:hover {
+  /* NOTE: Maybe apply standard button style instead for .ld-button? */
+  text-decoration: none;
 }
