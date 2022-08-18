@@ -62,6 +62,16 @@
   opacity: 1; /* override */
 }
 
+/* Course List Class Module */
+.learndash-wrapper .ld-item-list .ld-item-list-item {
+  --bgcolor: var(--color-bg-light-default);
+  overflow: hidden;
+  border: 1px solid var(--bgcolor); /* override */
+  border-radius: var(--border-radius-container-default); /*override */
+  background-color: var(--bgcolor); /* override */
+  margin: 1.5rem 0; /* override */
+}
+
 /* Course List Class Status */
 .learndash-wrapper .ld-item-list.ld-lesson-list .ld-topic-list .ld-table-list-header {
   padding: 20px 2rem 20px 60px;
