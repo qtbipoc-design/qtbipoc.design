@@ -101,6 +101,15 @@
 /* COURSE CONTENT PAGE */
 
 
+/* Course Content Sidebar */
+
+.learndash-wrapper .ld-focus .ld-focus-sidebar .ld-focus-sidebar-trigger .ld-icon {
+  /* Sidebar expand/collapse icon */
+  background-color: var(--color-bg-light-default);
+  color: var(--color-text-dark-on-light-default);
+  transform: translateY(-50%) translateX(50%); /* override */
+}
+
 body.ld-in-focus-mode, .learndash-wrapper .ld-focus .ld-focus-main, .ld-focus-content, .ld-focus-content .learndash .learndash-wrapper {
   /* Content Panel */
   background-color: var(--color-bg-dark-default);
