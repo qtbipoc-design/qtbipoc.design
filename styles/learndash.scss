@@ -45,6 +45,7 @@ https://www.notion.so/qtbipocdesign/Learndash-Login-Modal-93e71dfba7cc4a78873318
   max-height: calc(100vh - 5rem - 4rem); /* 5rem for header height, 4rem for 2x2rem of spacing above and below */
   box-shadow: 0 0 20px var(--color-shadow-default-onlight);
   border-radius: 1rem; /* overrides default */
+  border: 1px solid var(--color-line-default);
 }
 
 @media (max-width: 640px) {
@@ -163,7 +164,7 @@ https://www.notion.so/qtbipocdesign/Learndash-Login-Modal-93e71dfba7cc4a78873318
 /* LD login modal colors and styling */
 
 .learndash-wrapper .ld-modal .ld-login-modal-login .ld-modal-heading {
-  color: var(--color-text-default-onlight) !important;
+  color: var(--color-text-dark-on-light-default) !important;
 }
 
 .learndash-wrapper .ld-modal .ld-login-modal-register .ld-modal-heading {
@@ -173,7 +174,7 @@ https://www.notion.so/qtbipocdesign/Learndash-Login-Modal-93e71dfba7cc4a78873318
 
 .learndash-wrapper .ld-modal .ld-login-modal-login .ld-modal-text,
 .learndash-wrapper .ld-login-modal .ld-login-modal-form label {
-  color: var(--color-text-deemphasis-onlight);
+  color: var(--color-text-dark-on-light-default);
 }
 
 .learndash-wrapper .ld-login-modal .ld-login-modal-register .ld-modal-text,
