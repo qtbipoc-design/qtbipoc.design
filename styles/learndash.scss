@@ -33,6 +33,10 @@
   border-radius: var(--border-radius-button-default);
 }
 
+.learndash-wrapper .ld-expand-button {
+  font-size: var(--font-size-paragraph); /* override */
+}
+
 .learndash-wrapper .ld-expand-button .ld-text {
   padding: 0 0.5em 0 1em; /* override */
 }
@@ -43,6 +47,20 @@
   opacity: 1; /* override */
 }
 
+/* Course List Class Status */
+.learndash-wrapper .ld-item-list.ld-lesson-list .ld-topic-list .ld-table-list-header {
+  padding: 20px 2rem 20px 60px;
+}
+
+/* Course List Item */
+.learndash-wrapper .ld-item-list .ld-item-list-item .ld-item-title .ld-item-components {
+  /* ex. "8 Topics" */
+  font-size: var(--font-size-paragraph); /* override */
+}
+
+.learndash-wrapper .ld-table-list .ld-table-list-items {
+  font-size: var(--font-size-paragraph); /* override */
+}
 
 
 
