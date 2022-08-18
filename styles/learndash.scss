@@ -10,6 +10,15 @@
   display: none;
 }
 
+.learndash-shortcode-wrap-ld_infobar-302_302_0 {
+  /* Course Status module (shows whether you're enrolled, course price, course info, etc.) */
+  display:none;
+}
+
+.ld-tab-content p {
+  /* Paragraphs on Course page (presumably the only ones on the site */
+  font-size: var(--font-size-super-paragraph);
+}
 
 /* Course page: User type section (For Login/Logout button) */
 /* 
