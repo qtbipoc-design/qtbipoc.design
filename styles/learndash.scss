@@ -41,7 +41,7 @@
   padding: 0 0.5em 0 1em; /* override */
 }
 
-.learndash-wrapper .ld-item-list-actions>.ld-expand-button {
+.learndash-wrapper .ld-item-list-actions>.ld-expand-button:hover {
   background-color: var(--color-bg-color-accent) !important;
   color: var(--color-text-on-color-default);
   opacity: 1; /* override */
