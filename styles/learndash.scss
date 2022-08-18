@@ -30,7 +30,7 @@
   margin: 3rem 0 3rem;
 }
 
-.ld-tab-content p {
+.ld-tab-content .wpb_wrapper p {
   /* Paragraphs on Course page (presumably the only ones on the site */
   font-size: var(--font-size-super-paragraph);
 }
@@ -64,7 +64,8 @@
 }
 
 /* Course List Class Module */
-.learndash-wrapper .ld-item-list .ld-item-list-item {
+.learndash-wrapper .ld-item-list .ld-item-list-item /* In overview page */,
+.learndash-wrapper .ld-table-list.ld-no-pagination /* in Lesson page */ {
   --bgcolor: var(--color-bg-light-default);
   overflow: hidden;
   border: 1px solid var(--bgcolor); /* override */
@@ -91,6 +92,7 @@
 
 .learndash-wrapper .ld-table-list .ld-table-list-items {
   font-size: var(--font-size-paragraph); /* override */
+  border: none; /* override */
 }
 
 
