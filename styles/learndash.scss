@@ -10,11 +10,13 @@
 }
 
 /* Course page: User type section (For Login/Logout button) */
+/* 
 .learndash-course-visitor-message,
 .learndash-course-student-message{
   text-align: center;
 }
 
+*/
 
 
 /* COURSE CONTENT PAGE */
@@ -339,9 +341,14 @@ https://www.notion.so/qtbipocdesign/Learndash-Login-Modal-93e71dfba7cc4a78873318
   font-family: var(--font-family-special);
   font-size: var(--font-size-paragraph);
   line-height: var(--line-height-paragraph);
-  border-radius: 10rem;
+  border-radius: var(--border-radius-button-default);
+  text-transform: uppercase;
   transition: opacity .45s cubic-bezier(.25,1,.33,1),transform .45s cubic-bezier(.25,1,.33,1),border-color .45s cubic-bezier(.25,1,.33,1),color .45s cubic-bezier(.25,1,.33,1),background-color .45s cubic-bezier(.25,1,.33,1),box-shadow .45s cubic-bezier(.25,1,.33,1);
   -webkit-transition: opacity .45s cubic-bezier(.25,1,.33,1),transform .45s cubic-bezier(.25,1,.33,1),border-color .45s cubic-bezier(.25,1,.33,1),color .45s cubic-bezier(.25,1,.33,1),background-color .45s cubic-bezier(.25,1,.33,1),box-shadow .45s cubic-bezier(.25,1,.33,1);
+}
+
+.learndash-wrapper .ld-button:not(.ld-button-reverse):not(.learndash-link-previous-incomplete):not(.ld-button-transparent) {
+  background-color: var(--color-button-default) !important; /* override */
 }
 
 .container-button-learndash .ld-button:hover,
@@ -360,7 +367,7 @@ https://www.notion.so/qtbipocdesign/Learndash-Login-Modal-93e71dfba7cc4a78873318
 }
 
 .container-button-learndash.button-primary .learndash-wrapper .ld-button:not(.ld-button-reverse):not(.learndash-link-previous-incomplete):not(.ld-button-transparent) {
-  background-color: var(--color-bg-default-dark-purple) !important;
+  background-color: var(--color-bg-color-default) !important;
   
 }
 
