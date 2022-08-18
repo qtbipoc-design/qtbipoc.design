@@ -130,8 +130,8 @@ https://www.notion.so/qtbipocdesign/Learndash-Login-Modal-93e71dfba7cc4a78873318
 
 
 .learndash-wrapper .ld-login-modal>:not(.ld-login-modal-register) input[type='submit'] {
-  background-color: var(--color-site-accent) !important; /* override defaut */
-  color: var(--color-text-default-ondark);
+  background-color: var(--color-bg-color-accent) !important; /* override defaut */
+  color: var(--color-text-on-color-default);
 }
 
 /* LD Form fields */
