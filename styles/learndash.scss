@@ -4,10 +4,12 @@
   z-index: -1;
 }
 
-.section-title h1.entry-title {
-  text-align: left;
-  max-width: 65ch;
+.row.heading-title.hentry {
+  /* Default page heading */
+  /* Hiding it and using a custom page heading for easier layout with other elements */
+  display: none;
 }
+
 
 /* Course page: User type section (For Login/Logout button) */
 /* 
