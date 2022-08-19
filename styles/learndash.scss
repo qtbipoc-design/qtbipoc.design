@@ -125,6 +125,14 @@ body.ld-in-focus-mode, .learndash-wrapper .ld-focus .ld-focus-main, .ld-focus-co
   background-color: var(--color-bg-light-default);
 }
 
+.learndash-wrapper .ld-content-action .ld-button:not(.ld-button-reverse):not(.learndash-link-previous-incomplete):not(.ld-button-transparent) {
+  /* Content page content panel, end of page: "Previous Topic" and "Next topic" buttons */
+  background-color: var(--color-bg-default-light);
+  color: var(--color-text-dark-on-light-default);
+  font-size: var(--font-size-sub-paragraph);
+  line-height: var(--line-height-sub-paragraph);
+}
+
 
 
 /* LOGIN MODAL
@@ -238,9 +246,21 @@ https://www.notion.so/qtbipocdesign/Learndash-Login-Modal-93e71dfba7cc4a78873318
 }
 
 
-.learndash-wrapper .ld-login-modal>:not(.ld-login-modal-register) input[type='submit'] {
-  background-color: var(--color-bg-color-accent) !important; /* override defaut */
+.learndash-wrapper .ld-login-modal>:not(.ld-login-modal-register) input[type='submit'],
+.learndash-wrapper .learndash_mark_complete_button,
+.learndash-wrapper #learndash_mark_complete_button {
+  background-color: var(--color-bg-color-accent) !important; /* override default */
   color: var(--color-text-on-color-default);
+}
+
+.learndash-wrapper .ld-content-action input[type=submit] {
+  /* Content page action buttons */
+  font-size: var(--font-size-sub-paragraph);
+  line-height: var(--line-height-sub-paragraph);
+}
+
+.learndash-wrapper .ld-content-action input[type=submit]:hover {
+  transform: none;
 }
 
 /* LD Form fields */
