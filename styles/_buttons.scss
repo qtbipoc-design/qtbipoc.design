@@ -248,7 +248,6 @@ body .nectar-button[data-color-override="false"].see-through.extra_jumbo /* over
 .learndash-wrapper #learndash_mark_complete_button, 
 .learndash-wrapper .learndash_mark_complete_button,
 .learndash-wrapper .ld-button {
-  transition-property: box-shadow, transform; /* override */
   border-radius: var(--border-radius-button-default); /* Override */
   white-space: nowrap;
 }
