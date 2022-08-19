@@ -74,7 +74,7 @@ body[data-form-submit="regular"] .container-wrap button[type=submit] /* override
 }
 
 
-body[data-button-style*="slightly_rounded"] .nectar-button {
+body[data-button-style*="slightly_rounded"] .nectar-button{
   -webkit-transition-duration: 0.45s, 0.2s, 0.45s, 0.45s, 0.45s, 0.2s; /* override */
   transition-duration: 0.45s, 0.2s, 0.45s, 0.45s, 0.45s, 0.2s; /* override */
 }
@@ -244,6 +244,10 @@ body .nectar-button[data-color-override="false"].see-through.extra_jumbo /* over
   }
 }
 
+
+.learndash-wrapper .ld-button {
+  transition-property: box-shadow, transform; /* override */
+}
 
 /* Hover */
 /* TODO 8/18/22: Add :focus state for appropriate equivalents with :hover */
