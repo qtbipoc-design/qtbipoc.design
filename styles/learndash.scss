@@ -110,6 +110,11 @@
   transform: translateY(-50%) translateX(50%); /* override */
 }
 
+.learndash-wrapper .ld-course-navigation .ld-lesson-item-preview .ld-lesson-title, /* Class title */
+.learndash-wrapper .ld-focus .ld-focus-sidebar .ld-course-navigation .ld-topic-list.ld-table-list .ld-table-list-item /* Lesson title */ {
+  font-size: var(--font-size-sub-paragraph); /* override */
+}
+
 body.ld-in-focus-mode, .learndash-wrapper .ld-focus .ld-focus-main, .ld-focus-content, .ld-focus-content .learndash .learndash-wrapper {
   /* Content Panel */
   background-color: var(--color-bg-dark-default);
