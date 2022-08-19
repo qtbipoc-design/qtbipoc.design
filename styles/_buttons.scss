@@ -265,7 +265,8 @@ body[data-form-submit=regular] button[type=submit]:hover, /* Override */
 body[data-form-submit=regular] input[type=submit]:hover /* Override */,
 .learndash-wrapper .ld-button:hover /* Override */,
 .learndash-wrapper .ld-button:focus /* Override */,
-.learndash-wrapper .ld-login-modal input[type=submit]:hover /* Override */ {
+.learndash-wrapper .ld-login-modal input[type=submit]:hover /* Override */,
+.learndash-wrapper .ld-content-action input[type=submit]:hover /* override */ {
   opacity: 1;
 }
 
