@@ -137,6 +137,16 @@ body.ld-in-focus-mode, .learndash-wrapper .ld-focus .ld-focus-main, .ld-focus-co
 .learndash-wrapper .ld-focus-header .ld-content-action input[type=submit] {
   font-size: var(--font-size-paragraph);
   line-height: var(--line-height-paragraph);
+}
+
+/* Content Panel Header "Previous/Next" and "Mark complete" buttons */
+.learndash-wrapper .ld-focus-header .ld-button.ld-button-transparent,
+.learndash-wrapper .ld-focus .ld-focus-header .sfwd-mark-complete .learndash_mark_complete_button,
+.learndash-wrapper .ld-focus .ld-focus-header .sfwd-mark-complete:after {
+  color: var(--color-text-accent-on-light) !important; /* override */
+}
+
+.learndash-wrapper .ld-focus-header .ld-content-action input[type=submit] {
   padding: 0 !important;
 }
 
@@ -171,15 +181,14 @@ body.ld-in-focus-mode, .learndash-wrapper .ld-focus .ld-focus-main, .ld-focus-co
 .learndash-wrapper .ld-content-action .ld-button:not(.ld-button-reverse):not(.learndash-link-previous-incomplete):not(.ld-button-transparent) {
   /* Content page content panel, end of page: "Previous Topic" and "Next topic" buttons */
   background-color: var(--color-bg-light-default);
-  // color: var(--color-text-dark-on-light-default);
   font-size: var(--font-size-sub-paragraph);
   line-height: var(--line-height-sub-paragraph);
   color: var(--color-text-light-on-dark-default);
 }
 
 .learndash-wrapper .ld-content-action .ld-button:not(.ld-button-reverse):not(.learndash-link-previous-incomplete):not(.ld-button-transparent):hover {
-  transform: none;
   box-shadow: none !important; /* Override */
+  transform: none;
   text-decoration: none;
 }
 
