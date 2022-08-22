@@ -112,6 +112,27 @@
   .learndash-wrapper .ld-focus .ld-focus-header .ld-content-actions {
     flex-direction: column; /* override */
   }
+
+  .learndash-wrapper .ld-focus .ld-focus-header .ld-content-action, 
+  .learndash-wrapper .ld-focus .ld-focus-header .ld-progress {
+    border-right: 0;
+    border-bottom: 1px solid var(--color-line-subtle-on-light);
+  }
+
+  /* Header Nav buttons */
+  .learndash-wrapper .ld-content-actions .ld-content-action {
+    padding: 0 1em;
+  }
+
+  /* Header Nav "Mark Complete" button's form container */
+  .learndash-wrapper .ld-focus .ld-focus-header .ld-content-action .sfwd-mark-complete {
+    margin: 0; /* override */
+  }
+
+  /* Header Nav "Mark Complete" button */
+  .learndash-wrapper .ld-focus-header .ld-content-action input[type=submit] {
+    padding: 1em !important;
+  }
   
 }
 
