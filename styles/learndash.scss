@@ -162,7 +162,8 @@ body.ld-in-focus-mode, .learndash-wrapper .ld-focus .ld-focus-main, .ld-focus-co
 
 .learndash-wrapper .ld-content-action .ld-button:not(.ld-button-reverse):not(.learndash-link-previous-incomplete):not(.ld-button-transparent):hover {
   transform: none;
-  box-shadow: none; /* Override */
+  box-shadow: none !important; /* Override */
+  text-decoration: none;
 }
 
 
