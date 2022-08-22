@@ -107,6 +107,14 @@
 
 /* COURSE CONTENT PAGE */
 
+@media screen and (max-width: 640px) {
+  /* Header Nav */
+  .learndash-wrapper .ld-focus .ld-focus-header .ld-content-actions {
+    flex-direction: column; /* override */
+  }
+  
+}
+
 
 /* Course Content Sidebar */
 
