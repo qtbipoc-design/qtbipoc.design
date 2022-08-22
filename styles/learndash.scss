@@ -1,3 +1,9 @@
+/* LEARNDASH GENERAL */
+
+.learndash-wrapper a {
+  text-decoration: underline; /* override */
+}
+
 /* COURSE OVERVIEW PAGE */
 
 .learndash-wrapper .planetContainer {
@@ -103,6 +109,11 @@
 
 /* Course Content Sidebar */
 
+/* Sidebar top heading item (the one that shows course name) */
+.learndash-wrapper .ld-focus .ld-focus-sidebar .ld-course-navigation-heading {
+  border-right: 1px solid var(--color-line-default);
+}
+
 .learndash-wrapper .ld-focus .ld-focus-sidebar .ld-focus-sidebar-trigger .ld-icon {
   /* Sidebar expand/collapse icon */
   background-color: var(--color-bg-light-default);
@@ -123,6 +134,19 @@ body.ld-in-focus-mode, .learndash-wrapper .ld-focus .ld-focus-main, .ld-focus-co
 .learndash-wrapper .ld-table-list .ld-table-list-items {
   /* Course list */
   background-color: var(--color-bg-light-default);
+}
+
+/* Content Panel end-of-page navigation */
+.learndash_post_sfwd-lessons > .learndash-wrapper > .learndash-wrapper:last-of-type {
+  margin-top: 3rem;
+}
+
+/* Content Panel end-of-page navigation "Back to Course" link */
+.learndash-wrapper .ld-content-actions .ld-content-action .ld-primary-color.ld-course-step-back {
+  color: var(--color-text-accent-on-dark) !important;
+  font-size: var(--font-size-paragraph);
+  line-height: var(--line-height-paragraph);
+  padding: 0.5em 0;
 }
 
 .learndash-wrapper .ld-content-action .ld-button:not(.ld-button-reverse):not(.learndash-link-previous-incomplete):not(.ld-button-transparent) {
