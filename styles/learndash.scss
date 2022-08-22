@@ -165,10 +165,24 @@ body.ld-in-focus-mode, .learndash-wrapper .ld-focus .ld-focus-main, .ld-focus-co
     flex-direction: column; /* override */
   }
 
+  /* User menu */
+  .learndash-wrapper .ld-focus .ld-focus-header .ld-user-menu {
+    flex-basis: auto; /* override */
+  }
+
+  /* User name */
+  .learndash-wrapper .ld-focus .ld-focus-header .ld-user-menu .ld-text {
+    display: block; /* override */
+  }
+
   .learndash-wrapper .ld-focus .ld-focus-header .ld-content-action, 
   .learndash-wrapper .ld-focus .ld-focus-header .ld-progress {
     border-right: 0;
     border-bottom: 1px solid var(--color-line-subtle-on-light);
+  }
+
+  .learndash-wrapper .ld-focus .ld-focus-header .ld-user-menu .ld-text {
+    display: block;
   }
 
   /* Header Nav buttons */
