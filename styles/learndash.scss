@@ -133,11 +133,14 @@ body.ld-in-focus-mode, .learndash-wrapper .ld-focus .ld-focus-main, .ld-focus-co
 }
 
 /* Content Panel header navigation buttons */
-.learndash-wrapper .ld-focus-main .ld-content-action .ld-button {
+.learndash-wrapper .ld-focus-main .ld-content-action .ld-button,
+.learndash-wrapper .ld-focus-header .ld-content-action input[type=submit] {
   font-size: var(--font-size-paragraph);
   line-height: var(--line-height-paragraph);
+  padding: 0 !important;
 }
 
+.learndash-wrapper .ld-focus-header .ld-content-action input[type=submit]:hover,
 .learndash-wrapper .ld-focus-main .ld-content-action .ld-button:hover  {
   box-shadow: none !important; /* override */
   transform: none; /* override */
