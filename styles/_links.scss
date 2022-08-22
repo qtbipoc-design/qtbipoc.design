@@ -24,6 +24,7 @@ a[href^="mailto"]::after,
 a[href^="tel"]::after{
   font-family: FontAwesome;
   padding-left: 0.5em;
+  padding-right: 0.5em;
   font-size: 0.9em;
   display: inline-block;
 }

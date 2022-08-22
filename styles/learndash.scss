@@ -151,7 +151,8 @@ body.ld-in-focus-mode, .learndash-wrapper .ld-focus .ld-focus-main, .ld-focus-co
 }
 
 /* Content Panel end-of-page navigation */
-.learndash_post_sfwd-lessons > .learndash-wrapper > .learndash-wrapper:last-of-type {
+.learndash_post_sfwd-lessons > .learndash-wrapper > .learndash-wrapper:last-of-type,
+.learndash_post_sfwd-topic > .learndash-wrapper > .learndash-wrapper:last-of-type {
   margin-top: 3rem;
 }
 
