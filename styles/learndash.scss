@@ -158,6 +158,16 @@ body.ld-in-focus-mode, .learndash-wrapper .ld-focus .ld-focus-main, .ld-focus-co
 
 }
 
+/* Content Panel breadcrumbs */
+.learndash-wrapper .ld-breadcrumbs .ld-breadcrumbs-segments {
+  font-size: var(--font-size-sub-paragraph); /* override */
+  color: var(--color-text-dark-on-light-default);
+}
+
+.learndash-wrapper .ld-breadcrumbs .ld-status.ld-status-progress {
+  margin-bottom: 0; /* override */
+}
+
 .learndash-wrapper .ld-table-list .ld-table-list-items {
   /* Course list */
   background-color: var(--color-bg-light-default);
@@ -175,15 +185,19 @@ body.ld-in-focus-mode, .learndash-wrapper .ld-focus .ld-focus-main, .ld-focus-co
   font-size: var(--font-size-paragraph);
   line-height: var(--line-height-paragraph);
   padding: 0.5em 0;
-  margin-top: 1rem;
+}
+
+/* Content Panel end-of-page nav "Mark Complete" form */
+.learndash-wrapper .ld-focus-content .ld-content-action .sfwd-mark-complete {
+  margin-bottom: 1em; /* To add spacing above "Back to Class" link */
 }
 
 .learndash-wrapper .ld-content-action .ld-button:not(.ld-button-reverse):not(.learndash-link-previous-incomplete):not(.ld-button-transparent) {
   /* Content page content panel, end of page: "Previous Topic" and "Next topic" buttons */
-  background-color: var(--color-bg-light-default);
+  background-color: var(--color-bg-light-default) !important;
+  color: var(--color-text-dark-on-light-default);
   font-size: var(--font-size-sub-paragraph);
   line-height: var(--line-height-sub-paragraph);
-  color: var(--color-text-light-on-dark-default);
 }
 
 .learndash-wrapper .ld-content-action .ld-button:not(.ld-button-reverse):not(.learndash-link-previous-incomplete):not(.ld-button-transparent):hover {
