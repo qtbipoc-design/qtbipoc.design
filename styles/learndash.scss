@@ -18,11 +18,12 @@
 }
 
 .label-ld-enrollment.label-outlined {
-  border: 1px solid var(--color-extra-1);
+  --color-temp: var(--color-brand-yellow);
+  border: 1px solid var(--color-temp);
   display: inline-block;
   padding: .25em 1em;
   font-size: var(--font-size-super-paragraph);
-  color: var(--color-extra-1);
+  color: var(--color-temp);
   border-radius: var(--border-radius-button-default);
   background-color: var(--color-bg-neutral-dark-strong-semitransparent);
 }
