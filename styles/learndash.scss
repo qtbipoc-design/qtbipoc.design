@@ -380,7 +380,9 @@ https://www.notion.so/qtbipocdesign/Learndash-Login-Modal-93e71dfba7cc4a78873318
   color: var(--color-text-accent-darkest-on-light) !important; /* override */
 }
 
-.learndash-wrapper .ld-login-modal .ld-login-modal-register .ld-button:hover {
+/* Login Modal, Register side, "Register an account" button and "Register" submit button */
+.learndash-wrapper .ld-login-modal .ld-login-modal-register .ld-button:hover,
+.learndash-wrapper .ld-login-modal .ld-login-modal-register input[type='submit']:hover {
   box-shadow: 0 var(--shadow-length-large) 0 var(--color-graphic-accent-on-dark) !important; /* override */ /* Similar to large button default styling */
 }
 
