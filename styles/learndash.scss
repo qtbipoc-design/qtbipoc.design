@@ -293,6 +293,7 @@ https://www.notion.so/qtbipocdesign/Learndash-Login-Modal-93e71dfba7cc4a78873318
 }
 
 
+
 /* LearnDash modal internal styling */
 
 
@@ -426,7 +427,7 @@ https://www.notion.so/qtbipocdesign/Learndash-Login-Modal-93e71dfba7cc4a78873318
 .learndash-wrapper .ld-login-modal .ld-login-modal-register .ld-modal-text,
 .learndash-wrapper .ld-login-modal .ld-login-modal-register label,
 .learndash-wrapper .ld-login-modal .ld-login-modal-register p{
-  color: var(--color-text-default-ondark);
+  color: var(--color-text-light-on-dark-default);
 }
 
 
@@ -461,6 +462,17 @@ https://www.notion.so/qtbipocdesign/Learndash-Login-Modal-93e71dfba7cc4a78873318
   padding: 0.5rem;
   margin-top: 0.25em; /* minor offset to match the login side */
 }
+
+.learndash-wrapper .ld-login-modal .ld-login-modal-register .ld-alert-success {
+  border-color: var(--color-line-strong-on-dark);
+  color: var(--color-text-on-color-default);
+}
+
+.learndash-wrapper .ld-login-modal .ld-login-modal-register .ld-alert-success .ld-alert-icon {
+  color: var(--color-graphic-accent-on-light);
+  background-color: var(--color-bg-light-default) !important;
+}
+
 
 
 
