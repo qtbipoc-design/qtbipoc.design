@@ -264,7 +264,6 @@ body .nectar-button[data-color-override="false"].see-through.extra_jumbo /* over
 body[data-form-submit=regular] button[type=submit]:hover, /* Override */
 body[data-form-submit=regular] input[type=submit]:hover /* Override */,
 .learndash-wrapper .ld-button:hover /* Override */,
-.learndash-wrapper .ld-button:focus /* Override */,
 .learndash-wrapper .ld-login-modal input[type=submit]:hover /* Override */,
 .learndash-wrapper .ld-content-action input[type=submit]:hover /* override */ {
   opacity: 1;
@@ -293,9 +292,9 @@ body .nectar-button[data-color-override="false"].see-through.large:hover /* over
 body[data-form-submit=regular] .container-wrap .gform_wrapper input[type=submit]:hover,
 body[data-form-submit=see-through] .container-wrap .gform_wrapper input[type=submit]:hover,
 .learndash-wrapper .ld-button:hover,
-.learndash-wrapper .ld-button:focus,
-.learndash-wrapper input[type=submit]:hover,
-.learndash-wrapper input[type=submit]:focus {
+.learndash-wrapper .ld-login-modal .ld-login-modal-register .ld-button:hover,
+/* .learndash-wrapper .ld-button:focus, */
+.learndash-wrapper input[type=submit]:hover {
   box-shadow: 0 6px 0 var(--color-button-assigned-shadow) !important;
   box-shadow: 0 var(--shadow-length-large) 0 var(--color-button-assigned-shadow) !important;
   transform: translateY(-6px);

@@ -351,6 +351,12 @@ https://www.notion.so/qtbipocdesign/Learndash-Login-Modal-93e71dfba7cc4a78873318
   
 }
 
+/* Login modal, register side, "Register" submit button */
+.learndash-wrapper .ld-login-modal .ld-login-modal-register input[type='submit'] {
+  background-color: var(--color-bg-light-default) !important;
+  color: var(--color-text-accent-darkest-on-light);
+}
+
 /* "Register an Account" button */
 .learndash-wrapper .ld-login-modal-register .ld-button:not(.learndash-link-previous-incomplete):not(.ld-button-transparent),
 .learndash-wrapper .ld-login-modal .ld-login-modal-register #wp-submit{
@@ -453,8 +459,8 @@ https://www.notion.so/qtbipocdesign/Learndash-Login-Modal-93e71dfba7cc4a78873318
 .learndash-wrapper .ld-login-modal .ld-login-modal-register input[type='text']:focus,
 .learndash-wrapper .ld-login-modal .ld-login-modal-register input[type='password']:focus,
 .learndash-wrapper .ld-login-modal .ld-login-modal-register input[type='email']:focus{
-  background-color: var(--color-bg-emphasis-light);
-  color: var(--color-text-default-onlight);
+  background-color: var(--color-bg-form-field-default);
+  color: var(--color-text-form-field-default);
 }
 
 .learndash-wrapper .ld-login-modal input[type='text'],
