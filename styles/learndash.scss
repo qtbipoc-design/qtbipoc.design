@@ -362,6 +362,7 @@ https://www.notion.so/qtbipocdesign/Learndash-Login-Modal-93e71dfba7cc4a78873318
   border: 0;
   margin: 1rem 0;
   text-decoration: none;
+  text-transform: uppercase;
   --color-button-assigned-shadow: 
 }
 
@@ -370,7 +371,11 @@ https://www.notion.so/qtbipocdesign/Learndash-Login-Modal-93e71dfba7cc4a78873318
 }
 
 .learndash-wrapper .ld-login-modal-register .ld-button.ld-button-reverse:hover {
-  color: var(--color-text-accent-darkest-on-light);
+  color: var(--color-text-accent-darkest-on-light) !important; /* override */
+}
+
+.learndash-wrapper .ld-login-modal .ld-login-modal-register .ld-button:hover {
+  box-shadow: 0 var(--shadow-length-large) 0 var(--color-graphic-accent-on-dark) !important; /* override */ /* Similar to large button default styling */
 }
 
 .learndash-wrapper .ld-login-modal>:not(.ld-login-modal-register) input[type='submit'],
