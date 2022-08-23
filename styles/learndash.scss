@@ -686,6 +686,11 @@ https://www.notion.so/qtbipocdesign/Learndash-Login-Modal-93e71dfba7cc4a78873318
 
 /* STUDENT PROFILE PAGE */
 
+/* Course Search button */
+.learndash-wrapper .ld-item-list .ld-section-heading .ld-search-prompt {
+  display: none;
+}
+
 /* Course Progress module */
 .learndash-wrapper .ld-item-list .ld-item-list-item .ld-item-list-item-expanded .ld-progress {
   background-color: var(--color-bg-dark-default);
