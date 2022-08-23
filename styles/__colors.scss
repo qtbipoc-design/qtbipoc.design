@@ -41,6 +41,7 @@
   --color-lightness-shade-neutral-gray-darkest: calc(var(--color-lightness-neutral-gray-darkest) * var(--pct-color-lightness-shade));
 
   --color-lightness-neutral-black: 20%;
+  --color-lightness-color-dark: 20%;
 
   --color-lightness-disabled-on-light: 50%;
   --color-lightness-disabled-on-dark: 50%;
@@ -58,6 +59,7 @@
   --color-sla-default: var(--color-saturation-default) var(--color-lightness-default) / var(--color-alpha-default);
   --color-sla-shade: var(--color-saturation-default) var(--color-lightness-shade) / var(--color-alpha-default);
   --color-sla-tint: var(--color-saturation-default) var(--color-lightness-tint) / var(--color-alpha-default);
+  --color-sla-color-dark: var(--color-saturation-default) var(--color-lightness-color-dark) / var(--color-alpha-default);
 
 
   
@@ -100,6 +102,7 @@
 --color-brand-purple: hsla(var(--color-hue-brand-purple) var(--color-sla-default));
 --color-brand-purple-tint: hsla(var(--color-hue-brand-purple) var(--color-sla-tint));
 --color-brand-purple-shade: hsla(var(--color-hue-brand-purple) var(--color-sla-shade));
+--color-brand-purple-dark: hsla(var(--color-hue-brand-purple) var(--color-sla-color-dark));
 
 --color-brand-pink: hsla(var(--color-hue-brand-pink) var(--color-sla-default));
 --color-brand-pink-tint: hsla(var(--color-hue-brand-pink) var(--color-sla-tint));
@@ -140,6 +143,7 @@
   --color-hue-accent:           var(--color-hue-brand-purple);
   --color-accent:               var(--color-brand-purple);
   --color-accent-tint:          var(--color-brand-purple-tint);
+  --color-accent-darkest:       var(--color-brand-purple-dark);
   
   --color-hue-extra-1:          var(--color-hue-brand-lightblue);
   --color-extra-1:              var(--color-brand-lightblue);
@@ -183,6 +187,7 @@
 
   /* Color Foreground */
   --color-text-accent-on-light:           var(--color-accent);
+  --color-text-accent-darkest-on-light:   var(--color-accent-darkest);
   --color-text-accent-on-dark:            var(--color-accent-tint);
   --color-text-accent-default:            var(--color-text-accent-on-dark);
   --color-text-attention-on-light:        var(--color-attention);

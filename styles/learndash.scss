@@ -351,18 +351,27 @@ https://www.notion.so/qtbipocdesign/Learndash-Login-Modal-93e71dfba7cc4a78873318
   
 }
 
+/* "Register an Account" button */
 .learndash-wrapper .ld-login-modal-register .ld-button:not(.learndash-link-previous-incomplete):not(.ld-button-transparent),
 .learndash-wrapper .ld-login-modal .ld-login-modal-register #wp-submit{
-  border-radius: 100rem; /* override default */
   font-family: var(--font-family-special);
   font-size: var(--font-size-paragraph); /* override default */
   line-height: var(--line-height-paragraph);
   padding: 0.75em 5em !important;
-  border-radius: 100rem; /* override default */
+  border-radius: var(--border-radius-button-default); /* override default */
   border: 0;
   margin: 1rem 0;
+  text-decoration: none;
+  --color-button-assigned-shadow: 
 }
 
+.learndash-wrapper .ld-button:hover:not(.learndash-link-previous-incomplete):not(.ld-button-transparent) {
+  background-color: var(--color-bg-light-default) !important; /* override */
+}
+
+.learndash-wrapper .ld-login-modal-register .ld-button.ld-button-reverse:hover {
+  color: var(--color-text-accent-darkest-on-light);
+}
 
 .learndash-wrapper .ld-login-modal>:not(.ld-login-modal-register) input[type='submit'],
 .learndash-wrapper .learndash_mark_complete_button,
