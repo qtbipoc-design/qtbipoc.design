@@ -596,7 +596,7 @@ https://www.notion.so/qtbipocdesign/Learndash-Login-Modal-93e71dfba7cc4a78873318
 /* Progress bar fill */
 .learndash-wrapper .ld-progress .ld-progress-bar .ld-progress-bar-percentage /* Course page */ {
   height: 100%;
-  background-color: var(--color-text-default-onlight) !important;
+  background-color: var(--color-graphic-accent-on-light) !important;
 }
 
 /* Progress label */
@@ -682,3 +682,12 @@ https://www.notion.so/qtbipocdesign/Learndash-Login-Modal-93e71dfba7cc4a78873318
   /* NOTE: Maybe apply standard button style instead for .ld-button? */
   text-decoration: none;
 }
+
+
+/* STUDENT PROFILE PAGE */
+
+/* Course Progress module */
+.learndash-wrapper .ld-item-list .ld-item-list-item .ld-item-list-item-expanded .ld-progress {
+  background-color: var(--color-bg-dark-default);
+}
+
