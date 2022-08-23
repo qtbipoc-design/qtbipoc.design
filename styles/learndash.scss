@@ -97,6 +97,14 @@
   font-size: var(--font-size-paragraph); /* override */
 }
 
+.learndash-wrapper .ld-status-waiting {
+  /* ex. "Available on [Date and time]" label */
+  background-color: var(--color-brand-yellow) !important; /* override */
+  color: var(--color-text-dark-on-light-default) !important; /* override */
+  text-transform: none;
+  font-weight: var(--font-weight-default);
+}
+
 .learndash-wrapper .ld-table-list .ld-table-list-items {
   font-size: var(--font-size-paragraph); /* override */
   border: none; /* override */
