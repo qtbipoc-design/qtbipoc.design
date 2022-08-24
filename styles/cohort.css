@@ -5,3 +5,9 @@ body.material .cohort-members .member-card .nectar-button.accent-color {
 body.material .cohort-members .member-card .nectar-button.large:hover, .member-card .nectar-button[data-color-override="false"].regular-button.large:hover {
   --color-member-highlight-shade: var(--color-brand-purple-shade); /* override */
 }
+
+.cohort-members .nectar-button, 
+.cohort-members .nectar-button[data-color-override="false"].regular-button, 
+body[data-button-style*="slightly_rounded"] .cohort-members .nectar-button {
+  margin-bottom: 2rem; /* override */
+}
