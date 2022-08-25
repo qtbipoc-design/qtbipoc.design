@@ -12,9 +12,6 @@
     }
   });
 
-  const flagTruncatedContent = function(el, flagName) {
-    el.classList[el.target.scrollHeight > el.contentRect.height ? 'add' : 'remove'](flagName);
-  }
   
   memberBioParagraphs.forEach(span => {
     flagTruncatedContent(span, "hasTruncation");
@@ -25,3 +22,10 @@
 }))(jQuery);
 
 
+const flagTruncatedContent = function (el, flagName) {
+  console.log(el);
+  if (el.target.scrollHeight > el.contentRect.height) {
+    el.classList.add(flagName);
+  }
+  // el.classList[el.target.scrollHeight > el.contentRect.height ? 'add' : 'remove'](flagName);
+}
