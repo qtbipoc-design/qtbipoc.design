@@ -110,6 +110,11 @@ label.labelToggleMemberBio {
   cursor: pointer;
 }
 
+label.labelToggleMemberBio:hover {
+  background-color: var(--color-bg-neutral-dark-strong-semitransparent);
+  color: var(--color-text-light-on-dark-default);
+}
+
 .directory-result-member-bio span.truncated ~ label.labelToggleMemberBio {
   display: inline-block;
 }
