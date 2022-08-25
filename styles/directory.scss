@@ -109,7 +109,7 @@ label.labelToggleMemberBio {
   cursor: pointer;
 }
 
-.directory-result-member-bio span.hasTruncation ~ label.labelToggleMemberBio::after {
+.directory-result-member-bio input.toggleMemberBio:checked ~ label.labelToggleMemberBio::after {
   content: " Less";
 }
 
