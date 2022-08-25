@@ -104,16 +104,17 @@ label.labelToggleMemberBio {
   padding: 0.125em 0.5em;
   background-color: var(--color-bg-neutral-subtle-semitransparent);
   border-radius: var(--border-radius-medium);
-    margin-top: 0.5em;
+  margin-top: 0.5em;
   font-size: var(--font-size-sub-paragraph);
   cursor: pointer;
 }
 
-label.labelToggleMemberBio::after {
+.directory-result-member-bio span.hasTruncation label.labelToggleMemberBio::after {
+  display: inline-block;
   content: " Less";
 }
 
-.directory-result-member-bio span.truncated label.labelToggleMemberBio::after {
+.directory-result-member-bio span.truncated ~ label.labelToggleMemberBio::after {
   content: " More";
 }
 
@@ -122,9 +123,13 @@ label.labelToggleMemberBio:hover {
   color: var(--color-text-light-on-dark-default);
 }
 
-.directory-result-member-bio span.truncated ~ label.labelToggleMemberBio {
+.directory-result-member-bio span.hasTruncation label.labelToggleMemberBio {
   display: inline-block;
 }
+
+// .directory-result-member-bio span.truncated ~ label.labelToggleMemberBio {
+//   display: inline-block;
+// }
 
 
 /* Button */
