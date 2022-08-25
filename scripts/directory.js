@@ -13,9 +13,9 @@
   });
 
   
-  memberBioParagraphs.forEach(span => {
-    flagTruncatedContent(span, "hasTruncation");
-    contentObserver.observe(span);
+  memberBioParagraphs.forEach(element => {
+    flagTruncatedContent(element, "hasTruncation");
+    contentObserver.observe(element);
   });
   
 
@@ -25,7 +25,10 @@
 const flagTruncatedContent = function (el, flagName) {
   console.log(el);
   if (el.scrollHeight > el.contentRect.height) {
+    console.log("greater");
     el.classList.add(flagName);
+  } else {
+    console.log("not greater");
   }
   // el.classList[el.target.scrollHeight > el.contentRect.height ? 'add' : 'remove'](flagName);
 }
