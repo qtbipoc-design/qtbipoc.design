@@ -7,6 +7,7 @@ const memberBioParagraphs = document.querySelectorAll('.directory-result-member-
 const contentObserver = new ResizeObserver(entries => {
   for (let entry of entries) {
     entry.target.classList[entry.target.scrollHeight > entry.contentRect.height ? 'add' : 'remove']('truncated');
+    console.log(entry);
   }
 });
 
