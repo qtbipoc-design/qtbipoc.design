@@ -3,7 +3,7 @@
  * From: https://paulbakaus.com/tutorials/css/multiline-truncated-text-with-show-more-button-with-just-css/
 */
 
-const memberBioParagraphs = document.querySelectorAll('.directory-result-member-bio p');
+const memberBioParagraphs = document.querySelectorAll('.directory-result-member-bio span');
 const contentObserver = new ResizeObserver(entries => {
   for (let entry of entries) {
     entry.target.classList[entry.target.scrollHeight > entry.contentRect.height ? 'add' : 'remove']('truncated');
