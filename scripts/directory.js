@@ -9,7 +9,7 @@
     for (let entry of entries) {
       // entry.target.classList[entry.target.scrollHeight > entry.contentRect.height ? 'add' : 'remove']('truncated');
       entry.target.classList[entry.target.scrollHeight > entry.contentRect.height ? 'add' : 'remove']('hasTruncation');
-      console.log(entry);
+      // console.log(entry);
     }
   });
 
@@ -25,12 +25,8 @@
 
 const flagTruncatedContent = function (el, flagName) {
   console.log(el);
-  // if (el.scrollHeight > el.contentRect.height) {
   if (el.scrollHeight > el.clientHeight) {
-    console.log("greater");
     el.classList.add(flagName);
-  } else {
-    console.log("not greater");
   }
   // el.classList[el.target.scrollHeight > el.contentRect.height ? 'add' : 'remove'](flagName);
 }

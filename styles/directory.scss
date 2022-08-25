@@ -113,7 +113,6 @@ label.labelToggleMemberBio {
   content: " Less";
 }
 
-// .directory-result-member-bio span.truncated ~ label.labelToggleMemberBio::after {
 .directory-result-member-bio span.hasTruncation ~ label.labelToggleMemberBio::after {
   content: " More";
 }
@@ -125,7 +124,7 @@ label.labelToggleMemberBio:hover {
 
 // .directory-result-member-bio span.hasTruncation ~ label.labelToggleMemberBio {
 .directory-result-member-bio input.toggleMemberBio:checked ~ label.labelToggleMemberBio,
-.directory-result-member-bio span.truncated ~ label.labelToggleMemberBio {
+.directory-result-member-bio span.hasTruncation ~ label.labelToggleMemberBio {
   display: inline-block;
 }
 
