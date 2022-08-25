@@ -15,18 +15,8 @@
 
   
   memberBioParagraphs.forEach(element => {
-    // flagTruncatedContent(element, "hasTruncation");
     contentObserver.observe(element);
   });
   
 
 }))(jQuery);
-
-
-const flagTruncatedContent = function (el, flagName) {
-  console.log(el);
-  if (el.scrollHeight > el.clientHeight) {
-    el.classList.add(flagName);
-  }
-  // el.classList[el.target.scrollHeight > el.contentRect.height ? 'add' : 'remove'](flagName);
-}
