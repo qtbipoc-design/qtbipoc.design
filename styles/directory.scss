@@ -77,6 +77,19 @@ body .member-card .directory-result-member-bio {
   flex-grow: 100; /* Expand to make content below it align to bottom */
 }
 
+.directory-result-member-bio p {
+  -webkit-line-clamp: 5;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+}
+
+.directory-result-member-bio p:hover,
+.directory-result-member-bio p:focus {
+  -webkit-line-clamp: unset;
+  overflow: visible;
+}
+
 /* Button */
 .member-card .nectar-button{
   margin: 0 var(--padding-horizontal-member-card-content);
