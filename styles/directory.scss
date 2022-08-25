@@ -38,6 +38,7 @@
   height: 100%;  /* To make image fill height */
   object-fit: cover; /* To make image fill height */
   min-width: 100%; /* To make image fill width */
+  aspect-ratio: 1;
 }
 
 /* Content */
