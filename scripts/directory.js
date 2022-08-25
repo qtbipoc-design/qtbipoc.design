@@ -10,6 +10,10 @@
       // entry.target.classList[entry.target.scrollHeight > entry.contentRect.height ? 'add' : 'remove']('truncated');
       entry.target.classList[entry.target.scrollHeight > entry.contentRect.height ? 'add' : 'remove']('hasTruncation');
       // console.log(entry);
+
+      if (entry.target.scrollHeight <= entry.contentRect.height) {
+        entry.previousElementSibling.checked = false;
+      }
     }
   });
 
