@@ -2,7 +2,8 @@ body.material .cohort-members .member-card .nectar-button.accent-color {
   --color-member-highlight: var(--color-brand-purple); /* override */
 }
 
-body.material .cohort-members .member-card .nectar-button.large:hover, .member-card .nectar-button[data-color-override="false"].regular-button.large:hover {
+body.material .cohort-members .member-card .nectar-button.large:hover, 
+.cohort-members .member-card .nectar-button[data-color-override="false"].regular-button.large:hover {
   --color-member-highlight-shade: var(--color-brand-purple-shade); /* override */
 }
 
