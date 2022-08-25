@@ -12,13 +12,13 @@
     }
   });
 
-  const flagTruncatedContent = function (el, flagName) {
+  const flagTruncatedContent = function(el, flagName) {
     el.classList[el.target.scrollHeight > el.contentRect.height ? 'add' : 'remove'](flagName);
   }
   
   memberBioParagraphs.forEach(span => {
-    contentObserver.observe(span);
     flagTruncatedContent(span, "hasTruncation");
+    contentObserver.observe(span);
   });
   
 
