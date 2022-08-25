@@ -77,18 +77,28 @@ body .member-card .directory-result-member-bio {
   flex-grow: 100; /* Expand to make content below it align to bottom */
 }
 
-.directory-result-member-bio p {
+/* Bio "Read More" interaction */
+.directory-result-member-bio input.toggleMemberBio {
+  opacity: 0;
+  position: absolute;
+  pointer-events: none;
+}
+
+.directory-result-member-bio span {
   -webkit-line-clamp: 6;
   display: -webkit-box;
   overflow: hidden;
   -webkit-box-orient: vertical;
 }
 
-.directory-result-member-bio p:hover,
-.directory-result-member-bio p:focus {
-  -webkit-line-clamp: unset;
-  overflow: visible;
+.directory-result-member-bio input.toggleMemberBio:focus ~ label {
+  outline: -webkit-focus-ring-color auto 1rem;
 }
+
+.directory-result-member-bio input.toggleMemberBio:checked + span {
+  -webkit-line-clamp: unset;
+}
+
 
 /* Button */
 .member-card .nectar-button{
