@@ -24,7 +24,8 @@
 
 const flagTruncatedContent = function (el, flagName) {
   console.log(el);
-  if (el.scrollHeight > el.contentRect.height) {
+  // if (el.scrollHeight > el.contentRect.height) {
+  if (el.scrollHeight > el.clientHeight) {
     console.log("greater");
     el.classList.add(flagName);
   } else {
