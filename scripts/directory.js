@@ -13,7 +13,7 @@
   });
 
   const flagTruncatedContent = function (el, flagName) {
-    el.target.classList[el.target.scrollHeight > el.contentRect.height ? 'add' : 'remove'](flagName);
+    el.classList[el.target.scrollHeight > el.contentRect.height ? 'add' : 'remove'](flagName);
   }
   
   memberBioParagraphs.forEach(span => {
