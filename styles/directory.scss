@@ -99,6 +99,21 @@ body .member-card .directory-result-member-bio {
   -webkit-line-clamp: unset;
 }
 
+label.labelToggleMemberBio {
+  display: none;
+  padding: 0.125em 0.5em;
+  background-color: var(--color-bg-neutral-subtle-semitransparent);
+  border-radius: var(--border-radius-medium);
+  display: inline-block;
+  margin-top: 0.5em;
+  font-size: var(--font-size-sub-paragraph);
+  cursor: pointer;
+}
+
+.directory-result-member-bio span.truncated ~ label.labelToggleMemberBio {
+  display: inline-block;
+}
+
 
 /* Button */
 .member-card .nectar-button{
