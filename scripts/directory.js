@@ -7,14 +7,15 @@
   const memberBioParagraphs = document.querySelectorAll('.directory-result-member-bio span');
   const contentObserver = new ResizeObserver(entries => {
     for (let entry of entries) {
-      entry.target.classList[entry.target.scrollHeight > entry.contentRect.height ? 'add' : 'remove']('truncated');
+      // entry.target.classList[entry.target.scrollHeight > entry.contentRect.height ? 'add' : 'remove']('truncated');
+      entry.target.classList[entry.target.scrollHeight > entry.contentRect.height ? 'add' : 'remove']('hasTruncation');
       console.log(entry);
     }
   });
 
   
   memberBioParagraphs.forEach(element => {
-    flagTruncatedContent(element, "hasTruncation");
+    // flagTruncatedContent(element, "hasTruncation");
     contentObserver.observe(element);
   });
   
