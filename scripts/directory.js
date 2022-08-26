@@ -11,10 +11,6 @@
       entry.target.classList[entry.target.scrollHeight > entry.contentRect.height ? 'add' : 'remove']('hasTruncation');
       // console.log(entry);
 
-      // Uncheck "Read More" button if the content is tall enough.
-      if (entry.target.scrollHeight <= entry.contentRect.height) {
-        entry.target.previousElementSibling.checked = false;
-      }
     }
   });
 
