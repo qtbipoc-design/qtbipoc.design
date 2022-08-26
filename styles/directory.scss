@@ -122,7 +122,7 @@ label.labelToggleMemberBio:hover {
   color: var(--color-text-light-on-dark-default);
 }
 
-.directory-result-member-bio input.toggleMemberBio:checked ~ span.hasTruncation ~ label.labelToggleMemberBio,
+.directory-result-member-bio input.toggleMemberBio:checked ~ label.labelToggleMemberBio,
 .directory-result-member-bio span.hasTruncation ~ label.labelToggleMemberBio {
   display: inline-block;
 }
