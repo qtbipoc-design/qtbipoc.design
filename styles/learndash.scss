@@ -5,6 +5,12 @@
   text-decoration: underline; /* override */
 }
 
+.learndash-wrapper .ld-focus .ld-tab-content ol:not(.blocks-gallery-grid):not(.wp-block-gallery), 
+.learndash-wrapper .ld-focus .ld-tab-content ul:not(.blocks-gallery-grid):not(.wp-block-gallery) {
+  /* ul and ol */
+  margin: 0 0 1em 0;
+}
+
 /* COURSE OVERVIEW PAGE */
 
 .learndash-wrapper .planetContainer {
