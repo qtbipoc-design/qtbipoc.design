@@ -1,9 +1,6 @@
 console.debug('Main Loaded');
 
 const homepageHeroCarouselId = "homepage-hero-carousel";
-
-let homepageHeroCarousel = document.querySelector(`#${homepageHeroCarouselId}`);
-
 let carouselItemsToDelete = [];
 
 function updateHomepageHeroCarousel() {
@@ -46,8 +43,10 @@ function updateHomepageHeroCarousel() {
 	}, 1000);
 }
 
-document.addEventListener("DOMContentLoaded", function(event){
-	if (homepageHeroCarousel && typeof carousel_panel_next_event != "undefined") {
+document.addEventListener("DOMContentLoaded", function (event) {
+  let homepageHeroCarousel = document.querySelector(`#${ homepageHeroCarouselId }`);
+  
+  if (homepageHeroCarousel && typeof carousel_panel_next_event != "undefined") {
 		updateHomepageHeroCarousel();
 	}
 }); // End content loaded
