@@ -1,1 +1,1 @@
-console.log('Footer Loaded');
+console.debug('Footer Loaded');

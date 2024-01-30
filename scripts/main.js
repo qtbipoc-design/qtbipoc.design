@@ -1,1 +1,1 @@
-console.log('Main Loaded');
+console.debug('Main Loaded');
