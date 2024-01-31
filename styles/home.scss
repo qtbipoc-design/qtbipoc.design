@@ -5,6 +5,65 @@
     font-size: var(--font-size-super-heading);
 }
 
+/* Homepage Hero Intro */
+
+body #homepage-org-intro .heading h1 {
+  font-size: var(--font-size-super-heading);
+  color: hsla(0 100% 100% / 0.8);
+}
+
+#homepage-org-intro .heading .org-name {
+  color: #FFFFFF;
+  font-weight: var(--font-weight-extra-bold);
+  display: inline-block; /* for pseudo-elements */
+  position: relative; /* for pseudo-elements */
+  --padding-side: 0.3em;
+  padding: 0 var(--padding-side);
+}
+
+#homepage-org-intro .heading .org-name::before {
+  content: "";
+  /* background-color: hsla(0 100% 50% / 0.5); /* temp */
+  background-image: url('https://qtbipoc.design/wp-content/themes/salient-child/images/brand/star/graphic-starPair-static.png');
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position: top right;
+  display: block;
+  position: absolute;
+  width: 1em;
+  left: calc(-0.9em + var(--padding-side));
+  height: 1em;
+  bottom: -0.35em;
+  
+}
+
+
+#homepage-org-intro .heading .org-name::after {
+  content: "";
+  /* background-color: hsla(0 100% 50% / 0.5); /* temp */
+  background-image: url('https://qtbipoc.design/wp-content/themes/salient-child/images/brand/star/graphic-starPair-static.png');
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  display: block;
+  position: absolute;
+  width: 1em;
+  right: calc(-0.75em + var(--padding-side));
+  height: 1em;
+  top: -0.25em;
+}
+
+
+
+#homepage-org-intro .description p{
+  margin-left: auto;
+  margin-right: auto;
+  font-size: var(--font-size-h4);
+  color: hsla(0 100% 100% /0.8);
+}
+
+/* End Homepage Hero Intro */
+
 
 /* Home: "Choose Your Adventure section */
 .row-home-choose-your-adventure .inner_row .wpb_column,
