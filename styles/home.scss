@@ -12,6 +12,21 @@ body #homepage-org-intro .heading h1 {
   color: hsla(0 100% 100% / 0.8);
 }
 
+body #homepage-org-intro .heading h1::before {
+  /* Galaxy Background Graphic */
+  content: "";
+  width: 1670px;
+  height: 660px;
+  position: absolute;
+  display: block;
+  z-index: -100;
+  background-image: url('https://qtbipoc.design/wp-content/themes/salient-child/images/brand/graphic-galaxy-01-faint.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  top: -50%;
+  left: calc((1670px / -2) + (var(--width-content) / 2 ));
+}
+
 #homepage-org-intro .heading .org-name {
   color: #FFFFFF;
   font-weight: var(--font-weight-extra-bold);
