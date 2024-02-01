@@ -123,10 +123,30 @@ body .vc_row-fluid .event-widget-column-summary {
 
 /* Widget: Next Event for Home Page Hero Carousel */
 
+.template-future-event-one .inner-row-background-graphics::before {
+  /* Galaxy background graphic */
+  content: "";
+  display: block;
+  width: 1670px;
+  height: 660px;
+  background-image: url('https://qtbipoc.design/wp-content/themes/salient-child/images/brand/graphic-galaxy-01-faint.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  position: absolute;
+  transform: scaleX(-1);
+  left: calc((-1670px /2 ) + 40%); /* Position middle of graphic width to a percentge of content width */
+  top: -4rem;
+}
+
 .column-template-future-event-one-main-callout {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+
+span.event-meta-event-type-label {
+  display: inline-block; // To keep the event type label ("UX Nights", "Book Club") in same line in headline when possible
 }
 
 .column-template-future-event-one-main-callout .event-meta-relativeEventDate {
@@ -137,9 +157,10 @@ body .vc_row-fluid .event-widget-column-summary {
   font-size: var(--font-size-h5);
 }
 
-.column-template-future-event-one-main-callout .headline-hero {
-  font-size: var(--font-size-super-heading);
+.column-template-future-event-one-main-callout .wpb_wrapper h1.vc_custom_heading.headline-hero {
+  font-size: var(--font-size-super-heading); /* overrides Salient dynamic css .wpb_wrapper h1.vc_custom_heading */
   margin: 0 0 1.5rem;
+  line-height: 130%;
 }
 
 .column-template-future-event-one-main-callout .subheadline-hero p {
