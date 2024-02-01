@@ -99,6 +99,14 @@ body .container-wrap .search-filter-results .inner_row[data-column-margin="40px"
   line-height: var(--line-height-h4);
 }
 
+
+/* Misc */
+
+.link-event-post {
+  display: inline-block; /* Make link label one line if possible */
+}
+
+
 /* SPECIFIC WIDGETS */
 
 /* Widget: Post Summary */
