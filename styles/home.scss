@@ -5,6 +5,11 @@
     font-size: var(--font-size-super-heading);
 }
 
+/* Home page hero carousel */
+span.event-meta-event-type-label {
+  display: inline-block; // To keep the event type label ("UX Nights", "Book Club") in same line in headline when possible
+}
+
 /* Homepage Hero Intro */
 
 body #homepage-org-intro .heading h1 {
