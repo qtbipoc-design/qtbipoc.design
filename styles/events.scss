@@ -158,7 +158,7 @@ span.event-meta-event-type-label {
 }
 
 .column-template-future-event-one-main-callout .wpb_wrapper h1.vc_custom_heading.headline-hero {
-  font-size: var(--font-size-super-heading); /* overrides Salient dynamic css .wpb_wrapper h1.vc_custom_heading */
+  font-size: var(--font-size-super-heading) !important; /* overrides Salient dynamic css .wpb_wrapper h1.vc_custom_heading */
   margin: 0 0 1.5rem;
   line-height: 130%;
 }
