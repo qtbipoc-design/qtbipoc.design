@@ -18,7 +18,7 @@
   background-repeat: no-repeat;
   position: absolute;
   transform: scaleX(-1);
-  left: -30%;
+  left: calc((-1670px /2 ) + 40%); /* Position middle of graphic width to a percentge of content width */
   top: -4rem;
 }
 
