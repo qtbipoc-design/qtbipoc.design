@@ -121,3 +121,37 @@ body .vc_row-fluid .event-widget-column-summary {
   top: 50%;
 }
 
+/* Widget: Next Event for Home Page Hero Carousel */
+
+.column-template-future-event-one-main-callout {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.column-template-future-event-one-main-callout .event-meta-relativeEventDate {
+  background-color: var(--color-brand-yellow);
+  color: var(--color-text-dark-on-light-default);
+  padding: 3px 1em 5px 1em;
+  border-radius: var(--border-radius-default);
+  font-size: var(--font-size-h5);
+}
+
+.column-template-future-event-one-main-callout .headline-hero {
+  font-size: var(--font-size-super-heading);
+  margin: 0 0 1.5rem;
+}
+
+.column-template-future-event-one-main-callout .subheadline-hero p {
+  font-size: var(--font-size-h3);
+}
+
+body .template-future-event-one h4.event-widget-element-event-name {
+  margin-top: 2rem;
+  font-family: var(--font-family-default);
+}
+
+body .template-future-event-one .event-widget-element-event-date span {
+  font-family: var(--font-family-default);
+  font-size: var(--font-size-super-paragraph);
+}

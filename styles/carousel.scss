@@ -24,3 +24,37 @@
 .carousel-heading .control-wrap i[class*="fa-"] {
     text-decoration: none; /* override */
 }
+
+/* Flickity */
+
+/* Flickity for Home Page Hero Carousel. May need to split off with future carousels */
+
+.carousel-full-width .nectar-carousel.nectar-flickity .flickity-slider .cell {
+    
+  padding: 0 calc((100vw - var(--width-content)) / 2);
+  transition: opacity 300ms;
+  margin: 0 0 4rem;
+}
+
+.carousel-full-width .nectar-carousel.nectar-flickity .flickity-slider .cell:not(.is-selected) {
+  opacity: 0;
+}
+
+.nectar-flickity.nectar-carousel.nectar-carousel:not(.masonry) .flickity-viewport {
+  margin: 0; /*override top and bottom margins, when carousel has arrows */ 
+}
+
+.nectar-flickity[data-controls*=arrows_overlaid] .flickity-prev-next-button.previous,
+.nectar-flickity[data-controls*=arrows_overlaid] .flickity-prev-next-button.next{
+  --width-arrow-button: 40px;
+  --width-gutter: 1rem;
+  top: calc(100% + 1rem);
+}
+
+.nectar-flickity[data-controls*=arrows_overlaid] .flickity-prev-next-button.previous {
+  left: calc(50% - var(--width-arrow-button) - (var(--width-gutter) / 2 ));
+}
+
+.nectar-flickity[data-controls*=arrows_overlaid] .flickity-prev-next-button.next {
+  left: calc(50% + (var(--width-gutter) / 2));
+}
