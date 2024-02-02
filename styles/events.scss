@@ -179,6 +179,12 @@ span.event-meta-event-type-label {
   font-size: var(--font-size-h3);
 }
 
+.template-future-event-one a.anchor_image_featured img {
+  max-height: 24rem; /* TODO: set size limits based on screen size? */
+  object-fit: contain;
+  object-position: left;
+}
+
 body .template-future-event-one h4.event-widget-element-event-name {
   margin-top: 2rem;
   font-family: var(--font-family-default);
