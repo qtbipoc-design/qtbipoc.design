@@ -131,6 +131,10 @@ body .vc_row-fluid .event-widget-column-summary {
 
 /* Widget: Next Event for Home Page Hero Carousel */
 
+.template-future-event-one {
+  z-index: 0 !important; /* Override the "-100" that is added inline. Unsure where that came from */
+}
+
 .template-future-event-one .inner-row-background-graphics::before {
   /* Galaxy background graphic */
   content: "";
