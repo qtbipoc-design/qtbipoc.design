@@ -169,7 +169,7 @@ span.event-meta-event-type-label {
   font-size: var(--font-size-h5);
 
   &.event-meta-relativeEventDate-past-event {
-    background-color: hsla(var(--color-hs-neutral) var(--color-lightness-default) / var(--color-alpha-default));
+    background-color: hsla(var(--color-hs-neutral) var(--color-lightness-neutral-mid-dark) / var(--color-alpha-default));
     color: var(--color-text-light-on-dark-default);
   }
 }
