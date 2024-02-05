@@ -167,6 +167,11 @@ span.event-meta-event-type-label {
   padding: 3px 1em 5px 1em;
   border-radius: var(--border-radius-default);
   font-size: var(--font-size-h5);
+
+  &.event-meta-relativeEventDate-past-event {
+    background-color: hsla(var(--color-hs-neutral) var(--color-lightness-default) / var(--color-alpha-default));
+    color: var(--color-text-light-on-dark-default);
+  }
 }
 
 .column-template-future-event-one-main-callout .wpb_wrapper h1.vc_custom_heading.headline-hero {
