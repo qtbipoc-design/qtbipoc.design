@@ -65,7 +65,8 @@ body .container-wrap .search-filter-results .inner_row[data-column-margin="40px"
 
 /* Dates */
 .event-widget-element-event-date,
-.event-widget-element-event-date span{
+.event-widget-element-event-date span,
+.event-widget-element-event-date time{
   font-family: var(--font-family-display);
 }
 
@@ -195,7 +196,9 @@ body .template-future-event-one h4.event-widget-element-event-name {
   font-family: var(--font-family-default);
 }
 
-body .template-future-event-one .event-widget-element-event-date span {
+body .template-future-event-one .event-widget-element-event-date span,
+body .template-future-event-one .event-widget-element-event-date time
+ {
   font-family: var(--font-family-default);
   font-size: var(--font-size-super-paragraph);
 }
