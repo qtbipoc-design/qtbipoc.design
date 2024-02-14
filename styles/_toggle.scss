@@ -38,7 +38,8 @@ div[data-style="default"] .toggle h3 {
 
 .toggle h3 a:hover,
 .toggle.open h3 a,
-.toggle.open h3 a:hover {
+.toggle.open h3 a:hover,
+.toggle>.toggle-title a:hover /* override */ {
   background-color: var(--color-bg-local-accent);
   color: var(--color-fg-local-on-accent-bg);
 }
