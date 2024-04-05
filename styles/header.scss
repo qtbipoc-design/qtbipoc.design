@@ -9,8 +9,24 @@
 #logo {
   text-decoration: none;
   text-transform: lowercase;
+
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
+
+  @media only screen and (min-width: 999px) {
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+    
+  }
 }
-#logo img { margin-left: -24px!important;}
+#logo img { 
+  /* margin-left: -24px!important; */
+  height: 36px !important;
+
+  @media only screen and (min-width: 999px) {
+    height: 48px !important;
+  }
+}
 
 .nav-button a:before {
   border-color: rgba(255,255,255,.75)!important;
