@@ -291,8 +291,15 @@ pre {
 
 
 /* Paragraphs that goes after h1 heading (presumably page title/intro blurb) */
+h1 ~ .subtitle-hero *,
+h1 ~ .subtitle-hero p { 
+  /* specifying <p> in selector overrides general h1+p rule */
+  font-size: var(--font-size-h3);
+  line-height: var(--line-height-h3);
+}
+
 h1+p, 
-h1+*:not(.learndash)  p {
+h1~*  p {
   font-size: var(--font-size-super-paragraph);
 }
 
