@@ -90,3 +90,7 @@ li.gfield {
 body>.learndash-wrapper .spaceBg {
   display: none !important; /* override */ /* Ivan 8/2022: Disabling background stars and planets for Learn Dash pages indefinitely until I figure out a way to display them without breaking the page */
 }
+
+.html-newsletter-signup-embed iframe {
+  border-radius: var(--border-radius-container-default);
+}
